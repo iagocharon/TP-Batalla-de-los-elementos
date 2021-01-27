@@ -53,6 +53,18 @@ NodoABB* ABB::buscar(string clave) {
     return this->buscar(this->raiz, clave);
 }
 
+void ABB::mostrarEnOrden(NodoABB *nodo) {
+    if (nodo != NULL) {
+        this->mostrarEnOrden(nodo->getIzquierda());
+        cout << "\t-" << nodo->getClave() << "." << endl;
+        this->mostrarEnOrden(nodo->getDerecha());
+    }
+}
+
+void ABB::mostrarEnOrden() {
+    this->mostrarEnOrden(this->raiz);
+}
+
 NodoABB* ABB::hallarMinimo(NodoABB* nodo) {
     if (nodo == NULL) {
         return NULL;

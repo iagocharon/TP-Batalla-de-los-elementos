@@ -13,6 +13,7 @@ private:
     
     NodoABB* insertar(NodoABB* nodo, Personaje* dato, string clave);
     NodoABB* buscar(NodoABB* nodo, string clave);
+    void mostrarEnOrden(NodoABB* nodo);
     NodoABB* hallarMinimo(NodoABB* nodo);
     void eliminarNodo(NodoABB* nodo);
     NodoABB* eliminar(NodoABB* nodo, string clave);
@@ -28,6 +29,7 @@ public:
 
     void insertar(Personaje* dato, string clave);
     NodoABB* buscar(string clave);
+    void mostrarEnOrden();
     void eliminar(string clave);
     void eliminarTodo();
     
