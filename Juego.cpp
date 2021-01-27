@@ -103,3 +103,34 @@ void Juego::cargarTablero() {
         }
     }
 }
+
+void Juego::mostrarTablero() {
+    cout << "________" << endl;
+    for (int i = 0; i < MAX_FILAS; i++) {
+        cout << "|";
+        for (int j = 0; j < MAX_COLUMNAS; j++) {
+            cout << " ";
+            if (tablero[i][j]->getNombre() == "Montania") {
+                cout << MONTANIA;
+            }
+            else if (tablero[i][j]->getNombre() == "Precipicio") {
+                cout << PRECIPICIO;
+            }
+            else if (tablero[i][j]->getNombre() == "Lago") {
+                cout << LAGO;
+            }
+            else if (tablero[i][j]->getNombre() == "Volcan") {
+                cout << VOLCAN;
+            }
+            else if (tablero[i][j]->getNombre() == "Camino") {
+                cout << CAMINO;
+            }
+            else if (tablero[i][j]->getNombre() == "Vacio") {
+                cout << VACIO;
+            }
+            cout << " ";
+        }
+        cout << "|" << endl;
+    }
+    cout << "¯¯¯¯¯¯¯¯";
+}

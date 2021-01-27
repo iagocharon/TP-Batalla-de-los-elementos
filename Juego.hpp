@@ -44,6 +44,7 @@ public:
     void mostrarPersonajes();
     void seleccionarPersonaje(); // Antes de llamarla hay que fijarse la cantidad de personajes que ya eligio cada uno.
     void cargarTablero();
+    void mostrarTablero(); //Todavia falta agregar que muestre los personajes.
     
     
 };
