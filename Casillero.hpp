@@ -3,17 +3,24 @@
 
 #include <iostream>
 
+
+
+using namespace std;
+
 class Casillero {
 private:
     int costoTierra;
     int costoAire;
     int costoAgua;
     int costoFuego;
+    string nombre;
 public:
+    string getNombre();
     int getCostoTierra();
     int getCostoAire();
     int getCostoAgua();
     int getCostoFuego();
+    void setNombre(string nombre);
     void setCostoTierra(int costo);
     void setCostoAire(int costo);
     void setCostoAgua(int costo);

@@ -1,5 +1,9 @@
 #include "Casillero.hpp"
 
+string Casillero::getNombre() {
+    return this->nombre;
+}
+
 int Casillero::getCostoTierra() {
     return this->costoTierra;
 }
@@ -13,6 +17,10 @@ int Casillero::getCostoAgua() {
 
 int Casillero::getCostoFuego() {
     return this->costoFuego;
+}
+
+void Casillero::setNombre(string nombre) {
+    this->nombre = nombre;
 }
 
 void Casillero::setCostoTierra(int costo) {
@@ -33,6 +41,7 @@ void Casillero::setCostoFuego(int costo) {
 
 
 CasilleroMontania::CasilleroMontania() : Casillero() {
+    this->setNombre("Montania");
     this->setCostoTierra(0);
     this->setCostoAire(2);
     this->setCostoAgua(1);
@@ -40,6 +49,7 @@ CasilleroMontania::CasilleroMontania() : Casillero() {
 }
 
 CasilleroPrecipicio::CasilleroPrecipicio() : Casillero() {
+    this->setNombre("Precipicio");
     this->setCostoTierra(2);
     this->setCostoAire(1);
     this->setCostoAgua(1);
@@ -47,6 +57,7 @@ CasilleroPrecipicio::CasilleroPrecipicio() : Casillero() {
 }
 
 CasilleroLago::CasilleroLago() : Casillero() {
+    this->setNombre("Lago");
     this->setCostoTierra(1);
     this->setCostoAire(1);
     this->setCostoAgua(0);
@@ -54,6 +65,7 @@ CasilleroLago::CasilleroLago() : Casillero() {
 }
 
 CasilleroVolcan::CasilleroVolcan() : Casillero() {
+    this->setNombre("Volcan");
     this->setCostoTierra(1);
     this->setCostoAire(1);
     this->setCostoAgua(2);
@@ -61,6 +73,7 @@ CasilleroVolcan::CasilleroVolcan() : Casillero() {
 }
 
 CasilleroCamino::CasilleroCamino() : Casillero() {
+    this->setNombre("Camino");
     this->setCostoTierra(1);
     this->setCostoAire(1);
     this->setCostoAgua(1);
@@ -68,6 +81,7 @@ CasilleroCamino::CasilleroCamino() : Casillero() {
 }
 
 CasilleroVacio::CasilleroVacio() : Casillero() {
+    this->setNombre("Vacio");
     this->setCostoTierra(15);
     this->setCostoAire(15);
     this->setCostoAgua(15);
