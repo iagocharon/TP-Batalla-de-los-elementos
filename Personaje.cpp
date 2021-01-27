@@ -1,18 +1,22 @@
 #include "Personaje.h"
 
-Personaje::Personaje(string nombre, int escudo, int vida){
-    
+Personaje::Personaje(string nombre, string elemento, int escudo, int vida) {
     this->nombre = nombre;
+    this->elemento = elemento;
     this->escudo = escudo;
     this->vida = vida;
     srand(unsigned(time(NULL)));
-    this->energia = rand() % MAX_ENERGIA;
+    this->energia = rand() % TOPE_ENERGIA;
     this->fila = -1;
     this->columna = -1;
 }
 
 string Personaje::getNombre() {
     return this->nombre;
+}
+
+string Personaje::getElemento() {
+    return this->elemento;
 }
 
 int Personaje::getEscudo() {
@@ -37,6 +41,10 @@ int Personaje::getColumna() {
 
 void Personaje::setNombre(string nombre) {
     this->nombre = nombre;
+}
+
+void Personaje::setElemento(string elemento) {
+    this->elemento = elemento;
 }
 
 void Personaje::setEscudo(int escudo) {

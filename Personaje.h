@@ -5,16 +5,21 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define MAX_ENERGIA 20;
+
+#define TOPE_ENERGIA 20;
+#define ELEMENTO_TIERRA "Tierra"
+#define ELEMENTO_AIRE "Aire"
+#define ELEMENTO_AGUA "Agua"
+#define ELEMENTO_FUEGO "Fuego"
 
 using namespace std;
 
 class Personaje{
-
 protected:
     //Atributos
 
     string nombre;
+    string elemento;
     int escudo;
     int vida;
     int energia;
@@ -24,7 +29,7 @@ protected:
 public:
     // PRE: Los parámetros recibidos son válidos
     // POS: Crea un personaje cargando sus atributos con lo recibido
-    Personaje(string nombre, int escudo, int vida);
+    Personaje(string nombre, string elemento, int escudo, int vida);
 
     // PRE: -
     // POS: Alimenta al personaje, notifica al usuario
@@ -34,6 +39,7 @@ public:
     // POS: Devuelve el nombre del personaje
     string getNombre();
 
+    string getElemento();
     // PRE: -
     // POS: Devuelve el escudo del personaje
     int getEscudo();
@@ -51,6 +57,8 @@ public:
     int getColumna();
     
     void setNombre(string nombre);
+    
+    void setElemento(string elemento);
     
     void setEscudo(int escudo);
     
