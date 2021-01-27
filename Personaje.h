@@ -1,14 +1,13 @@
-//
-// Created by daniel on 23/11/20.
-//
-
 #ifndef TP2_PERSONAJE_H
 #define TP2_PERSONAJE_H
 
-const int TOPE_ENERGIA = 20;
+#include <iostream>
+#include <stdlib.h>
+#include <time.h>
+
+#define MAX_ENERGIA 20;
 
 using namespace std;
-#include <iostream>
 
 class Personaje{
 
@@ -44,6 +43,8 @@ public:
     // PRE: -
     // POS: Devuelve la energia del personaje
     short obtenerEnergia();
+    
+    void mostrar();
 };
 
 #endif //TP2_PERSONAJE_H
