@@ -4,43 +4,43 @@
 
 #include "utiles.h"
 
-Tipo Utiles::establecerTipo(string elemento, string nombre, short escudo, short vida){
+Tipo Utiles::establecerTipo(string elemento, string nombre, int escudo, int vida) {
 
     Tipo personaje;
 
-    if(elemento == "aire")
-        personaje = new ElementalAire(nombre, escudo, vida);
+    if (elemento == "aire")
+        personaje = new ElementalAire(nombre, elemento, escudo, vida);
 
-    else if(elemento == "fuego")
-        personaje = new ElementalFuego(nombre, escudo, vida);
+    else if (elemento == "fuego")
+        personaje = new ElementalFuego(nombre, elemento, escudo, vida);
 
-    else if(elemento == "tierra")
-        personaje = new ElementalTierra(nombre, escudo, vida);
+    else if (elemento == "tierra")
+        personaje = new ElementalTierra(nombre, elemento, escudo, vida);
 
     else
-        personaje = new ElementalAgua(nombre, escudo, vida);
+        personaje = new ElementalAgua(nombre, elemento, escudo, vida);
 
     return personaje;
 }
 
-Tipo Utiles::establecerTipo(string elemento, string nombre){
+Tipo Utiles::establecerTipo(string elemento, string nombre) {
 
     Tipo personaje;
 
-    short escudo = randomizar(0, 2);
-    short vida = randomizar(10, 100);
+    int escudo = randomizar(0, 2);
+    int vida = randomizar(10, 100);
 
     personaje = establecerTipo(elemento, nombre, escudo, vida);
 
     return personaje;
 }
 
-short Utiles::randomizar(short minimo, short maximo){
+int Utiles::randomizar(int minimo, int maximo) {
 
-    srand(time(0));
-    short numero = 0;
+    srand(unsigned(time(0)));
+    int numero = 0;
 
-    short rango = maximo - minimo + 1;
+    int rango = maximo - minimo + 1;
     numero = rand() % rango + minimo;
 
     return numero;

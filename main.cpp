@@ -7,7 +7,7 @@
 
 using namespace std;
 
-int main(){
+int main() {
 
     int opcion;
 
@@ -16,7 +16,7 @@ int main(){
     cout << "2) Si se va a correr en una terminal" << endl;
     cin >> opcion;
 
-    while(opcion != IDE && opcion != TERMINAL){
+    while(opcion != IDE && opcion != TERMINAL) {
         cout << "La opción no es válida, ingrese alguna según las opciones dadas" << endl;
         cin >> opcion;
     }

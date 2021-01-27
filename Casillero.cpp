@@ -15,19 +15,19 @@ int Casillero::getCostoFuego() {
     return this->costoFuego;
 }
 
-void Casillero::setCostoTierra(int costo){
+void Casillero::setCostoTierra(int costo) {
     this->costoTierra = costo;
 }
 
-void Casillero::setCostoAire(int costo){
+void Casillero::setCostoAire(int costo) {
     this->costoAire = costo;
 }
 
-void Casillero::setCostoAgua(int costo){
+void Casillero::setCostoAgua(int costo) {
     this->costoAgua = costo;
 }
 
-void Casillero::setCostoFuego(int costo){
+void Casillero::setCostoFuego(int costo) {
     this->costoFuego = costo;
 }
 

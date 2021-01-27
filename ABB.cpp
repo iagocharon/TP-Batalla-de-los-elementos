@@ -22,9 +22,22 @@ void ABB::setRaiz(NodoABB* raiz) {
 
 NodoABB* ABB::insertar(NodoABB* nodo, Personaje* dato, string clave) {
     if (nodo == NULL) {
+        Personaje* auxiliar;
+        if (dato->getElemento() == ELEMENTO_AGUA) {
+            auxiliar = new ElementalAgua(dato->getNombre(), dato->getElemento(), dato->getEscudo(), dato->getVida());
+        }
+        else if (dato->getElemento() == ELEMENTO_AIRE) {
+            auxiliar = new ElementalAire(dato->getNombre(), dato->getElemento(), dato->getEscudo(), dato->getVida());
+        }
+        else if (dato->getElemento() == ELEMENTO_TIERRA) {
+            auxiliar = new ElementalTierra(dato->getNombre(), dato->getElemento(), dato->getEscudo(), dato->getVida());
+        }
+        else if (dato->getElemento() == ELEMENTO_FUEGO) {
+            auxiliar = new ElementalFuego(dato->getNombre(), dato->getElemento(), dato->getEscudo(), dato->getVida());
+        }
         nodo = new NodoABB(clave, dato);
     }
-    else if (clave > nodo->getClave()){
+    else if (clave > nodo->getClave()) {
         nodo->setDerecha(insertar(nodo->getDerecha(), dato, clave), nodo);
     }
     else {
@@ -135,6 +148,15 @@ void ABB::eliminarTodo(NodoABB* nodo) {
 
 void ABB::eliminarTodo() {
     this->eliminarTodo(this->raiz);
+}
+
+bool ABB::vacio() {
+    if (this->raiz == NULL) {
+        return true;
+    }
+    else {
+        return false;
+    }
 }
 
 ABB::~ABB() {

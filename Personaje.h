@@ -6,7 +6,7 @@
 #include <time.h>
 
 
-#define TOPE_ENERGIA 20;
+#define TOPE_ENERGIA 20
 #define ELEMENTO_TIERRA "Tierra"
 #define ELEMENTO_AIRE "Aire"
 #define ELEMENTO_AGUA "Agua"

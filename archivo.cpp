@@ -1,16 +1,12 @@
-//
-// Created by daniel on 6/12/20.
-//
-
 #include"Archivo.h"
 
 using namespace std;
 
 
-Archivo::Archivo(string ruta){
+Archivo::Archivo(string ruta) {
 
     archivo.open(ruta);
-    if(!archivo){
+    if (!archivo) {
         cout << "El archivo no pudo ser abierto" << endl;
         apertura = false;
     } else
@@ -19,44 +15,41 @@ Archivo::Archivo(string ruta){
 }
 
 
-bool Archivo::aperturaValida(){
+bool Archivo::aperturaValida() {
 
     return apertura;
 }
 
 
-void Archivo::leerLinea(){
+void Archivo::leerLinea() {
 
     string escudoLeido;
     string vidaLeida;
 
     getline(archivo, nombre, ',');
     getline(archivo, escudoLeido, ',');
-    this -> escudo = (short)stoi(escudoLeido);
+    this->escudo = (int)stoi(escudoLeido);
     getline(archivo, vidaLeida);
-    this -> vida = (short)stoi(vidaLeida);
+    this->vida = (int)stoi(vidaLeida);
 }
 
 
-void Archivo::cargarLista(Lista* lista){
-
-    Personaje* personaje;
-    Utiles util;
-
-    if(aperturaValida()){
-
-        while(getline(archivo, elemento, ',')){
-
+void Archivo::cargarPersonajes(ABB* personajes) {
+    if (aperturaValida()) {
+        while(getline(archivo, elemento, ',')) {
             leerLinea();
-
-            personaje = util.establecerTipo(elemento, nombre, escudo, vida);
-
-            lista -> alta(personaje);
+//            personaje = util.establecerTipo(elemento, nombre, escudo, vida);
+            Personaje* auxiliar = NULL;
+            auxiliar->setNombre(nombre);
+            auxiliar->setElemento(elemento);
+            auxiliar->setEscudo(escudo);
+            auxiliar->setVida(vida);
+            personajes->insertar(auxiliar, this->nombre);
         }
     }
 }
 
-Archivo::~Archivo(){
+Archivo::~Archivo() {
 
     archivo.close();
 }

@@ -9,6 +9,8 @@
 #include <iostream>
 #include <string>
 #include "utiles.h"
+#include "ABB.hpp"
+#include "Personaje.h"
 
 using namespace std;
 
@@ -16,10 +18,10 @@ class Archivo {
 
     ifstream archivo;
     bool apertura;
-    std::string elemento;
-    std::string nombre;
-    short escudo;
-    short vida;
+    string elemento;
+    string nombre;
+    int escudo;
+    int vida;
 
 public:
     // PRE: -
@@ -36,7 +38,7 @@ public:
 
     // PRE: La apertura del archivo fue válida
     // POS: Carga la lista inicial según lo leido del archivo
-    void cargarLista(Lista* lista);
+    void cargarPersonajes(ABB* personajes);
 
     // PRE: -
     // POS: Cierra el archivo

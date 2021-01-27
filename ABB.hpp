@@ -3,6 +3,10 @@
 
 #include <iostream>
 #include "Personaje.h"
+#include "ElementalAgua.h"
+#include "ElementalAire.h"
+#include "ElementalFuego.h"
+#include "ElementalTierra.h"
 #include "NodoABB.hpp"
 
 using namespace std;
@@ -32,6 +36,7 @@ public:
     void mostrarEnOrden();
     void eliminar(string clave);
     void eliminarTodo();
+    bool vacio();
     
     ~ABB();
 };

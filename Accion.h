@@ -1,11 +1,9 @@
-//
-// Created by nicolas on 25/11/20.
-//
-
 #ifndef TP2_ACCION_H
 #define TP2_ACCION_H
 #include <iostream>
 #include "utiles.h"
+#include "ABB.hpp"
+
 const int NO_ENCONTRADO = -1;
 const int AGREGAR_PERSONAJE = 1;
 const int ELIMINAR_PERSONAJE = 2;
@@ -19,12 +17,12 @@ using namespace std;
 class Accion {
 private:
     int elegida;
-    Lista* lista;
+    ABB* personajes;
 
 public:
     // PRE: opcion es válida
     // POS: Crea una acción con opcion como elegida
-    Accion(int opcion, Lista* lista);
+    Accion(int opcion, ABB* personajes);
 
     //PRE: La poción elegida es válida
     //POS: Ejecuta la acción determinada por el atributo elegida

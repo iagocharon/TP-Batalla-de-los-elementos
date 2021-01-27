@@ -11,23 +11,23 @@ void ejecucion(int tipo) {
     int opcionElegida = 0;
     string ruta;
 
-    if(tipo == IDE)
+    if (tipo == IDE)
         ruta = "../personajes.csv";
     else
         ruta = "personajes.csv";
 
     Archivo archivo(ruta);
-    Lista* lista = new Lista();
+    ABB* personajes = new ABB();
 
-    if(archivo.aperturaValida()) {
+    if (archivo.aperturaValida()) {
 
-        archivo.cargarLista(lista);
+        archivo.cargarPersonajes(personajes);
         menu.bienvenida();
 
         while (opcionElegida != SALIR) {
 
             opcionElegida = menu.opcion();
-            Accion accion(opcionElegida, lista);
+            Accion accion(opcionElegida, personajes);
 
             accion.determinarAccion();
             menu.espaciado();
@@ -36,5 +36,5 @@ void ejecucion(int tipo) {
         menu.despedida();
     }
 
-    delete lista;
+    delete personajes;
 }

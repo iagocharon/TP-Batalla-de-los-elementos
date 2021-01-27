@@ -9,7 +9,6 @@
 #include "ElementalTierra.h"
 #include "ElementalAire.h"
 #include "ElementalFuego.h"
-#include "Lista.h"
 #include <cstdlib>
 #include <ctime>
 #include <string>
@@ -23,7 +22,7 @@ class Utiles{
 public:
     // PRE: los valores recibidos son válidos
     // POS: devuelve un Tipo personaje cargando lo recibido en sus atributos
-    Tipo establecerTipo(string elemento, string nombre, short escudo, short vida);
+    Tipo establecerTipo(string elemento, string nombre, int escudo, int vida);
 
     // PRE: los valores recibidos son válidos
     // POS: devuelve un Tipo personaje cargando lo recibido en sus atributos y lo no recibido de forma default
@@ -31,7 +30,7 @@ public:
 
     // PRE: minimo < maximo
     // POS: devuelve un numero aleatorio entre minimo y maximo
-    short randomizar(short minimo, short maximo);
+    int randomizar(int minimo, int maximo);
 };
 
 
