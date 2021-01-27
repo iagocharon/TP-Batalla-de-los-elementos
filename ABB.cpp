@@ -22,19 +22,6 @@ void ABB::setRaiz(NodoABB* raiz) {
 
 NodoABB* ABB::insertar(NodoABB* nodo, Personaje* dato, string clave) {
     if (nodo == NULL) {
-        Personaje* auxiliar;
-        if (dato->getElemento() == ELEMENTO_AGUA) {
-            auxiliar = new ElementalAgua(dato->getNombre(), dato->getElemento(), dato->getEscudo(), dato->getVida());
-        }
-        else if (dato->getElemento() == ELEMENTO_AIRE) {
-            auxiliar = new ElementalAire(dato->getNombre(), dato->getElemento(), dato->getEscudo(), dato->getVida());
-        }
-        else if (dato->getElemento() == ELEMENTO_TIERRA) {
-            auxiliar = new ElementalTierra(dato->getNombre(), dato->getElemento(), dato->getEscudo(), dato->getVida());
-        }
-        else if (dato->getElemento() == ELEMENTO_FUEGO) {
-            auxiliar = new ElementalFuego(dato->getNombre(), dato->getElemento(), dato->getEscudo(), dato->getVida());
-        }
         nodo = new NodoABB(clave, dato);
     }
     else if (clave > nodo->getClave()) {

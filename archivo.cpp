@@ -39,11 +39,19 @@ void Archivo::cargarPersonajes(ABB* personajes) {
         while(getline(archivo, elemento, ',')) {
             leerLinea();
 //            personaje = util.establecerTipo(elemento, nombre, escudo, vida);
-            Personaje* auxiliar = NULL;
-            auxiliar->setNombre(nombre);
-            auxiliar->setElemento(elemento);
-            auxiliar->setEscudo(escudo);
-            auxiliar->setVida(vida);
+            Personaje* auxiliar;
+            if (elemento == ELEMENTO_AGUA) {
+                auxiliar = new ElementalAgua(nombre, elemento, escudo, vida);
+            }
+            else if (elemento == ELEMENTO_AIRE) {
+                auxiliar = new ElementalAire(nombre, elemento, escudo, vida);
+            }
+            else if (elemento == ELEMENTO_TIERRA) {
+                auxiliar = new ElementalTierra(nombre, elemento, escudo, vida);
+            }
+            else if (elemento == ELEMENTO_FUEGO) {
+                auxiliar = new ElementalFuego(nombre, elemento, escudo, vida);
+            }
             personajes->insertar(auxiliar, this->nombre);
         }
     }
