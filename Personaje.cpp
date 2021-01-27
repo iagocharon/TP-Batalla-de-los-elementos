@@ -1,29 +1,64 @@
 #include "Personaje.h"
 
-Personaje::Personaje(string nombre, short escudo, short vida){
+Personaje::Personaje(string nombre, int escudo, int vida){
     
     this->nombre = nombre;
     this->escudo = escudo;
     this->vida = vida;
     srand(unsigned(time(NULL)));
     this->energia = rand() % MAX_ENERGIA;
+    this->fila = -1;
+    this->columna = -1;
 }
 
-std::string Personaje::obtenerNombre(){
-    return nombre;
+string Personaje::getNombre() {
+    return this->nombre;
 }
 
-short Personaje::obtenerEscudo() {
-    return escudo;
+int Personaje::getEscudo() {
+    return this->escudo;
 }
 
-short Personaje::obtenerVida() {
-    return vida;
+int Personaje::getVida() {
+    return this->vida;
 }
 
-short Personaje::obtenerEnergia() {
-    return energia;
+int Personaje::getEnergia() {
+    return this->energia;
 }
+
+int Personaje::getFila() {
+    return this->fila;
+}
+
+int Personaje::getColumna() {
+    return this->columna;
+}
+
+void Personaje::setNombre(string nombre) {
+    this->nombre = nombre;
+}
+
+void Personaje::setEscudo(int escudo) {
+    this->escudo = escudo;
+}
+
+void Personaje::setVida(int vida) {
+    this->vida = vida;
+}
+
+void Personaje::setEnergia(int energia) {
+    this->energia = energia;
+}
+
+void Personaje::setFila(int fila) {
+    this->fila = fila;
+}
+
+void Personaje::setColumna(int columna) {
+    this->columna = columna;
+}
+
 
 void Personaje::mostrar() {
     cout << "\tNOMBRE: " << this->nombre << endl;

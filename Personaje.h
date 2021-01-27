@@ -15,14 +15,16 @@ protected:
     //Atributos
 
     string nombre;
-    short escudo;
-    short vida;
-    short energia;
+    int escudo;
+    int vida;
+    int energia;
+    int fila;
+    int columna;
 
 public:
     // PRE: Los parámetros recibidos son válidos
     // POS: Crea un personaje cargando sus atributos con lo recibido
-    Personaje(std::string nombre, short escudo, short vida);
+    Personaje(string nombre, int escudo, int vida);
 
     // PRE: -
     // POS: Alimenta al personaje, notifica al usuario
@@ -30,19 +32,35 @@ public:
 
     // PRE: -
     // POS: Devuelve el nombre del personaje
-    std::string obtenerNombre();
+    string getNombre();
 
     // PRE: -
     // POS: Devuelve el escudo del personaje
-    short obtenerEscudo();
+    int getEscudo();
 
     // PRE: -
     // POS: Devuelve la vida del personaje
-    short obtenerVida();
+    int getVida();
 
     // PRE: -
     // POS: Devuelve la energia del personaje
-    short obtenerEnergia();
+    int getEnergia();
+    
+    int getFila();
+    
+    int getColumna();
+    
+    void setNombre(string nombre);
+    
+    void setEscudo(int escudo);
+    
+    void setVida(int vida);
+    
+    void setEnergia(int energia);
+    
+    void setFila(int fila);
+    
+    void setColumna(int columna);
     
     void mostrar();
 };
