@@ -9,6 +9,7 @@ void ElementalAire::alimentar() {
 }
 
 void ElementalAire::atacar(Personaje* enemigos[MAX_PERSONAJES]) {
+    cout << "ATAQUE DE ELEMENTAL DE AIRE" << endl;
     if (this->energia >= ENERGIA_ATAQUE_AIRE) {
         for (int i = 0; i < MAX_PERSONAJES; i++) {
             float danio = DANIO_AIRE;
@@ -37,6 +38,7 @@ void ElementalAire::atacar(Personaje* enemigos[MAX_PERSONAJES]) {
 }
 
 void ElementalAire::defender(Personaje* aliados[MAX_PERSONAJES]) {
+    cout << "DEFENSA DE ELEMENTAL DE AIRE" << endl;
     if (this->energia >= ENERGIA_DEFENSA_AIRE) {
         cout << "\tIngrese las coordenadas de la casilla a la que desea desplazarse: " << endl;
         cout << "\t\tFila: ";
