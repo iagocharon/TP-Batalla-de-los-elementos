@@ -70,5 +70,8 @@ void ElementalAgua::defender(Personaje* aliados[MAX_PERSONAJES]) {
             }
         }
     }
+    else {
+        cout << "\tNo tiene energia suficiente para defender." << endl;
+    }
 }
 

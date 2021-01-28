@@ -54,4 +54,7 @@ void ElementalAire::defender(Personaje* aliados[MAX_PERSONAJES]) {
             cin >> this->columna;
         }
     }
+    else {
+        cout << "\tNo tiene energia suficiente para defender." << endl;
+    }
 }

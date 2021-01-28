@@ -52,6 +52,6 @@ void ElementalFuego::defender(Personaje* aliados[MAX_PERSONAJES]) {
         this->energia -= ENERGIA_DEFENSA_FUEGO;
     }
     else {
-        cout << "\tNo tiene energia suficiente para atacar." << endl;
+        cout << "\tNo tiene energia suficiente para defender." << endl;
     }
 }
