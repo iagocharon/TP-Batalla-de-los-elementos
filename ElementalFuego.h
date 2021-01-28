@@ -6,7 +6,12 @@
 
 using namespace std;
 
-const int AUMENTO_ENERGIA_FUEGO = 15;
+#define AUMENTO_ENERGIA_FUEGO 15
+#define ENERGIA_ATAQUE_FUEGO 5
+#define DANIO_FUEGO 20
+#define MODIFICADOR_FUEGO 10
+#define ENERGIA_DEFENSA_FUEGO 10
+#define RECUPERACION_FUEGO 10
 
 class ElementalFuego: public Personaje{
 public:
@@ -17,6 +22,10 @@ public:
     // PRE: -
     // POS: Notifica al usuario cómo fue alimentado el Personaje y aumenta la energía en AUMENTO_ENERGIA_FUEGO
     void alimentar();
+    
+    void atacar(Personaje* enemigos[MAX_PERSONAJES]);
+    
+    void defender(Personaje* aliados[MAX_PERSONAJES]);
 };
 
 
