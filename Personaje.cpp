@@ -1,6 +1,6 @@
 #include "Personaje.h"
 
-Personaje::Personaje(string nombre, string elemento, int escudo, int vida) {
+Personaje::Personaje(string nombre, string elemento, int escudo, float vida) {
     this->nombre = nombre;
     this->elemento = elemento;
     this->escudo = escudo;
