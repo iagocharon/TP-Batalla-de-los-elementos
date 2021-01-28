@@ -7,6 +7,7 @@
 
 #define TOPE_ENERGIA 20
 #define MAX_PERSONAJES 3
+#define MAX_TABLERO 8
 #define ELEMENTO_TIERRA "Tierra"
 #define ELEMENTO_AIRE "Aire"
 #define ELEMENTO_AGUA "Agua"
@@ -73,6 +74,8 @@ public:
     void mostrar();
     
     virtual void atacar(Personaje* enemigos[MAX_PERSONAJES]) = 0;
+    
+    virtual void defender(Personaje* aliados[MAX_PERSONAJES]) = 0;
 };
 
 #endif //TP2_PERSONAJE_H
