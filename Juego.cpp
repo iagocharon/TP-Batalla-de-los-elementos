@@ -64,11 +64,15 @@ void Juego::seleccionarPersonaje() {
     cin >> nombre;
     Personaje* auxiliar = this->personajes->buscar(nombre)->getDato();
     if (this->turno == 1) {
-        this->personajesJugador1.push_back(auxiliar);
+        for (int i = 0; i < MAX_PERSONAJES; i++) {
+            personajesJugador1[i] = auxiliar;
+        }
         this->turno = 2;
     }
     else {
-        this->personajesJugador1.push_back(auxiliar);
+        for (int i = 0; i < MAX_PERSONAJES; i++) {
+            personajesJugador1[i] = auxiliar;
+        }
         this->turno = 1;
     }
     personajes->eliminar(nombre);

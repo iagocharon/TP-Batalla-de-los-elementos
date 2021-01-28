@@ -2,7 +2,6 @@
 #define Juego_hpp
 
 #include <iostream>
-#include <vector>
 #include <stdlib.h>
 #include <time.h>
 #include <fstream>
@@ -10,6 +9,10 @@
 #include "Personaje.h"
 #include "ABB.hpp"
 #include "Casillero.hpp"
+#include "ElementalAgua.h"
+#include "ElementalAire.h"
+#include "ElementalFuego.h"
+#include "ElementalTierra.h"
 
 #define MAX_PERSONAJES 3
 #define MAX_FILAS 8
@@ -26,8 +29,8 @@ using namespace std;
 
 class Juego {
 private:
-    vector<Personaje*> personajesJugador1;
-    vector<Personaje*> personajesJugador2;
+    Personaje* personajesJugador1[MAX_PERSONAJES];
+    Personaje* personajesJugador2[MAX_PERSONAJES];
     ABB* personajes;
     int eleccion;
     int turno; //1 Jugador1 y 2 Jugador2.
