@@ -4,6 +4,11 @@
 #include <iostream>
 #include "Personaje.h"
 
+#define ENERGIA_ATAQUE_AIRE 8
+#define DANIO_AIRE 15
+#define ENERGIA_DEFENSA_AIRE 15
+#define MODIFICADOR_AIRE 5
+
 using namespace std;
 
 class ElementalAire: public Personaje{
@@ -15,6 +20,10 @@ public:
     // PRE: -
     // POS: Notifica al usuario el estado de la alimentación del personaje
     void alimentar();
+    
+    void atacar(Personaje* enemigos[MAX_PERSONAJES]);
+    
+    void defender(Personaje* aliados[MAX_PERSONAJES]);
 };
 
 
