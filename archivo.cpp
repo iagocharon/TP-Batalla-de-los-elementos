@@ -52,6 +52,7 @@ void Archivo::cargarPersonajes(ABB* personajes) {
             else if (elemento == ELEMENTO_FUEGO) {
                 auxiliar = new ElementalFuego(nombre, elemento, escudo, vida);
             }
+            else return;
             personajes->insertar(auxiliar, this->nombre);
         }
     }
