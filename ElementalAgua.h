@@ -7,8 +7,11 @@
 
 #define AUMENTO_ENERGIA_AGUA 10
 #define TOPE_ALIMENTACIONES 3
-#define MINIMO_ENERGIA_AGUA 5
+#define ENERGIA_ATAQUE_AGUA 5
+#define ENERGIA_DEFENSA_AGUA 12
 #define DANIO_AGUA 20
+#define RECUPERACION_AGUA 50
+#define RECUPERACION_ALIADOS_AGUA 10
 #define MODIFICADOR_AGUA 10
 
 using namespace std;
@@ -28,6 +31,8 @@ public:
     void alimentar();
     
     void atacar(Personaje* enemigos[MAX_PERSONAJES]);
+    
+    void defender(Personaje* aliados[MAX_PERSONAJES]);
 };
 
 #endif //TP2_ELEMENTALAGUA_H

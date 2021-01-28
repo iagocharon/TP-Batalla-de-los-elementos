@@ -24,16 +24,16 @@ void ElementalAgua::alimentar() {
 
 void ElementalAgua::atacar(Personaje* enemigos[MAX_PERSONAJES]) {
     cout << "ATAQUE DE ELEMENTAL DE AGUA" << endl;
-    int filaObjetivo, columnaObjetivo;
-    cout << "\tIngrese las coordenadas del destino del ataque: " << endl;
-    cout << "\t\tFila: ";
-    cin >> filaObjetivo;
-    cout << "\t\tColumna: ";
-    cin >> columnaObjetivo;
-    
-    for (int i = 0; i < MAX_PERSONAJES; i++) {
-        if ((enemigos[i]->getFila() == filaObjetivo) && (enemigos[i]->getColumna() == columnaObjetivo)) {
-            if (this->energia > MINIMO_ENERGIA_AGUA) {
+    if (this->energia >= ENERGIA_ATAQUE_AGUA) {
+        int filaObjetivo, columnaObjetivo;
+        cout << "\tIngrese las coordenadas del destino del ataque: " << endl;
+        cout << "\t\tFila: ";
+        cin >> filaObjetivo;
+        cout << "\t\tColumna: ";
+        cin >> columnaObjetivo;
+        
+        for (int i = 0; i < MAX_PERSONAJES; i++) {
+            if ((enemigos[i]->getFila() == filaObjetivo) && (enemigos[i]->getColumna() == columnaObjetivo)) {
                 float danio = DANIO_AGUA;
                 if (enemigos[i]->getElemento() == ELEMENTO_FUEGO) {
                     danio += MODIFICADOR_AGUA;
@@ -51,11 +51,24 @@ void ElementalAgua::atacar(Personaje* enemigos[MAX_PERSONAJES]) {
                     danio = danio * 0.2;
                 }
                 enemigos[i]->setVida(enemigos[i]->getVida() - danio);
-                this->setEnergia(this->getEnergia() - MINIMO_ENERGIA_AGUA);
             }
-            else {
-                cout << "\tNo tiene energia suficiente para atacar." << endl;
+        }
+        this->energia -= ENERGIA_ATAQUE_AGUA;
+    }
+    else {
+        cout << "\tNo tiene energia suficiente para atacar." << endl;
+    }
+}
+
+void ElementalAgua::defender(Personaje* aliados[MAX_PERSONAJES]) {
+    cout << "DEFENSA DE ELEMENTAL DE AGUA" << endl;
+    if (this->energia >= ENERGIA_DEFENSA_AGUA) {
+        this->vida += RECUPERACION_AGUA;
+        for (int i = 0; i < MAX_PERSONAJES; i++) {
+            if (aliados[i]->getNombre() != this->nombre) {
+                aliados[i]->setVida(aliados[i]->getVida() + RECUPERACION_ALIADOS_AGUA);
             }
         }
     }
 }
+
