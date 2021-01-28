@@ -5,8 +5,8 @@
 #include <stdlib.h>
 #include <time.h>
 
-
 #define TOPE_ENERGIA 20
+#define MAX_PERSONAJES 3
 #define ELEMENTO_TIERRA "Tierra"
 #define ELEMENTO_AIRE "Aire"
 #define ELEMENTO_AGUA "Agua"
@@ -21,7 +21,7 @@ protected:
     string nombre;
     string elemento;
     int escudo;
-    int vida;
+    float vida;
     int energia;
     int fila;
     int columna;
@@ -29,7 +29,7 @@ protected:
 public:
     // PRE: Los parámetros recibidos son válidos
     // POS: Crea un personaje cargando sus atributos con lo recibido
-    Personaje(string nombre, string elemento, int escudo, int vida);
+    Personaje(string nombre, string elemento, int escudo, float vida);
 
     // PRE: -
     // POS: Alimenta al personaje, notifica al usuario
@@ -71,6 +71,8 @@ public:
     void setColumna(int columna);
     
     void mostrar();
+    
+    virtual void atacar(Personaje* enemigos[MAX_PERSONAJES]) = 0;
 };
 
 #endif //TP2_PERSONAJE_H
