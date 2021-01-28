@@ -51,6 +51,7 @@ void ElementalAgua::atacar(Personaje* enemigos[MAX_PERSONAJES]) {
                     danio = danio * 0.2;
                 }
                 enemigos[i]->setVida(enemigos[i]->getVida() - danio);
+                this->setEnergia(this->getEnergia() - MINIMO_ENERGIA_AGUA);
             }
             else {
                 cout << "\tNo tiene energia suficiente para atacar." << endl;
