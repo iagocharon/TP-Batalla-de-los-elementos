@@ -37,6 +37,7 @@ public:
     int topPrioridad();
     void push(Vertice* evaluado, int pesoAgua, int pesoAire, int pesoFuego, int pesoTierra, int iteracion);
     void pop();
+    Vertice* topAndPop();
     
     ~ColaPrioridad();
 };

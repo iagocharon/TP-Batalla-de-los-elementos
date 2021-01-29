@@ -169,6 +169,12 @@ void ColaPrioridad::pop() {
     delete auxiliar;
 }
 
+Vertice* ColaPrioridad::topAndPop() {
+    Vertice* auxiliar = this->primero->getVertice();
+    this->pop();
+    return auxiliar;
+}
+
 ColaPrioridad::~ColaPrioridad() {
     while(!vacia()){
         this->pop();
