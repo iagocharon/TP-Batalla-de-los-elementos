@@ -1,7 +1,3 @@
-//
-// Created by nicolas on 26/11/20.
-//
-
 #ifndef TP2_ARCHIVO_H
 #define TP2_ARCHIVO_H
 
@@ -14,7 +10,7 @@
 
 using namespace std;
 
-class Archivo {
+class ArchivoPersonaje {
 
     ifstream archivo;
     bool apertura;
@@ -26,7 +22,7 @@ class Archivo {
 public:
     // PRE: -
     // POS: Abre un archivo y lo guarda en caso de ser posible, carga el estado de apertura
-    Archivo(string ruta);
+    ArchivoPersonaje(string ruta);
 
     // PRE: -
     // POS: true si la apertura fue válida, false de otro modo
@@ -42,7 +38,7 @@ public:
 
     // PRE: -
     // POS: Cierra el archivo
-    ~Archivo();
+    ~ArchivoPersonaje();
 };
 
 

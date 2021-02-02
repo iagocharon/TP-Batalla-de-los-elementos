@@ -1,44 +1,41 @@
-#include"Archivo.h"
+#include "ArchivoPersonajes.h"
 
 using namespace std;
 
 
-Archivo::Archivo(string ruta) {
-
-    archivo.open(ruta);
-    if (!archivo) {
-        cout << "El archivo no pudo ser abierto" << endl;
-        apertura = false;
-    } else
-        apertura = true;
-
+ArchivoPersonaje::ArchivoPersonaje(string ruta) {
+    this->archivo.open(ruta);
+    if (!this->archivo) {
+        cout << "Error al abrir archivo de personajes." << endl;
+        this->apertura = false;
+    }
+    else {
+        this->apertura = true;
+    }
 }
 
 
-bool Archivo::aperturaValida() {
-
-    return apertura;
+bool ArchivoPersonaje::aperturaValida() {
+    return this->apertura;
 }
 
 
-void Archivo::leerLinea() {
-
+void ArchivoPersonaje::leerLinea() {
     string escudoLeido;
     string vidaLeida;
 
-    getline(archivo, nombre, ',');
-    getline(archivo, escudoLeido, ',');
+    getline(this->archivo, this->nombre, ',');
+    getline(this->archivo, escudoLeido, ',');
     this->escudo = (int)stoi(escudoLeido);
-    getline(archivo, vidaLeida);
+    getline(this->archivo, vidaLeida);
     this->vida = (int)stoi(vidaLeida);
 }
 
 
-void Archivo::cargarPersonajes(ABB* personajes) {
-    if (aperturaValida()) {
+void ArchivoPersonaje::cargarPersonajes(ABB* personajes) {
+    if (this->aperturaValida()) {
         while(getline(archivo, elemento, ',')) {
             leerLinea();
-//            personaje = util.establecerTipo(elemento, nombre, escudo, vida);
             Personaje* auxiliar;
             if (elemento == ELEMENTO_AGUA) {
                 auxiliar = new ElementalAgua(nombre, elemento, escudo, vida);
@@ -58,7 +55,6 @@ void Archivo::cargarPersonajes(ABB* personajes) {
     }
 }
 
-Archivo::~Archivo() {
-
-    archivo.close();
+ArchivoPersonaje::~ArchivoPersonaje() {
+    this->archivo.close();
 }
