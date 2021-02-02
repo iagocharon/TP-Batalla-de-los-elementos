@@ -13,16 +13,20 @@ using namespace std;
 
 class ElementalAire: public Personaje{
 public:
+      // PRE: Los parámetros recibidos son válidos
+      // POS: Crea un ElementalAire cargando sus atributos
+      ElementalAire(string nombre, string elemento, int escudo, int vida);
+
     // PRE: Los parámetros recibidos son válidos
-    // POS: Crea un ElementalAire cargando sus atributos
-    ElementalAire(string nombre, string elemento, int escudo, int vida);
+    // POS: Crea un ElementalFuego cargando sus atributos (se utiliza al cargar partida);
+    ElementalAire(string nombre, string elemento, int escudo, int vida, int energia, int fila, int columna);
 
     // PRE: -
     // POS: Notifica al usuario el estado de la alimentación del personaje
     void alimentar();
-    
+
     void atacar(Personaje* enemigos[MAX_PERSONAJES]);
-    
+
     void defender(Personaje* aliados[MAX_PERSONAJES]);
 };
 

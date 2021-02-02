@@ -1,8 +1,16 @@
 #include "ElementalTierra.h"
 
-ElementalTierra::ElementalTierra(string nombre, string elemento, int escudo, int vida) : Personaje(nombre, elemento, escudo, vida) {
-    this->bonificacion = false;
-}
+
+ElementalTierra::ElementalTierra(string nombre, string elemento, int escudo, int vida)
+ : Personaje(nombre, elemento, escudo, vida){
+   this->bonificacion = false;
+ }
+
+ElementalTierra::ElementalTierra(string nombre, string elemento, int escudo, int vida, int energia, int fila, int columna)
+ : Personaje(nombre, elemento, escudo, vida, energia, fila, columna){
+   this->bonificacion = false;
+ }
+
 
 bool ElementalTierra::getBonificacion() {
     return this->bonificacion;

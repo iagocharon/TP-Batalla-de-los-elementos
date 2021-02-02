@@ -1,140 +1,156 @@
 #include "Juego.hpp"
 
 Juego::Juego() {
-    this->personajes = NULL;
-    this->eleccion = 0;
+    jugador1 = nullptr;
+    jugador2 = nullptr;
+    personajes = nullptr;
     srand(unsigned(time(NULL)));
-    this->turno = 1 + rand()%2;
+    turno = 1 + rand()%2;
 }
 
 Juego::Juego(ABB* personajes) {
+    jugador1 = nullptr;
+    jugador2 = nullptr;
     this->personajes = personajes;
-    this->eleccion = 0;
+    salir = false;
     srand(unsigned(time(NULL)));
     this->turno = 1 + rand()%2;
 }
 
-void Juego::mostrarMenu() {
-    cout << "Seleccione una opcion:" << endl;
-    cout << "\t1- Buscar por nombre los detalles de un personaje en particular." << endl;
-    cout << "\t2- Mostrar todos los nombres de los personajes." << endl;
-    cout << "\t3- Seleccionar personaje." << endl;
-    cout << "\t4- Salir." << endl;
-    cout << "\n\tEleccion: ";
-    cin >> this->eleccion;
-    
-    while (this->eleccion < 1 || this->eleccion > 4) {
-        cout << "\tIngrese una opcion valida: ";
-        cin >> this->eleccion;
+Jugador* Juego::getJugador1(){
+    return jugador1;
+}
+
+Jugador* Juego::getJugador2(){
+    return jugador2;
+}
+
+void Juego::partidaCargar(){
+    ifstream partida(PARTIDA);
+
+    if(!partida.is_open())
+    {
+        cout << "No se encontro una partida guardada" << endl;
+        return;
     }
-}
 
-void Juego::accionMenu() {
-    switch (this->eleccion) {
-        case 1:
-            this->buscar();
-            break;
-        case 2:
-            this->mostrarPersonajes();
-            break;
-        case 3:
-            
-        default:
-            break;
-    }
-}
+    string elemento = "";
+    string nombre = "";
+    string escudo = "";
+    string vida = "";
+    string energia = "";
+    string fila = "";
+    string columna = "";
+    string turno = "";
+    Personaje* personaje = nullptr;
 
-void Juego::buscar() {
-    cout << "BUSCANDO PERSONAJE" << endl;
-    cout << "\tIngrese el nombre del personaje a buscar: ";
-    string nombre;
-    cin >> nombre;
-    this->personajes->buscar(nombre)->getDato()->mostrar();
-}
 
-void Juego::mostrarPersonajes() {
-    cout << "MOSTRANDO PERSONAJES" << endl;
-    this->personajes->mostrarEnOrden();
-}
+    getline(partida, turno, '\n');
+    this->turno = stoi(turno);
 
-void Juego::seleccionarPersonaje() {
-    cout << "SELECCION DE PERSONAJE" << endl;
-    cout << "\tIngrese el nombre del personaje seleccionado: ";
-    string nombre;
-    cin >> nombre;
-    Personaje* auxiliar = this->personajes->buscar(nombre)->getDato();
-    if (this->turno == 1) {
-        for (int i = 0; i < MAX_PERSONAJES; i++) {
-            personajesJugador1[i] = auxiliar;
+    for(int i = 0; i < 2*MAX_PERSONAJES; i++){
+        getline(partida, elemento, ',');
+        getline(partida, nombre, ',');
+        getline(partida, escudo, ',');
+        getline(partida, vida, ',');
+        getline(partida, energia, ',');
+        getline(partida, fila, ',');
+        getline(partida, columna, '\n');
+
+        if(elemento == ELEMENTO_AIRE)
+        {
+            personaje = new ElementalAire(nombre, elemento, stoi(escudo), stoi(vida), stoi(energia), stoi(fila),
+                    stoi(columna));
         }
-        this->turno = 2;
-    }
-    else {
-        for (int i = 0; i < MAX_PERSONAJES; i++) {
-            personajesJugador1[i] = auxiliar;
+        else if(elemento == ELEMENTO_AGUA)
+        {
+            personaje = new ElementalAgua(nombre, elemento, stoi(escudo), stoi(vida), stoi(energia), stoi(fila),
+                    stoi(columna));
         }
-        this->turno = 1;
+        else if(elemento == ELEMENTO_TIERRA)
+        {
+            personaje = new ElementalTierra(nombre, elemento, stoi(escudo), stoi(vida), stoi(energia), stoi(fila),
+                    stoi(columna));
+        }
+        else
+        {
+            personaje = new ElementalFuego(nombre, elemento, stoi(escudo), stoi(vida), stoi(energia), stoi(fila),
+                    stoi(columna));
+        }
+
+        if(i < MAX_PERSONAJES){
+            jugador1->setPersonaje(i, personaje);
+        }else{
+            jugador2->setPersonaje(i-MAX_PERSONAJES, personaje);
+        }
     }
+    partida.close();
+    cout << "Partida cargada" << endl;
+}
+
+void Juego::seleccionJugador1(string nombre){
+    cout << "JUGADOR 1." << jugador1->getCantidadPersonajes()+1 << "/" << MAX_PERSONAJES << endl;
+    cout << "\nIngrese el nombre del personaje a seleccionar: ";
+    cin >> nombre;
+    cout << endl;
+    jugador1->setPersonaje(jugador1->getCantidadPersonajes(), personajes->buscar(nombre)->getDato());
     personajes->eliminar(nombre);
+    system("CLS");
 }
 
-void Juego::cargarTablero() {
-    ifstream archivo(NOMBRE_TABLERO);
-    if (!(archivo.fail())) {
-        for (int i = 0; i < MAX_FILAS; i++) {
-            for (int j = 0; j < MAX_COLUMNAS; j++) {
-                string letra;
-                getline(archivo, letra, ',');
-                if (letra == MONTANIA) {
-                    tablero[i][j] = new CasilleroMontania();
-                }
-                else if (letra == PRECIPICIO) {
-                    tablero[i][j] = new CasilleroPrecipicio();
-                }
-                else if (letra == LAGO) {
-                    tablero[i][j] = new CasilleroLago();
-                }
-                else if (letra == VOLCAN) {
-                    tablero[i][j] = new CasilleroVolcan();
-                }
-                else if (letra == CAMINO) {
-                    tablero[i][j] = new CasilleroCamino();
-                }
-                else if (letra == VACIO) {
-                    tablero[i][j] = new CasilleroVacio();
-                }
-            }
-        }
+void Juego::seleccionJugador2(string nombre){
+    cout << "JUGADOR 2." << jugador2->getCantidadPersonajes()+1 << "/" << MAX_PERSONAJES << endl;
+    cout << "\nIngrese el nombre del personaje a seleccionar: ";
+    cin >> nombre;
+    cout << endl;
+    jugador2->setPersonaje(jugador2->getCantidadPersonajes(), personajes->buscar(nombre)->getDato());
+    personajes->eliminar(nombre);
+    system("CLS");
+}
+
+void Juego::seleccionPersonajes(){
+    string nombre = "";
+
+    if(turno == 1){
+        cout << "Jugador 1\n" << endl;
+        seleccionJugador1(nombre);
+    }else{
+        cout << "Jugador 2\n" << endl;
+        seleccionJugador1(nombre);
     }
 }
 
-void Juego::mostrarTablero() {
-    cout << "________" << endl;
-    for (int i = 0; i < MAX_FILAS; i++) {
-        cout << "|";
-        for (int j = 0; j < MAX_COLUMNAS; j++) {
-            cout << " ";
-            if (tablero[i][j]->getNombre() == "Montania") {
-                cout << MONTANIA;
-            }
-            else if (tablero[i][j]->getNombre() == "Precipicio") {
-                cout << PRECIPICIO;
-            }
-            else if (tablero[i][j]->getNombre() == "Lago") {
-                cout << LAGO;
-            }
-            else if (tablero[i][j]->getNombre() == "Volcan") {
-                cout << VOLCAN;
-            }
-            else if (tablero[i][j]->getNombre() == "Camino") {
-                cout << CAMINO;
-            }
-            else if (tablero[i][j]->getNombre() == "Vacio") {
-                cout << VACIO;
-            }
-            cout << " ";
-        }
-        cout << "|" << endl;
-    }
-    cout << "¯¯¯¯¯¯¯¯";
+void Juego::setSalir(bool salir){
+    this->salir = salir;
 }
+
+ABB* Juego::getPersonajes(){
+    return personajes;
+}
+
+void Juego::partidaGuardar(){
+    ofstream partida(PARTIDA);
+    partida << turno << "\n";
+    for(int i = 0; i <= 2; i++){
+        partida << jugador1->getPersonajes()[i]->getElemento() << ",";
+        partida << jugador1->getPersonajes()[i]->getNombre() << ",";
+        partida << jugador1->getPersonajes()[i]->getEscudo() << ",";
+        partida << jugador1->getPersonajes()[i]->getVida() << ",";
+        partida << jugador1->getPersonajes()[i]->getEnergia() << ",";
+        partida << jugador1->getPersonajes()[i]->getFila() << ",";
+        partida << jugador1->getPersonajes()[i]->getColumna() << "\n";
+    }
+
+    for(int i = 0; i <= 2; i++){
+        partida << jugador2->getPersonajes()[i]->getElemento() << ",";
+        partida << jugador2->getPersonajes()[i]->getNombre() << ",";
+        partida << jugador2->getPersonajes()[i]->getEscudo() << ",";
+        partida << jugador2->getPersonajes()[i]->getVida() << ",";
+        partida << jugador2->getPersonajes()[i]->getEnergia() << ",";
+        partida << jugador2->getPersonajes()[i]->getFila() << ",";
+        partida << jugador2->getPersonajes()[i]->getColumna() << "\n";
+    }
+    partida.close();
+}
+
+

@@ -1,6 +1,6 @@
 #include "Personaje.h"
 
-Personaje::Personaje(string nombre, string elemento, int escudo, float vida) {
+Personaje::Personaje(string nombre, string elemento, int escudo, int vida) {
     this->nombre = nombre;
     this->elemento = elemento;
     this->escudo = escudo;
@@ -9,6 +9,16 @@ Personaje::Personaje(string nombre, string elemento, int escudo, float vida) {
     this->energia = rand() % TOPE_ENERGIA;
     this->fila = -1;
     this->columna = -1;
+}
+
+Personaje::Personaje(string nombre, string elemento, int escudo, int vida, int energia, int fila, int columna) {
+    this->nombre = nombre;
+    this->elemento = elemento;
+    this->escudo = escudo;
+    this->vida = vida;
+    this->energia = energia;
+    this->fila = fila;
+    this->columna = columna;
 }
 
 string Personaje::getNombre() {

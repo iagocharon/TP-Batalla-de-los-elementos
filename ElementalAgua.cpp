@@ -1,7 +1,13 @@
 #include "ElementalAgua.h"
 
-ElementalAgua::ElementalAgua(string nombre, string elemento, int escudo, float vida) : Personaje(nombre, elemento, escudo, vida) {
-    this->vecesAlimentado = 0;
+ElementalAgua::ElementalAgua(string nombre, string elemento, int escudo, int vida)
+ : Personaje(nombre, elemento, escudo, vida) {
+    vecesAlimentado = 0;
+}
+
+ElementalAgua::ElementalAgua(string nombre, string elemento, int escudo, int vida, int energia, int fila, int columna)
+ : Personaje(nombre, elemento, escudo, vida, energia, fila, columna){
+    vecesAlimentado = 0;
 }
 
 void ElementalAgua::alimentar() {
@@ -31,7 +37,7 @@ void ElementalAgua::atacar(Personaje* enemigos[MAX_PERSONAJES]) {
         cin >> filaObjetivo;
         cout << "\t\tColumna: ";
         cin >> columnaObjetivo;
-        
+
         for (int i = 0; i < MAX_PERSONAJES; i++) {
             if ((enemigos[i]->getFila() == filaObjetivo) && (enemigos[i]->getColumna() == columnaObjetivo)) {
                 float danio = DANIO_AGUA;
@@ -74,4 +80,3 @@ void ElementalAgua::defender(Personaje* aliados[MAX_PERSONAJES]) {
         cout << "\tNo tiene energia suficiente para defender." << endl;
     }
 }
-

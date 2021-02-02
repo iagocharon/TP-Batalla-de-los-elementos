@@ -23,15 +23,19 @@ private:
 public:
     // PRE: Los parámetros recibidos son válidos
     // POS: Crea un ElementalAgua cargando sus atributos
-    ElementalAgua(string nombre, string elemento, int escudo, float vida);
+    ElementalAgua(string nombre, string elemento, int escudo, int vida);
+
+    // PRE: Los parámetros recibidos son válidos
+    // POS: Crea un ElementalFuego cargando sus atributos (se utiliza al cargar partida);
+    ElementalAgua(string nombre, string elemento, int escudo, int vida, int energia, int fila, int columna);
 
     // PRE: -
     // POS: Notifica al usuario cómo fue alimentado el Personaje y aumenta la energía en AUMENTO_ENERGIA_AGUA
     //      En caso de ser efectuada la alimentación aumenta en 1 las vecesAlimentado
     void alimentar();
-    
+
     void atacar(Personaje* enemigos[MAX_PERSONAJES]);
-    
+
     void defender(Personaje* aliados[MAX_PERSONAJES]);
 };
 

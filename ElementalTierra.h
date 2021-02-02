@@ -22,16 +22,20 @@ public:
     // POS: Crea un ElementalTierra cargando sus atributos
     ElementalTierra(string nombre,string elemento, int escudo, int vida);
 
+    // PRE: Los parámetros recibidos son válidos
+    // POS: Crea un ElementalFuego cargando sus atributos (se utiliza al cargar partida);
+    ElementalTierra(string nombre, string elemento, int escudo, int vida, int energia, int fila, int columna);
+
     bool getBonificacion();
-    
+
     void setBonificacion(bool bonificacion);
-    
+
     // PRE: -
     // POS: Notifica al usuario cómo fue alimentado el Personaje y aumenta la energía en AUMENTO_ENERGIA_TIERRA
     void alimentar();
-    
+
     void atacar(Personaje* enemigos[MAX_PERSONAJES]);
-    
+
     void defender(Personaje* aliados[MAX_PERSONAJES]);
 };
 

@@ -19,12 +19,16 @@ public:
     // POS: Crea un ElementalFuego cargando sus atributos
     ElementalFuego(string nombre, string elemento, int escudo, int vida);
 
+    // PRE: Los parámetros recibidos son válidos
+    // POS: Crea un ElementalFuego cargando sus atributos (se utiliza al cargar partida);
+    ElementalFuego(string nombre, string elemento, int escudo, int vida, int energia, int fila, int columna);
+
     // PRE: -
     // POS: Notifica al usuario cómo fue alimentado el Personaje y aumenta la energía en AUMENTO_ENERGIA_FUEGO
     void alimentar();
-    
+
     void atacar(Personaje* enemigos[MAX_PERSONAJES]);
-    
+
     void defender(Personaje* aliados[MAX_PERSONAJES]);
 };
 
