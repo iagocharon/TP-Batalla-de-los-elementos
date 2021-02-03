@@ -3,7 +3,7 @@
 #include "ejecucion.h"
 #include "Menu.h"
 #include "Accion.h"
-#include "Archivo.h"
+#include "ArchivoPersonajes.h"
 
 void ejecucion(int tipo) {
 
@@ -16,7 +16,7 @@ void ejecucion(int tipo) {
     else
         ruta = "personajes.csv";
 
-    Archivo archivo(ruta);
+    ArchivoPersonaje archivo(ruta);
     ABB* personajes = new ABB();
 
     if (archivo.aperturaValida()) {

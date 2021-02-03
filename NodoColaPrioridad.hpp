@@ -2,7 +2,7 @@
 #define NodoColaPrioridad_hpp
 
 #include <iostream>
-#include "Vertice.hpp"
+#include "DatosGrafo.hpp"
 
 class NodoColaPrioridad {
 private:

@@ -19,7 +19,7 @@ private:
 public:
     Jugador();
     vector<Personaje*> getPersonajes();
-    vector<Personaje*> setPersonaje(int posicion, Personaje* personaje);
+    void setPersonaje(int posicion, Personaje* personaje);
     int getCantidadPersonajes();
     void incrementarCantidadPersonajes();
 };

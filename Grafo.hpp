@@ -4,9 +4,10 @@
 #include <iostream>
 #include <list>
 #include "ColaPrioridad.hpp"
-#include "Vertice.hpp"
-#include "Arista.hpp"
+#include "DatosGrafo.hpp"
+#include "DatosGrafo.hpp"
 #include "Etiqueta.hpp"
+#include "Casillero.hpp"
 
 #define CRITERIO_AGUA 1
 #define CRITERIO_AIRE 2
@@ -38,9 +39,9 @@ private:
 public:
     Grafo();
     
-    void agregarVertice(string nombre);
-    Vertice* getVertice(string nombre);
-    bool existeVertice(string nombre);
+    void agregarVertice(Casillero* casillero);
+    Vertice* getVertice(Casillero* casillero);
+    bool existeVertice(Casillero* casillero);
     void agregarArista(Vertice* inicio, Vertice* destino, int costoAgua, int costoAire, int costoFuego, int costoTierra);
     int getCostoAgua(Vertice* incio, Vertice* destino);
     int getCostoAire(Vertice* incio, Vertice* destino);

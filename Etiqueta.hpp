@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <list>
-#include "Vertice.hpp"
+#include "DatosGrafo.hpp"
 
 #define INFINITO 99999
 

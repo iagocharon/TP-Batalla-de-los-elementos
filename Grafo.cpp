@@ -7,8 +7,8 @@ Grafo::Grafo() {
     this->tamanio = 0;
 }
 
-void Grafo::agregarVertice(string nombre) {
-    Vertice* ingresante = new Vertice(nombre);
+void Grafo::agregarVertice(Casillero* casillero) {
+    Vertice* ingresante = new Vertice(casillero);
     if (!this->primero) {
         this->primero = ingresante;
         this->ultimo = ingresante;
@@ -17,13 +17,13 @@ void Grafo::agregarVertice(string nombre) {
     }
     this->ultimo->setSiguiente(ingresante);
     this->ultimo = ingresante;
-    tamanio++;
+    this->tamanio++;
 }
 
-Vertice* Grafo::getVertice(string nombre) {
+Vertice* Grafo::getVertice(Casillero* casillero) {
     Vertice* auxiliar = this->primero;
     for (int i = 0; i < this->tamanio; i++) {
-        if (auxiliar->getSiguiente()->getNombre() == nombre) {
+        if (auxiliar->getSiguiente()->getCasillero() == casillero) {
             return auxiliar;
         }
         auxiliar = auxiliar->getSiguiente();
@@ -31,8 +31,8 @@ Vertice* Grafo::getVertice(string nombre) {
     return NULL;
 }
 
-bool Grafo::existeVertice(string nombre) {
-    if (this->getVertice(nombre) != NULL) {
+bool Grafo::existeVertice(Casillero* casillero) {
+    if (this->getVertice(casillero) != NULL) {
         return true;
     }
     else {

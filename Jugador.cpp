@@ -8,17 +8,17 @@ Jugador::Jugador(){
 }
 
 vector<Personaje*> Jugador::getPersonajes(){
-    return personajesJugador;
+    return this->personajesJugador;
 }
 
-vector<Personaje*> Jugador::setPersonaje(int posicion, Personaje* personaje){
-    personajesJugador[posicion] = personaje;
+void Jugador::setPersonaje(int posicion, Personaje* personaje){
+    this->personajesJugador[posicion] = personaje;
 }
 
 int Jugador::getCantidadPersonajes(){
-    return cantidadPersonajes;
+    return this->cantidadPersonajes;
 }
 
 void Jugador::incrementarCantidadPersonajes(){
-    cantidadPersonajes++;
+    this->cantidadPersonajes++;
 }
