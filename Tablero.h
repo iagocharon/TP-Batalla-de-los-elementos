@@ -6,6 +6,7 @@
 #include <fstream>
 #include "Jugador.h"
 #include "Juego.hpp"
+#include "Grafo.hpp"
 
 #define MAX_FILAS 8
 #define MAX_COLUMNAS 8
@@ -23,8 +24,9 @@ class Tablero {
 private:
     Casillero* tablero[MAX_FILAS][MAX_COLUMNAS];
 public:
-    void cargarTablero();
+    Tablero();
     void mostrarTablero(Juego* juego);
+    void cargarGrafo(Grafo* grafo);
 private:
     void mostrarPersonajeJugador1(int columna, int fila, char elemento);
     void mostrarPersonajeJugador2(int columna, int fila, char elemento);

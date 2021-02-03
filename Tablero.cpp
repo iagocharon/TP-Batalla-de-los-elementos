@@ -1,6 +1,6 @@
 #include "Tablero.h"
 
-void Tablero::cargarTablero() {
+Tablero::Tablero() {
     ifstream archivo(NOMBRE_TABLERO);
     if (!archivo.is_open()) {
         cout << "Error al cargar el tablero\n" << endl;
@@ -12,22 +12,22 @@ void Tablero::cargarTablero() {
             string letra;
             getline(archivo, letra, ',');
             if (letra == MONTANIA) {
-                tablero[i][j] = new CasilleroMontania();
+                this->tablero[i][j] = new CasilleroMontania();
             }
             else if (letra == PRECIPICIO) {
-                tablero[i][j] = new CasilleroPrecipicio();
+                this->tablero[i][j] = new CasilleroPrecipicio();
             }
             else if (letra == LAGO) {
-                tablero[i][j] = new CasilleroLago();
+                this->tablero[i][j] = new CasilleroLago();
             }
             else if (letra == VOLCAN) {
-                tablero[i][j] = new CasilleroVolcan();
+                this->tablero[i][j] = new CasilleroVolcan();
             }
             else if (letra == CAMINO) {
-                tablero[i][j] = new CasilleroCamino();
+                this->tablero[i][j] = new CasilleroCamino();
             }
             else{
-                tablero[i][j] = new CasilleroVacio();
+                this->tablero[i][j] = new CasilleroVacio();
             }
         }
     }
@@ -42,9 +42,10 @@ void Tablero::mostrarTablero(Juego* juego){
         for (int j = 0; j < MAX_COLUMNAS; j++) {
             personaje = personajeJugado(j, i, juego, jugador);
             if (jugador == 1) {
-                mostrarPersonajeJugador1(j, i, personaje);
-            } else {
-                mostrarPersonajeJugador2(j, i, personaje);
+                this->mostrarPersonajeJugador1(j, i, personaje);
+            }
+            else {
+                this->mostrarPersonajeJugador2(j, i, personaje);
             }
         }
         cout << "\n";
@@ -53,43 +54,43 @@ void Tablero::mostrarTablero(Juego* juego){
 
 void Tablero::mostrarPersonajeJugador1(int columna, int fila, char elemento){
     if (tablero[columna][fila]->getNombre() == "Montania") {
-        printf("\033[1;43;107m %c \033[0m");
+        printf("\033[1;43;107m %c \033[0m", elemento);
     }
     else if (tablero[columna][fila]->getNombre() == "Precipicio") {
-        printf("\033[1;100;107m %c \033[0m");
+        printf("\033[1;100;107m %c \033[0m", elemento);
     }
     else if (tablero[columna][fila]->getNombre() == "Lago") {
-        printf("\033[1;46;107m %c \033[0m");
+        printf("\033[1;46;107m %c \033[0m", elemento);
     }
     else if (tablero[columna][fila]->getNombre() == "Volcan") {
-        printf("\033[1;41;107m %c \033[0m");
+        printf("\033[1;41;107m %c \033[0m", elemento);
     }
     else if (tablero[columna][fila]->getNombre() == "Camino") {
-        printf("\033[1;42;107m %c \033[0m");
+        printf("\033[1;42;107m %c \033[0m", elemento);
     }
     else{
-        printf("\033[1;45;107m %c \033[0m");
+        printf("\033[1;45;107m %c \033[0m", elemento);
     }
 }
 
 void Tablero::mostrarPersonajeJugador2(int columna, int fila, char elemento){
     if (tablero[columna][fila]->getNombre() == "Montania") {
-        printf("\033[1;43;30m %c \033[0m");
+        printf("\033[1;43;30m %c \033[0m", elemento);
     }
     else if (tablero[columna][fila]->getNombre() == "Precipicio") {
-        printf("\033[1;100;30m %c \033[0m");
+        printf("\033[1;100;30m %c \033[0m", elemento);
     }
     else if (tablero[columna][fila]->getNombre() == "Lago") {
-        printf("\033[1;46;30m %c \033[0m");
+        printf("\033[1;46;30m %c \033[0m", elemento);
     }
     else if (tablero[columna][fila]->getNombre() == "Volcan") {
-        printf("\033[1;41;30m %c \033[0m");
+        printf("\033[1;41;30m %c \033[0m", elemento);
     }
     else if (tablero[columna][fila]->getNombre() == "Camino") {
-        printf("\033[1;42;30m %c \033[0m");
+        printf("\033[1;42;30m %c \033[0m", elemento);
     }
     else{
-        printf("\033[1;45;30m %c \033[0m");
+        printf("\033[1;45;30m %c \033[0m", elemento);
     }
 }
 
@@ -122,4 +123,30 @@ char Tablero::elementoPersonaje(Personaje* personaje){
         return 'W';
     }
     return 'F';
+}
+
+void Tablero::cargarGrafo(Grafo* grafo) {
+    for (int i = 0; i < MAX_FILAS; i++) {
+        for (int j = 0; j < MAX_COLUMNAS; j++) {
+            grafo->agregarVertice(this->tablero[i][j]);
+        }
+    }
+    for (int i = 0; i < MAX_FILAS; i++) {
+        for (int j = 0; j < MAX_COLUMNAS; j++) {
+            if (i < (MAX_FILAS - 1)) {
+                grafo->agregarArista(grafo->getVertice(tablero[i][j]), grafo->getVertice(tablero[i+1][j]), grafo->getVertice(tablero[i+1][j])->getCasillero()->getCostoAgua(), grafo->getVertice(tablero[i+1][j])->getCasillero()->getCostoAire(), grafo->getVertice(tablero[i+1][j])->getCasillero()->getCostoFuego(), grafo->getVertice(tablero[i+1][j])->getCasillero()->getCostoTierra());
+            }
+            if (i > 0) {
+                grafo->agregarArista(grafo->getVertice(tablero[i][j]), grafo->getVertice(tablero[i-1][j]), grafo->getVertice(tablero[i-1][j])->getCasillero()->getCostoAgua(), grafo->getVertice(tablero[i-1][j])->getCasillero()->getCostoAire(), grafo->getVertice(tablero[i-1][j])->getCasillero()->getCostoFuego(), grafo->getVertice(tablero[i-1][j])->getCasillero()->getCostoTierra());
+            }
+            if (j < (MAX_COLUMNAS - 1)) {
+                grafo->agregarArista(grafo->getVertice(tablero[i][j]), grafo->getVertice(tablero[i][j+1]), grafo->getVertice(tablero[i][j+1])->getCasillero()->getCostoAgua(), grafo->getVertice(tablero[i][j+1])->getCasillero()->getCostoAire(), grafo->getVertice(tablero[i][j+1])->getCasillero()->getCostoFuego(), grafo->getVertice(tablero[i][j+1])->getCasillero()->getCostoTierra());
+
+            }
+            if (j > 0) {
+                grafo->agregarArista(grafo->getVertice(tablero[i][j]), grafo->getVertice(tablero[i][j-1]), grafo->getVertice(tablero[i][j-1])->getCasillero()->getCostoAgua(), grafo->getVertice(tablero[i][j-1])->getCasillero()->getCostoAire(), grafo->getVertice(tablero[i][j-1])->getCasillero()->getCostoFuego(), grafo->getVertice(tablero[i][j-1])->getCasillero()->getCostoTierra());
+
+            }
+        }
+    }
 }
