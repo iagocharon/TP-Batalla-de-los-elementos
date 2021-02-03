@@ -1,15 +1,15 @@
-#include "MenuJuego.h"
+#include "MenuSeleccion.h"
 
-MenuJuego::MenuJuego(){}
+MenuSeleccion::MenuSeleccion(){}
 
-void MenuJuego::mostrarMenu() {
+void MenuSeleccion::mostrarMenu() {
     cout << "\t1- Buscar por nombre los detalles de un personaje en particular." << endl;
     cout << "\t2- Mostrar todos los nombres de los personajes." << endl;
     cout << "\t3- Seleccionar personaje." << endl;
     cout << "\t4- Salir." << endl;
 }
 
-void MenuJuego::accionMenu(int eleccion, Juego* juego){
+void MenuSeleccion::accionMenu(int eleccion, Juego* juego){
     system("CLS");
     switch (eleccion){
         case 1:
@@ -33,7 +33,7 @@ void MenuJuego::accionMenu(int eleccion, Juego* juego){
     }
 }
 
-void MenuJuego::buscar(ABB* personajes){
+void MenuSeleccion::buscar(ABB* personajes){
     string nombre = "";
     cout << "\tIngrese el nombre del personaje a buscar: ";
     cin >> nombre;

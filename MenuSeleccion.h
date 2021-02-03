@@ -7,9 +7,9 @@
 
 using namespace std;
 
-class MenuJuego {
+class MenuSeleccion {
 public:
-    MenuJuego();
+    MenuSeleccion();
     void mostrarMenu();
     void accionMenu(int eleccion, Juego* juego);
 
