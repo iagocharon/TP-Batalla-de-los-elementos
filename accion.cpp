@@ -4,7 +4,6 @@ Accion::Accion(int opcion, ABB* personajes) {
     elegida = opcion;
     this->personajes = personajes;
 }
-
 void Accion::determinarAccion() {
     if (elegida == AGREGAR_PERSONAJE) {
         agregarNuevo();
@@ -18,8 +17,11 @@ void Accion::determinarAccion() {
     else if (elegida == BUSCAR_POR_NOMBRE && !(personajes->vacio()))
         buscarPorNombre();
 
-    else if (elegida == ALIMENTAR_PERSONAJE && !(personajes->vacio()))
+    else if ((elegida == JUGAR_JUEGO) && (personajes->cantidadPersonajes() > PERSONAJES_MINIMOS))
         alimentarPersonaje();
+
+    else if ((elegida == JUGAR_JUEGO) && (personajes->cantidadPersonajes() <= PERSONAJES_MINIMOS))
+        cout << "Debe haber por lo menos 6 personajes para poder comenzar una partida, agregue " << PERSONAJES_MINIMOS - personajes->cantidadPersonajes() << " personajes más para comenzar." << endl;
 
     else if (elegida == SALIR);
 

@@ -33,6 +33,7 @@ void ArchivoPersonaje::leerLinea() {
 
 
 void ArchivoPersonaje::cargarPersonajes(ABB* personajes) {
+
     if (this->aperturaValida()) {
         while(getline(archivo, elemento, ',')) {
             leerLinea();

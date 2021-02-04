@@ -14,6 +14,7 @@ using namespace std;
 class ABB {
 private:
     NodoABB* raiz;
+    int cantidadCargados;
     
     NodoABB* insertar(NodoABB* nodo, Personaje* dato, string clave);
     NodoABB* buscar(NodoABB* nodo, string clave);
@@ -27,6 +28,8 @@ public:
     ABB();
     ABB(NodoABB* raiz);
     ABB(Personaje* dato, string clave);
+
+    int cantidadPersonajes();
     
     NodoABB* getRaiz();
     void setRaiz(NodoABB* raiz);

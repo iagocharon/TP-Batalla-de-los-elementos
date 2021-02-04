@@ -2,7 +2,9 @@
 
 ABB::ABB() {
     this->raiz = NULL;
+    cantidadCargados = 0;
 }
+
 
 ABB::ABB(NodoABB* raiz) {
     this->raiz = raiz;
@@ -20,6 +22,10 @@ void ABB::setRaiz(NodoABB* raiz) {
     this->raiz = raiz;
 }
 
+int ABB::cantidadPersonajes(){
+    return cantidadCargados;
+}
+
 NodoABB* ABB::insertar(NodoABB* nodo, Personaje* dato, string clave) {
     if (nodo == NULL) {
         nodo = new NodoABB(clave, dato);
@@ -30,11 +36,14 @@ NodoABB* ABB::insertar(NodoABB* nodo, Personaje* dato, string clave) {
     else {
         nodo->setIzquierda(insertar(nodo->getIzquierda(), dato, clave), nodo);
     }
+
     return nodo;
 }
 
 void ABB::insertar(Personaje* dato, string clave) {
+
     this->raiz = insertar(this->raiz, dato, clave);
+    cantidadCargados++;
 }
 
 NodoABB* ABB::buscar(NodoABB* nodo, string clave) {
@@ -121,6 +130,7 @@ NodoABB* ABB::eliminar(NodoABB* nodo, string clave) {
 
 void ABB::eliminar(string clave) {
     this->eliminar(this->raiz, clave);
+    cantidadCargados--;
 }
 
 void ABB::eliminarTodo(NodoABB* nodo) {

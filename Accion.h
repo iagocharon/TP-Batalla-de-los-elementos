@@ -9,8 +9,9 @@ const int AGREGAR_PERSONAJE = 1;
 const int ELIMINAR_PERSONAJE = 2;
 const int MOSTRAR_NOMBRES = 3;
 const int BUSCAR_POR_NOMBRE = 4;
-const int ALIMENTAR_PERSONAJE = 5;
+const int JUGAR_JUEGO = 5;
 const int SALIR = 6;
+const int PERSONAJES_MINIMOS = 6;
 
 using namespace std;
 

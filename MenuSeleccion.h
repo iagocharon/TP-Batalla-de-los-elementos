@@ -8,6 +8,7 @@
 using namespace std;
 
 class MenuSeleccion {
+
 public:
     MenuSeleccion();
     void mostrarMenu();

@@ -16,7 +16,7 @@ void Menu::mostrarMenu() {
     cout << "\t2) Eliminar un personaje" << endl;
     cout << "\t3) Mostrar nombres de los personajes" << endl;
     cout << "\t4) Buscar por nombre los detalles de un personaje en particular" << endl;
-    cout << "\t5) Alimentar un personaje" << endl;
+    cout << "\t5) Comenzar juego" << endl;
     cout << "\t6) Salir" << endl;
 }
 

@@ -1,6 +1,12 @@
 #include "MenuSeleccion.h"
 
+const int BUSCAR_POR_NOMBRE = 1;
+const int MOSTRAR_NOMBRES = 2;
+const int SELECCIONAR_PERSONAJE = 3;
+const int SALIR = 4;
+
 MenuSeleccion::MenuSeleccion(){}
+
 
 void MenuSeleccion::mostrarMenu() {
     cout << "\t1- Buscar por nombre los detalles de un personaje en particular." << endl;
@@ -11,22 +17,27 @@ void MenuSeleccion::mostrarMenu() {
 
 void MenuSeleccion::accionMenu(int eleccion, Juego* juego){
     system("CLS");
+
     switch (eleccion){
-        case 1:
+        case BUSCAR_POR_NOMBRE:
             buscar(juego->getPersonajes());
             mostrarMenu();
             break;
-        case 2:
+
+        case MOSTRAR_NOMBRES:
             juego->getPersonajes()->mostrarEnOrden();
             mostrarMenu();
             break;
-        case 3:
+
+        case SELECCIONAR_PERSONAJE:
             juego->seleccionPersonajes();
             mostrarMenu();
             break;
-        case 4:
+
+        case SALIR:
             juego->setSalir(true);
             break;
+
         default:
             cout << "Opcion inválida" << endl;
             mostrarMenu();
