@@ -63,6 +63,7 @@ NodoABB* ABB::buscar(string clave) {
 }
 
 void ABB::mostrarEnOrden(NodoABB *nodo) {
+
     if (nodo != NULL) {
         this->mostrarEnOrden(nodo->getIzquierda());
         cout << "\t-" << nodo->getClave() << "." << endl;
@@ -87,19 +88,22 @@ NodoABB* ABB::hallarMinimo(NodoABB* nodo) {
 }
 
 void ABB::eliminarNodo(NodoABB* nodo) {
+    cout << "Elimino" << endl;
     if (nodo->esHoja()) {
         delete nodo;
     }
     else if (nodo->soloHijoDerecho()) {
         nodo->getDerecha()->setPadre(nodo->getPadre());
         NodoABB* auxiliar = nodo;
-        nodo = nodo->getDerecha();
+        //nodo->getPadre()->setDerecha(nodo->getDerecha());
+        //nodo = nodo->getDerecha();
         delete auxiliar;
     }
     else if (nodo->soloHijoIzquierdo()) {
         nodo->getIzquierda()->setPadre(nodo->getPadre());
         NodoABB* auxiliar = nodo;
-        nodo = nodo->getIzquierda();
+        //nodo->getPadre()->setIzquierda(nodo->getIzquierda());
+        //nodo = nodo->getIzquierda();
         delete auxiliar;
     }
     else {

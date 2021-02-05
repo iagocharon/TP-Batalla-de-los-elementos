@@ -30,6 +30,7 @@ void Accion::determinarAccion() {
 }
 
 void Accion::agregarNuevo() {
+
     Utiles util;
     Tipo personaje;
     
@@ -40,26 +41,29 @@ void Accion::agregarNuevo() {
 
     personajes->insertar(personaje, personaje->getNombre());
     cout << "Se agrego a " << personaje->getNombre() << " a la lista" << endl;
-
 }
 
 void Accion::eliminarPersonaje() {
+
     string nombre = ingresoNombre();
     this->personajes->eliminar(nombre);
 }
 
 void Accion::mostrarNombres() {
+
     this->personajes->mostrarEnOrden();
 }
 
 
 void Accion::buscarPorNombre() {
+
     string nombre = ingresoNombre();
     this->personajes->buscar(nombre)->getDato()->mostrar();
 }
 
 
 void Accion::alimentarPersonaje() {
+
     string nombre = ingresoNombre();
 
     if (!(this->personajes->buscar(nombre))) {

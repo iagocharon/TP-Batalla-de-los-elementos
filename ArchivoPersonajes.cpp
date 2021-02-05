@@ -21,6 +21,7 @@ bool ArchivoPersonaje::aperturaValida() {
 
 
 void ArchivoPersonaje::leerLinea() {
+
     string escudoLeido;
     string vidaLeida;
 
@@ -35,22 +36,25 @@ void ArchivoPersonaje::leerLinea() {
 void ArchivoPersonaje::cargarPersonajes(ABB* personajes) {
 
     if (this->aperturaValida()) {
+
+        Personaje* auxiliar;
+
         while(getline(archivo, elemento, ',')) {
+
             leerLinea();
-            Personaje* auxiliar;
-            if (elemento == ELEMENTO_AGUA) {
+
+            if (elemento == ELEMENTO_AGUA)
                 auxiliar = new ElementalAgua(nombre, elemento, escudo, vida);
-            }
-            else if (elemento == ELEMENTO_AIRE) {
+
+            else if (elemento == ELEMENTO_AIRE)
                 auxiliar = new ElementalAire(nombre, elemento, escudo, vida);
-            }
-            else if (elemento == ELEMENTO_TIERRA) {
+
+            else if (elemento == ELEMENTO_TIERRA)
                 auxiliar = new ElementalTierra(nombre, elemento, escudo, vida);
-            }
-            else if (elemento == ELEMENTO_FUEGO) {
+
+            else if (elemento == ELEMENTO_FUEGO)
                 auxiliar = new ElementalFuego(nombre, elemento, escudo, vida);
-            }
-            else return;
+
             personajes->insertar(auxiliar, this->nombre);
         }
     }
