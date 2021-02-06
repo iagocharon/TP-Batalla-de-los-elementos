@@ -34,6 +34,7 @@ public:
     bool esHoja();
     bool soloHijoDerecho();
     bool soloHijoIzquierdo();
+    bool esRaiz();
     
     ~NodoABB();
 };
