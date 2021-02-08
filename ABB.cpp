@@ -31,10 +31,12 @@ NodoABB* ABB::insertar(NodoABB* nodo, Personaje* dato, string clave) {
         nodo = new NodoABB(clave, dato);
     }
     else if (clave > nodo->getClave()) {
-        nodo->setDerecha(insertar(nodo->getDerecha(), dato, clave), nodo);
+        nodo->setDerecha(insertar(nodo->getDerecha(), dato, clave));
+        nodo->getDerecha()->setPadre(nodo);
     }
     else {
-        nodo->setIzquierda(insertar(nodo->getIzquierda(), dato, clave), nodo);
+        nodo->setIzquierda(insertar(nodo->getIzquierda(), dato, clave));
+        nodo->getIzquierda()->setPadre(nodo);
     }
 
     return nodo;
@@ -56,6 +58,7 @@ NodoABB* ABB::buscar(NodoABB* nodo, string clave) {
     else {
         return buscar(nodo->getIzquierda(), clave);
     }
+    return NULL;
 }
 
 NodoABB* ABB::buscar(string clave) {
@@ -94,6 +97,7 @@ void ABB::eliminarNodo(NodoABB* nodo) {
     }
     else if (nodo->soloHijoDerecho()) {
         nodo->getDerecha()->setPadre(nodo->getPadre());
+        nodo->getPadre()->setDerecha(nodo->getDerecha());
         NodoABB* auxiliar = nodo;
         //nodo->getPadre()->setDerecha(nodo->getDerecha());
         //nodo = nodo->getDerecha();
@@ -101,6 +105,7 @@ void ABB::eliminarNodo(NodoABB* nodo) {
     }
     else if (nodo->soloHijoIzquierdo()) {
         nodo->getIzquierda()->setPadre(nodo->getPadre());
+        nodo->getPadre()->setIzquierda(nodo->getIzquierda());
         NodoABB* auxiliar = nodo;
         //nodo->getPadre()->setIzquierda(nodo->getIzquierda());
         //nodo = nodo->getIzquierda();
@@ -120,7 +125,7 @@ NodoABB* ABB::eliminar(NodoABB* nodo, string clave) {
     }
     if (nodo->getClave() == clave) {
         this->eliminarNodo(nodo);
-        return NULL;
+        return nodo;
     }
     else if (nodo->getClave() < clave) {
         nodo->setDerecha(eliminar(nodo->getDerecha(), clave));

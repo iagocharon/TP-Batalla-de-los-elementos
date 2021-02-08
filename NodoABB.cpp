@@ -86,6 +86,8 @@ bool NodoABB::soloHijoIzquierdo() {
     }
 }
 
+
+
 NodoABB::~NodoABB() {
     
 }
