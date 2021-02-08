@@ -20,6 +20,7 @@ NodoABB* ABB::getRaiz() {
 
 void ABB::setRaiz(NodoABB* raiz) {
     this->raiz = raiz;
+    raiz->setPadre(NULL);
 }
 
 int ABB::cantidadPersonajes(){
@@ -91,27 +92,34 @@ NodoABB* ABB::hallarMinimo(NodoABB* nodo) {
 }
 
 void ABB::eliminarNodo(NodoABB* nodo) {
-    cout << "Elimino" << endl;
+
     if (nodo->esHoja()) {
         delete nodo;
     }
+
     else if (nodo->soloHijoDerecho()) {
-        nodo->getDerecha()->setPadre(nodo->getPadre());
-        nodo->getPadre()->setDerecha(nodo->getDerecha());
-        NodoABB* auxiliar = nodo;
-        //nodo->getPadre()->setDerecha(nodo->getDerecha());
-        //nodo = nodo->getDerecha();
-        delete auxiliar;
-    }
-    else if (nodo->soloHijoIzquierdo()) {
-        nodo->getIzquierda()->setPadre(nodo->getPadre());
-        nodo->getPadre()->setIzquierda(nodo->getIzquierda());
-        NodoABB* auxiliar = nodo;
-        //nodo->getPadre()->setIzquierda(nodo->getIzquierda());
-        //nodo = nodo->getIzquierda();
-        delete auxiliar;
-    }
-    else {
+        if (nodo->esRaiz()) {
+            setRaiz(nodo->getDerecha());
+            delete nodo;
+        } else {
+            nodo->getDerecha()->setPadre(nodo->getPadre());
+            nodo->getPadre()->setDerecha(nodo->getDerecha());
+            NodoABB *auxiliar = nodo;
+            nodo = nodo->getDerecha();
+            delete auxiliar;
+        }
+    } else if (nodo->soloHijoIzquierdo()) {
+        if(nodo->esRaiz()){
+            setRaiz(nodo->getIzquierda());
+            delete nodo;
+        } else {
+            nodo->getIzquierda()->setPadre(nodo->getPadre());
+            nodo->getPadre()->setIzquierda(nodo->getIzquierda());
+            NodoABB *auxiliar = nodo;
+            nodo = nodo->getIzquierda();
+            delete auxiliar;
+        }
+    } else {
         NodoABB* minimo = this->hallarMinimo(nodo->getDerecha());
         nodo->setDato(minimo->getDato());
         nodo->setClave(minimo->getClave());
@@ -124,15 +132,15 @@ NodoABB* ABB::eliminar(NodoABB* nodo, string clave) {
         return NULL;
     }
     if (nodo->getClave() == clave) {
-        this->eliminarNodo(nodo);
+        eliminarNodo(nodo);
         return nodo;
     }
     else if (nodo->getClave() < clave) {
-        nodo->setDerecha(eliminar(nodo->getDerecha(), clave));
+        eliminar(nodo->getDerecha(), clave);
         return nodo;
     }
     else {
-        nodo->setIzquierda(eliminar(nodo->getIzquierda(), clave));
+        eliminar(nodo->getIzquierda(), clave);
         return nodo;
     }
 }

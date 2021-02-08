@@ -31,6 +31,7 @@ public:
     void setIzquierda(NodoABB* izquierda, NodoABB* padre);
     void setPadre(NodoABB* padre);
 
+    bool esHijoIzquierdo(NodoABB* hijo);
     bool esHoja();
     bool soloHijoDerecho();
     bool soloHijoIzquierdo();

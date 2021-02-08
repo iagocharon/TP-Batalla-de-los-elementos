@@ -85,9 +85,21 @@ bool NodoABB::soloHijoIzquierdo() {
         return false;
     }
 }
+bool NodoABB::esRaiz() {
+    return padre == NULL;
+}
+bool NodoABB::esHijoIzquierdo(NodoABB* hijo){
 
-
+    return (izquierda == hijo);
+}
 
 NodoABB::~NodoABB() {
-    
+
+    if(esRaiz()||soloHijoIzquierdo()||soloHijoDerecho()){}
+
+    else if(getPadre()->esHijoIzquierdo(this))
+        getPadre()->setIzquierda(NULL);
+
+    else
+        getPadre()->setDerecha(NULL);
 }
