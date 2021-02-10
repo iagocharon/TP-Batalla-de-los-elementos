@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/nicolas/CLionProjects/TP-Batalla-de-los-elementos/NodoABB.cpp
+NodoABB.hpp
+/home/nicolas/CLionProjects/TP-Batalla-de-los-elementos/NodoABB.hpp
+
+/home/nicolas/CLionProjects/TP-Batalla-de-los-elementos/NodoABB.hpp
+iostream
+-
+Personaje.h
+/home/nicolas/CLionProjects/TP-Batalla-de-los-elementos/Personaje.h
+
+/home/nicolas/CLionProjects/TP-Batalla-de-los-elementos/Personaje.h
+iostream
+-
+stdlib.h
+-
+time.h
+-
+
