@@ -25,6 +25,46 @@ Jugador* Juego::getJugador2(){
     return jugador2;
 }
 
+void Juego::moverPersonaje(Personaje* personaje){
+    int x = 0;
+    int y = 0;
+    bool ingresoValido = false;
+
+    do{
+        ingresoValido = true;
+        cout << "\nIngrese la coordenada x a la que moverse (1 - 8): ";
+        cin >> x;
+        cout << "\nIngrese la coordenada y a la que moverse (1 - 8): ";
+        cin >> y;
+        x -= 1;
+        y -= 1;
+
+        if(x >= MAX_TABLERO || x < 0 || y >= MAX_TABLERO || y < 0){
+            cout << "\nCoordenadas invalidas, vuelva a ingresarlas." << endl;
+            continue;
+        }
+
+        for(int i = 0; i < MAX_PERSONAJES; i++){
+            if((x == jugador1->getPersonajes()[i]->getFila() && y == jugador1->getPersonajes()[i]->getFila()) ||
+               (x == jugador2->getPersonajes()[i]->getFila() && y == jugador2->getPersonajes()[i]->getFila())){
+                cout << "\nYa hay un personaje en esas coordenadas." << endl;
+                ingresoValido = false;
+                break;
+            }
+        }
+
+    //Falta comprobar que la energía sea suficiente para mover al personaje al casillero deseado.
+    }while(!ingresoValido);
+
+    //Hay que restar la energia al personaje
+    personaje->setFila(x);
+    personaje->setColumna(y);
+}
+
+int Juego::getTurno(){
+    return this->turno;
+}
+
 void Juego::partidaCargar(){
     ifstream partida(PARTIDA);
 

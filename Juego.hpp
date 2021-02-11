@@ -5,6 +5,7 @@
 #include <vector>
 #include <stdlib.h>
 #include <time.h>
+#include "ColaPrioridad.hpp"
 #include <fstream>
 #include <string>
 #include "Personaje.h"
@@ -38,6 +39,8 @@ public:
     ABB* getPersonajes();
     Jugador* getJugador1();
     Jugador* getJugador2();
+    int getTurno();
+    void moverPersonaje(Personaje* personaje);
     void partidaGuardar();
     void partidaCargar();
 
