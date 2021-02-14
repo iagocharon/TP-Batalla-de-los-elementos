@@ -12,10 +12,8 @@ class MenuSeleccion {
 public:
     MenuSeleccion();
     void mostrarMenu();
-    void accionMenu(int eleccion, Juego* juego);
-
-private:
-    void buscar(ABB* personajes);
+    int determinarOpcion();
+    bool opcionValida(int elegida);
 };
 
 #endif //TP_BATALLA_DE_LOS_ELEMENTOS_MAIN_MENUJUEGO_H

@@ -81,24 +81,30 @@ void Accion::alimentarPersonaje() {
     }
 }
 
+const int SALIR_JUEGO = 4;
+
 void Accion::jugarPartida(){
 
-    Juego* juego = new Juego(personajes);
-    int elegida = 0;
+    Juego* juego = new Juego;
+    MenuSeleccion menu;
 
-    while(!juego -> salir()){
-        int elegida = juego -> determinarOpcion();
-        if(elegida == BUSCAR_POR_NOMBRE_JUEGO)
+    int eleccion = 0;
+
+    while(eleccion != SALIR_JUEGO){
+
+        eleccion = menu.determinarOpcion();
+
+        if(eleccion == BUSCAR_POR_NOMBRE_JUEGO)
             buscarPorNombre();
 
-        else if(elegida == MOSTRAR_NOMBRES_JUEGO)
+        else if(eleccion == MOSTRAR_NOMBRES_JUEGO)
             mostrarNombres();
 
-        else if(elegida == ELEGIR_PERSONAJE)
-            ;
+        else if(eleccion == ELEGIR_PERSONAJE)
+            juego -> seleccionPersonajes();
 
         else
-            juego ->setSalir(true);
+            juego -> setSalir(true);
     }
 
 }

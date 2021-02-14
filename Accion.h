@@ -4,6 +4,7 @@
 #include "utiles.h"
 #include "ABB.hpp"
 #include "Juego.hpp"
+#include "MenuSeleccion.h"
 
 const int NO_ENCONTRADO = -1;
 const int AGREGAR_PERSONAJE = 1;

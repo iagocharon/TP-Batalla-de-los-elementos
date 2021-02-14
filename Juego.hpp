@@ -49,9 +49,6 @@ public:
     void moverPersonaje(Personaje* personaje);
     void partidaGuardar();
     void partidaCargar();
-    int determinarOpcion();
-    void mostrarMenuInicial();
-    bool opcionValida(int elegida);
 
 private:
     void seleccionJugador1();

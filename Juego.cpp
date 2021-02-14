@@ -1,6 +1,7 @@
 #include "Juego.hpp"
 
 Juego::Juego() {
+
     jugador1 = nullptr;
     jugador2 = nullptr;
     personajes = nullptr;
@@ -8,6 +9,7 @@ Juego::Juego() {
 }
 
 Juego::Juego(ABB* personajes) {
+
     jugador1 = nullptr;
     jugador2 = nullptr;
     this->personajes = personajes;
@@ -31,14 +33,10 @@ void Juego::randomizarTurno(){
 
 void Juego::jugar(){
 
-    int elegida = 0;
-
-    while(!salida){
-        elegida = determinarOpcion();
-    }
 }
 
 bool Juego::salir(){
+
     return salida;
 }
 Jugador* Juego::getJugador1(){
@@ -98,14 +96,14 @@ void Juego::partidaCargar(){
         return;
     }
 
-    string elemento = "";
-    string nombre = "";
-    string escudo = "";
-    string vida = "";
-    string energia = "";
-    string fila = "";
-    string columna = "";
-    string turno = "";
+    string elemento;
+    string nombre;
+    string escudo;
+    string vida;
+    string energia;
+    string fila;
+    string columna;
+    string turno;
     Personaje* personaje = nullptr;
 
 
@@ -154,7 +152,7 @@ void Juego::partidaCargar(){
 
 void Juego::seleccionJugador1(){
 
-    string nombre = "";
+    string nombre;
 
     cout << "JUGADOR 1." << jugador1->getCantidadPersonajes()+1 << "/" << MAX_PERSONAJES << endl;
     cout << "\nIngrese el nombre del personaje a seleccionar: ";
@@ -172,7 +170,7 @@ void Juego::seleccionJugador1(){
 
 void Juego::seleccionJugador2(){
 
-    string nombre = "";
+    string nombre;
 
     cout << "JUGADOR 2." << jugador2->getCantidadPersonajes()+1 << "/" << MAX_PERSONAJES << endl;
     cout << "\nIngrese el nombre del personaje a seleccionar: ";
@@ -233,32 +231,4 @@ void Juego::partidaGuardar(){
     partida.close();
 }
 
-int Juego::determinarOpcion(){
-
-    int elegida = 0;
-
-    mostrarMenuInicial();
-    cin >> elegida;
-
-    if(!opcionValida(elegida)){
-        cout << "La opción ingresada no es válida, por favor ingrese un número válido." << endl;
-        mostrarMenuInicial();
-        cin >> elegida;
-    }
-
-    return elegida;
-}
-
-void Juego::mostrarMenuInicial(){
-
-    cout << "Elija alguna de las siguientes opciones (ingrese el número): " << endl;
-    cout << "\t1) Buscar por nombre los detalles de un personaje en particular" << endl;
-    cout << "\t2) Mostrar nombres de los personajes" << endl;
-    cout << "\t3) Seleccionar personaje" << endl;
-    cout << "\t4) Salir " << endl;
-}
-
-bool Juego::opcionValida(int elegida){
-    return (elegida >= OPCION_MIN && elegida <= OPCION_MAX);
-}
 
