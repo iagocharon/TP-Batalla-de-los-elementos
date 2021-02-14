@@ -5,7 +5,6 @@
 #include <list>
 #include "ColaPrioridad.hpp"
 #include "DatosGrafo.hpp"
-#include "DatosGrafo.hpp"
 #include "Etiqueta.hpp"
 #include "Casillero.hpp"
 

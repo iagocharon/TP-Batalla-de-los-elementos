@@ -133,42 +133,31 @@ Etiqueta* Grafo::getEtiqueta(Vertice* buscado) {
 
 
 bool Grafo::caminoPorAgua() {
-    if (this->criterioBusqueda == CRITERIO_AGUA) {
-        return true;
-    }
-    else {
-        return false;
-    }
+
+    return (this->criterioBusqueda == CRITERIO_AGUA);
 }
+
 
 bool Grafo::caminoPorAire() {
-    if (this->criterioBusqueda == CRITERIO_AIRE) {
-        return true;
-    }
-    else {
-        return false;
-    }
+
+    return (this->criterioBusqueda == CRITERIO_AIRE);
 }
+
 
 bool Grafo::caminoPorFuego() {
-    if (this->criterioBusqueda == CRITERIO_FUEGO) {
-        return true;
-    }
-    else {
-        return false;
-    }
+
+    return (this->criterioBusqueda == CRITERIO_FUEGO);
 }
 
+
 bool Grafo::caminoPorTierra() {
-    if (this->criterioBusqueda == CRITERIO_TIERRA) {
-        return true;
-    }
-    else {
-        return false;
-    }
+
+
+    return (this->criterioBusqueda == CRITERIO_TIERRA);
 }
 
 void Grafo::evaluarVerticeDestino(Etiqueta* partida, Etiqueta* destino, int iteracion) {
+
     int partidaAcumulaAgua = 0, costoAristaAgua, pesoTotalAgua;
     int partidaAcumulaAire = 0, costoAristaAire, pesoTotalAire;
     int partidaAcumulaFuego = 0, costoAristaFuego, pesoTotalFuego;

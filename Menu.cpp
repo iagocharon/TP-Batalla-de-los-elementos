@@ -10,7 +10,7 @@ void Menu::bienvenida() {
     cout << "Bienvenido al programa, que le sea leve \u263A" << endl;
 }
 
-void Menu::mostrarMenu() {
+void Menu::mostrarMenuInicial() {
     cout << "Elija alguna de las siguientes opciones (ingrese el número): " << endl;
     cout << "\t1) Agregar un nuevo personaje " << endl;
     cout << "\t2) Eliminar un personaje" << endl;
@@ -22,17 +22,16 @@ void Menu::mostrarMenu() {
 
 int Menu::opcion() {
     int elegida = 0;
-    mostrarMenu();
+    mostrarMenuInicial();
     cout << "Ingrese su valor aqui: " << endl;
     cin >> elegida;
     while(!opcionValida(elegida)) {
         cout << "La opción " << elegida << " no es válida, ingrese alguna de las posibles por favor" << endl;
-        mostrarMenu();
+        mostrarMenuInicial();
         cin >> elegida;
     }
     return elegida;
 }
-
 
 bool Menu::opcionValida(int opcion) {
     return(opcion >= PRIMERA_OPCION && opcion <= ULTIMA_OPCION);

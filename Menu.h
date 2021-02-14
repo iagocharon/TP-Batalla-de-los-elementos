@@ -13,7 +13,7 @@ public:
     void bienvenida();
 
     //Imprime en pantalla un menu de opciones
-    void mostrarMenu();
+    void mostrarMenuInicial();
 
     // PRE: La opción ingresada es un entero
     // POS: Devuelve una opción válida elegida

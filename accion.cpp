@@ -4,25 +4,31 @@ Accion::Accion(int opcion, ABB* personajes) {
     elegida = opcion;
     this->personajes = personajes;
 }
+
+
 void Accion::determinarAccion() {
-    if (elegida == AGREGAR_PERSONAJE) {
+
+    if (elegida == AGREGAR_PERSONAJE)
         agregarNuevo();
-    }
-    else if (elegida == ELIMINAR_PERSONAJE && !(personajes->vacio())) {
-        eliminarPersonaje();
-    }
-    else if (elegida == MOSTRAR_NOMBRES && !(personajes->vacio())) {
-        mostrarNombres();
-    }
-    else if (elegida == BUSCAR_POR_NOMBRE && !(personajes->vacio()))
-        buscarPorNombre();
 
-    else if ((elegida == JUGAR_JUEGO) && (personajes->cantidadPersonajes() > PERSONAJES_MINIMOS))
-        alimentarPersonaje();
+    else if(!personajes->vacio()) {
 
-    else if ((elegida == JUGAR_JUEGO) && (personajes->cantidadPersonajes() <= PERSONAJES_MINIMOS))
-        cout << "Debe haber por lo menos 6 personajes para poder comenzar una partida, agregue " << PERSONAJES_MINIMOS - personajes->cantidadPersonajes() << " personajes más para comenzar." << endl;
+        if (elegida == ELIMINAR_PERSONAJE)
+            eliminarPersonaje();
 
+        else if (elegida == MOSTRAR_NOMBRES)
+            mostrarNombres();
+
+        else if (elegida == BUSCAR_POR_NOMBRE)
+            buscarPorNombre();
+
+        else if ((elegida == JUGAR_JUEGO) && (personajes->cantidadPersonajes() > PERSONAJES_MINIMOS))
+            jugarPartida();
+
+        else if ((elegida == JUGAR_JUEGO) && (personajes->cantidadPersonajes() <= PERSONAJES_MINIMOS))
+            cout << "Debe haber por lo menos 6 personajes para poder comenzar una partida, agregue "
+                 << PERSONAJES_MINIMOS - personajes->cantidadPersonajes() << " personajes más para comenzar." << endl;
+    }
     else if (elegida == SALIR);
 
     else
@@ -71,11 +77,31 @@ void Accion::alimentarPersonaje() {
     }
     else {
         this->personajes->buscar(nombre)->getDato()->alimentar();
-        
+
     }
 }
 
+void Accion::jugarPartida(){
 
+    Juego* juego = new Juego(personajes);
+    int elegida = 0;
+
+    while(!juego -> salir()){
+        int elegida = juego -> determinarOpcion();
+        if(elegida == BUSCAR_POR_NOMBRE_JUEGO)
+            buscarPorNombre();
+
+        else if(elegida == MOSTRAR_NOMBRES_JUEGO)
+            mostrarNombres();
+
+        else if(elegida == ELEGIR_PERSONAJE)
+            ;
+
+        else
+            juego ->setSalir(true);
+    }
+
+}
 
 string Accion::ingresoNombre() {
     string nombre;

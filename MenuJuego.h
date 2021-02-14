@@ -8,6 +8,7 @@
 using namespace std;
 
 class MenuJuego {
+
 public:
     void mostrarMenu1();
     void accionMenu1(int eleccion, Juego* juego, Personaje* personaje);

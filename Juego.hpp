@@ -18,6 +18,8 @@
 #include "ElementalFuego.h"
 #include "ElementalTierra.h"
 
+const int OPCION_MIN = 1;
+const int OPCION_MAX = 4;
 #define PARTIDA "partida.csv"
 
 using namespace std;
@@ -27,15 +29,19 @@ private:
     Jugador* jugador1;
     Jugador* jugador2;
     ABB* personajes;
-    bool salir;
+    bool salida;
     int turno;
 
 public:
     Juego();
     Juego(ABB* personajes);
+    void jugar();
 
+    void randomizarTurno();
+    void cambiarTurno();
     void seleccionPersonajes();
     void setSalir(bool salir);
+    bool salir();
     ABB* getPersonajes();
     Jugador* getJugador1();
     Jugador* getJugador2();
@@ -43,10 +49,13 @@ public:
     void moverPersonaje(Personaje* personaje);
     void partidaGuardar();
     void partidaCargar();
+    int determinarOpcion();
+    void mostrarMenuInicial();
+    bool opcionValida(int elegida);
 
 private:
-    void seleccionJugador1(string nombre);
-    void seleccionJugador2(string nombre);
+    void seleccionJugador1();
+    void seleccionJugador2();
 };
 
 #endif /* Juego_hpp */

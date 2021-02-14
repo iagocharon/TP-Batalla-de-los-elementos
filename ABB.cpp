@@ -1,41 +1,47 @@
 #include "ABB.hpp"
 
 ABB::ABB() {
+
     this->raiz = NULL;
     cantidadCargados = 0;
 }
 
 
 ABB::ABB(NodoABB* raiz) {
+
     this->raiz = raiz;
 }
 
 ABB::ABB(Personaje* dato, string clave) {
+
     insertar(dato, clave);
 }
 
 NodoABB* ABB::getRaiz() {
+
     return this->raiz;
 }
 
 void ABB::setRaiz(NodoABB* raiz) {
+
     this->raiz = raiz;
     raiz->setPadre(NULL);
 }
 
 int ABB::cantidadPersonajes(){
+
     return cantidadCargados;
 }
 
 NodoABB* ABB::insertar(NodoABB* nodo, Personaje* dato, string clave) {
     if (nodo == NULL) {
         nodo = new NodoABB(clave, dato);
-    }
-    else if (clave > nodo->getClave()) {
+
+    } else if (clave > nodo->getClave()) {
         nodo->setDerecha(insertar(nodo->getDerecha(), dato, clave));
         nodo->getDerecha()->setPadre(nodo);
-    }
-    else {
+
+    } else {
         nodo->setIzquierda(insertar(nodo->getIzquierda(), dato, clave));
         nodo->getIzquierda()->setPadre(nodo);
     }
@@ -52,17 +58,17 @@ void ABB::insertar(Personaje* dato, string clave) {
 NodoABB* ABB::buscar(NodoABB* nodo, string clave) {
     if (nodo == NULL || nodo->getClave() == clave) {
         return nodo;
-    }
-    else if (clave > nodo->getClave()) {
+
+    } else if (clave > nodo->getClave()) {
         return buscar(nodo->getDerecha(), clave);
-    }
-    else {
+
+    } else {
         return buscar(nodo->getIzquierda(), clave);
     }
-    return NULL;
 }
 
 NodoABB* ABB::buscar(string clave) {
+
     return this->buscar(this->raiz, clave);
 }
 
@@ -76,17 +82,19 @@ void ABB::mostrarEnOrden(NodoABB *nodo) {
 }
 
 void ABB::mostrarEnOrden() {
+
     this->mostrarEnOrden(this->raiz);
 }
 
 NodoABB* ABB::hallarMinimo(NodoABB* nodo) {
+
     if (nodo == NULL) {
         return NULL;
     }
     if (nodo->getIzquierda() != NULL) {
         return this->hallarMinimo(nodo->getIzquierda());
-    }
-    else {
+
+    } else {
         return nodo;
     }
 }
@@ -127,27 +135,40 @@ void ABB::eliminarNodo(NodoABB* nodo) {
     }
 }
 
-NodoABB* ABB::eliminar(NodoABB* nodo, string clave) {
+NodoABB* ABB::eliminar(NodoABB* nodo, string clave, bool* eliminado) {
     if (nodo == NULL) {
         return NULL;
     }
+
     if (nodo->getClave() == clave) {
         eliminarNodo(nodo);
+        *eliminado = true;
         return nodo;
-    }
-    else if (nodo->getClave() < clave) {
-        eliminar(nodo->getDerecha(), clave);
+
+    } else if (nodo->getClave() < clave) {
+        eliminar(nodo->getDerecha(), clave, eliminado);
         return nodo;
-    }
-    else {
-        eliminar(nodo->getIzquierda(), clave);
+
+    } else {
+        eliminar(nodo->getIzquierda(), clave, eliminado);
         return nodo;
     }
 }
 
-void ABB::eliminar(string clave) {
-    this->eliminar(this->raiz, clave);
-    cantidadCargados--;
+bool ABB::eliminar(string clave) {
+
+    bool eliminado = false;
+
+    this->eliminar(this->raiz, clave, &eliminado);
+
+    if(!eliminado)
+        cout << "No se encontró a " << clave << " entre las opciones." << endl;
+
+    else {
+        cout << "Se eliminó a " << clave << "." << endl;
+        cantidadCargados--;
+    }
+    return eliminado;
 }
 
 void ABB::eliminarTodo(NodoABB* nodo) {
@@ -165,13 +186,9 @@ void ABB::eliminarTodo() {
 }
 
 bool ABB::vacio() {
-    if (this->raiz == NULL) {
-        return true;
-    }
-    else {
-        return false;
-    }
+    return (this->raiz == NULL);
 }
+
 
 ABB::~ABB() {
     this->eliminarTodo();

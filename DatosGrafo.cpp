@@ -91,16 +91,16 @@ void Vertice::setCasillero(Casillero* casillero) {
     this->casillero = casillero;
 }
 
-void Vertice::eliminarArista(Arista* aEliminar) {
-    if (this->arista == aEliminar) {
-        this->arista = aEliminar->getSiguiente();
-        delete aEliminar;
+void Vertice::eliminarArista(Arista* eliminar) {
+    if (this->arista == eliminar) {
+        this->arista = eliminar->getSiguiente();
+        delete eliminar;
     }
     else {
         Arista* previa = this->arista;
         Arista* eliminamos = previa->getSiguiente();
         while (eliminamos != NULL) {
-            if (eliminamos == aEliminar) {
+            if (eliminamos == eliminar) {
                 previa->setSiguiente(eliminamos->getSiguiente());
                 delete eliminamos;
                 return;

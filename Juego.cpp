@@ -4,19 +4,43 @@ Juego::Juego() {
     jugador1 = nullptr;
     jugador2 = nullptr;
     personajes = nullptr;
-    srand(unsigned(time(NULL)));
-    turno = 1 + rand()%2;
+    turno = 1;
 }
 
 Juego::Juego(ABB* personajes) {
     jugador1 = nullptr;
     jugador2 = nullptr;
     this->personajes = personajes;
-    salir = false;
+    salida = false;
+    turno = 1;
+}
+
+void Juego::cambiarTurno(){
+
+    if(turno == 1)
+        turno = 2;
+    else
+        turno = 1;
+}
+
+void Juego::randomizarTurno(){
+
     srand(unsigned(time(NULL)));
     this->turno = 1 + rand()%2;
 }
 
+void Juego::jugar(){
+
+    int elegida = 0;
+
+    while(!salida){
+        elegida = determinarOpcion();
+    }
+}
+
+bool Juego::salir(){
+    return salida;
+}
 Jugador* Juego::getJugador1(){
     return jugador1;
 }
@@ -128,40 +152,56 @@ void Juego::partidaCargar(){
     cout << "Partida cargada" << endl;
 }
 
-void Juego::seleccionJugador1(string nombre){
+void Juego::seleccionJugador1(){
+
+    string nombre = "";
+
     cout << "JUGADOR 1." << jugador1->getCantidadPersonajes()+1 << "/" << MAX_PERSONAJES << endl;
     cout << "\nIngrese el nombre del personaje a seleccionar: ";
     cin >> nombre;
     cout << endl;
     jugador1->setPersonaje(jugador1->getCantidadPersonajes(), personajes->buscar(nombre)->getDato());
-    personajes->eliminar(nombre);
+
+    bool eliminado = personajes->eliminar(nombre);
+
+    if(eliminado)
+        cambiarTurno();
+
     system("CLS");
 }
 
-void Juego::seleccionJugador2(string nombre){
+void Juego::seleccionJugador2(){
+
+    string nombre = "";
+
     cout << "JUGADOR 2." << jugador2->getCantidadPersonajes()+1 << "/" << MAX_PERSONAJES << endl;
     cout << "\nIngrese el nombre del personaje a seleccionar: ";
     cin >> nombre;
     cout << endl;
     jugador2->setPersonaje(jugador2->getCantidadPersonajes(), personajes->buscar(nombre)->getDato());
-    personajes->eliminar(nombre);
+
+    bool eliminado = personajes->eliminar(nombre);
+
+    if(eliminado)
+        cambiarTurno();
+
     system("CLS");
 }
 
 void Juego::seleccionPersonajes(){
-    string nombre = "";
 
     if(turno == 1){
         cout << "Jugador 1\n" << endl;
-        seleccionJugador1(nombre);
-    }else{
+        seleccionJugador1();
+
+    } else {
         cout << "Jugador 2\n" << endl;
-        seleccionJugador1(nombre);
+        seleccionJugador2();
     }
 }
 
 void Juego::setSalir(bool salir){
-    this->salir = salir;
+    this->salida = salir;
 }
 
 ABB* Juego::getPersonajes(){
@@ -193,4 +233,32 @@ void Juego::partidaGuardar(){
     partida.close();
 }
 
+int Juego::determinarOpcion(){
+
+    int elegida = 0;
+
+    mostrarMenuInicial();
+    cin >> elegida;
+
+    if(!opcionValida(elegida)){
+        cout << "La opción ingresada no es válida, por favor ingrese un número válido." << endl;
+        mostrarMenuInicial();
+        cin >> elegida;
+    }
+
+    return elegida;
+}
+
+void Juego::mostrarMenuInicial(){
+
+    cout << "Elija alguna de las siguientes opciones (ingrese el número): " << endl;
+    cout << "\t1) Buscar por nombre los detalles de un personaje en particular" << endl;
+    cout << "\t2) Mostrar nombres de los personajes" << endl;
+    cout << "\t3) Seleccionar personaje" << endl;
+    cout << "\t4) Salir " << endl;
+}
+
+bool Juego::opcionValida(int elegida){
+    return (elegida >= OPCION_MIN && elegida <= OPCION_MAX);
+}
 

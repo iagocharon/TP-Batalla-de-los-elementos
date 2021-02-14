@@ -58,7 +58,7 @@ public:
     void setSiguiente(Vertice* siguiente);
     void setArista(Arista* arista);
     void setCasillero(Casillero* casillero);
-    void eliminarArista(Arista* aEliminar);
+    void eliminarArista(Arista* eliminar);
     void agregarArista(Arista* nueva);
     
     ~Vertice();

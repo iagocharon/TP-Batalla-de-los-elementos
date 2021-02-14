@@ -3,15 +3,19 @@
 #include <iostream>
 #include "utiles.h"
 #include "ABB.hpp"
+#include "Juego.hpp"
 
 const int NO_ENCONTRADO = -1;
 const int AGREGAR_PERSONAJE = 1;
 const int ELIMINAR_PERSONAJE = 2;
 const int MOSTRAR_NOMBRES = 3;
 const int BUSCAR_POR_NOMBRE = 4;
-const int JUGAR_JUEGO = 5;
+const int JUGAR_JUEGO= 5;
 const int SALIR = 6;
 const int PERSONAJES_MINIMOS = 6;
+const int BUSCAR_POR_NOMBRE_JUEGO = 1;
+const int MOSTRAR_NOMBRES_JUEGO = 2;
+const int ELEGIR_PERSONAJE = 3;
 
 using namespace std;
 
@@ -44,6 +48,9 @@ public:
     //PRE: La lista no está vacia
     //POS: Muestra las características de un personaje
     void buscarPorNombre();
+
+    void jugarPartida();
+
 
     //PRE: La lista no está vacia
     //POS: Aumenta la energía del personaje según lo estipulado
