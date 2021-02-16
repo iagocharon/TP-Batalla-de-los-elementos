@@ -8,10 +8,10 @@
 #define TOPE_ENERGIA 20
 #define MAX_PERSONAJES 3
 #define MAX_TABLERO 8
-#define ELEMENTO_TIERRA "tierra"
-#define ELEMENTO_AIRE "aire"
-#define ELEMENTO_AGUA "agua"
-#define ELEMENTO_FUEGO "fuego"
+#define ELEMENTO_TIERRA "Tierra"
+#define ELEMENTO_AIRE "Fire"
+#define ELEMENTO_AGUA "Fgua"
+#define ELEMENTO_FUEGO "Fuego"
 
 using namespace std;
 

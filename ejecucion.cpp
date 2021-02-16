@@ -22,6 +22,7 @@ void ejecucion(int tipo) {
     if (archivo.aperturaValida()) {
 
         archivo.cargarPersonajes(personajes);
+        personajes->buscar("Nicolas")->getDato()->mostrar();
         menu.bienvenida();
 
         while (opcionElegida != SALIR) {
