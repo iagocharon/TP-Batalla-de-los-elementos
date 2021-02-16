@@ -151,14 +151,14 @@ void Juego::partidaCargar(){
 }
 
 void Juego::seleccionJugador1(){
-
+    cout << "JUGADOR 1" << jugador1->getCantidadPersonajes()+1 << "/" << MAX_PERSONAJES << endl;
     string nombre;
 
-    cout << "JUGADOR 1." << jugador1->getCantidadPersonajes()+1 << "/" << MAX_PERSONAJES << endl;
     cout << "\nIngrese el nombre del personaje a seleccionar: ";
     cin >> nombre;
     cout << endl;
     jugador1->setPersonaje(jugador1->getCantidadPersonajes(), personajes->buscar(nombre)->getDato());
+    jugador1->incrementarCantidadPersonajes();
 
     bool eliminado = personajes->eliminar(nombre);
 
@@ -169,14 +169,14 @@ void Juego::seleccionJugador1(){
 }
 
 void Juego::seleccionJugador2(){
-
+    cout << "JUGADOR 2" << jugador2->getCantidadPersonajes()+1 << "/" << MAX_PERSONAJES << endl;
     string nombre;
 
-    cout << "JUGADOR 2." << jugador2->getCantidadPersonajes()+1 << "/" << MAX_PERSONAJES << endl;
     cout << "\nIngrese el nombre del personaje a seleccionar: ";
     cin >> nombre;
     cout << endl;
     jugador2->setPersonaje(jugador2->getCantidadPersonajes(), personajes->buscar(nombre)->getDato());
+    jugador2->incrementarCantidadPersonajes();
 
     bool eliminado = personajes->eliminar(nombre);
 
@@ -189,14 +189,52 @@ void Juego::seleccionJugador2(){
 void Juego::seleccionPersonajes(){
 
     if(turno == 1){
-        cout << "Jugador 1\n" << endl;
         seleccionJugador1();
 
     } else {
-        cout << "Jugador 2\n" << endl;
         seleccionJugador2();
     }
 }
+
+void Juego::posicionJugador1(int posicion) {
+    cout << "JUGADOR 1";
+    
+    int fila, columna;
+    cout << "Ingrese fila para el personaje " << jugador1->getPersonaje(posicion)->getNombre() << ": ";
+    cin >> fila;
+    jugador1->getPersonaje(posicion)->setFila(fila);
+    cout << "Ingrese columna para el personaje " << jugador1->getPersonaje(posicion)->getNombre() << ": ";
+    cin >> columna;
+    jugador1->getPersonaje(posicion)->setColumna(columna);
+
+}
+
+void Juego::posicionJugador2(int posicion) {
+    cout << "JUGADOR 2";
+    
+    int fila, columna;
+    cout << "Ingrese fila para el personaje " << jugador2->getPersonaje(posicion)->getNombre() << ": ";
+    cin >> fila;
+    jugador2->getPersonaje(posicion)->setFila(fila);
+    cout << "Ingrese columna para el personaje " << jugador2->getPersonaje(posicion)->getNombre() << ": ";
+    cin >> columna;
+    jugador2->getPersonaje(posicion)->setColumna(columna);
+
+}
+
+void Juego::posicionarPersonaje(int posicion) {
+    if(turno == 1){
+        posicionJugador1(posicion);
+        posicionJugador2(posicion);
+
+    }
+    else {
+        posicionJugador2(posicion);
+        posicionJugador1(posicion);
+    }
+
+}
+
 
 void Juego::setSalir(bool salir){
     this->salida = salir;

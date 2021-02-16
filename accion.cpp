@@ -84,29 +84,52 @@ void Accion::alimentarPersonaje() {
 const int SALIR_JUEGO = 4;
 
 void Accion::jugarPartida(){
-
     Juego* juego = new Juego(this->personajes);
+    Tablero* tablero = new Tablero();
+
+    elegirPersonajes(juego);
+    posicionarPersonajes(juego, tablero);
+    
+    while (!juego->getJugador1()->perdio() && !juego->getJugador2()->perdio()) {
+    }
+    
+}
+
+void Accion::elegirPersonajes(Juego* juego) {
     MenuSeleccion menu;
-
     int eleccion = 0;
+    int elegidos = 0;
 
-    while(eleccion != SALIR_JUEGO){
+    while(eleccion != SALIR_JUEGO && elegidos < 6){
 
         eleccion = menu.determinarOpcion();
 
-        if(eleccion == BUSCAR_POR_NOMBRE_JUEGO)
+        if(eleccion == BUSCAR_POR_NOMBRE_JUEGO) {
             buscarPorNombre();
-
-        else if(eleccion == MOSTRAR_NOMBRES_JUEGO)
+        }
+        else if(eleccion == MOSTRAR_NOMBRES_JUEGO) {
             mostrarNombres();
-
-        else if(eleccion == ELEGIR_PERSONAJE)
+        }
+        else if(eleccion == ELEGIR_PERSONAJE) {
             juego -> seleccionPersonajes();
+            elegidos++;
+        }
 
         else
             juego -> setSalir(true);
     }
+}
 
+void Accion::posicionarPersonajes(Juego* juego, Tablero* tablero) {
+    int posicion = 0;
+    
+    while (posicion < MAX_PERSONAJES) {
+        tablero->mostrarTablero(juego);
+        juego->posicionarPersonaje(posicion);
+        posicion++;
+    }
+    
+    
 }
 
 string Accion::ingresoNombre() {

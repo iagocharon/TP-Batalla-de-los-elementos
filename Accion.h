@@ -5,6 +5,7 @@
 #include "ABB.hpp"
 #include "Juego.hpp"
 #include "MenuSeleccion.h"
+#include "Tablero.h"
 
 const int NO_ENCONTRADO = -1;
 const int AGREGAR_PERSONAJE = 1;
@@ -50,6 +51,10 @@ public:
     //POS: Muestra las características de un personaje
     void buscarPorNombre();
 
+    void elegirPersonajes(Juego* juego);
+        
+    void posicionarPersonajes(Juego* juego, Tablero* tablero);
+    
     void jugarPartida();
 
 

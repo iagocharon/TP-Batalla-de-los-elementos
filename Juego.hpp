@@ -40,6 +40,7 @@ public:
     void randomizarTurno();
     void cambiarTurno();
     void seleccionPersonajes();
+    void posicionarPersonaje(int posicion);
     void setSalir(bool salir);
     bool salir();
     ABB* getPersonajes();
@@ -53,6 +54,9 @@ public:
 private:
     void seleccionJugador1();
     void seleccionJugador2();
+    void posicionJugador1(int posicion);
+    void posicionJugador2(int posicion);
+
 };
 
 #endif /* Juego_hpp */
