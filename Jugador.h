@@ -22,6 +22,7 @@ public:
     void setPersonaje(int posicion, Personaje* personaje);
     int getCantidadPersonajes();
     void incrementarCantidadPersonajes();
+    bool perdio();
 };
 
 

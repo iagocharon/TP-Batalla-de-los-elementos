@@ -22,3 +22,13 @@ int Jugador::getCantidadPersonajes(){
 void Jugador::incrementarCantidadPersonajes(){
     this->cantidadPersonajes++;
 }
+
+bool Jugador::perdio() {
+    bool resultado = true;
+    for (int i = 0; i < MAX_PERSONAJES; i++) {
+        if (personajesJugador[i]->getVida() > 0) {
+            resultado = false;
+        }
+    }
+    return resultado;
+}
