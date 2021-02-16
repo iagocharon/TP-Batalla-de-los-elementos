@@ -7,8 +7,8 @@ Jugador::Jugador(){
     cantidadPersonajes = 0;
 }
 
-vector<Personaje*> Jugador::getPersonajes(){
-    return this->personajesJugador;
+Personaje* Jugador::getPersonaje(int posicion){
+    return this->personajesJugador[posicion];
 }
 
 void Jugador::setPersonaje(int posicion, Personaje* personaje){

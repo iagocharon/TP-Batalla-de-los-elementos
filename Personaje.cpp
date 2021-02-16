@@ -80,6 +80,7 @@ void Personaje::setColumna(int columna) {
 
 void Personaje::mostrar() {
     cout << "\tNOMBRE: " << this->nombre << endl;
+    cout << "\tELEMENTO: " << this->elemento << endl;
     cout << "\tESCUDO: " << this->escudo << endl;
     cout << "\tVIDA: " << this->vida << endl;
     cout << "\tENERGIA: " << this->energia << endl;

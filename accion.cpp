@@ -22,7 +22,7 @@ void Accion::determinarAccion() {
         else if (elegida == BUSCAR_POR_NOMBRE)
             buscarPorNombre();
 
-        else if ((elegida == JUGAR_JUEGO) && (personajes->cantidadPersonajes() > PERSONAJES_MINIMOS))
+        else if ((elegida == JUGAR_JUEGO) && (personajes->cantidadPersonajes() >= PERSONAJES_MINIMOS))
             jugarPartida();
 
         else if ((elegida == JUGAR_JUEGO) && (personajes->cantidadPersonajes() <= PERSONAJES_MINIMOS))
@@ -85,7 +85,7 @@ const int SALIR_JUEGO = 4;
 
 void Accion::jugarPartida(){
 
-    Juego* juego = new Juego;
+    Juego* juego = new Juego(this->personajes);
     MenuSeleccion menu;
 
     int eleccion = 0;

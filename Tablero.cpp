@@ -97,15 +97,15 @@ void Tablero::mostrarPersonajeJugador2(int columna, int fila, char elemento){
 
 char Tablero::personajeJugado(int columna, int fila, Juego* juego, int& jugador){
     for(int i = 0; i < MAX_PERSONAJES; i++){
-        if(juego->getJugador1()->getPersonajes()[i]->getColumna() == columna &&
-        juego->getJugador1()->getPersonajes()[i]->getFila() == fila) {
+        if(juego->getJugador1()->getPersonaje(i)->getColumna() == columna &&
+           juego->getJugador1()->getPersonaje(i)->getFila() == fila) {
             jugador = 1;
-            return elementoPersonaje(juego->getJugador1()->getPersonajes()[i]);
+            return elementoPersonaje(juego->getJugador1()->getPersonaje(i));
         }
-        if(juego->getJugador2()->getPersonajes()[i]->getColumna() == columna &&
-        juego->getJugador2()->getPersonajes()[i]->getFila() == fila){
+        if(juego->getJugador2()->getPersonaje(i)->getColumna() == columna &&
+           juego->getJugador2()->getPersonaje(i)->getFila() == fila){
             jugador = 2;
-            return elementoPersonaje(juego->getJugador2()->getPersonajes()[i]);
+            return elementoPersonaje(juego->getJugador2()->getPersonaje(i));
         }
     }
     jugador = 0;

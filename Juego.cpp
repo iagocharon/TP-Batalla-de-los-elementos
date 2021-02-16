@@ -2,16 +2,16 @@
 
 Juego::Juego() {
 
-    jugador1 = nullptr;
-    jugador2 = nullptr;
+    jugador1 = new Jugador();
+    jugador2 = new Jugador();
     personajes = nullptr;
     turno = 1;
 }
 
 Juego::Juego(ABB* personajes) {
 
-    jugador1 = nullptr;
-    jugador2 = nullptr;
+    jugador1 = new Jugador();
+    jugador2 = new Jugador();
     this->personajes = personajes;
     salida = false;
     turno = 1;
@@ -67,8 +67,8 @@ void Juego::moverPersonaje(Personaje* personaje){
         }
 
         for(int i = 0; i < MAX_PERSONAJES; i++){
-            if((x == jugador1->getPersonajes()[i]->getFila() && y == jugador1->getPersonajes()[i]->getFila()) ||
-               (x == jugador2->getPersonajes()[i]->getFila() && y == jugador2->getPersonajes()[i]->getFila())){
+            if((x == jugador1->getPersonaje(i)->getFila() && y == jugador1->getPersonaje(i)->getFila()) ||
+               (x == jugador2->getPersonaje(i)->getFila() && y == jugador2->getPersonaje(i)->getFila())){
                 cout << "\nYa hay un personaje en esas coordenadas." << endl;
                 ingresoValido = false;
                 break;
@@ -210,23 +210,23 @@ void Juego::partidaGuardar(){
     ofstream partida(PARTIDA);
     partida << turno << "\n";
     for(int i = 0; i <= 2; i++){
-        partida << jugador1->getPersonajes()[i]->getElemento() << ",";
-        partida << jugador1->getPersonajes()[i]->getNombre() << ",";
-        partida << jugador1->getPersonajes()[i]->getEscudo() << ",";
-        partida << jugador1->getPersonajes()[i]->getVida() << ",";
-        partida << jugador1->getPersonajes()[i]->getEnergia() << ",";
-        partida << jugador1->getPersonajes()[i]->getFila() << ",";
-        partida << jugador1->getPersonajes()[i]->getColumna() << "\n";
+        partida << jugador1->getPersonaje(i)->getElemento() << ",";
+        partida << jugador1->getPersonaje(i)->getNombre() << ",";
+        partida << jugador1->getPersonaje(i)->getEscudo() << ",";
+        partida << jugador1->getPersonaje(i)->getVida() << ",";
+        partida << jugador1->getPersonaje(i)->getEnergia() << ",";
+        partida << jugador1->getPersonaje(i)->getFila() << ",";
+        partida << jugador1->getPersonaje(i)->getColumna() << "\n";
     }
 
     for(int i = 0; i <= 2; i++){
-        partida << jugador2->getPersonajes()[i]->getElemento() << ",";
-        partida << jugador2->getPersonajes()[i]->getNombre() << ",";
-        partida << jugador2->getPersonajes()[i]->getEscudo() << ",";
-        partida << jugador2->getPersonajes()[i]->getVida() << ",";
-        partida << jugador2->getPersonajes()[i]->getEnergia() << ",";
-        partida << jugador2->getPersonajes()[i]->getFila() << ",";
-        partida << jugador2->getPersonajes()[i]->getColumna() << "\n";
+        partida << jugador2->getPersonaje(i)->getElemento() << ",";
+        partida << jugador2->getPersonaje(i)->getNombre() << ",";
+        partida << jugador2->getPersonaje(i)->getEscudo() << ",";
+        partida << jugador2->getPersonaje(i)->getVida() << ",";
+        partida << jugador2->getPersonaje(i)->getEnergia() << ",";
+        partida << jugador2->getPersonaje(i)->getFila() << ",";
+        partida << jugador2->getPersonaje(i)->getColumna() << "\n";
     }
     partida.close();
 }

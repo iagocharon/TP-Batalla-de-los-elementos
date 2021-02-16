@@ -13,12 +13,12 @@ using namespace std;
 
 class Jugador {
 private:
-    vector<Personaje*> personajesJugador;
+    Personaje* personajesJugador[MAX_PERSONAJES];
     int cantidadPersonajes;
 
 public:
     Jugador();
-    vector<Personaje*> getPersonajes();
+    Personaje* getPersonaje(int posicion);
     void setPersonaje(int posicion, Personaje* personaje);
     int getCantidadPersonajes();
     void incrementarCantidadPersonajes();
