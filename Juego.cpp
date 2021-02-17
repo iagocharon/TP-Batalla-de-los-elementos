@@ -136,7 +136,6 @@ void Juego::seleccionJugador1() {
     bool eliminado;
 
     do {
-        delete jugador1->getPersonajes()[jugador1->getCantidadPersonajes()];
         cout << "JUGADOR 1.\n" << jugador1->getCantidadPersonajes() + 1 << "/" << MAX_PERSONAJES << endl;
         cout << "\nIngrese el nombre del personaje a seleccionar: ";
         cin >> nombre;
@@ -159,7 +158,6 @@ void Juego::seleccionJugador2() {
     bool eliminado;
 
     do {
-        delete jugador2->getPersonajes()[jugador2->getCantidadPersonajes()];
         cout << "JUGADOR 2.\n" << jugador2->getCantidadPersonajes() + 1 << "/" << MAX_PERSONAJES << endl;
         cout << "\nIngrese el nombre del personaje a seleccionar: ";
         cin >> nombre;
@@ -203,11 +201,6 @@ int Juego::partidaCargar() {
     string columna;
     string turno;
     Personaje *personaje;
-
-    for (int i = 0; i < MAX_PERSONAJES; i++) {
-        delete jugador1->getPersonajes()[i];
-        delete jugador2->getPersonajes()[i];
-    }
 
     getline(partida, turno, '\n');
     this->turno = stoi(turno);

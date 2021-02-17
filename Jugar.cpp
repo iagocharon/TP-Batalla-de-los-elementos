@@ -14,8 +14,8 @@ void Jugar::seleccionarPersonajes(Juego *juego) {
                 system("clear");
                 return;
             }
-            eleccion = 0;
         }
+        eleccion = 0;
     }
 }
 

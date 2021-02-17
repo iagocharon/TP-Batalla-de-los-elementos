@@ -32,11 +32,11 @@ int main() {
 
     if(juego->partidaCargar() == PARTIDA_NO_ENCONTRADA){
         jugar->seleccionarPersonajes(juego);
-        jugar->posicionarPersonajes(juego, tablero);
     }
 
 
     if(!juego->getSalir()){
+        jugar->posicionarPersonajes(juego, tablero);
         juego->randomizarTurno();
 
         while(!jugar->finDelJuego(juego) && !juego->getSalir()){

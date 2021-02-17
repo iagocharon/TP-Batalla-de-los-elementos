@@ -1,9 +1,9 @@
 #include "Jugador.h"
 
 Jugador::Jugador(){
-    personajesJugador[0] = new ElementalAire(" ","aire",0,0,0,-1,-1);
-    personajesJugador[1] = new ElementalAire(" ","aire",0,0,0,-1,-1);
-    personajesJugador[2] = new ElementalAire(" ","aire",0,0,0,-1,-1);
+    personajesJugador[0] = nullptr;
+    personajesJugador[1] = nullptr;
+    personajesJugador[2] = nullptr;
     cantidadPersonajes = 0;
 }
 
