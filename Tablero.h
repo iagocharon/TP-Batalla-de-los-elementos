@@ -5,12 +5,12 @@
 #include "Casillero.hpp"
 #include <fstream>
 #include "Jugador.h"
-#include "Juego.hpp"
+#include "Juego.h"
 #include "Grafo.hpp"
 
 #define MAX_FILAS 8
 #define MAX_COLUMNAS 8
-#define NOMBRE_TABLERO "tablero.csv"
+#define NOMBRE_TABLERO "../tablero.csv"
 #define MONTANIA "M"
 #define PRECIPICIO "P"
 #define LAGO "L"

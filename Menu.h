@@ -1,7 +1,3 @@
-//
-// Created by nicolas on 25/11/20.
-//
-
 #ifndef TP2_MENU_H
 #define TP2_MENU_H
 
@@ -13,7 +9,7 @@ public:
     void bienvenida();
 
     //Imprime en pantalla un menu de opciones
-    void mostrarMenuInicial();
+    void mostrarMenu();
 
     // PRE: La opción ingresada es un entero
     // POS: Devuelve una opción válida elegida

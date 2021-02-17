@@ -14,14 +14,18 @@ public:
     // PRE: Recibe un puntero a un juego y un MenuSeleccion.
     // POS: Controla el flujo de seleccion de personajes para que cada jugador pueda
     //  seleccionar 3 para poder empezar a jugar.
-    void seleccionarPersonajes(Juego* juego, MenuSeleccion menuSeleccion);
+    void seleccionarPersonajes(Juego* juego);
+
+    // PRE:
+    // POS:
+    void posicionarPersonajes(Juego* juego, Tablero* tablero);
 
     // PRE: Recibe un puntero a juego completamente cargado, un MenuJuego, y un puntero a tablero
     // cargado.
     // POS: Llama a los menus de accion necesarios para el desarrollo del juego (acciones de cada personaje).
     //  Al terminar de recibir las acciones de todos los personajes de un jugador cambia el turno del juego.
     //  Tambien muestra el tablero y las estadisticas del personaje en juego.
-    void jugar(Juego* juego, MenuJuego menuJuego, Tablero* tablero);
+    void jugar(Juego* juego, Tablero* tablero);
 
     // PRE: Recibe un juego completamente cargado.
     // POS: Verifica si el juego termino comprobando la salud de todos los personajes de cada jugador.

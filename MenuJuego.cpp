@@ -1,5 +1,7 @@
 #include "MenuJuego.h"
 
+MenuJuego::MenuJuego(){}
+
 void MenuJuego::mostrarMenu1() {
     cout << "\t1- Alimentar personaje." << endl;
     cout << "\t2- Mover personaje." << endl;
@@ -8,7 +10,7 @@ void MenuJuego::mostrarMenu1() {
 }
 
 void MenuJuego::accionMenu1(int eleccion, Juego* juego, Personaje* personaje){
-    system("CLS");
+    system("cls");
 
     switch (eleccion){
         case 1:
@@ -16,8 +18,8 @@ void MenuJuego::accionMenu1(int eleccion, Juego* juego, Personaje* personaje){
             break;
 
         case 2:
-            juego->moverPersonaje(personaje);
-            break;
+            //juego->moverPersonaje(personaje);
+            //break;
 
         case 3:
             break;
@@ -39,11 +41,10 @@ void MenuJuego::mostrarMenu2() {
 }
 
 void MenuJuego::accionMenu2(int eleccion, Juego* juego, Personaje* personaje){
-    system("CLS");
+    system("cls");
 
     switch (eleccion){
         case 1:
-            //Personaje*[] no compatible con vector<Personaje*>.
             if(juego->getTurno() == 1){
                 personaje->atacar(juego->getJugador2()->getPersonajes());
             }else{
@@ -52,7 +53,6 @@ void MenuJuego::accionMenu2(int eleccion, Juego* juego, Personaje* personaje){
             break;
 
         case 2:
-            //Personaje*[] no compatible con vector<Personaje*>.
             if(juego->getTurno() == 1){
                 personaje->defender(juego->getJugador1()->getPersonajes());
             }else{

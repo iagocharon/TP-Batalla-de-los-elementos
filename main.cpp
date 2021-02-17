@@ -28,20 +28,23 @@ int main() {
     auto* menuJuego = new MenuJuego();
     auto* menuSeleccion = new MenuSeleccion();
     auto* jugar = new Jugar();
-
-    if(juego->partidaCargar() == PARTIDA_NO_ENCONTRADA){
-        jugar->seleccionarPersonajes(juego, *menuSeleccion);
-    }
-
     auto* tablero = new Tablero();
 
-    if(juego->getSalir()){
+    if(juego->partidaCargar() == PARTIDA_NO_ENCONTRADA){
+        jugar->seleccionarPersonajes(juego);
+        jugar->posicionarPersonajes(juego, tablero);
+    }
+
+
+    if(!juego->getSalir()){
         juego->randomizarTurno();
 
         while(!jugar->finDelJuego(juego) && !juego->getSalir()){
-            jugar->jugar(juego, *menuJuego, tablero);
+            jugar->jugar(juego, tablero);
         }
     }
 
+    delete tablero;
+    delete juego;
     return 0;
 }

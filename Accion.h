@@ -1,11 +1,10 @@
 #ifndef TP2_ACCION_H
 #define TP2_ACCION_H
 #include <iostream>
-#include "utiles.h"
+#include "Utiles.h"
 #include "ABB.hpp"
-#include "Juego.hpp"
+#include "Juego.h"
 #include "MenuSeleccion.h"
-#include "Tablero.h"
 
 const int NO_ENCONTRADO = -1;
 const int AGREGAR_PERSONAJE = 1;
@@ -51,11 +50,7 @@ public:
     //POS: Muestra las características de un personaje
     void buscarPorNombre();
 
-    void elegirPersonajes(Juego* juego);
-        
-    void posicionarPersonajes(Juego* juego, Tablero* tablero);
-    
-    void jugarPartida();
+    // void jugarPartida();
 
 
     //PRE: La lista no está vacia

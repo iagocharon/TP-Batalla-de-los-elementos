@@ -60,6 +60,10 @@ public:
     // POS: Devuelve el turno actual.
     int getTurno();
 
+    // PRE:
+    // POS:
+    void posicionarPersonaje(int personaje);
+
     //void moverPersonaje(Personaje* personaje);
 
     // PRE: -
@@ -84,6 +88,10 @@ public:
     void partidaGuardar();
 
 private:
+    //PRE:
+    //POS:
+    bool posicionValida(int fila, int columna);
+
     // PRE: -
     // POS: El jugador 1 ingresa el nombre del personaje del árbol que desea conservar. Luego
     //  se elimina este personaje del árbol.

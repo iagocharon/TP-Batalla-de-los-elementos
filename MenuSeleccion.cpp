@@ -15,23 +15,38 @@ void MenuSeleccion::mostrarMenu() {
     cout << "\t4- Salir." << endl;
 }
 
-int MenuSeleccion::determinarOpcion(){
+void MenuSeleccion::accionMenu(int eleccion, Juego* juego){
+    system("clear");
 
-    int elegida = 0;
+    switch (eleccion){
+        case BUSCAR_POR_NOMBRE:
+            buscar(juego->getPersonajes());
+            break;
 
-    mostrarMenu();
-    cin >> elegida;
+        case MOSTRAR_NOMBRES:
+            juego->getPersonajes()->mostrarEnOrden();
+            break;
 
-    if(!opcionValida(elegida)){
-        cout << "La opción ingresada no es válida, por favor ingrese un número válido." << endl;
-        mostrarMenu();
-        cin >> elegida;
+        case SELECCIONAR_PERSONAJE:
+            juego->seleccionPersonajes();
+            break;
+
+        case SALIR:
+            juego->setSalir(true);
+            break;
+
+        default:
+            cout << "Opcion inválida" << endl;
     }
-
-    return elegida;
 }
 
-bool MenuSeleccion::opcionValida(int elegida){
-
-    return (elegida >= OPCION_MIN && elegida <= OPCION_MAX);
+void MenuSeleccion::buscar(ABB* personajes){
+    string nombre;
+    cout << "\tIngrese el nombre del personaje a buscar: ";
+    cin >> nombre;
+    if(personajes->buscar(nombre) != nullptr){
+        personajes->buscar(nombre)->getDato()->mostrar();
+    }else{
+        cout << "Error" << endl;
+    }
 }

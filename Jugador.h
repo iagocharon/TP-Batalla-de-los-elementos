@@ -2,7 +2,6 @@
 #define TP_BATALLA_DE_LOS_ELEMENTOS_MAIN_JUGADOR_H
 
 #include <iostream>
-#include <vector>
 #include <string>
 #include "Personaje.h"
 #include "ABB.hpp"
@@ -17,12 +16,26 @@ private:
     int cantidadPersonajes;
 
 public:
+    // Constructor
     Jugador();
-    Personaje* getPersonaje(int posicion);
+
+    // PRE: -
+    // POS: Devuelve un puntero al vector de personajes del jugador.
+    Personaje** getPersonajes();
+
+    // PRE: Recibe un entero con valores entre 0 y 2, y un personaje cargado.
+    // POS: Agrega al personaje al vector de personajes en la posicion indicada y aumenta la
+    //  cantidad de personajes.
     void setPersonaje(int posicion, Personaje* personaje);
+
+    // PRE: -
+    // POS: Devuelve la cantidad de personajes del jugador.
     int getCantidadPersonajes();
-    void incrementarCantidadPersonajes();
-    bool perdio();
+
+    // PRE: -
+    // POS: Reduce mucho la vida de un personaje muerto y lo quita del tablero para que no interfiera
+    //  con el resto del juego.
+    void matarPersonajes();
 };
 
 

@@ -1,6 +1,7 @@
 #include "Tablero.h"
 
 Tablero::Tablero() {
+    string letra;
     ifstream archivo(NOMBRE_TABLERO);
     if (!archivo.is_open()) {
         cout << "Error al cargar el tablero\n" << endl;
@@ -9,8 +10,12 @@ Tablero::Tablero() {
 
     for (int i = 0; i < MAX_FILAS; i++) {
         for (int j = 0; j < MAX_COLUMNAS; j++) {
-            string letra;
-            getline(archivo, letra, ',');
+
+            if(j < MAX_COLUMNAS-1)
+                getline(archivo, letra, ',');
+            else
+                getline(archivo, letra, '\n');
+
             if (letra == MONTANIA) {
                 this->tablero[i][j] = new CasilleroMontania();
             }
@@ -53,23 +58,23 @@ void Tablero::mostrarTablero(Juego* juego){
 }
 
 void Tablero::mostrarPersonajeJugador1(int columna, int fila, char elemento){
-    if (tablero[columna][fila]->getNombre() == "Montania") {
-        printf("\033[1;43;107m %c \033[0m", elemento);
+    if (tablero[fila][columna]->getNombre() == "Montania") {
+        printf("\033[1;43;97m %c \033[0m", elemento);
     }
-    else if (tablero[columna][fila]->getNombre() == "Precipicio") {
-        printf("\033[1;100;107m %c \033[0m", elemento);
+    else if (tablero[fila][columna]->getNombre() == "Precipicio") {
+        printf("\033[1;100;97m %c \033[0m", elemento);
     }
-    else if (tablero[columna][fila]->getNombre() == "Lago") {
-        printf("\033[1;46;107m %c \033[0m", elemento);
+    else if (tablero[fila][columna]->getNombre() == "Lago") {
+        printf("\033[1;46;97m %c \033[0m", elemento);
     }
-    else if (tablero[columna][fila]->getNombre() == "Volcan") {
-        printf("\033[1;41;107m %c \033[0m", elemento);
+    else if (tablero[fila][columna]->getNombre() == "Volcan") {
+        printf("\033[1;41;97m %c \033[0m", elemento);
     }
-    else if (tablero[columna][fila]->getNombre() == "Camino") {
-        printf("\033[1;42;107m %c \033[0m", elemento);
+    else if (tablero[fila][columna]->getNombre() == "Camino") {
+        printf("\033[1;42;97m %c \033[0m", elemento);
     }
     else{
-        printf("\033[1;45;107m %c \033[0m", elemento);
+        printf("\033[1;45;97m %c \033[0m", elemento);
     }
 }
 
@@ -97,15 +102,15 @@ void Tablero::mostrarPersonajeJugador2(int columna, int fila, char elemento){
 
 char Tablero::personajeJugado(int columna, int fila, Juego* juego, int& jugador){
     for(int i = 0; i < MAX_PERSONAJES; i++){
-        if(juego->getJugador1()->getPersonaje(i)->getColumna() == columna &&
-           juego->getJugador1()->getPersonaje(i)->getFila() == fila) {
+        if(juego->getJugador1()->getPersonajes()[i]->getColumna() == columna &&
+        juego->getJugador1()->getPersonajes()[i]->getFila() == fila) {
             jugador = 1;
-            return elementoPersonaje(juego->getJugador1()->getPersonaje(i));
+            return elementoPersonaje(juego->getJugador1()->getPersonajes()[i]);
         }
-        if(juego->getJugador2()->getPersonaje(i)->getColumna() == columna &&
-           juego->getJugador2()->getPersonaje(i)->getFila() == fila){
+        if(juego->getJugador2()->getPersonajes()[i]->getColumna() == columna &&
+        juego->getJugador2()->getPersonajes()[i]->getFila() == fila){
             jugador = 2;
-            return elementoPersonaje(juego->getJugador2()->getPersonaje(i));
+            return elementoPersonaje(juego->getJugador2()->getPersonajes()[i]);
         }
     }
     jugador = 0;

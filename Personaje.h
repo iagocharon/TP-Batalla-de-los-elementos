@@ -8,17 +8,16 @@
 #define TOPE_ENERGIA 20
 #define MAX_PERSONAJES 3
 #define MAX_TABLERO 8
-#define ELEMENTO_TIERRA "Tierra"
-#define ELEMENTO_AIRE "Fire"
-#define ELEMENTO_AGUA "Fgua"
-#define ELEMENTO_FUEGO "Fuego"
+#define ELEMENTO_TIERRA "tierra"
+#define ELEMENTO_AIRE "aire"
+#define ELEMENTO_AGUA "agua"
+#define ELEMENTO_FUEGO "fuego"
 
 using namespace std;
 
 class Personaje{
 protected:
     //Atributos
-
     string nombre;
     string elemento;
     int escudo;
@@ -45,6 +44,7 @@ public:
     string getNombre();
 
     string getElemento();
+
     // PRE: -
     // POS: Devuelve el escudo del personaje
     int getEscudo();
