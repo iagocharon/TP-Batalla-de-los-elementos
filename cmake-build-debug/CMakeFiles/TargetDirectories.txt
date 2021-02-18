@@ -1,3 +1,0 @@
-/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles/BDE.dir
