@@ -59,38 +59,93 @@ bool Juego::posicionValida(int fila, int columna){
     return true;
 }
 
-void Juego::posicionarPersonaje(int personaje) {
+void Juego::posicionarPersonajeJugador1(int personaje) {
     int fila;
     int columna;
+    do {
+        cout << "JUGADOR 1" << endl;
+        cout << "Personaje " << this->jugador1->getPersonajes()[personaje]->getNombre()<< " (" << personaje + 1  << "/3):" << endl;
+        cout << "Ingrese la fila del personaje(1-8): " << endl;
+        cin >> fila;
+        cout << "Ingrese la columna del personaje (1-8): " << endl;
+        cin >> columna;
 
-    for (int i = 0; i < 2; i++) {
-        do {
-            cout << "Personaje " << personaje + 1 << "/3 del jugador " << turno << endl;
-            cout << "Ingrese la fila del personaje(1-8): " << endl;
-            cin >> fila;
-            cout << "Ingrese la columna del personaje (1-8): " << endl;
-            cin >> columna;
-
-            if(!posicionValida(fila, columna)) {
-                system("clear");
-                cout << "Posicion inválida." << endl;
-            }
-
-        } while(!posicionValida(fila, columna));
-
-        fila--;
-        columna--;
-
-        if (turno == 1) {
-            jugador1->getPersonajes()[personaje]->setFila(fila);
-            jugador1->getPersonajes()[personaje]->setColumna(columna);
-        } else {
-            jugador2->getPersonajes()[personaje]->setFila(fila);
-            jugador2->getPersonajes()[personaje]->setColumna(columna);
+        if(!posicionValida(fila, columna)) {
+            system("clear");
+            cout << "Posicion inválida." << endl;
         }
-        cambiarTurno();
-    }
+
+    } while(!posicionValida(fila, columna));
+
+    fila--;
+    columna--;
+
+    jugador1->getPersonajes()[personaje]->setFila(fila);
+    jugador1->getPersonajes()[personaje]->setColumna(columna);
+    cambiarTurno();
+
 }
+
+void Juego::posicionarPersonajeJugador2(int personaje) {
+    int fila;
+    int columna;
+    do {
+        cout << "JUGADOR 12" << endl;
+        cout << "Personaje " << this->jugador2->getPersonajes()[personaje]->getNombre()<< " (" << personaje + 1  << "/3):" << endl;
+        cout << "Ingrese la fila del personaje(1-8): " << endl;
+        cin >> fila;
+        cout << "Ingrese la columna del personaje (1-8): " << endl;
+        cin >> columna;
+
+        if(!posicionValida(fila, columna)) {
+            system("clear");
+            cout << "Posicion inválida." << endl;
+        }
+
+    } while(!posicionValida(fila, columna));
+
+    fila--;
+    columna--;
+
+    jugador2->getPersonajes()[personaje]->setFila(fila);
+    jugador2->getPersonajes()[personaje]->setColumna(columna);
+    cambiarTurno();
+}
+
+
+//void Juego::posicionarPersonajes(int personaje, Tablero* tablero) {
+//    this->posicionarPersonajeJugador1(personaje, tablero);
+//    this->posicionarPersonajeJugador2(personaje, tablero);
+    
+//    for (int i = 0; i < 2; i++) {
+//        do {
+//            cout << "Personaje " << personaje + 1 << "/3 del jugador " << turno << endl;
+//
+//            cout << "Ingrese la fila del personaje(1-8): " << endl;
+//            cin >> fila;
+//            cout << "Ingrese la columna del personaje (1-8): " << endl;
+//            cin >> columna;
+//
+//            if(!posicionValida(fila, columna)) {
+//                system("clear");
+//                cout << "Posicion inválida." << endl;
+//            }
+//
+//        } while(!posicionValida(fila, columna));
+//
+//        fila--;
+//        columna--;
+//
+//        if (turno == 1) {
+//            jugador1->getPersonajes()[personaje]->setFila(fila);
+//            jugador1->getPersonajes()[personaje]->setColumna(columna);
+//        } else {
+//            jugador2->getPersonajes()[personaje]->setFila(fila);
+//            jugador2->getPersonajes()[personaje]->setColumna(columna);
+//        }
+//        cambiarTurno();
+//    }
+//}
 
 
 /*

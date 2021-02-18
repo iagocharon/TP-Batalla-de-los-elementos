@@ -41,8 +41,10 @@ void Jugar::seleccionarPersonajes(Juego *juego) {
 
 void Jugar::posicionarPersonajes(Juego *juego, Tablero *tablero) {
     for (int i = 0; i < MAX_PERSONAJES; i++){
-        juego->posicionarPersonaje(i);
         tablero->mostrarTablero(juego);
+        juego->posicionarPersonajeJugador1(i);
+        tablero->mostrarTablero(juego);
+        juego->posicionarPersonajeJugador2(i);
     }
     system("clear");
 }

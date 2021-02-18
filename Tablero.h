@@ -10,7 +10,7 @@
 
 #define MAX_FILAS 8
 #define MAX_COLUMNAS 8
-#define NOMBRE_TABLERO "../tablero.csv"
+#define NOMBRE_TABLERO "tablero.csv"
 #define MONTANIA "M"
 #define PRECIPICIO "P"
 #define LAGO "L"
@@ -30,6 +30,7 @@ public:
 private:
     void mostrarPersonajeJugador1(int columna, int fila, char elemento);
     void mostrarPersonajeJugador2(int columna, int fila, char elemento);
+    void mostrarPersonaje(int columna, int fila, char elemento);
     char personajeJugado(int columna, int fila, Juego* juego, int& jugador);
     char elementoPersonaje(Personaje* personaje);
 };

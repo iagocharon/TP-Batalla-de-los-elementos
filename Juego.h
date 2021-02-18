@@ -62,7 +62,8 @@ public:
 
     // PRE:
     // POS:
-    void posicionarPersonaje(int personaje);
+    void posicionarPersonajeJugador1(int personaje);
+    void posicionarPersonajeJugador2(int personaje);
 
     //void moverPersonaje(Personaje* personaje);
 
@@ -88,6 +89,8 @@ public:
     void partidaGuardar();
 
 private:
+    
+
     //PRE:
     //POS:
     bool posicionValida(int fila, int columna);
