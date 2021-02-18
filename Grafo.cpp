@@ -20,6 +20,17 @@ void Grafo::agregarVertice(Casillero* casillero) {
     this->tamanio++;
 }
 
+Vertice* Grafo::getVertice(int fila, int columna) {
+    Vertice* auxiliar = this->primero;
+    for (int i = 0; i < this->tamanio; i++) {
+        if (auxiliar->getCasillero()->getFila() == fila && auxiliar->getCasillero()->getColumna() == columna) {
+            return auxiliar;
+        }
+        auxiliar = auxiliar->getSiguiente();
+    }
+    return NULL;
+}
+
 Vertice* Grafo::getVertice(Casillero* casillero) {
     Vertice* auxiliar = this->primero;
     for (int i = 0; i < this->tamanio; i++) {
@@ -315,5 +326,13 @@ int Grafo::caminoMinimo(Vertice *salida, Vertice *destino) {
         }
     }
     return -1;
+}
+
+int Grafo::getCriterioBusqueda() {
+    return this->criterioBusqueda;
+}
+
+void Grafo::setCriterioBusqueda(int criterio) {
+    this->criterioBusqueda = criterio;
 }
 

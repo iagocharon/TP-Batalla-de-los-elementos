@@ -30,15 +30,12 @@ private:
     void verificarPesoVerticeMarcado(Vertice* visitado, Vertice* destino, int iteracion, list<Vertice*> &vistos, ColaPrioridad &cola);
     void trabajoAdyacente(Arista* auxAristas, list<Vertice*>* vistos, Vertice* visitado, ColaPrioridad* cola, Etiqueta* auxActual, int iteracion);
     bool existeCamino(Vertice* destino);
-    int getPesoAguaAcumulado(Vertice* aCalcular);
-    int getPesoAireAcumulado(Vertice* aCalcular);
-    int getPesoFuegoAcumulado(Vertice* aCalcular);
-    int getPesoTierraAcumulado(Vertice* aCalcular);
-    
+
 public:
     Grafo();
     
     void agregarVertice(Casillero* casillero);
+    Vertice* getVertice(int fila, int columna);
     Vertice* getVertice(Casillero* casillero);
     bool existeVertice(Casillero* casillero);
     void agregarArista(Vertice* inicio, Vertice* destino, int costoAgua, int costoAire, int costoFuego, int costoTierra);
@@ -47,6 +44,12 @@ public:
     int getCostoFuego(Vertice* incio, Vertice* destino);
     int getCostoTierra(Vertice* incio, Vertice* destino);
     int getTamanio();
+    int getCriterioBusqueda();
+    void setCriterioBusqueda(int criterio);
+    int getPesoAguaAcumulado(Vertice* aCalcular);
+    int getPesoAireAcumulado(Vertice* aCalcular);
+    int getPesoFuegoAcumulado(Vertice* aCalcular);
+    int getPesoTierraAcumulado(Vertice* aCalcular);
     bool caminoPorAgua();
     bool caminoPorAire();
     bool caminoPorFuego();

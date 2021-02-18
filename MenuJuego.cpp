@@ -9,7 +9,7 @@ void MenuJuego::mostrarMenu1() {
     cout << "\t4- Salir del juego." << endl;
 }
 
-void MenuJuego::accionMenu1(int eleccion, Juego* juego, Personaje* personaje){
+void MenuJuego::accionMenu1(int eleccion, Juego* juego, Personaje* personaje, Tablero* tablero, Grafo* grafo){
     system("clear");
 
     switch (eleccion){
@@ -18,8 +18,10 @@ void MenuJuego::accionMenu1(int eleccion, Juego* juego, Personaje* personaje){
             break;
 
         case 2:
-            //juego->moverPersonaje(personaje);
-            //break;
+            tablero->mostrarTablero(juego);
+            juego->moverPersonaje(personaje, grafo);
+            tablero->mostrarTablero(juego);
+            break;
 
         case 3:
             break;
@@ -40,7 +42,7 @@ void MenuJuego::mostrarMenu2() {
     cout << "\t4- Salir." << endl;
 }
 
-void MenuJuego::accionMenu2(int eleccion, Juego* juego, Personaje* personaje){
+void MenuJuego::accionMenu2(int eleccion, Juego* juego, Personaje* personaje, Tablero* tablero, Grafo* grafo){
     system("clear");
 
     switch (eleccion){

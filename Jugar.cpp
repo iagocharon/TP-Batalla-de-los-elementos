@@ -66,6 +66,8 @@ void Jugar::jugar(Juego *juego, Tablero *tablero) {
     int eleccion = 0;
     MenuJuego menu;
     Personaje *personaje;
+    Grafo* grafo = new Grafo();
+    tablero->cargarGrafo(grafo);
 
     for (int i = 0; i < MAX_PERSONAJES; i++) {
         juego->getJugador1()->matarPersonajes();
@@ -79,7 +81,7 @@ void Jugar::jugar(Juego *juego, Tablero *tablero) {
             tableroYPersonaje(juego, tablero, personaje);
             menu.mostrarMenu1();
             cin >> eleccion;
-            menu.accionMenu1(eleccion, juego, personaje);
+            menu.accionMenu1(eleccion, juego, personaje, tablero, grafo);
             if (juego->getSalir()) {
                 juego->partidaGuardar();
                 system("clear");
@@ -91,7 +93,7 @@ void Jugar::jugar(Juego *juego, Tablero *tablero) {
             tableroYPersonaje(juego, tablero, personaje);
             menu.mostrarMenu2();
             cin >> eleccion;
-            menu.accionMenu2(eleccion, juego, personaje);
+            menu.accionMenu2(eleccion, juego, personaje, tablero, grafo);
             if (juego->getSalir()) {
                 juego->partidaGuardar();
                 system("clear");

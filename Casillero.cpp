@@ -19,6 +19,14 @@ int Casillero::getCostoFuego() {
     return this->costoFuego;
 }
 
+int Casillero::getFila() {
+    return this->fila;
+}
+
+int Casillero::getColumna() {
+    return this->columna;
+}
+
 void Casillero::setNombre(string nombre) {
     this->nombre = nombre;
 }
@@ -39,6 +47,13 @@ void Casillero::setCostoFuego(int costo) {
     this->costoFuego = costo;
 }
 
+void Casillero::setFila(int fila) {
+    this->fila = fila;
+}
+
+void Casillero::setColumna(int columna) {
+    this->columna = columna;
+}
 
 CasilleroMontania::CasilleroMontania() : Casillero() {
     this->setNombre("Montania");

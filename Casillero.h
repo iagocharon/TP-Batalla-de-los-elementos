@@ -14,17 +14,23 @@ private:
     int costoAgua;
     int costoFuego;
     string nombre;
+    int fila;
+    int columna;
 public:
     string getNombre();
     int getCostoTierra();
     int getCostoAire();
     int getCostoAgua();
     int getCostoFuego();
+    int getFila();
+    int getColumna();
     void setNombre(string nombre);
     void setCostoTierra(int costo);
     void setCostoAire(int costo);
     void setCostoAgua(int costo);
     void setCostoFuego(int costo);
+    void setFila(int fila);
+    void setColumna(int columna);
     
 };
 
