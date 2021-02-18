@@ -215,6 +215,12 @@ void Juego::seleccionJugador1() {
         cout << "\nIngrese el nombre del personaje a seleccionar: ";
         cin >> nombre;
         cout << endl;
+        while (personajes->buscar(nombre) == NULL) {
+            cout << "Ese personaje no existe." << endl;
+            cout << "Ingrese un personaje valido: ";
+            cin >> nombre;
+            cout << endl;
+        }
         jugador1->setPersonaje(jugador1->getCantidadPersonajes(), personajes->buscar(nombre)->getDato());
         eliminado = personajes->eliminar(nombre);
 
