@@ -10,7 +10,7 @@
 
 #define MAX_FILAS 8
 #define MAX_COLUMNAS 8
-#define NOMBRE_TABLERO "../tablero.csv"
+#define NOMBRE_TABLERO "tablero.csv"
 #define MONTANIA "M"
 #define PRECIPICIO "P"
 #define LAGO "L"

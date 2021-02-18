@@ -34,6 +34,8 @@ Tablero::Tablero() {
             else{
                 this->tablero[i][j] = new CasilleroVacio();
             }
+            this->tablero[i][j]->setFila(i);
+            this->tablero[i][j]->setColumna(j);
         }
     }
     archivo.close();
@@ -139,37 +141,37 @@ void Tablero::cargarGrafo(Grafo* grafo) {
     for (int i = 0; i < MAX_FILAS; i++) {
         for (int j = 0; j < MAX_COLUMNAS; j++) {
             if (i < (MAX_FILAS - 1)) {
-                grafo->agregarArista(grafo->getVertice(tablero[i][j]),
-                                     grafo->getVertice(tablero[i+1][j]),
-                                     grafo->getVertice(tablero[i+1][j])->getCasillero()->getCostoAgua(),
-                                     grafo->getVertice(tablero[i+1][j])->getCasillero()->getCostoAire(),
-                                     grafo->getVertice(tablero[i+1][j])->getCasillero()->getCostoFuego(),
-                                     grafo->getVertice(tablero[i+1][j])->getCasillero()->getCostoTierra());
+                grafo->agregarArista(grafo->getVertice(i, j),
+                                     grafo->getVertice(i+1, j),
+                                     grafo->getVertice(i+1, j)->getCasillero()->getCostoAgua(),
+                                     grafo->getVertice(i+1, j)->getCasillero()->getCostoAire(),
+                                     grafo->getVertice(i+1, j)->getCasillero()->getCostoFuego(),
+                                     grafo->getVertice(i+1, j)->getCasillero()->getCostoTierra());
             }
             if (i > 0) {
-                grafo->agregarArista(grafo->getVertice(tablero[i][j]),
-                                     grafo->getVertice(tablero[i-1][j]),
-                                     grafo->getVertice(tablero[i-1][j])->getCasillero()->getCostoAgua(),
-                                     grafo->getVertice(tablero[i-1][j])->getCasillero()->getCostoAire(),
-                                     grafo->getVertice(tablero[i-1][j])->getCasillero()->getCostoFuego(),
-                                     grafo->getVertice(tablero[i-1][j])->getCasillero()->getCostoTierra());
+                grafo->agregarArista(grafo->getVertice(i, j),
+                                     grafo->getVertice(i-1, j),
+                                     grafo->getVertice(i-1, j)->getCasillero()->getCostoAgua(),
+                                     grafo->getVertice(i-1, j)->getCasillero()->getCostoAire(),
+                                     grafo->getVertice(i-1, j)->getCasillero()->getCostoFuego(),
+                                     grafo->getVertice(i-1, j)->getCasillero()->getCostoTierra());
             }
             if (j < (MAX_COLUMNAS - 1)) {
-                grafo->agregarArista(grafo->getVertice(tablero[i][j]),
-                                     grafo->getVertice(tablero[i][j+1]),
-                                     grafo->getVertice(tablero[i][j+1])->getCasillero()->getCostoAgua(),
-                                     grafo->getVertice(tablero[i][j+1])->getCasillero()->getCostoAire(),
-                                     grafo->getVertice(tablero[i][j+1])->getCasillero()->getCostoFuego(),
-                                     grafo->getVertice(tablero[i][j+1])->getCasillero()->getCostoTierra());
+                grafo->agregarArista(grafo->getVertice(i, j),
+                                     grafo->getVertice(i, j+1),
+                                     grafo->getVertice(i, j+1)->getCasillero()->getCostoAgua(),
+                                     grafo->getVertice(i, j+1)->getCasillero()->getCostoAire(),
+                                     grafo->getVertice(i, j+1)->getCasillero()->getCostoFuego(),
+                                     grafo->getVertice(i, j+1)->getCasillero()->getCostoTierra());
 
             }
             if (j > 0) {
-                grafo->agregarArista(grafo->getVertice(tablero[i][j]),
-                                     grafo->getVertice(tablero[i][j-1]),
-                                     grafo->getVertice(tablero[i][j-1])->getCasillero()->getCostoAgua(),
-                                     grafo->getVertice(tablero[i][j-1])->getCasillero()->getCostoAire(),
-                                     grafo->getVertice(tablero[i][j-1])->getCasillero()->getCostoFuego(),
-                                     grafo->getVertice(tablero[i][j-1])->getCasillero()->getCostoTierra());
+                grafo->agregarArista(grafo->getVertice(i, j),
+                                     grafo->getVertice(i, j-1),
+                                     grafo->getVertice(i, j-1)->getCasillero()->getCostoAgua(),
+                                     grafo->getVertice(i, j-1)->getCasillero()->getCostoAire(),
+                                     grafo->getVertice(i, j-1)->getCasillero()->getCostoFuego(),
+                                     grafo->getVertice(i, j-1)->getCasillero()->getCostoTierra());
 
             }
         }
