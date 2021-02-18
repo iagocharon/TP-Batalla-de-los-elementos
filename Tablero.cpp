@@ -34,6 +34,8 @@ Tablero::Tablero() {
             else{
                 this->tablero[i][j] = new CasilleroVacio();
             }
+            this->tablero[i][j]->setFila(i);
+            this->tablero[i][j]->setColumna(j);
         }
     }
     archivo.close();
@@ -46,37 +48,15 @@ void Tablero::mostrarTablero(Juego* juego){
     for (int i = 0; i < MAX_FILAS; i++) {
         for (int j = 0; j < MAX_COLUMNAS; j++) {
             personaje = personajeJugado(j, i, juego, jugador);
-            this->mostrarPersonaje(j, i, personaje);
-//            if (jugador == 1) {
-//                this->mostrarPersonajeJugador1(j, i, personaje);
-//            }
-//            else {
-//                this->mostrarPersonajeJugador2(j, i, personaje);
-//            }
+            if (jugador == 1) {
+                this->mostrarPersonajeJugador1(j, i, personaje);
+            }
+            else {
+                this->mostrarPersonajeJugador2(j, i, personaje);
+            }
             
         }
         cout << "\n";
-    }
-}
-
-void Tablero::mostrarPersonaje(int columna, int fila, char elemento) {
-    if (tablero[fila][columna]->getNombre() == "Montania") {
-        printf("\033[1;43;97m %c \033[0m", elemento);
-    }
-    else if (tablero[fila][columna]->getNombre() == "Precipicio") {
-        printf("\033[1;100;97m %c \033[0m", elemento);
-    }
-    else if (tablero[fila][columna]->getNombre() == "Lago") {
-        printf("\033[1;46;97m %c \033[0m", elemento);
-    }
-    else if (tablero[fila][columna]->getNombre() == "Volcan") {
-        printf("\033[1;41;97m %c \033[0m", elemento);
-    }
-    else if (tablero[fila][columna]->getNombre() == "Camino") {
-        printf("\033[1;42;97m %c \033[0m", elemento);
-    }
-    else{
-        printf("\033[1;45;97m %c \033[0m", elemento);
     }
 }
 
@@ -162,17 +142,17 @@ void Tablero::cargarGrafo(Grafo* grafo) {
     for (int i = 0; i < MAX_FILAS; i++) {
         for (int j = 0; j < MAX_COLUMNAS; j++) {
             if (i < (MAX_FILAS - 1)) {
-                grafo->agregarArista(grafo->getVertice(tablero[i][j]), grafo->getVertice(tablero[i+1][j]), grafo->getVertice(tablero[i+1][j])->getCasillero()->getCostoAgua(), grafo->getVertice(tablero[i+1][j])->getCasillero()->getCostoAire(), grafo->getVertice(tablero[i+1][j])->getCasillero()->getCostoFuego(), grafo->getVertice(tablero[i+1][j])->getCasillero()->getCostoTierra());
+                grafo->agregarArista(grafo->getVertice(i,j), grafo->getVertice(i+1,j), grafo->getVertice(i+1,j)->getCasillero()->getCostoAgua(), grafo->getVertice(i+1,j)->getCasillero()->getCostoAire(), grafo->getVertice(i+1,j)->getCasillero()->getCostoFuego(), grafo->getVertice(i+1,j)->getCasillero()->getCostoTierra());
             }
             if (i > 0) {
-                grafo->agregarArista(grafo->getVertice(tablero[i][j]), grafo->getVertice(tablero[i-1][j]), grafo->getVertice(tablero[i-1][j])->getCasillero()->getCostoAgua(), grafo->getVertice(tablero[i-1][j])->getCasillero()->getCostoAire(), grafo->getVertice(tablero[i-1][j])->getCasillero()->getCostoFuego(), grafo->getVertice(tablero[i-1][j])->getCasillero()->getCostoTierra());
+                grafo->agregarArista(grafo->getVertice(i,j), grafo->getVertice(i-1,j), grafo->getVertice(i-1,j)->getCasillero()->getCostoAgua(), grafo->getVertice(i-1,j)->getCasillero()->getCostoAire(), grafo->getVertice(i-1,j)->getCasillero()->getCostoFuego(), grafo->getVertice(i-1,j)->getCasillero()->getCostoTierra());
             }
             if (j < (MAX_COLUMNAS - 1)) {
-                grafo->agregarArista(grafo->getVertice(tablero[i][j]), grafo->getVertice(tablero[i][j+1]), grafo->getVertice(tablero[i][j+1])->getCasillero()->getCostoAgua(), grafo->getVertice(tablero[i][j+1])->getCasillero()->getCostoAire(), grafo->getVertice(tablero[i][j+1])->getCasillero()->getCostoFuego(), grafo->getVertice(tablero[i][j+1])->getCasillero()->getCostoTierra());
+                grafo->agregarArista(grafo->getVertice(i,j), grafo->getVertice(i,j+1), grafo->getVertice(i,j+1)->getCasillero()->getCostoAgua(), grafo->getVertice(i,j+1)->getCasillero()->getCostoAire(), grafo->getVertice(i,j+1)->getCasillero()->getCostoFuego(), grafo->getVertice(i,j+1)->getCasillero()->getCostoTierra());
 
             }
             if (j > 0) {
-                grafo->agregarArista(grafo->getVertice(tablero[i][j]), grafo->getVertice(tablero[i][j-1]), grafo->getVertice(tablero[i][j-1])->getCasillero()->getCostoAgua(), grafo->getVertice(tablero[i][j-1])->getCasillero()->getCostoAire(), grafo->getVertice(tablero[i][j-1])->getCasillero()->getCostoFuego(), grafo->getVertice(tablero[i][j-1])->getCasillero()->getCostoTierra());
+                grafo->agregarArista(grafo->getVertice(i,j), grafo->getVertice(i,j-1), grafo->getVertice(i,j-1)->getCasillero()->getCostoAgua(), grafo->getVertice(i,j-1)->getCasillero()->getCostoAire(), grafo->getVertice(i,j-1)->getCasillero()->getCostoFuego(), grafo->getVertice(i,j-1)->getCasillero()->getCostoTierra());
 
             }
         }
