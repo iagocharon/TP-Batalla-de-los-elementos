@@ -92,12 +92,6 @@
 		<Unit filename="/home/esosa/Desktop/BDE/ABB.hpp">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/Accion.cpp">
-			<Option target="BDE"/>
-		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/Accion.h">
-			<Option target="BDE"/>
-		</Unit>
 		<Unit filename="/home/esosa/Desktop/BDE/ArchivoPersonajes.cpp">
 			<Option target="BDE"/>
 		</Unit>
@@ -107,25 +101,19 @@
 		<Unit filename="/home/esosa/Desktop/BDE/Casillero.cpp">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/Casillero.hpp">
+		<Unit filename="/home/esosa/Desktop/BDE/Casillero.h">
 			<Option target="BDE"/>
 		</Unit>
 		<Unit filename="/home/esosa/Desktop/BDE/ColaPrioridad.cpp">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/ColaPrioridad.hpp">
+		<Unit filename="/home/esosa/Desktop/BDE/ColaPrioridad.h">
 			<Option target="BDE"/>
 		</Unit>
 		<Unit filename="/home/esosa/Desktop/BDE/DatosGrafo.cpp">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/DatosGrafo.hpp">
-			<Option target="BDE"/>
-		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/Ejecucion.cpp">
-			<Option target="BDE"/>
-		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/Ejecucion.h">
+		<Unit filename="/home/esosa/Desktop/BDE/DatosGrafo.h">
 			<Option target="BDE"/>
 		</Unit>
 		<Unit filename="/home/esosa/Desktop/BDE/ElementalAgua.cpp">
@@ -155,13 +143,13 @@
 		<Unit filename="/home/esosa/Desktop/BDE/Etiqueta.cpp">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/Etiqueta.hpp">
+		<Unit filename="/home/esosa/Desktop/BDE/Etiqueta.h">
 			<Option target="BDE"/>
 		</Unit>
 		<Unit filename="/home/esosa/Desktop/BDE/Grafo.cpp">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/Grafo.hpp">
+		<Unit filename="/home/esosa/Desktop/BDE/Grafo.h">
 			<Option target="BDE"/>
 		</Unit>
 		<Unit filename="/home/esosa/Desktop/BDE/Juego.cpp">
@@ -182,10 +170,10 @@
 		<Unit filename="/home/esosa/Desktop/BDE/Jugar.h">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/Menu.cpp">
+		<Unit filename="/home/esosa/Desktop/BDE/MenuInicio.cpp">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/Menu.h">
+		<Unit filename="/home/esosa/Desktop/BDE/MenuInicio.h">
 			<Option target="BDE"/>
 		</Unit>
 		<Unit filename="/home/esosa/Desktop/BDE/MenuJuego.cpp">
@@ -203,13 +191,13 @@
 		<Unit filename="/home/esosa/Desktop/BDE/NodoABB.cpp">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/NodoABB.hpp">
+		<Unit filename="/home/esosa/Desktop/BDE/NodoABB.h">
 			<Option target="BDE"/>
 		</Unit>
 		<Unit filename="/home/esosa/Desktop/BDE/NodoColaPrioridad.cpp">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/NodoColaPrioridad.hpp">
+		<Unit filename="/home/esosa/Desktop/BDE/NodoColaPrioridad.h">
 			<Option target="BDE"/>
 		</Unit>
 		<Unit filename="/home/esosa/Desktop/BDE/Personaje.cpp">

@@ -1,4 +1,4 @@
-#include "ColaPrioridad.hpp"
+#include "ColaPrioridad.h"
 
 ColaPrioridad::ColaPrioridad(int criterioOrden) {
     this->primero = NULL;

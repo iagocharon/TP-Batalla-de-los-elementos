@@ -8,18 +8,14 @@ include_directories(.)
 add_executable(BDE
         ABB.cpp
         ABB.hpp
-        Accion.cpp
-        Accion.h
         ArchivoPersonajes.cpp
         ArchivoPersonajes.h
         Casillero.cpp
-        Casillero.hpp
+        Casillero.h
         ColaPrioridad.cpp
-        ColaPrioridad.hpp
+        ColaPrioridad.h
         DatosGrafo.cpp
-        DatosGrafo.hpp
-        Ejecucion.cpp
-        Ejecucion.h
+        DatosGrafo.h
         ElementalAgua.cpp
         ElementalAgua.h
         ElementalAire.cpp
@@ -29,22 +25,22 @@ add_executable(BDE
         ElementalTierra.cpp
         ElementalTierra.h
         Etiqueta.cpp
-        Etiqueta.hpp
+        Etiqueta.h
         Grafo.cpp
-        Grafo.hpp
+        Grafo.h
         Juego.cpp
         Juego.h
         Jugador.cpp
         Jugador.h
         main.cpp
-        Menu.cpp
-        Menu.h
+        MenuInicio.cpp
+        MenuInicio.h
         MenuSeleccion.cpp
         MenuSeleccion.h
         NodoABB.cpp
-        NodoABB.hpp
+        NodoABB.h
         NodoColaPrioridad.cpp
-        NodoColaPrioridad.hpp
+        NodoColaPrioridad.h
         Personaje.cpp
         Personaje.h
         Tablero.cpp

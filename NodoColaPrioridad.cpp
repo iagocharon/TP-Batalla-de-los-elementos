@@ -1,4 +1,4 @@
-#include "NodoColaPrioridad.hpp"
+#include "NodoColaPrioridad.h"
 
 NodoColaPrioridad::NodoColaPrioridad(Vertice* vertice, int prioridad, int pesoAgua, int pesoAire, int pesoFuego, int pesoTierra) {
     this->vertice = vertice;

@@ -1,4 +1,4 @@
-#include "Casillero.hpp"
+#include "Casillero.h"
 
 string Casillero::getNombre() {
     return this->nombre;

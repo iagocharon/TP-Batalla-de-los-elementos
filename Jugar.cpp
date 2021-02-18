@@ -1,5 +1,25 @@
 #include "Jugar.h"
 
+void Jugar::inicio(Juego *juego){
+    MenuInicio menu;
+    int eleccion = 0;
+
+    if (juego->getPersonajes() == nullptr) {
+        cout << "No se encontro el archivo de personajes. Terminando ejecución." << endl;
+        juego->setSalir(true);
+        return;
+    }
+
+    while (eleccion != SALIR && eleccion != COMENZAR) {
+        menu.mostrarMenu();
+        menu.espaciado();
+        cout << "Ingrese su eleccion: ";
+        cin >> eleccion;
+        menu.accionMenu(eleccion, juego);
+        menu.espaciado();
+    }
+}
+
 void Jugar::seleccionarPersonajes(Juego *juego) {
     MenuSeleccion menu;
     int eleccion = 0;
@@ -24,7 +44,7 @@ void Jugar::posicionarPersonajes(Juego *juego, Tablero *tablero) {
         juego->posicionarPersonaje(i);
         tablero->mostrarTablero(juego);
     }
-
+    system("clear");
 }
 
 Personaje *Jugar::determinarPersonaje(Juego *juego, int personaje) {
@@ -58,7 +78,7 @@ void Jugar::jugar(Juego *juego, Tablero *tablero) {
             menu.mostrarMenu1();
             cin >> eleccion;
             menu.accionMenu1(eleccion, juego, personaje);
-            if (!juego->getSalir()) {
+            if (juego->getSalir()) {
                 juego->partidaGuardar();
                 system("clear");
                 return;
@@ -70,7 +90,7 @@ void Jugar::jugar(Juego *juego, Tablero *tablero) {
             menu.mostrarMenu2();
             cin >> eleccion;
             menu.accionMenu2(eleccion, juego, personaje);
-            if (!juego->getSalir()) {
+            if (juego->getSalir()) {
                 juego->partidaGuardar();
                 system("clear");
                 return;

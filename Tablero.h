@@ -2,11 +2,11 @@
 #define TP_BATALLA_DE_LOS_ELEMENTOS_MAIN_TABLERO_H
 
 #include <iostream>
-#include "Casillero.hpp"
+#include "Casillero.h"
 #include <fstream>
 #include "Jugador.h"
 #include "Juego.h"
-#include "Grafo.hpp"
+#include "Grafo.h"
 
 #define MAX_FILAS 8
 #define MAX_COLUMNAS 8

@@ -1,4 +1,4 @@
-#include "DatosGrafo.hpp"
+#include "DatosGrafo.h"
 
 Arista::Arista(Vertice* destino) {
     this->siguiente = NULL;

@@ -4,6 +4,16 @@
 
 #include "Utiles.h"
 
+ABB* Utiles::personajes() {
+    ArchivoPersonaje archivo(RUTA);
+    ABB *personajes = new ABB();
+    if (archivo.aperturaValida()) {
+        archivo.cargarPersonajes(personajes);
+        return personajes;
+    }
+    return nullptr;
+}
+
 Tipo Utiles::establecerTipo(string elemento, string nombre, int escudo, int vida) {
 
     Tipo personaje;

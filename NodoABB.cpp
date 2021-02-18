@@ -1,4 +1,4 @@
-#include "NodoABB.hpp"
+#include "NodoABB.h"
 
 NodoABB::NodoABB(string clave, Personaje* dato) {
     this->clave = clave;

@@ -1,4 +1,4 @@
-#include "Etiqueta.hpp"
+#include "Etiqueta.h"
 
 Etiqueta::Etiqueta(Vertice* actual) {
     this->vertice = actual;

@@ -5,12 +5,12 @@
 #include <vector>
 #include <cstdlib>
 #include <ctime>
-#include "ColaPrioridad.hpp"
+#include "ColaPrioridad.h"
 #include <fstream>
 #include <string>
 #include "Personaje.h"
 #include "ABB.hpp"
-#include "Casillero.hpp"
+#include "Casillero.h"
 #include "Jugador.h"
 #include "Personaje.h"
 #include "ElementalAire.h"

@@ -19,24 +19,38 @@ ElementalFuego.h
 /home/esosa/Desktop/BDE/ElementalFuego.h
 ElementalTierra.h
 /home/esosa/Desktop/BDE/ElementalTierra.h
-NodoABB.hpp
-/home/esosa/Desktop/BDE/NodoABB.hpp
+NodoABB.h
+/home/esosa/Desktop/BDE/NodoABB.h
 
-/home/esosa/Desktop/BDE/Casillero.hpp
+/home/esosa/Desktop/BDE/ArchivoPersonajes.h
+fstream
+-
+iostream
+-
+string
+-
+Utiles.h
+/home/esosa/Desktop/BDE/Utiles.h
+ABB.hpp
+/home/esosa/Desktop/BDE/ABB.hpp
+Personaje.h
+/home/esosa/Desktop/BDE/Personaje.h
+
+/home/esosa/Desktop/BDE/Casillero.h
 iostream
 -
 
-/home/esosa/Desktop/BDE/ColaPrioridad.hpp
+/home/esosa/Desktop/BDE/ColaPrioridad.h
 iostream
 -
-NodoColaPrioridad.hpp
-/home/esosa/Desktop/BDE/NodoColaPrioridad.hpp
+NodoColaPrioridad.h
+/home/esosa/Desktop/BDE/NodoColaPrioridad.h
 
-/home/esosa/Desktop/BDE/DatosGrafo.hpp
+/home/esosa/Desktop/BDE/DatosGrafo.h
 iostream
 -
-Casillero.hpp
-/home/esosa/Desktop/BDE/Casillero.hpp
+Casillero.h
+/home/esosa/Desktop/BDE/Casillero.h
 
 /home/esosa/Desktop/BDE/ElementalAgua.h
 iostream
@@ -64,27 +78,27 @@ iostream
 Personaje.h
 /home/esosa/Desktop/BDE/Personaje.h
 
-/home/esosa/Desktop/BDE/Etiqueta.hpp
+/home/esosa/Desktop/BDE/Etiqueta.h
 iostream
 -
 list
 -
-DatosGrafo.hpp
-/home/esosa/Desktop/BDE/DatosGrafo.hpp
+DatosGrafo.h
+/home/esosa/Desktop/BDE/DatosGrafo.h
 
-/home/esosa/Desktop/BDE/Grafo.hpp
+/home/esosa/Desktop/BDE/Grafo.h
 iostream
 -
 list
 -
-ColaPrioridad.hpp
-/home/esosa/Desktop/BDE/ColaPrioridad.hpp
-DatosGrafo.hpp
-/home/esosa/Desktop/BDE/DatosGrafo.hpp
-Etiqueta.hpp
-/home/esosa/Desktop/BDE/Etiqueta.hpp
-Casillero.hpp
-/home/esosa/Desktop/BDE/Casillero.hpp
+ColaPrioridad.h
+/home/esosa/Desktop/BDE/ColaPrioridad.h
+DatosGrafo.h
+/home/esosa/Desktop/BDE/DatosGrafo.h
+Etiqueta.h
+/home/esosa/Desktop/BDE/Etiqueta.h
+Casillero.h
+/home/esosa/Desktop/BDE/Casillero.h
 
 /home/esosa/Desktop/BDE/Juego.h
 iostream
@@ -95,8 +109,8 @@ cstdlib
 -
 ctime
 -
-ColaPrioridad.hpp
-/home/esosa/Desktop/BDE/ColaPrioridad.hpp
+ColaPrioridad.h
+/home/esosa/Desktop/BDE/ColaPrioridad.h
 fstream
 -
 string
@@ -105,8 +119,8 @@ Personaje.h
 /home/esosa/Desktop/BDE/Personaje.h
 ABB.hpp
 /home/esosa/Desktop/BDE/ABB.hpp
-Casillero.hpp
-/home/esosa/Desktop/BDE/Casillero.hpp
+Casillero.h
+/home/esosa/Desktop/BDE/Casillero.h
 Jugador.h
 /home/esosa/Desktop/BDE/Jugador.h
 Personaje.h
@@ -137,6 +151,8 @@ Jugar.h
 /home/esosa/Desktop/BDE/Jugar.h
 Juego.h
 /home/esosa/Desktop/BDE/Juego.h
+MenuInicio.h
+/home/esosa/Desktop/BDE/MenuInicio.h
 MenuSeleccion.h
 /home/esosa/Desktop/BDE/MenuSeleccion.h
 MenuJuego.h
@@ -145,6 +161,14 @@ Personaje.h
 /home/esosa/Desktop/BDE/Personaje.h
 Tablero.h
 /home/esosa/Desktop/BDE/Tablero.h
+
+/home/esosa/Desktop/BDE/MenuInicio.h
+iostream
+-
+Juego.h
+/home/esosa/Desktop/BDE/Juego.h
+Utiles.h
+/home/esosa/Desktop/BDE/Utiles.h
 
 /home/esosa/Desktop/BDE/MenuJuego.h
 iostream
@@ -162,17 +186,17 @@ Juego.h
 Jugador.h
 /home/esosa/Desktop/BDE/Jugador.h
 
-/home/esosa/Desktop/BDE/NodoABB.hpp
+/home/esosa/Desktop/BDE/NodoABB.h
 iostream
 -
 Personaje.h
 /home/esosa/Desktop/BDE/Personaje.h
 
-/home/esosa/Desktop/BDE/NodoColaPrioridad.hpp
+/home/esosa/Desktop/BDE/NodoColaPrioridad.h
 iostream
 -
-DatosGrafo.hpp
-/home/esosa/Desktop/BDE/DatosGrafo.hpp
+DatosGrafo.h
+/home/esosa/Desktop/BDE/DatosGrafo.h
 
 /home/esosa/Desktop/BDE/Personaje.h
 iostream
@@ -185,14 +209,36 @@ time.h
 /home/esosa/Desktop/BDE/Tablero.h
 iostream
 -
-Casillero.hpp
-/home/esosa/Desktop/BDE/Casillero.hpp
+Casillero.h
+/home/esosa/Desktop/BDE/Casillero.h
 fstream
 -
 Jugador.h
 /home/esosa/Desktop/BDE/Jugador.h
 Juego.h
 /home/esosa/Desktop/BDE/Juego.h
-Grafo.hpp
-/home/esosa/Desktop/BDE/Grafo.hpp
+Grafo.h
+/home/esosa/Desktop/BDE/Grafo.h
+
+/home/esosa/Desktop/BDE/Utiles.h
+Personaje.h
+/home/esosa/Desktop/BDE/Personaje.h
+ElementalAgua.h
+/home/esosa/Desktop/BDE/ElementalAgua.h
+ElementalTierra.h
+/home/esosa/Desktop/BDE/ElementalTierra.h
+ElementalAire.h
+/home/esosa/Desktop/BDE/ElementalAire.h
+ElementalFuego.h
+/home/esosa/Desktop/BDE/ElementalFuego.h
+cstdlib
+-
+ctime
+-
+string
+-
+ABB.hpp
+/home/esosa/Desktop/BDE/ABB.hpp
+ArchivoPersonajes.h
+/home/esosa/Desktop/BDE/ArchivoPersonajes.h
 

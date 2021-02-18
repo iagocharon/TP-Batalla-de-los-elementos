@@ -2,6 +2,7 @@
 #define BDE_JUGAR_H
 
 #include "Juego.h"
+#include "MenuInicio.h"
 #include "MenuSeleccion.h"
 #include "MenuJuego.h"
 #include "Personaje.h"
@@ -11,6 +12,10 @@ using namespace std;
 
 class Jugar {
 public:
+    // PRE:
+    // POS:
+    void inicio(Juego* juego);
+
     // PRE: Recibe un puntero a un juego y un MenuSeleccion.
     // POS: Controla el flujo de seleccion de personajes para que cada jugador pueda
     //  seleccionar 3 para poder empezar a jugar.

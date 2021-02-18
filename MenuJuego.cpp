@@ -10,7 +10,7 @@ void MenuJuego::mostrarMenu1() {
 }
 
 void MenuJuego::accionMenu1(int eleccion, Juego* juego, Personaje* personaje){
-    system("cls");
+    system("clear");
 
     switch (eleccion){
         case 1:
@@ -41,7 +41,7 @@ void MenuJuego::mostrarMenu2() {
 }
 
 void MenuJuego::accionMenu2(int eleccion, Juego* juego, Personaje* personaje){
-    system("cls");
+    system("clear");
 
     switch (eleccion){
         case 1:

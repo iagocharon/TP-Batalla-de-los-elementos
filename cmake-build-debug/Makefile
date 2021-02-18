@@ -170,33 +170,6 @@ ABB.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BDE.dir/build.make CMakeFiles/BDE.dir/ABB.cpp.s
 .PHONY : ABB.cpp.s
 
-Accion.o: Accion.cpp.o
-
-.PHONY : Accion.o
-
-# target to build an object file
-Accion.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BDE.dir/build.make CMakeFiles/BDE.dir/Accion.cpp.o
-.PHONY : Accion.cpp.o
-
-Accion.i: Accion.cpp.i
-
-.PHONY : Accion.i
-
-# target to preprocess a source file
-Accion.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BDE.dir/build.make CMakeFiles/BDE.dir/Accion.cpp.i
-.PHONY : Accion.cpp.i
-
-Accion.s: Accion.cpp.s
-
-.PHONY : Accion.s
-
-# target to generate assembly for a file
-Accion.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BDE.dir/build.make CMakeFiles/BDE.dir/Accion.cpp.s
-.PHONY : Accion.cpp.s
-
 ArchivoPersonajes.o: ArchivoPersonajes.cpp.o
 
 .PHONY : ArchivoPersonajes.o
@@ -304,33 +277,6 @@ DatosGrafo.s: DatosGrafo.cpp.s
 DatosGrafo.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BDE.dir/build.make CMakeFiles/BDE.dir/DatosGrafo.cpp.s
 .PHONY : DatosGrafo.cpp.s
-
-Ejecucion.o: Ejecucion.cpp.o
-
-.PHONY : Ejecucion.o
-
-# target to build an object file
-Ejecucion.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BDE.dir/build.make CMakeFiles/BDE.dir/Ejecucion.cpp.o
-.PHONY : Ejecucion.cpp.o
-
-Ejecucion.i: Ejecucion.cpp.i
-
-.PHONY : Ejecucion.i
-
-# target to preprocess a source file
-Ejecucion.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BDE.dir/build.make CMakeFiles/BDE.dir/Ejecucion.cpp.i
-.PHONY : Ejecucion.cpp.i
-
-Ejecucion.s: Ejecucion.cpp.s
-
-.PHONY : Ejecucion.s
-
-# target to generate assembly for a file
-Ejecucion.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BDE.dir/build.make CMakeFiles/BDE.dir/Ejecucion.cpp.s
-.PHONY : Ejecucion.cpp.s
 
 ElementalAgua.o: ElementalAgua.cpp.o
 
@@ -575,32 +521,32 @@ Jugar.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BDE.dir/build.make CMakeFiles/BDE.dir/Jugar.cpp.s
 .PHONY : Jugar.cpp.s
 
-Menu.o: Menu.cpp.o
+MenuInicio.o: MenuInicio.cpp.o
 
-.PHONY : Menu.o
+.PHONY : MenuInicio.o
 
 # target to build an object file
-Menu.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BDE.dir/build.make CMakeFiles/BDE.dir/Menu.cpp.o
-.PHONY : Menu.cpp.o
+MenuInicio.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BDE.dir/build.make CMakeFiles/BDE.dir/MenuInicio.cpp.o
+.PHONY : MenuInicio.cpp.o
 
-Menu.i: Menu.cpp.i
+MenuInicio.i: MenuInicio.cpp.i
 
-.PHONY : Menu.i
+.PHONY : MenuInicio.i
 
 # target to preprocess a source file
-Menu.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BDE.dir/build.make CMakeFiles/BDE.dir/Menu.cpp.i
-.PHONY : Menu.cpp.i
+MenuInicio.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BDE.dir/build.make CMakeFiles/BDE.dir/MenuInicio.cpp.i
+.PHONY : MenuInicio.cpp.i
 
-Menu.s: Menu.cpp.s
+MenuInicio.s: MenuInicio.cpp.s
 
-.PHONY : Menu.s
+.PHONY : MenuInicio.s
 
 # target to generate assembly for a file
-Menu.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BDE.dir/build.make CMakeFiles/BDE.dir/Menu.cpp.s
-.PHONY : Menu.cpp.s
+MenuInicio.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BDE.dir/build.make CMakeFiles/BDE.dir/MenuInicio.cpp.s
+.PHONY : MenuInicio.cpp.s
 
 MenuJuego.o: MenuJuego.cpp.o
 
@@ -830,9 +776,6 @@ help:
 	@echo "... ABB.o"
 	@echo "... ABB.i"
 	@echo "... ABB.s"
-	@echo "... Accion.o"
-	@echo "... Accion.i"
-	@echo "... Accion.s"
 	@echo "... ArchivoPersonajes.o"
 	@echo "... ArchivoPersonajes.i"
 	@echo "... ArchivoPersonajes.s"
@@ -845,9 +788,6 @@ help:
 	@echo "... DatosGrafo.o"
 	@echo "... DatosGrafo.i"
 	@echo "... DatosGrafo.s"
-	@echo "... Ejecucion.o"
-	@echo "... Ejecucion.i"
-	@echo "... Ejecucion.s"
 	@echo "... ElementalAgua.o"
 	@echo "... ElementalAgua.i"
 	@echo "... ElementalAgua.s"
@@ -875,9 +815,9 @@ help:
 	@echo "... Jugar.o"
 	@echo "... Jugar.i"
 	@echo "... Jugar.s"
-	@echo "... Menu.o"
-	@echo "... Menu.i"
-	@echo "... Menu.s"
+	@echo "... MenuInicio.o"
+	@echo "... MenuInicio.i"
+	@echo "... MenuInicio.s"
 	@echo "... MenuJuego.o"
 	@echo "... MenuJuego.i"
 	@echo "... MenuJuego.s"

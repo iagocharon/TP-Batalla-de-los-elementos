@@ -7,7 +7,7 @@
 #include "ElementalAire.h"
 #include "ElementalFuego.h"
 #include "ElementalTierra.h"
-#include "NodoABB.hpp"
+#include "NodoABB.h"
 
 using namespace std;
 

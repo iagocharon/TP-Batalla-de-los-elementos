@@ -1,4 +1,4 @@
-#include "Grafo.hpp"
+#include "Grafo.h"
 
 Grafo::Grafo() {
     this->primero = NULL;

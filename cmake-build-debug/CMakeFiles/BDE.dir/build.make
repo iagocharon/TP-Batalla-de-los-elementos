@@ -90,22 +90,9 @@ CMakeFiles/BDE.dir/ABB.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BDE.dir/ABB.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/esosa/Desktop/BDE/ABB.cpp -o CMakeFiles/BDE.dir/ABB.cpp.s
 
-CMakeFiles/BDE.dir/Accion.cpp.o: CMakeFiles/BDE.dir/flags.make
-CMakeFiles/BDE.dir/Accion.cpp.o: ../Accion.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/BDE.dir/Accion.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/Accion.cpp.o -c /home/esosa/Desktop/BDE/Accion.cpp
-
-CMakeFiles/BDE.dir/Accion.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BDE.dir/Accion.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/esosa/Desktop/BDE/Accion.cpp > CMakeFiles/BDE.dir/Accion.cpp.i
-
-CMakeFiles/BDE.dir/Accion.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BDE.dir/Accion.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/esosa/Desktop/BDE/Accion.cpp -o CMakeFiles/BDE.dir/Accion.cpp.s
-
 CMakeFiles/BDE.dir/ArchivoPersonajes.cpp.o: CMakeFiles/BDE.dir/flags.make
 CMakeFiles/BDE.dir/ArchivoPersonajes.cpp.o: ../ArchivoPersonajes.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/BDE.dir/ArchivoPersonajes.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/BDE.dir/ArchivoPersonajes.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/ArchivoPersonajes.cpp.o -c /home/esosa/Desktop/BDE/ArchivoPersonajes.cpp
 
 CMakeFiles/BDE.dir/ArchivoPersonajes.cpp.i: cmake_force
@@ -118,7 +105,7 @@ CMakeFiles/BDE.dir/ArchivoPersonajes.cpp.s: cmake_force
 
 CMakeFiles/BDE.dir/Casillero.cpp.o: CMakeFiles/BDE.dir/flags.make
 CMakeFiles/BDE.dir/Casillero.cpp.o: ../Casillero.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/BDE.dir/Casillero.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/BDE.dir/Casillero.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/Casillero.cpp.o -c /home/esosa/Desktop/BDE/Casillero.cpp
 
 CMakeFiles/BDE.dir/Casillero.cpp.i: cmake_force
@@ -131,7 +118,7 @@ CMakeFiles/BDE.dir/Casillero.cpp.s: cmake_force
 
 CMakeFiles/BDE.dir/ColaPrioridad.cpp.o: CMakeFiles/BDE.dir/flags.make
 CMakeFiles/BDE.dir/ColaPrioridad.cpp.o: ../ColaPrioridad.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/BDE.dir/ColaPrioridad.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/BDE.dir/ColaPrioridad.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/ColaPrioridad.cpp.o -c /home/esosa/Desktop/BDE/ColaPrioridad.cpp
 
 CMakeFiles/BDE.dir/ColaPrioridad.cpp.i: cmake_force
@@ -144,7 +131,7 @@ CMakeFiles/BDE.dir/ColaPrioridad.cpp.s: cmake_force
 
 CMakeFiles/BDE.dir/DatosGrafo.cpp.o: CMakeFiles/BDE.dir/flags.make
 CMakeFiles/BDE.dir/DatosGrafo.cpp.o: ../DatosGrafo.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/BDE.dir/DatosGrafo.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/BDE.dir/DatosGrafo.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/DatosGrafo.cpp.o -c /home/esosa/Desktop/BDE/DatosGrafo.cpp
 
 CMakeFiles/BDE.dir/DatosGrafo.cpp.i: cmake_force
@@ -155,22 +142,9 @@ CMakeFiles/BDE.dir/DatosGrafo.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BDE.dir/DatosGrafo.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/esosa/Desktop/BDE/DatosGrafo.cpp -o CMakeFiles/BDE.dir/DatosGrafo.cpp.s
 
-CMakeFiles/BDE.dir/Ejecucion.cpp.o: CMakeFiles/BDE.dir/flags.make
-CMakeFiles/BDE.dir/Ejecucion.cpp.o: ../Ejecucion.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/BDE.dir/Ejecucion.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/Ejecucion.cpp.o -c /home/esosa/Desktop/BDE/Ejecucion.cpp
-
-CMakeFiles/BDE.dir/Ejecucion.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BDE.dir/Ejecucion.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/esosa/Desktop/BDE/Ejecucion.cpp > CMakeFiles/BDE.dir/Ejecucion.cpp.i
-
-CMakeFiles/BDE.dir/Ejecucion.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BDE.dir/Ejecucion.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/esosa/Desktop/BDE/Ejecucion.cpp -o CMakeFiles/BDE.dir/Ejecucion.cpp.s
-
 CMakeFiles/BDE.dir/ElementalAgua.cpp.o: CMakeFiles/BDE.dir/flags.make
 CMakeFiles/BDE.dir/ElementalAgua.cpp.o: ../ElementalAgua.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/BDE.dir/ElementalAgua.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/BDE.dir/ElementalAgua.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/ElementalAgua.cpp.o -c /home/esosa/Desktop/BDE/ElementalAgua.cpp
 
 CMakeFiles/BDE.dir/ElementalAgua.cpp.i: cmake_force
@@ -183,7 +157,7 @@ CMakeFiles/BDE.dir/ElementalAgua.cpp.s: cmake_force
 
 CMakeFiles/BDE.dir/ElementalAire.cpp.o: CMakeFiles/BDE.dir/flags.make
 CMakeFiles/BDE.dir/ElementalAire.cpp.o: ../ElementalAire.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/BDE.dir/ElementalAire.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/BDE.dir/ElementalAire.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/ElementalAire.cpp.o -c /home/esosa/Desktop/BDE/ElementalAire.cpp
 
 CMakeFiles/BDE.dir/ElementalAire.cpp.i: cmake_force
@@ -196,7 +170,7 @@ CMakeFiles/BDE.dir/ElementalAire.cpp.s: cmake_force
 
 CMakeFiles/BDE.dir/ElementalFuego.cpp.o: CMakeFiles/BDE.dir/flags.make
 CMakeFiles/BDE.dir/ElementalFuego.cpp.o: ../ElementalFuego.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/BDE.dir/ElementalFuego.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/BDE.dir/ElementalFuego.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/ElementalFuego.cpp.o -c /home/esosa/Desktop/BDE/ElementalFuego.cpp
 
 CMakeFiles/BDE.dir/ElementalFuego.cpp.i: cmake_force
@@ -209,7 +183,7 @@ CMakeFiles/BDE.dir/ElementalFuego.cpp.s: cmake_force
 
 CMakeFiles/BDE.dir/ElementalTierra.cpp.o: CMakeFiles/BDE.dir/flags.make
 CMakeFiles/BDE.dir/ElementalTierra.cpp.o: ../ElementalTierra.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/BDE.dir/ElementalTierra.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/BDE.dir/ElementalTierra.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/ElementalTierra.cpp.o -c /home/esosa/Desktop/BDE/ElementalTierra.cpp
 
 CMakeFiles/BDE.dir/ElementalTierra.cpp.i: cmake_force
@@ -222,7 +196,7 @@ CMakeFiles/BDE.dir/ElementalTierra.cpp.s: cmake_force
 
 CMakeFiles/BDE.dir/Etiqueta.cpp.o: CMakeFiles/BDE.dir/flags.make
 CMakeFiles/BDE.dir/Etiqueta.cpp.o: ../Etiqueta.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/BDE.dir/Etiqueta.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/BDE.dir/Etiqueta.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/Etiqueta.cpp.o -c /home/esosa/Desktop/BDE/Etiqueta.cpp
 
 CMakeFiles/BDE.dir/Etiqueta.cpp.i: cmake_force
@@ -235,7 +209,7 @@ CMakeFiles/BDE.dir/Etiqueta.cpp.s: cmake_force
 
 CMakeFiles/BDE.dir/Grafo.cpp.o: CMakeFiles/BDE.dir/flags.make
 CMakeFiles/BDE.dir/Grafo.cpp.o: ../Grafo.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/BDE.dir/Grafo.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/BDE.dir/Grafo.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/Grafo.cpp.o -c /home/esosa/Desktop/BDE/Grafo.cpp
 
 CMakeFiles/BDE.dir/Grafo.cpp.i: cmake_force
@@ -248,7 +222,7 @@ CMakeFiles/BDE.dir/Grafo.cpp.s: cmake_force
 
 CMakeFiles/BDE.dir/Juego.cpp.o: CMakeFiles/BDE.dir/flags.make
 CMakeFiles/BDE.dir/Juego.cpp.o: ../Juego.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/BDE.dir/Juego.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/BDE.dir/Juego.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/Juego.cpp.o -c /home/esosa/Desktop/BDE/Juego.cpp
 
 CMakeFiles/BDE.dir/Juego.cpp.i: cmake_force
@@ -261,7 +235,7 @@ CMakeFiles/BDE.dir/Juego.cpp.s: cmake_force
 
 CMakeFiles/BDE.dir/Jugador.cpp.o: CMakeFiles/BDE.dir/flags.make
 CMakeFiles/BDE.dir/Jugador.cpp.o: ../Jugador.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/BDE.dir/Jugador.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/BDE.dir/Jugador.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/Jugador.cpp.o -c /home/esosa/Desktop/BDE/Jugador.cpp
 
 CMakeFiles/BDE.dir/Jugador.cpp.i: cmake_force
@@ -274,7 +248,7 @@ CMakeFiles/BDE.dir/Jugador.cpp.s: cmake_force
 
 CMakeFiles/BDE.dir/main.cpp.o: CMakeFiles/BDE.dir/flags.make
 CMakeFiles/BDE.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/BDE.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/BDE.dir/main.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/main.cpp.o -c /home/esosa/Desktop/BDE/main.cpp
 
 CMakeFiles/BDE.dir/main.cpp.i: cmake_force
@@ -285,22 +259,22 @@ CMakeFiles/BDE.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BDE.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/esosa/Desktop/BDE/main.cpp -o CMakeFiles/BDE.dir/main.cpp.s
 
-CMakeFiles/BDE.dir/Menu.cpp.o: CMakeFiles/BDE.dir/flags.make
-CMakeFiles/BDE.dir/Menu.cpp.o: ../Menu.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/BDE.dir/Menu.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/Menu.cpp.o -c /home/esosa/Desktop/BDE/Menu.cpp
+CMakeFiles/BDE.dir/MenuInicio.cpp.o: CMakeFiles/BDE.dir/flags.make
+CMakeFiles/BDE.dir/MenuInicio.cpp.o: ../MenuInicio.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/BDE.dir/MenuInicio.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/MenuInicio.cpp.o -c /home/esosa/Desktop/BDE/MenuInicio.cpp
 
-CMakeFiles/BDE.dir/Menu.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BDE.dir/Menu.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/esosa/Desktop/BDE/Menu.cpp > CMakeFiles/BDE.dir/Menu.cpp.i
+CMakeFiles/BDE.dir/MenuInicio.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BDE.dir/MenuInicio.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/esosa/Desktop/BDE/MenuInicio.cpp > CMakeFiles/BDE.dir/MenuInicio.cpp.i
 
-CMakeFiles/BDE.dir/Menu.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BDE.dir/Menu.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/esosa/Desktop/BDE/Menu.cpp -o CMakeFiles/BDE.dir/Menu.cpp.s
+CMakeFiles/BDE.dir/MenuInicio.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BDE.dir/MenuInicio.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/esosa/Desktop/BDE/MenuInicio.cpp -o CMakeFiles/BDE.dir/MenuInicio.cpp.s
 
 CMakeFiles/BDE.dir/MenuSeleccion.cpp.o: CMakeFiles/BDE.dir/flags.make
 CMakeFiles/BDE.dir/MenuSeleccion.cpp.o: ../MenuSeleccion.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/BDE.dir/MenuSeleccion.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/BDE.dir/MenuSeleccion.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/MenuSeleccion.cpp.o -c /home/esosa/Desktop/BDE/MenuSeleccion.cpp
 
 CMakeFiles/BDE.dir/MenuSeleccion.cpp.i: cmake_force
@@ -313,7 +287,7 @@ CMakeFiles/BDE.dir/MenuSeleccion.cpp.s: cmake_force
 
 CMakeFiles/BDE.dir/NodoABB.cpp.o: CMakeFiles/BDE.dir/flags.make
 CMakeFiles/BDE.dir/NodoABB.cpp.o: ../NodoABB.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/BDE.dir/NodoABB.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/BDE.dir/NodoABB.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/NodoABB.cpp.o -c /home/esosa/Desktop/BDE/NodoABB.cpp
 
 CMakeFiles/BDE.dir/NodoABB.cpp.i: cmake_force
@@ -326,7 +300,7 @@ CMakeFiles/BDE.dir/NodoABB.cpp.s: cmake_force
 
 CMakeFiles/BDE.dir/NodoColaPrioridad.cpp.o: CMakeFiles/BDE.dir/flags.make
 CMakeFiles/BDE.dir/NodoColaPrioridad.cpp.o: ../NodoColaPrioridad.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/BDE.dir/NodoColaPrioridad.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/BDE.dir/NodoColaPrioridad.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/NodoColaPrioridad.cpp.o -c /home/esosa/Desktop/BDE/NodoColaPrioridad.cpp
 
 CMakeFiles/BDE.dir/NodoColaPrioridad.cpp.i: cmake_force
@@ -339,7 +313,7 @@ CMakeFiles/BDE.dir/NodoColaPrioridad.cpp.s: cmake_force
 
 CMakeFiles/BDE.dir/Personaje.cpp.o: CMakeFiles/BDE.dir/flags.make
 CMakeFiles/BDE.dir/Personaje.cpp.o: ../Personaje.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/BDE.dir/Personaje.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/BDE.dir/Personaje.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/Personaje.cpp.o -c /home/esosa/Desktop/BDE/Personaje.cpp
 
 CMakeFiles/BDE.dir/Personaje.cpp.i: cmake_force
@@ -352,7 +326,7 @@ CMakeFiles/BDE.dir/Personaje.cpp.s: cmake_force
 
 CMakeFiles/BDE.dir/Tablero.cpp.o: CMakeFiles/BDE.dir/flags.make
 CMakeFiles/BDE.dir/Tablero.cpp.o: ../Tablero.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/BDE.dir/Tablero.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/BDE.dir/Tablero.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/Tablero.cpp.o -c /home/esosa/Desktop/BDE/Tablero.cpp
 
 CMakeFiles/BDE.dir/Tablero.cpp.i: cmake_force
@@ -365,7 +339,7 @@ CMakeFiles/BDE.dir/Tablero.cpp.s: cmake_force
 
 CMakeFiles/BDE.dir/Utiles.cpp.o: CMakeFiles/BDE.dir/flags.make
 CMakeFiles/BDE.dir/Utiles.cpp.o: ../Utiles.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/BDE.dir/Utiles.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/BDE.dir/Utiles.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/Utiles.cpp.o -c /home/esosa/Desktop/BDE/Utiles.cpp
 
 CMakeFiles/BDE.dir/Utiles.cpp.i: cmake_force
@@ -378,7 +352,7 @@ CMakeFiles/BDE.dir/Utiles.cpp.s: cmake_force
 
 CMakeFiles/BDE.dir/MenuJuego.cpp.o: CMakeFiles/BDE.dir/flags.make
 CMakeFiles/BDE.dir/MenuJuego.cpp.o: ../MenuJuego.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/BDE.dir/MenuJuego.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/BDE.dir/MenuJuego.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/MenuJuego.cpp.o -c /home/esosa/Desktop/BDE/MenuJuego.cpp
 
 CMakeFiles/BDE.dir/MenuJuego.cpp.i: cmake_force
@@ -391,7 +365,7 @@ CMakeFiles/BDE.dir/MenuJuego.cpp.s: cmake_force
 
 CMakeFiles/BDE.dir/Jugar.cpp.o: CMakeFiles/BDE.dir/flags.make
 CMakeFiles/BDE.dir/Jugar.cpp.o: ../Jugar.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/BDE.dir/Jugar.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/BDE.dir/Jugar.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/Jugar.cpp.o -c /home/esosa/Desktop/BDE/Jugar.cpp
 
 CMakeFiles/BDE.dir/Jugar.cpp.i: cmake_force
@@ -405,12 +379,10 @@ CMakeFiles/BDE.dir/Jugar.cpp.s: cmake_force
 # Object files for target BDE
 BDE_OBJECTS = \
 "CMakeFiles/BDE.dir/ABB.cpp.o" \
-"CMakeFiles/BDE.dir/Accion.cpp.o" \
 "CMakeFiles/BDE.dir/ArchivoPersonajes.cpp.o" \
 "CMakeFiles/BDE.dir/Casillero.cpp.o" \
 "CMakeFiles/BDE.dir/ColaPrioridad.cpp.o" \
 "CMakeFiles/BDE.dir/DatosGrafo.cpp.o" \
-"CMakeFiles/BDE.dir/Ejecucion.cpp.o" \
 "CMakeFiles/BDE.dir/ElementalAgua.cpp.o" \
 "CMakeFiles/BDE.dir/ElementalAire.cpp.o" \
 "CMakeFiles/BDE.dir/ElementalFuego.cpp.o" \
@@ -420,7 +392,7 @@ BDE_OBJECTS = \
 "CMakeFiles/BDE.dir/Juego.cpp.o" \
 "CMakeFiles/BDE.dir/Jugador.cpp.o" \
 "CMakeFiles/BDE.dir/main.cpp.o" \
-"CMakeFiles/BDE.dir/Menu.cpp.o" \
+"CMakeFiles/BDE.dir/MenuInicio.cpp.o" \
 "CMakeFiles/BDE.dir/MenuSeleccion.cpp.o" \
 "CMakeFiles/BDE.dir/NodoABB.cpp.o" \
 "CMakeFiles/BDE.dir/NodoColaPrioridad.cpp.o" \
@@ -434,12 +406,10 @@ BDE_OBJECTS = \
 BDE_EXTERNAL_OBJECTS =
 
 BDE: CMakeFiles/BDE.dir/ABB.cpp.o
-BDE: CMakeFiles/BDE.dir/Accion.cpp.o
 BDE: CMakeFiles/BDE.dir/ArchivoPersonajes.cpp.o
 BDE: CMakeFiles/BDE.dir/Casillero.cpp.o
 BDE: CMakeFiles/BDE.dir/ColaPrioridad.cpp.o
 BDE: CMakeFiles/BDE.dir/DatosGrafo.cpp.o
-BDE: CMakeFiles/BDE.dir/Ejecucion.cpp.o
 BDE: CMakeFiles/BDE.dir/ElementalAgua.cpp.o
 BDE: CMakeFiles/BDE.dir/ElementalAire.cpp.o
 BDE: CMakeFiles/BDE.dir/ElementalFuego.cpp.o
@@ -449,7 +419,7 @@ BDE: CMakeFiles/BDE.dir/Grafo.cpp.o
 BDE: CMakeFiles/BDE.dir/Juego.cpp.o
 BDE: CMakeFiles/BDE.dir/Jugador.cpp.o
 BDE: CMakeFiles/BDE.dir/main.cpp.o
-BDE: CMakeFiles/BDE.dir/Menu.cpp.o
+BDE: CMakeFiles/BDE.dir/MenuInicio.cpp.o
 BDE: CMakeFiles/BDE.dir/MenuSeleccion.cpp.o
 BDE: CMakeFiles/BDE.dir/NodoABB.cpp.o
 BDE: CMakeFiles/BDE.dir/NodoColaPrioridad.cpp.o
@@ -460,7 +430,7 @@ BDE: CMakeFiles/BDE.dir/MenuJuego.cpp.o
 BDE: CMakeFiles/BDE.dir/Jugar.cpp.o
 BDE: CMakeFiles/BDE.dir/build.make
 BDE: CMakeFiles/BDE.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Linking CXX executable BDE"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Linking CXX executable BDE"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/BDE.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

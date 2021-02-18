@@ -12,6 +12,10 @@
 #include <cstdlib>
 #include <ctime>
 #include <string>
+#include "ABB.hpp"
+#include "ArchivoPersonajes.h"
+
+#define RUTA "personajes.csv"
 
 typedef Personaje* Tipo;
 
@@ -20,6 +24,10 @@ using namespace std;
 class Utiles{
 
 public:
+    // PRE:
+    // POS:
+    ABB* personajes();
+
     // PRE: los valores recibidos son válidos
     // POS: devuelve un Tipo personaje cargando lo recibido en sus atributos
     Tipo establecerTipo(string elemento, string nombre, int escudo, int vida);

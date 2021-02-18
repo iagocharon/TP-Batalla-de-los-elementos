@@ -5,12 +5,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/esosa/Desktop/BDE/ABB.cpp" "/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles/BDE.dir/ABB.cpp.o"
-  "/home/esosa/Desktop/BDE/Accion.cpp" "/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles/BDE.dir/Accion.cpp.o"
   "/home/esosa/Desktop/BDE/ArchivoPersonajes.cpp" "/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles/BDE.dir/ArchivoPersonajes.cpp.o"
   "/home/esosa/Desktop/BDE/Casillero.cpp" "/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles/BDE.dir/Casillero.cpp.o"
   "/home/esosa/Desktop/BDE/ColaPrioridad.cpp" "/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles/BDE.dir/ColaPrioridad.cpp.o"
   "/home/esosa/Desktop/BDE/DatosGrafo.cpp" "/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles/BDE.dir/DatosGrafo.cpp.o"
-  "/home/esosa/Desktop/BDE/Ejecucion.cpp" "/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles/BDE.dir/Ejecucion.cpp.o"
   "/home/esosa/Desktop/BDE/ElementalAgua.cpp" "/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles/BDE.dir/ElementalAgua.cpp.o"
   "/home/esosa/Desktop/BDE/ElementalAire.cpp" "/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles/BDE.dir/ElementalAire.cpp.o"
   "/home/esosa/Desktop/BDE/ElementalFuego.cpp" "/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles/BDE.dir/ElementalFuego.cpp.o"
@@ -20,7 +18,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/esosa/Desktop/BDE/Juego.cpp" "/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles/BDE.dir/Juego.cpp.o"
   "/home/esosa/Desktop/BDE/Jugador.cpp" "/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles/BDE.dir/Jugador.cpp.o"
   "/home/esosa/Desktop/BDE/Jugar.cpp" "/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles/BDE.dir/Jugar.cpp.o"
-  "/home/esosa/Desktop/BDE/Menu.cpp" "/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles/BDE.dir/Menu.cpp.o"
+  "/home/esosa/Desktop/BDE/MenuInicio.cpp" "/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles/BDE.dir/MenuInicio.cpp.o"
   "/home/esosa/Desktop/BDE/MenuJuego.cpp" "/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles/BDE.dir/MenuJuego.cpp.o"
   "/home/esosa/Desktop/BDE/MenuSeleccion.cpp" "/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles/BDE.dir/MenuSeleccion.cpp.o"
   "/home/esosa/Desktop/BDE/NodoABB.cpp" "/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles/BDE.dir/NodoABB.cpp.o"
