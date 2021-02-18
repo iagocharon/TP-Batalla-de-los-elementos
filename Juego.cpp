@@ -148,8 +148,8 @@ void Juego::posicionarPersonajeJugador2(int personaje) {
 //}
 
 
-/*
-void Juego::moverPersonaje(Personaje* personaje){
+
+void Juego::moverPersonaje(Personaje* personaje, Grafo* tablero){
     int x = 0;
     int y = 0;
     bool ingresoValido = false;
@@ -176,15 +176,35 @@ void Juego::moverPersonaje(Personaje* personaje){
                 break;
             }
         }
-
     //Falta comprobar que la energía sea suficiente para mover al personaje al casillero deseado.
     }while(!ingresoValido);
-
+    
+    Vertice* salida = tablero->getVertice(personaje->getFila(), personaje->getColumna());
+    Vertice* destino = tablero->getVertice(x, y);
+    if (personaje->getElemento() == ELEMENTO_AGUA) {
+        tablero->setCriterioBusqueda(1);
+    }
+    else if (personaje->getElemento() == ELEMENTO_AIRE) {
+        tablero->setCriterioBusqueda(2);
+    }
+    else if (personaje->getElemento() == ELEMENTO_FUEGO) {
+        tablero->setCriterioBusqueda(3);
+    }
+    else if (personaje->getElemento() == ELEMENTO_TIERRA) {
+        tablero->setCriterioBusqueda(4);
+    }
+    int energiaNecesaria = tablero->caminoMinimo(salida, destino);
+    if (energiaNecesaria >= personaje->getEnergia()) {
     //Hay que restar la energia al personaje
-    personaje->setFila(x);
-    personaje->setColumna(y);
+        personaje->setFila(x);
+        personaje->setColumna(y);
+        personaje->setEnergia(personaje->getEnergia() - energiaNecesaria);
+    }
+    else {
+        cout << "No tiene energia necesaria." << endl;
+    }
 }
-*/
+
 
 void Juego::seleccionJugador1() {
     string nombre;

@@ -17,6 +17,7 @@
 #include "ElementalAgua.h"
 #include "ElementalFuego.h"
 #include "ElementalTierra.h"
+#include "Grafo.h"
 
 #define PARTIDA "partida.csv"
 #define PARTIDA_ENCONTRADA 0
@@ -87,6 +88,8 @@ public:
     // PRE: -
     // POS: Crea un archivo con el turno actual y los personajes de cada jugador.
     void partidaGuardar();
+    
+    void moverPersonaje(Personaje* personaje, Grafo* tablero);
 
 private:
     
