@@ -23,17 +23,21 @@ int main() {
             jugar->seleccionarPersonajes(juego);
             if(!juego->getSalir())
                 jugar->posicionarPersonajes(juego, tablero);
+            juego->randomizarTurno();
         }
 
 
         if(!juego->getSalir()){
-            juego->randomizarTurno();
 
             while(!jugar->finDelJuego(juego) && !juego->getSalir()){
                 jugar->jugar(juego, tablero, grafo);
             }
+            if(jugar->finDelJuego(juego)){
+                juego->borrarPartidaGuardada();
+            }
         }
     }
+
 
     delete tablero;
     delete juego;

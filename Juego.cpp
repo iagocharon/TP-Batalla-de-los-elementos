@@ -346,4 +346,8 @@ void Juego::partidaGuardar() {
     partida.close();
 }
 
+void Juego::borrarPartidaGuardada() {
+    remove(PARTIDA);
+}
+
 

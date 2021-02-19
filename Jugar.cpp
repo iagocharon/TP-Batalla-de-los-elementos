@@ -53,7 +53,7 @@ Personaje *Jugar::determinarPersonaje(Juego *juego, int personaje) {
     if (juego->getTurno() == 1) {
         return juego->getJugador1()->getPersonajes()[personaje];
     } else {
-        return juego->getJugador1()->getPersonajes()[personaje];
+        return juego->getJugador2()->getPersonajes()[personaje];
     }
 }
 
@@ -68,8 +68,16 @@ void Jugar::jugar(Juego *juego, Tablero *tablero, Grafo* grafo) {
     Personaje *personaje;
 
     for (int i = 0; i < MAX_PERSONAJES; i++) {
+        if(juego->getTurno() == 1){
+            cout << "JUGADOR 1" << endl;
+        }else{
+            cout << "JUGADOR 2" << endl;
+        }
         juego->getJugador1()->matarPersonajes();
         juego->getJugador2()->matarPersonajes();
+        if(finDelJuego(juego)){
+            return;
+        }
         personaje = determinarPersonaje(juego, i);
         if (personaje->getVida() <= 0) {
             continue;

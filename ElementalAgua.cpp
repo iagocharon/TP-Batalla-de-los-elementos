@@ -32,11 +32,23 @@ void ElementalAgua::atacar(Personaje* enemigos[MAX_PERSONAJES]) {
     cout << "ATAQUE DE ELEMENTAL DE AGUA" << endl;
     if (this->energia >= ENERGIA_ATAQUE_AGUA) {
         int filaObjetivo, columnaObjetivo;
-        cout << "\tIngrese las coordenadas del destino del ataque: " << endl;
-        cout << "\t\tFila: ";
-        cin >> filaObjetivo;
-        cout << "\t\tColumna: ";
-        cin >> columnaObjetivo;
+        do{
+            cout << "\tIngrese las coordenadas del destino del ataque: " << endl;
+            cout << "\t\tFila: ";
+            cin >> filaObjetivo;
+            cout << "\t\tColumna: ";
+            cin >> columnaObjetivo;
+
+            if(filaObjetivo < 1 || filaObjetivo > 8 ||
+               columnaObjetivo < 1 || columnaObjetivo > 8){
+                cout << "Coordenadas inválidas." << endl;
+            }
+        }while(filaObjetivo < 1 || filaObjetivo > 8 ||
+         columnaObjetivo < 1 || columnaObjetivo > 8);
+
+
+        filaObjetivo--;
+        columnaObjetivo--;
 
         for (int i = 0; i < MAX_PERSONAJES; i++) {
             if ((enemigos[i]->getFila() == filaObjetivo) && (enemigos[i]->getColumna() == columnaObjetivo)) {
