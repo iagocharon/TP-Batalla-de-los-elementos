@@ -22,6 +22,8 @@
 #define PARTIDA "partida.csv"
 #define PARTIDA_ENCONTRADA 0
 #define PARTIDA_NO_ENCONTRADA -1
+#define JUGADOR1 1
+#define JUGADORES 2
 
 using namespace std;
 
@@ -61,9 +63,12 @@ public:
     // POS: Devuelve el turno actual.
     int getTurno();
 
-    // PRE:
-    // POS:
+    // PRE: Recibe un entero con la posicion del vector de personajes de un jugador.
+    // POS: Cambia la posicion de un personaje del jugador 1.
     void posicionarPersonajeJugador1(int personaje);
+
+    // PRE: Recibe un entero con la posicion del vector de personajes de un jugador.
+    // POS: Cambia la posicion de un personaje del jugador 2.
     void posicionarPersonajeJugador2(int personaje);
 
     //void moverPersonaje(Personaje* personaje);
@@ -76,9 +81,13 @@ public:
     // POS: Cambia el turno entre 1 y 2 según corresponda.
     void cambiarTurno();
 
-    // PRE:
-    // POS:
+    // PRE: -
+    // POS: Llama a seleccionarJugador1 o seleccionarJugador2 según corresponda.
     void seleccionPersonajes();
+
+    // PRE: -
+    // POS: Llama a posicionarPersonajeJugador1 o posicionarPersonajeJugador2 según corresponda.
+    void posicionPersonajes(int personaje);
 
     // PRE: -
     // POS: Intenta cargar una partida ya empezada. Devuelve 0 si tiene exito o -1 en caso contraro.
@@ -92,14 +101,17 @@ public:
     // PRE: -
     // POS: Elimina el archivo con los datos de la partida.
     void borrarPartidaGuardada();
-    
-    void moverPersonaje(Personaje* personaje, Grafo* tablero);
+
+    // PRE:
+    // POS:
+    // void moverPersonaje(Personaje* personaje, Grafo* tablero);
 
 private:
     
 
-    //PRE:
-    //POS:
+    //PRE: Recibe dos enteros inicializados.
+    //POS: Devuelve true si la posicion que representa es valida y no hay otro personaje en esa posicion
+    // o false en caso contrario.
     bool posicionValida(int fila, int columna);
 
     // PRE: -

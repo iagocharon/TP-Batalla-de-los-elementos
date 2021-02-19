@@ -71,7 +71,6 @@ void Juego::posicionarPersonajeJugador1(int personaje) {
         cin >> columna;
 
         if(!posicionValida(fila, columna)) {
-            system("clear");
             cout << "Posicion inválida." << endl;
         }
 
@@ -98,7 +97,6 @@ void Juego::posicionarPersonajeJugador2(int personaje) {
         cin >> columna;
 
         if(!posicionValida(fila, columna)) {
-            system("clear");
             cout << "Posicion inválida." << endl;
         }
 
@@ -112,42 +110,7 @@ void Juego::posicionarPersonajeJugador2(int personaje) {
     cambiarTurno();
 }
 
-
-//void Juego::posicionarPersonajes(int personaje, Tablero* tablero) {
-//    this->posicionarPersonajeJugador1(personaje, tablero);
-//    this->posicionarPersonajeJugador2(personaje, tablero);
-    
-//    for (int i = 0; i < 2; i++) {
-//        do {
-//            cout << "Personaje " << personaje + 1 << "/3 del jugador " << turno << endl;
-//
-//            cout << "Ingrese la fila del personaje(1-8): " << endl;
-//            cin >> fila;
-//            cout << "Ingrese la columna del personaje (1-8): " << endl;
-//            cin >> columna;
-//
-//            if(!posicionValida(fila, columna)) {
-//                system("clear");
-//                cout << "Posicion inválida." << endl;
-//            }
-//
-//        } while(!posicionValida(fila, columna));
-//
-//        fila--;
-//        columna--;
-//
-//        if (turno == 1) {
-//            jugador1->getPersonajes()[personaje]->setFila(fila);
-//            jugador1->getPersonajes()[personaje]->setColumna(columna);
-//        } else {
-//            jugador2->getPersonajes()[personaje]->setFila(fila);
-//            jugador2->getPersonajes()[personaje]->setColumna(columna);
-//        }
-//        cambiarTurno();
-//    }
-//}
-
-
+/*
 
 void Juego::moverPersonaje(Personaje* personaje, Grafo* tablero){
     int x = 0;
@@ -204,7 +167,7 @@ void Juego::moverPersonaje(Personaje* personaje, Grafo* tablero){
         cout << "No tiene energia necesaria." << endl;
     }
 }
-
+*/
 
 void Juego::seleccionJugador1() {
     string nombre;
@@ -228,10 +191,7 @@ void Juego::seleccionJugador1() {
             cout << "Personaje inválido" << endl;
         }
     } while (!eliminado);
-
     cambiarTurno();
-
-    system("clear");
 }
 
 void Juego::seleccionJugador2() {
@@ -252,15 +212,21 @@ void Juego::seleccionJugador2() {
     } while (!eliminado);
 
     cambiarTurno();
-
-    system("clear");
 }
 
 void Juego::seleccionPersonajes() {
-    if (turno == 1) {
+    if (turno == JUGADOR1) {
         seleccionJugador1();
     } else {
         seleccionJugador2();
+    }
+}
+
+void Juego::posicionPersonajes(int personaje){
+    if(turno == JUGADOR1){
+        posicionarPersonajeJugador1(personaje);
+    } else {
+        posicionarPersonajeJugador2(personaje);
     }
 }
 
@@ -319,7 +285,6 @@ int Juego::partidaCargar() {
     cout << "Partida cargada" << endl;
     return PARTIDA_ENCONTRADA;
 }
-
 
 void Juego::partidaGuardar() {
     ofstream partida(PARTIDA);

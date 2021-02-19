@@ -20,6 +20,14 @@ int Jugador::getCantidadPersonajes(){
     return this->cantidadPersonajes;
 }
 
+bool Jugador::jugadorMuerto() {
+    for (int i = 0; i < MAX_PERSONAJES; i++) {
+        if (personajesJugador[i]->getVida() > 0) {
+            return false;
+        }
+    }
+    return true;
+}
 void Jugador::matarPersonajes(){
     for(int i = 0; i < MAX_PERSONAJES; i++){
         if(personajesJugador[i]->getVida() <= 0){

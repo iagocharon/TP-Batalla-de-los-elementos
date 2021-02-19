@@ -32,6 +32,10 @@ public:
     // POS: Devuelve la cantidad de personajes del jugador.
     int getCantidadPersonajes();
 
+    // -
+    // Devuelve true si todos los personajes del jugador estan muertos o false en caso contrario.
+    bool jugadorMuerto();
+
     // PRE: -
     // POS: Reduce mucho la vida de un personaje muerto y lo quita del tablero para que no interfiera
     //  con el resto del juego.

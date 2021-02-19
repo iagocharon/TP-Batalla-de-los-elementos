@@ -1,11 +1,6 @@
 #include "MenuSeleccion.h"
 
-const int BUSCAR_POR_NOMBRE = 1;
-const int MOSTRAR_NOMBRES = 2;
-const int SELECCIONAR_PERSONAJE = 3;
-const int SALIR = 4;
-
-MenuSeleccion::MenuSeleccion(){}
+MenuSeleccion::MenuSeleccion() {}
 
 
 void MenuSeleccion::mostrarMenu() {
@@ -15,23 +10,21 @@ void MenuSeleccion::mostrarMenu() {
     cout << "\t4- Salir." << endl;
 }
 
-void MenuSeleccion::accionMenu(int eleccion, Juego* juego){
-    system("clear");
-
-    switch (eleccion){
-        case BUSCAR_POR_NOMBRE:
+void MenuSeleccion::accionMenu(int eleccion, Juego *juego) {
+    switch (eleccion) {
+        case MS_BUSCAR_POR_NOMBRE:
             buscar(juego->getPersonajes());
             break;
 
-        case MOSTRAR_NOMBRES:
+        case MS_MOSTRAR_NOMBRES:
             juego->getPersonajes()->mostrarEnOrden();
             break;
 
-        case SELECCIONAR_PERSONAJE:
+        case MS_SELECCIONAR_PERSONAJE:
             juego->seleccionPersonajes();
             break;
 
-        case SALIR:
+        case MS_SALIR:
             juego->setSalir(true);
             break;
 
@@ -40,13 +33,13 @@ void MenuSeleccion::accionMenu(int eleccion, Juego* juego){
     }
 }
 
-void MenuSeleccion::buscar(ABB* personajes){
+void MenuSeleccion::buscar(ABB *personajes) {
     string nombre;
     cout << "\tIngrese el nombre del personaje a buscar: ";
     cin >> nombre;
-    if(personajes->buscar(nombre) != nullptr){
+    if (personajes->buscar(nombre) != nullptr) {
         personajes->buscar(nombre)->getDato()->mostrar();
-    }else{
+    } else {
         cout << "Error" << endl;
     }
 }

@@ -80,25 +80,25 @@ bool MenuInicio::elementoValido(string elemento) {
 void MenuInicio::accionMenu(int& eleccion, Juego* juego) {
     switch(eleccion)
     {
-        case 1:
+        case MI_AGREGAR_PERSONAJE:
             agregarNuevo(juego->getPersonajes());
             break;
-        case 2:
+        case MI_ELIMINAR_PERSONAJE:
             eliminarPersonaje(juego->getPersonajes());
             break;
-        case 3:
+        case MI_MOSTRAR_NOMBRES:
             mostrarNombres(juego->getPersonajes());
             break;
-        case 4:
+        case MI_BUSCAR_POR_NOMBRE:
             buscarPorNombre(juego->getPersonajes());
             break;
-        case 5:
-            if(juego->getPersonajes()->cantidadPersonajes() < PERSONAJES_MINIMOS){
+        case MI_COMENZAR:
+            if(juego->getPersonajes()->cantidadPersonajes() < MI_PERSONAJES_MINIMOS){
                 cout << "Se necesitan almenos 6 personajes para comenzar.\n" << endl;
                 eleccion = 0;
             }
             break;
-        case 6:
+        case MI_SALIR:
             juego->setSalir(true);
             break;
         default:

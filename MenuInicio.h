@@ -4,11 +4,14 @@
 #include <iostream>
 #include "Juego.h"
 #include "Utiles.h"
-const int MOSTRAR_NOMBRES = 3;
-const int BUSCAR_POR_NOMBRE = 4;
-const int PERSONAJES_MINIMOS = 6;
-const int COMENZAR = 5;
-const int SALIR = 6;
+
+#define MI_AGREGAR_PERSONAJE 1
+#define MI_ELIMINAR_PERSONAJE 2
+#define MI_MOSTRAR_NOMBRES 3
+#define MI_BUSCAR_POR_NOMBRE 4
+#define MI_PERSONAJES_MINIMOS 6
+#define MI_COMENZAR 5
+#define MI_SALIR 6
 
 class MenuInicio {
 

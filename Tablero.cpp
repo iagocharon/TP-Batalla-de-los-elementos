@@ -48,7 +48,7 @@ void Tablero::mostrarTablero(Juego* juego){
     for (int i = 0; i < MAX_FILAS; i++) {
         for (int j = 0; j < MAX_COLUMNAS; j++) {
             personaje = personajeJugado(j, i, juego, jugador);
-            if (jugador == 1) {
+            if (jugador == JUGADOR1) {
                 this->mostrarPersonajeJugador1(j, i, personaje);
             }
             else {

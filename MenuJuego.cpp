@@ -9,24 +9,20 @@ void MenuJuego::mostrarMenu1() {
     cout << "\t4- Salir del juego." << endl;
 }
 
-void MenuJuego::accionMenu1(int eleccion, Juego* juego, Personaje* personaje, Tablero* tablero, Grafo* grafo){
-    system("clear");
-
+void MenuJuego::accionMenu1(int eleccion, Juego* juego, Personaje* personaje, Grafo* grafo){
     switch (eleccion){
-        case 1:
+        case MJ_ALIMENTAR:
             personaje->alimentar();
             break;
 
-        case 2:
-            tablero->mostrarTablero(juego);
-            juego->moverPersonaje(personaje, grafo);
-            tablero->mostrarTablero(juego);
+        case MJ_MOVER:
+            //juego->moverPersonaje(personaje, grafo);
             break;
 
-        case 3:
+        case MJ_PASAR:
             break;
 
-        case 4:
+        case MJ_SALIR:
             juego->setSalir(true);
             break;
 
@@ -42,30 +38,28 @@ void MenuJuego::mostrarMenu2() {
     cout << "\t4- Salir." << endl;
 }
 
-void MenuJuego::accionMenu2(int eleccion, Juego* juego, Personaje* personaje, Tablero* tablero, Grafo* grafo){
-    system("clear");
-
+void MenuJuego::accionMenu2(int eleccion, Juego* juego, Personaje* personaje, Grafo* grafo){
     switch (eleccion){
-        case 1:
-            if(juego->getTurno() == 1){
+        case MJ_ATACAR:
+            if(juego->getTurno() == JUGADOR1){
                 personaje->atacar(juego->getJugador2()->getPersonajes());
             }else{
                 personaje->atacar(juego->getJugador1()->getPersonajes());
             }
             break;
 
-        case 2:
-            if(juego->getTurno() == 1){
+        case MJ_DEFENDER:
+            if(juego->getTurno() == JUGADOR1){
                 personaje->defender(juego->getJugador1()->getPersonajes());
             }else{
                 personaje->defender(juego->getJugador2()->getPersonajes());
             }
             break;
 
-        case 3:
+        case MJ_PASAR:
             break;
 
-        case 4:
+        case MJ_SALIR:
             juego->setSalir(true);
             break;
 
