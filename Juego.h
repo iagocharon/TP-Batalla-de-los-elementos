@@ -88,6 +88,10 @@ public:
     // PRE: -
     // POS: Crea un archivo con el turno actual y los personajes de cada jugador.
     void partidaGuardar();
+
+    // PRE: -
+    // POS: Elimina el archivo con los datos de la partida.
+    void borrarPartidaGuardada();
     
     void moverPersonaje(Personaje* personaje, Grafo* tablero);
 
