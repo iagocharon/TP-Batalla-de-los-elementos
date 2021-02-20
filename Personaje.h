@@ -9,7 +9,7 @@
 #define MAX_PERSONAJES 3
 #define MAX_TABLERO 8
 #define ELEMENTO_TIERRA "tierra"
-#define ELEMENTO_AIRE "aire"
+#define ELEMENTO_AIRE "tire"
 #define ELEMENTO_AGUA "agua"
 #define ELEMENTO_FUEGO "fuego"
 
@@ -18,6 +18,7 @@ using namespace std;
 class Personaje{
 protected:
     //Atributos
+
     string nombre;
     string elemento;
     int escudo;
@@ -44,7 +45,6 @@ public:
     string getNombre();
 
     string getElemento();
-
     // PRE: -
     // POS: Devuelve el escudo del personaje
     int getEscudo();
@@ -80,6 +80,9 @@ public:
     virtual void atacar(Personaje* enemigos[MAX_PERSONAJES]) = 0;
 
     virtual void defender(Personaje* aliados[MAX_PERSONAJES]) = 0;
+
+    virtual bool energiaNecesariaAtaque() = 0;
+    virtual bool energiaNecesariaDefensa() = 0;
 };
 
 #endif //TP2_PERSONAJE_H

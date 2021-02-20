@@ -1,3 +1,3 @@
-/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/esosa/Desktop/BDE/cmake-build-debug/CMakeFiles/BDE.dir
+/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles/BDE.dir

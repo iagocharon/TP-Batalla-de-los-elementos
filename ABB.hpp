@@ -7,7 +7,9 @@
 #include "ElementalAire.h"
 #include "ElementalFuego.h"
 #include "ElementalTierra.h"
-#include "NodoABB.h"
+#include "NodoABB.hpp"
+
+const int SALIR = 6;
 
 using namespace std;
 

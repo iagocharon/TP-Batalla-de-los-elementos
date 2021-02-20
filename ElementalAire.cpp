@@ -13,7 +13,7 @@ void ElementalAire::alimentar() {
 
 void ElementalAire::atacar(Personaje* enemigos[MAX_PERSONAJES]) {
     cout << "ATAQUE DE ELEMENTAL DE AIRE" << endl;
-    if (this->energia >= ENERGIA_ATAQUE_AIRE) {
+    if (energiaNecesariaAtaque()) {
         for (int i = 0; i < MAX_PERSONAJES; i++) {
             float danio = DANIO_AIRE;
             if (enemigos[i]->getElemento() == ELEMENTO_TIERRA) {
@@ -42,7 +42,7 @@ void ElementalAire::atacar(Personaje* enemigos[MAX_PERSONAJES]) {
 
 void ElementalAire::defender(Personaje* aliados[MAX_PERSONAJES]) {
     cout << "DEFENSA DE ELEMENTAL DE AIRE" << endl;
-    if (this->energia >= ENERGIA_DEFENSA_AIRE) {
+    if (energiaNecesariaDefensa()) {
         cout << "\tIngrese las coordenadas de la casilla a la que desea desplazarse: " << endl;
         cout << "\t\tFila: ";
         cin >> this->fila;
@@ -53,11 +53,21 @@ void ElementalAire::defender(Personaje* aliados[MAX_PERSONAJES]) {
         cout << "\t\tColumna: ";
         cin >> this->columna;
         while (this->columna < 0 || this->columna >= MAX_TABLERO) {
-            cout << "\t\tIngrese una fila valida: ";
+            cout << "\t\tIngrese una columna valida: ";
             cin >> this->columna;
         }
     }
     else {
         cout << "\tNo tiene energia suficiente para defender." << endl;
     }
+}
+
+bool ElementalAire::energiaNecesariaAtaque(){
+
+    return this->energia >= ENERGIA_ATAQUE_AIRE;
+}
+
+bool ElementalAire::energiaNecesariaDefensa(){
+
+    return this->energia >= ENERGIA_DEFENSA_AIRE;
 }

@@ -30,25 +30,13 @@ void ElementalAgua::alimentar() {
 
 void ElementalAgua::atacar(Personaje* enemigos[MAX_PERSONAJES]) {
     cout << "ATAQUE DE ELEMENTAL DE AGUA" << endl;
-    if (this->energia >= ENERGIA_ATAQUE_AGUA) {
+    if (energiaNecesariaAtaque()) {
         int filaObjetivo, columnaObjetivo;
-        do{
-            cout << "\tIngrese las coordenadas del destino del ataque: " << endl;
-            cout << "\t\tFila: ";
-            cin >> filaObjetivo;
-            cout << "\t\tColumna: ";
-            cin >> columnaObjetivo;
-
-            if(filaObjetivo < 1 || filaObjetivo > 8 ||
-               columnaObjetivo < 1 || columnaObjetivo > 8){
-                cout << "Coordenadas inválidas." << endl;
-            }
-        }while(filaObjetivo < 1 || filaObjetivo > 8 ||
-         columnaObjetivo < 1 || columnaObjetivo > 8);
-
-
-        filaObjetivo--;
-        columnaObjetivo--;
+        cout << "\tIngrese las coordenadas del destino del ataque: " << endl;
+        cout << "\t\tFila: ";
+        cin >> filaObjetivo;
+        cout << "\t\tColumna: ";
+        cin >> columnaObjetivo;
 
         for (int i = 0; i < MAX_PERSONAJES; i++) {
             if ((enemigos[i]->getFila() == filaObjetivo) && (enemigos[i]->getColumna() == columnaObjetivo)) {
@@ -80,7 +68,7 @@ void ElementalAgua::atacar(Personaje* enemigos[MAX_PERSONAJES]) {
 
 void ElementalAgua::defender(Personaje* aliados[MAX_PERSONAJES]) {
     cout << "DEFENSA DE ELEMENTAL DE AGUA" << endl;
-    if (this->energia >= ENERGIA_DEFENSA_AGUA) {
+    if (energiaNecesariaDefensa()) {
         this->vida += RECUPERACION_AGUA;
         for (int i = 0; i < MAX_PERSONAJES; i++) {
             if (aliados[i]->getNombre() != this->nombre) {
@@ -91,4 +79,14 @@ void ElementalAgua::defender(Personaje* aliados[MAX_PERSONAJES]) {
     else {
         cout << "\tNo tiene energia suficiente para defender." << endl;
     }
+}
+
+bool ElementalAgua::energiaNecesariaAtaque(){
+
+    return this->energia >= ENERGIA_ATAQUE_AGUA;
+}
+
+bool ElementalAgua::energiaNecesariaDefensa(){
+
+    return this->energia >= ENERGIA_DEFENSA_AGUA;
 }

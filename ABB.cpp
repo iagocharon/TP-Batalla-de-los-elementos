@@ -50,6 +50,7 @@ NodoABB* ABB::insertar(NodoABB* nodo, Personaje* dato, string clave) {
 }
 
 void ABB::insertar(Personaje* dato, string clave) {
+
     this->raiz = insertar(this->raiz, dato, clave);
     cantidadCargados++;
 }
@@ -164,7 +165,7 @@ bool ABB::eliminar(string clave) {
         cout << "No se encontró a " << clave << " entre las opciones." << endl;
 
     else {
-        //cout << "Se eliminó a " << clave << "." << endl;
+        cout << "Se eliminó a " << clave << "." << endl;
         cantidadCargados--;
     }
     return eliminado;

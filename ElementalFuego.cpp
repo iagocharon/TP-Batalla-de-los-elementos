@@ -18,7 +18,8 @@ void ElementalFuego::alimentar() {
 
 void ElementalFuego::atacar(Personaje* enemigos[MAX_PERSONAJES]) {
     cout << "ATAQUE DE ELEMENTAL DE FUEGO" << endl;
-    if (this->energia >= ENERGIA_ATAQUE_FUEGO) {
+
+    if (energiaNecesariaAtaque()) {
         for (int i = 0; i < MAX_PERSONAJES; i++) {
             if (abs(enemigos[i]->getFila() - this->fila) <= 1) {
                 float danio = DANIO_FUEGO;
@@ -49,11 +50,22 @@ void ElementalFuego::atacar(Personaje* enemigos[MAX_PERSONAJES]) {
 
 void ElementalFuego::defender(Personaje* aliados[MAX_PERSONAJES]) {
     cout << "DEFENSA DE ELEMENTAL DE FUEGO" << endl;
-    if (this->energia >= ENERGIA_DEFENSA_FUEGO) {
+
+    if (energiaNecesariaDefensa()) {
         this->vida += RECUPERACION_FUEGO;
         this->energia -= ENERGIA_DEFENSA_FUEGO;
     }
     else {
         cout << "\tNo tiene energia suficiente para defender." << endl;
     }
+}
+
+bool ElementalFuego::energiaNecesariaAtaque(){
+
+    return this->energia >= ENERGIA_ATAQUE_FUEGO;
+}
+
+bool ElementalFuego::energiaNecesariaDefensa(){
+
+    return this->energia >= ENERGIA_DEFENSA_FUEGO;
 }

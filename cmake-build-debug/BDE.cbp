@@ -8,43 +8,43 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/esosa/Desktop/BDE/cmake-build-debug"/>
+				<Option working_dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/esosa/Desktop/BDE/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/esosa/Desktop/BDE/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/home/esosa/Desktop/BDE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/home/esosa/Desktop/BDE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/nicolas/Daniel/Algo\ 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/nicolas/Daniel/Algo\ 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/nicolas/Daniel/Algo\ 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/nicolas/Daniel/Algo\ 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/esosa/Desktop/BDE/cmake-build-debug"/>
+				<Option working_dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/esosa/Desktop/BDE/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/esosa/Desktop/BDE/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/home/esosa/Desktop/BDE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/home/esosa/Desktop/BDE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/nicolas/Daniel/Algo\ 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/nicolas/Daniel/Algo\ 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/nicolas/Daniel/Algo\ 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/nicolas/Daniel/Algo\ 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/esosa/Desktop/BDE/cmake-build-debug"/>
+				<Option working_dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/esosa/Desktop/BDE/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/esosa/Desktop/BDE/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/home/esosa/Desktop/BDE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/home/esosa/Desktop/BDE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/nicolas/Daniel/Algo\ 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/nicolas/Daniel/Algo\ 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/nicolas/Daniel/Algo\ 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/nicolas/Daniel/Algo\ 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="BDE">
-				<Option output="/home/esosa/Desktop/BDE/cmake-build-debug/BDE" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/esosa/Desktop/BDE/cmake-build-debug"/>
+				<Option output="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/BDE" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/esosa/Desktop/BDE/."/>
+					<Add directory="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/."/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -55,20 +55,20 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/esosa/Desktop/BDE/cmake-build-debug/Makefile&quot;  VERBOSE=1 BDE"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/esosa/Desktop/BDE/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/home/esosa/Desktop/BDE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/home/esosa/Desktop/BDE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/nicolas/Daniel/Algo\ 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/Makefile&quot;  VERBOSE=1 BDE"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/nicolas/Daniel/Algo\ 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/nicolas/Daniel/Algo\ 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/nicolas/Daniel/Algo\ 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="BDE/fast">
-				<Option output="/home/esosa/Desktop/BDE/cmake-build-debug/BDE" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/esosa/Desktop/BDE/cmake-build-debug"/>
+				<Option output="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/BDE" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/esosa/Desktop/BDE/."/>
+					<Add directory="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/."/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -79,149 +79,149 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/esosa/Desktop/BDE/cmake-build-debug/Makefile&quot;  VERBOSE=1 BDE/fast"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/esosa/Desktop/BDE/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/home/esosa/Desktop/BDE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/home/esosa/Desktop/BDE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/nicolas/Daniel/Algo\ 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/Makefile&quot;  VERBOSE=1 BDE/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/nicolas/Daniel/Algo\ 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/nicolas/Daniel/Algo\ 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/nicolas/Daniel/Algo\ 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/esosa/Desktop/BDE/ABB.cpp">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/ABB.cpp">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/ABB.hpp">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/ABB.hpp">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/ArchivoPersonajes.cpp">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/ArchivoPersonajes.cpp">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/ArchivoPersonajes.h">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/ArchivoPersonajes.h">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/Casillero.cpp">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/Casillero.cpp">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/Casillero.h">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/Casillero.h">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/ColaPrioridad.cpp">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/ColaPrioridad.cpp">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/ColaPrioridad.h">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/ColaPrioridad.h">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/DatosGrafo.cpp">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/DatosGrafo.cpp">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/DatosGrafo.h">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/DatosGrafo.h">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/ElementalAgua.cpp">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/ElementalAgua.cpp">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/ElementalAgua.h">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/ElementalAgua.h">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/ElementalAire.cpp">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/ElementalAire.cpp">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/ElementalAire.h">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/ElementalAire.h">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/ElementalFuego.cpp">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/ElementalFuego.cpp">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/ElementalFuego.h">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/ElementalFuego.h">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/ElementalTierra.cpp">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/ElementalTierra.cpp">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/ElementalTierra.h">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/ElementalTierra.h">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/Etiqueta.cpp">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/Etiqueta.cpp">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/Etiqueta.h">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/Etiqueta.h">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/Grafo.cpp">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/Grafo.cpp">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/Grafo.h">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/Grafo.h">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/Juego.cpp">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/Juego.cpp">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/Juego.h">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/Juego.h">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/Jugador.cpp">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/Jugador.cpp">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/Jugador.h">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/Jugador.h">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/Jugar.cpp">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/Jugar.cpp">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/Jugar.h">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/Jugar.h">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/MenuInicio.cpp">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/MenuInicio.cpp">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/MenuInicio.h">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/MenuInicio.h">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/MenuJuego.cpp">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/MenuJuego.cpp">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/MenuJuego.h">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/MenuJuego.h">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/MenuSeleccion.cpp">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/MenuSeleccion.cpp">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/MenuSeleccion.h">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/MenuSeleccion.h">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/NodoABB.cpp">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/NodoABB.cpp">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/NodoABB.h">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/NodoABB.h">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/NodoColaPrioridad.cpp">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/NodoColaPrioridad.cpp">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/NodoColaPrioridad.h">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/NodoColaPrioridad.h">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/Personaje.cpp">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/Personaje.cpp">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/Personaje.h">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/Personaje.h">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/Tablero.cpp">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/Tablero.cpp">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/Tablero.h">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/Tablero.h">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/Utiles.cpp">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/Utiles.cpp">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/Utiles.h">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/Utiles.h">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/main.cpp">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/main.cpp">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/esosa/Desktop/BDE/CMakeLists.txt">
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

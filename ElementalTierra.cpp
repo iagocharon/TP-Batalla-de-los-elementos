@@ -30,7 +30,7 @@ void ElementalTierra::alimentar() {
 
 void ElementalTierra::atacar(Personaje* enemigos[MAX_PERSONAJES]) {
     cout << "ATAQUE DE ELEMENTAL DE TIERRA" << endl;
-    if (this->energia >= ENERGIA_ATAQUE_TIERRA) {
+    if (energiaNecesariaAtaque()) {
         for (int i = 0; i < MAX_PERSONAJES; i++) {
             float danio;
             if (abs(enemigos[i]->getFila() - this->fila) <= 2) {
@@ -64,6 +64,12 @@ void ElementalTierra::atacar(Personaje* enemigos[MAX_PERSONAJES]) {
             else if (enemigos[i]->getEscudo() > 2) {
                 danio = danio * 0.2;
             }
+            if(enemigos[i]->getElemento() == ELEMENTO_AGUA)
+                danio += MODIFICADOR_TIERRA_AGUA;
+
+            else if(enemigos[i]->getElemento() == ELEMENTO_AGUA)
+                danio = MODIFICADOR_TIERRA_AIRE;
+
             enemigos[i]->setVida(enemigos[i]->getVida() - danio);
         }
         this->energia -= ENERGIA_ATAQUE_TIERRA;
@@ -75,12 +81,22 @@ void ElementalTierra::atacar(Personaje* enemigos[MAX_PERSONAJES]) {
 
 void ElementalTierra::defender(Personaje* aliados[MAX_PERSONAJES]) {
     cout << "DEFENSA DE ELEMENTAL DE TIERRA" << endl;
-    if (this->energia >= ENERGIA_DEFENSA_TIERRA) {
+    if (energiaNecesariaDefensa()) {
         this->escudo =+ BONIFICACION_ESCUDO_TIERRA;
-        this->bonificacion = true;
+        setBonificacion(true);
         this->energia -= ENERGIA_DEFENSA_TIERRA;
     }
     else {
         cout << "\tNo tiene energia suficiente para defender." << endl;
     }
+}
+
+bool ElementalTierra::energiaNecesariaAtaque(){
+
+    return this->energia >= ENERGIA_ATAQUE_TIERRA;
+}
+
+bool ElementalTierra::energiaNecesariaDefensa(){
+
+    return this->energia >= ENERGIA_DEFENSA_TIERRA;
 }
