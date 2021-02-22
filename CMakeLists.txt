@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.16.5)
+cmake_minimum_required(VERSION 3.17)
 project(BDE)
 
 set(CMAKE_CXX_STANDARD 14)
@@ -12,8 +12,6 @@ add_executable(BDE
         ArchivoPersonajes.h
         Casillero.cpp
         Casillero.h
-        ColaPrioridad.cpp
-        ColaPrioridad.h
         DatosGrafo.cpp
         DatosGrafo.h
         ElementalAgua.cpp
@@ -24,8 +22,6 @@ add_executable(BDE
         ElementalFuego.h
         ElementalTierra.cpp
         ElementalTierra.h
-        Etiqueta.cpp
-        Etiqueta.h
         Grafo.cpp
         Grafo.h
         Juego.cpp
@@ -39,8 +35,6 @@ add_executable(BDE
         MenuSeleccion.h
         NodoABB.cpp
         NodoABB.h
-        NodoColaPrioridad.cpp
-        NodoColaPrioridad.h
         Personaje.cpp
         Personaje.h
         Tablero.cpp

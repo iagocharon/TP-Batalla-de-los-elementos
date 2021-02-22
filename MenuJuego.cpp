@@ -1,6 +1,6 @@
 #include "MenuJuego.h"
 
-MenuJuego::MenuJuego() {}
+MenuJuego::MenuJuego(){}
 
 void MenuJuego::mostrarMenu1() {
     cout << "\t1- Alimentar personaje." << endl;
@@ -9,21 +9,14 @@ void MenuJuego::mostrarMenu1() {
     cout << "\t4- Salir del juego." << endl;
 }
 
-void MenuJuego::accionMenu1(int eleccion, Juego* juego, Personaje* personaje, Grafo* grafo, Tablero* tablero) {
-    Utiles utiles;
-    utiles.limpiarPantalla();
-    switch (eleccion) {
+void MenuJuego::accionMenu1(int eleccion, Juego* juego, Personaje* personaje, Grafo* grafo){
+    switch (eleccion){
         case MJ_ALIMENTAR:
-            utiles.enmarcar("ALIMENTAR PERSONAJE");
             personaje->alimentar();
             break;
 
         case MJ_MOVER:
-            utiles.enmarcar("MOVER PERSONAJE");
-            tablero->mostrarTablero(juego);
             juego->moverPersonaje(personaje, grafo);
-            cout << endl << endl;
-            tablero->mostrarTablero(juego);
             break;
 
         case MJ_PASAR:
@@ -36,7 +29,6 @@ void MenuJuego::accionMenu1(int eleccion, Juego* juego, Personaje* personaje, Gr
         default:
             cout << "Opcion inválida" << endl;
     }
-    utiles.pausa();
 }
 
 void MenuJuego::mostrarMenu2() {
@@ -46,28 +38,20 @@ void MenuJuego::mostrarMenu2() {
     cout << "\t4- Salir." << endl;
 }
 
-void MenuJuego::accionMenu2(int eleccion, Juego* juego, Personaje* personaje, Grafo* grafo, Tablero* tablero) {
-    Utiles utiles;
-    utiles.limpiarPantalla();
-    switch (eleccion) {
+void MenuJuego::accionMenu2(int eleccion, Juego* juego, Personaje* personaje, Grafo* grafo){
+    switch (eleccion){
         case MJ_ATACAR:
-            utiles.enmarcar("ATACAR");
-            tablero->mostrarTablero(juego);
-            if(juego->getTurno() == JUGADOR1) {
+            if(juego->getTurno() == JUGADOR1){
                 personaje->atacar(juego->getJugador2()->getPersonajes());
-            }
-            else{
+            }else{
                 personaje->atacar(juego->getJugador1()->getPersonajes());
             }
             break;
 
         case MJ_DEFENDER:
-            utiles.enmarcar("DEFENDER");
-            tablero->mostrarTablero(juego);
-            if(juego->getTurno() == JUGADOR1) {
+            if(juego->getTurno() == JUGADOR1){
                 personaje->defender(juego->getJugador1()->getPersonajes());
-            }
-            else{
+            }else{
                 personaje->defender(juego->getJugador2()->getPersonajes());
             }
             break;
@@ -82,6 +66,5 @@ void MenuJuego::accionMenu2(int eleccion, Juego* juego, Personaje* personaje, Gr
         default:
             cout << "Opcion inválida" << endl;
     }
-    utiles.pausa();
 }
 

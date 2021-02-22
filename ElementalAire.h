@@ -25,24 +25,9 @@ public:
     // POS: Notifica al usuario el estado de la alimentación del personaje
     void alimentar();
 
-    // PRE: -
-    // POS: Realiza un ataque con las características del ataque aire si tiene energia suficiente,
-    //      sino notifica al ususario que no es posible efectuar el mismo
     void atacar(Personaje* enemigos[MAX_PERSONAJES]);
 
-    // PRE: -
-    // POS: Se desplaza a la posición deseada en el tablero elegida por el usuario en caso de
-    //      tener energia >= ENERGIA_DEFENSA_AIRE, de otro modo notifica al usuario la
-    //      imposibilidad de defenderse
     void defender(Personaje* aliados[MAX_PERSONAJES]);
-
-    // PRE: -
-    // POS: devuelve true si la energia es suficiente para realizar su ataque
-    bool energiaNecesariaAtaque();
-
-    // PRE: -
-    // POS: devuelve true si la energia es suficiente para realizar su defensa
-    bool energiaNecesariaDefensa();
 };
 
 

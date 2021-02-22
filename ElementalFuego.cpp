@@ -1,10 +1,10 @@
 #include "ElementalFuego.h"
 
 ElementalFuego::ElementalFuego(string nombre, string elemento, int escudo, int vida)
- : Personaje(nombre, elemento, escudo, vida) {}
+ : Personaje(nombre, elemento, escudo, vida){}
 
 ElementalFuego::ElementalFuego(string nombre, string elemento, int escudo, int vida, int energia, int fila, int columna)
-: Personaje(nombre, elemento, escudo, vida, energia, fila, columna) {}
+: Personaje(nombre, elemento, escudo, vida, energia, fila, columna){}
 
 void ElementalFuego::alimentar() {
     cout << "Estas alimentando a " << this->nombre << " un elemental de fuego, que consume madera para recuperar " << AUMENTO_ENERGIA_FUEGO << " de energia" << endl;
@@ -18,8 +18,7 @@ void ElementalFuego::alimentar() {
 
 void ElementalFuego::atacar(Personaje* enemigos[MAX_PERSONAJES]) {
     cout << "ATAQUE DE ELEMENTAL DE FUEGO" << endl;
-
-    if (energiaNecesariaAtaque()) {
+    if (this->energia >= ENERGIA_ATAQUE_FUEGO) {
         for (int i = 0; i < MAX_PERSONAJES; i++) {
             if (abs(enemigos[i]->getFila() - this->fila) <= 1) {
                 float danio = DANIO_FUEGO;
@@ -50,22 +49,11 @@ void ElementalFuego::atacar(Personaje* enemigos[MAX_PERSONAJES]) {
 
 void ElementalFuego::defender(Personaje* aliados[MAX_PERSONAJES]) {
     cout << "DEFENSA DE ELEMENTAL DE FUEGO" << endl;
-
-    if (energiaNecesariaDefensa()) {
+    if (this->energia >= ENERGIA_DEFENSA_FUEGO) {
         this->vida += RECUPERACION_FUEGO;
         this->energia -= ENERGIA_DEFENSA_FUEGO;
     }
     else {
         cout << "\tNo tiene energia suficiente para defender." << endl;
     }
-}
-
-bool ElementalFuego::energiaNecesariaAtaque() {
-
-    return this->energia >= ENERGIA_ATAQUE_FUEGO;
-}
-
-bool ElementalFuego::energiaNecesariaDefensa() {
-
-    return this->energia >= ENERGIA_DEFENSA_FUEGO;
 }

@@ -9,8 +9,6 @@
 #include "ElementalTierra.h"
 #include "NodoABB.h"
 
-const int SALIR = 6;
-
 using namespace std;
 
 class ABB {

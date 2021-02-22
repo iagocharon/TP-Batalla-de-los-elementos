@@ -28,7 +28,7 @@ void ABB::setRaiz(NodoABB* raiz) {
     raiz->setPadre(NULL);
 }
 
-int ABB::cantidadPersonajes() {
+int ABB::cantidadPersonajes(){
 
     return cantidadCargados;
 }
@@ -37,13 +37,11 @@ NodoABB* ABB::insertar(NodoABB* nodo, Personaje* dato, string clave) {
     if (nodo == NULL) {
         nodo = new NodoABB(clave, dato);
 
-    }
-    else if (clave > nodo->getClave()) {
+    } else if (clave > nodo->getClave()) {
         nodo->setDerecha(insertar(nodo->getDerecha(), dato, clave));
         nodo->getDerecha()->setPadre(nodo);
 
-    }
-    else {
+    } else {
         nodo->setIzquierda(insertar(nodo->getIzquierda(), dato, clave));
         nodo->getIzquierda()->setPadre(nodo);
     }
@@ -52,7 +50,6 @@ NodoABB* ABB::insertar(NodoABB* nodo, Personaje* dato, string clave) {
 }
 
 void ABB::insertar(Personaje* dato, string clave) {
-
     this->raiz = insertar(this->raiz, dato, clave);
     cantidadCargados++;
 }
@@ -61,12 +58,10 @@ NodoABB* ABB::buscar(NodoABB* nodo, string clave) {
     if (nodo == nullptr || nodo->getClave() == clave) {
         return nodo;
 
-    }
-    else if (clave > nodo->getClave()) {
+    } else if (clave > nodo->getClave()) {
         return buscar(nodo->getDerecha(), clave);
 
-    }
-    else {
+    } else {
         return buscar(nodo->getIzquierda(), clave);
     }
 }
@@ -98,8 +93,7 @@ NodoABB* ABB::hallarMinimo(NodoABB* nodo) {
     if (nodo->getIzquierda() != NULL) {
         return this->hallarMinimo(nodo->getIzquierda());
 
-    }
-    else {
+    } else {
         return nodo;
     }
 }
@@ -114,29 +108,25 @@ void ABB::eliminarNodo(NodoABB* nodo) {
         if (nodo->esRaiz()) {
             setRaiz(nodo->getDerecha());
             delete nodo;
-        }
-        else {
+        } else {
             nodo->getDerecha()->setPadre(nodo->getPadre());
             nodo->getPadre()->setDerecha(nodo->getDerecha());
             NodoABB *auxiliar = nodo;
             nodo = nodo->getDerecha();
             delete auxiliar;
         }
-    }
-    else if (nodo->soloHijoIzquierdo()) {
-        if(nodo->esRaiz()) {
+    } else if (nodo->soloHijoIzquierdo()) {
+        if(nodo->esRaiz()){
             setRaiz(nodo->getIzquierda());
             delete nodo;
-        }
-        else {
+        } else {
             nodo->getIzquierda()->setPadre(nodo->getPadre());
             nodo->getPadre()->setIzquierda(nodo->getIzquierda());
             NodoABB *auxiliar = nodo;
             nodo = nodo->getIzquierda();
             delete auxiliar;
         }
-    }
-    else {
+    } else {
         NodoABB* minimo = this->hallarMinimo(nodo->getDerecha());
         nodo->setDato(minimo->getDato());
         nodo->setClave(minimo->getClave());
@@ -154,13 +144,11 @@ NodoABB* ABB::eliminar(NodoABB* nodo, string clave, bool* eliminado) {
         *eliminado = true;
         return nodo;
 
-    }
-    else if (nodo->getClave() < clave) {
+    } else if (nodo->getClave() < clave) {
         eliminar(nodo->getDerecha(), clave, eliminado);
         return nodo;
 
-    }
-    else {
+    } else {
         eliminar(nodo->getIzquierda(), clave, eliminado);
         return nodo;
     }
@@ -176,7 +164,7 @@ bool ABB::eliminar(string clave) {
         cout << "No se encontró a " << clave << " entre las opciones." << endl;
 
     else {
-        cout << "Se eliminó a " << clave << " del arbol de personajes." << endl;
+        //cout << "Se eliminó a " << clave << "." << endl;
         cantidadCargados--;
     }
     return eliminado;

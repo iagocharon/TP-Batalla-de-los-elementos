@@ -5,7 +5,6 @@ Personaje::Personaje(string nombre, string elemento, int escudo, int vida) {
     this->elemento = elemento;
     this->escudo = escudo;
     this->vida = vida;
-    srand(unsigned(time(NULL)));
     this->energia = rand() % TOPE_ENERGIA;
     this->fila = -1;
     this->columna = -1;
@@ -79,9 +78,9 @@ void Personaje::setColumna(int columna) {
 
 
 void Personaje::mostrar() {
-    cout << "\tELEMENTO: " << this->elemento << endl;
-    cout << "\tNOMBRE: " << this->nombre << endl;
-    cout << "\tESCUDO: " << this->escudo << endl;
-    cout << "\tVIDA: " << this->vida << endl;
-    cout << "\tENERGIA: " << this->energia << endl;
+    cout << "\nELEMENTO: " << this->elemento << endl;
+    cout << "NOMBRE: " << this->nombre << endl;
+    cout << "ESCUDO: " << this->escudo << endl;
+    cout << "VIDA: " << this->vida << endl;
+    cout << "ENERGIA: " << this->energia << endl;
 }

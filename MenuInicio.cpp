@@ -1,6 +1,9 @@
 #include "MenuInicio.h"
 #include <iostream>
 
+const int PRIMERA_OPCION = 1;
+const int ULTIMA_OPCION = 6;
+
 using namespace std;
 
 void MenuInicio::mostrarMenu() {
@@ -13,7 +16,7 @@ void MenuInicio::mostrarMenu() {
     cout << "\t6) Salir" << endl;
 }
 
-void MenuInicio::agregarNuevo(ABB* personajes) {
+void MenuInicio::agregarNuevo(ABB* personajes){
 
     Utiles util;
     Tipo personaje;
@@ -71,36 +74,26 @@ string MenuInicio::ingresoElemento() {
 
 
 bool MenuInicio::elementoValido(string elemento) {
-    return(elemento == ELEMENTO_AGUA || elemento == ELEMENTO_AIRE || elemento == ELEMENTO_TIERRA || elemento == ELEMENTO_AIRE);
+    return(elemento == "agua" || elemento == "tierra" || elemento == "fuego" || elemento == "aire");
 }
 
 void MenuInicio::accionMenu(int& eleccion, Juego* juego) {
-    Utiles utiles;
-    utiles.limpiarPantalla();
     switch(eleccion)
     {
         case MI_AGREGAR_PERSONAJE:
-            utiles.enmarcar("AGREGAR UN PERSONAJE");
             agregarNuevo(juego->getPersonajes());
-            utiles.pausa();
             break;
         case MI_ELIMINAR_PERSONAJE:
-            utiles.enmarcar("ELIMINAR UN PERSONAJE");
             eliminarPersonaje(juego->getPersonajes());
-            utiles.pausa();
             break;
         case MI_MOSTRAR_NOMBRES:
-            utiles.enmarcar("MOSTRAR NOMBRES DE PERSONAJES");
             mostrarNombres(juego->getPersonajes());
-            utiles.pausa();
             break;
         case MI_BUSCAR_POR_NOMBRE:
-            utiles.enmarcar("BUSCAR PERSONAJE POR NOMBRE");
             buscarPorNombre(juego->getPersonajes());
-            utiles.pausa();
             break;
         case MI_COMENZAR:
-            if(juego->getPersonajes()->cantidadPersonajes() < MI_PERSONAJES_MINIMOS) {
+            if(juego->getPersonajes()->cantidadPersonajes() < MI_PERSONAJES_MINIMOS){
                 cout << "Se necesitan almenos 6 personajes para comenzar.\n" << endl;
                 eleccion = 0;
             }

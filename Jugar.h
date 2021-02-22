@@ -7,7 +7,6 @@
 #include "MenuJuego.h"
 #include "Personaje.h"
 #include "Tablero.h"
-#include "Utiles.h"
 
 #define VIDA_MUERTO 0
 #define MINIMO 1

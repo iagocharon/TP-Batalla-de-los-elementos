@@ -1,3 +1,7 @@
+//
+// Created by nicolas on 28/11/20.
+//
+
 #include "Utiles.h"
 
 ABB* Utiles::personajes() {
@@ -14,13 +18,13 @@ Tipo Utiles::establecerTipo(string elemento, string nombre, int escudo, int vida
 
     Tipo personaje;
 
-    if (elemento == ELEMENTO_AIRE)
+    if (elemento == "aire")
         personaje = new ElementalAire(nombre, elemento, escudo, vida);
 
-    else if (elemento == ELEMENTO_FUEGO)
+    else if (elemento == "fuego")
         personaje = new ElementalFuego(nombre, elemento, escudo, vida);
 
-    else if (elemento == ELEMENTO_TIERRA)
+    else if (elemento == "tierra")
         personaje = new ElementalTierra(nombre, elemento, escudo, vida);
 
     else
@@ -42,8 +46,6 @@ Tipo Utiles::establecerTipo(string elemento, string nombre) {
 }
 
 int Utiles::randomizar(int minimo, int maximo) {
-
-    srand(unsigned(time(0)));
     int numero = 0;
 
     int rango = maximo - minimo + 1;
@@ -76,5 +78,4 @@ void Utiles::enmarcar(string texto) {
     cout << "└";
     for ( int i = 0; i < tamanio; i++) cout << "─";
     cout << "┘" << endl;
-
 }
