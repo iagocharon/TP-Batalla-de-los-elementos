@@ -105,7 +105,7 @@ public:
 
     // PRE: -
     // POS: Intenta cargar una partida ya empezada. Devuelve 0 si tiene exito o -1 en caso contraro.
-    //  También muestra un mensaje por pantalla para ambos casos.
+    //      Muestra un mensaje por pantalla para ambos casos.
     int partidaCargar();
 
     // PRE: -
@@ -118,19 +118,19 @@ public:
 
 private:
 
-    //PRE: Recibe dos enteros inicializados.
-    //POS: Devuelve true si la posicion que representa es valida y no hay otro personaje en esa posicion
-    // o false en caso contrario.
+    // PRE: Recibe dos enteros inicializados.
+    // POS: Devuelve true si la posicion que representa es valida y no hay otro personaje en esa posicion
+    //      o false en caso contrario.
     bool posicionValida(int fila, int columna);
 
     // PRE: -
     // POS: El jugador 1 ingresa el nombre del personaje del árbol que desea conservar. Luego
-    //  se elimina este personaje del árbol.
+    //      se elimina este personaje del árbol.
     void seleccionJugador1();
 
     // PRE: -
     // POS: El jugador 2 ingresa el nombre del personaje del árbol que desea conservar. Luego
-    //  se elimina este personaje del árbol.
+    //      se elimina este personaje del árbol.
     void seleccionJugador2();
 };
 

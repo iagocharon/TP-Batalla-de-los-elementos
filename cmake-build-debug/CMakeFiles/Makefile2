@@ -74,12 +74,12 @@ clean: CMakeFiles/BDE.dir/clean
 CMakeFiles/BDE.dir/all:
 	$(MAKE) -f CMakeFiles/BDE.dir/build.make CMakeFiles/BDE.dir/depend
 	$(MAKE) -f CMakeFiles/BDE.dir/build.make CMakeFiles/BDE.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24 "Built target BDE"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21 "Built target BDE"
 .PHONY : CMakeFiles/BDE.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/BDE.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" 24
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" 21
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/BDE.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" 0
 .PHONY : CMakeFiles/BDE.dir/rule

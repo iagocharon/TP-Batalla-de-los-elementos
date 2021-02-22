@@ -22,33 +22,97 @@ private:
     int tamanio;
     
 public:
+
+    // PRE:
+    // POS:
     Grafo();
-    
+
+    // PRE:
+    // POS:
     Vertice* getPrimero();
+
+    // PRE:
+    // POS:
     Vertice* getUltimo();
+
+    // PRE:
+    // POS:
     int getCriterioBusqueda();
+
+    // PRE:
+    // POS:
     int getTamanio();
+
+    // PRE:
+    // POS:
     Vertice* getVertice(int fila, int columna);
+
+    // PRE:
+    // POS:
     Vertice* getVertice(int posicion);
+
+    // PRE:
+    // POS:
     Arista* getArista(Vertice* salida, Vertice* destino);
+
+    // PRE:
+    // POS:
     int getDistancia(Vertice* salida, Vertice* destino);
+
+    // PRE:
+    // POS:
     int getNumeroVertice(Vertice* vertice);
 
+    // PRE:
+    // POS:
     void setPrimero(Vertice* primero);
+
+    // PRE:
+    // POS:
     void setUltimo(Vertice* ultimo);
+
+    // PRE:
+    // POS:
     void setCriterioBusqueda(int criterioBusqueda);
+
+    // PRE:
+    // POS:
     void setTamanio(int tamanio);
+
+    // PRE:
+    // POS:
     void setSucesores(Vertice* vertice, Vertice* sucesores[], int* cantidadSucesores);
-    
+
+    // PRE:
+    // POS:
     void agregarVertice(Casillero* casillero);
+
+    // PRE:
+    // POS:
     void agregarArista(Vertice* salida, Vertice* destino);
-    
+
+    // PRE:
+    // POS:
     bool existeArista(Vertice* salida, Vertice* destino);
+
+    // PRE:
+    // POS:
     bool todosVistos(bool visitados[]);
+
+    // PRE:
+    // POS:
     int minimoNoVisitado(bool visitados[], int distancias[]);
+
+    // PRE:
+    // POS:
     void mostrarLista(list<Vertice*> lista);
+
+    // PRE:
+    // POS:
     int caminoMinimo(Vertice* salida, Vertice* destino);
-    
+
+    // PRE:
+    // POS:
     ~Grafo();
 };
 

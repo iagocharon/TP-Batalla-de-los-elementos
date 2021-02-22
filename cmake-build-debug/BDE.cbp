@@ -104,12 +104,6 @@
 		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/Casillero.h">
 			<Option target="BDE"/>
 		</Unit>
-		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/ColaPrioridad.cpp">
-			<Option target="BDE"/>
-		</Unit>
-		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/ColaPrioridad.h">
-			<Option target="BDE"/>
-		</Unit>
 		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/DatosGrafo.cpp">
 			<Option target="BDE"/>
 		</Unit>
@@ -138,12 +132,6 @@
 			<Option target="BDE"/>
 		</Unit>
 		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/ElementalTierra.h">
-			<Option target="BDE"/>
-		</Unit>
-		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/Etiqueta.cpp">
-			<Option target="BDE"/>
-		</Unit>
-		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/Etiqueta.h">
 			<Option target="BDE"/>
 		</Unit>
 		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/Grafo.cpp">
@@ -192,12 +180,6 @@
 			<Option target="BDE"/>
 		</Unit>
 		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/NodoABB.h">
-			<Option target="BDE"/>
-		</Unit>
-		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/NodoColaPrioridad.cpp">
-			<Option target="BDE"/>
-		</Unit>
-		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/NodoColaPrioridad.h">
 			<Option target="BDE"/>
 		</Unit>
 		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/Personaje.cpp">

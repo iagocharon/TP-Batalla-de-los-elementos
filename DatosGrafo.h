@@ -23,20 +23,57 @@ private:
     int costoTierra;
     
 public:
+
+    // PRE:
+    // POS:
     Arista(Vertice* destino);
 
+    // PRE:
+    // POS:
     Arista* getSiguiente();
+
+    // PRE:
+    // POS:
     Vertice* getDestino();
+
+    // PRE:
+    // POS:
     int getCostoAire();
+
+    // PRE:
+    // POS:
     int getCostoAgua();
+
+    // PRE:
+    // POS:
     int getCostoFuego();
+
+    // PRE:
+    // POS:
     int getCostoTierra();
-    
+
+    // PRE:
+    // POS:
     void setSiguiente(Arista* siguiente);
+
+    // PRE:
+    // POS:
     void setDestino(Vertice* destino);
+
+    // PRE:
+    // POS:
     void setCostoAire(int costoAire);
+
+    // PRE:
+    // POS:
     void setCostoAgua(int costoAgua);
+
+    // PRE:
+    // POS:
     void setCostoFuego(int costoFuego);
+
+    // PRE:
+    // POS:
     void setCostoTierra(int costoTierra);
     
     ~Arista();

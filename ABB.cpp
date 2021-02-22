@@ -28,7 +28,7 @@ void ABB::setRaiz(NodoABB* raiz) {
     raiz->setPadre(NULL);
 }
 
-int ABB::cantidadPersonajes(){
+int ABB::cantidadElementos(){
 
     return cantidadCargados;
 }
@@ -36,6 +36,7 @@ int ABB::cantidadPersonajes(){
 NodoABB* ABB::insertar(NodoABB* nodo, Personaje* dato, string clave) {
     if (nodo == NULL) {
         nodo = new NodoABB(clave, dato);
+        setRaiz(nodo);
 
     } else if (clave > nodo->getClave()) {
         nodo->setDerecha(insertar(nodo->getDerecha(), dato, clave));
@@ -161,7 +162,7 @@ bool ABB::eliminar(string clave) {
     this->eliminar(this->raiz, clave, &eliminado);
 
     if(!eliminado)
-        cout << "No se encontró a " << clave << " entre las opciones." << endl;
+        cout << "No se encontró a " << clave << " entre las posibles opciones." << endl;
 
     else {
         //cout << "Se eliminó a " << clave << "." << endl;

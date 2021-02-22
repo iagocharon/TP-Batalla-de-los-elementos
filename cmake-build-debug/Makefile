@@ -204,33 +204,6 @@ Casillero.cpp.s:
 	$(MAKE) -f CMakeFiles/BDE.dir/build.make CMakeFiles/BDE.dir/Casillero.cpp.s
 .PHONY : Casillero.cpp.s
 
-ColaPrioridad.o: ColaPrioridad.cpp.o
-
-.PHONY : ColaPrioridad.o
-
-# target to build an object file
-ColaPrioridad.cpp.o:
-	$(MAKE) -f CMakeFiles/BDE.dir/build.make CMakeFiles/BDE.dir/ColaPrioridad.cpp.o
-.PHONY : ColaPrioridad.cpp.o
-
-ColaPrioridad.i: ColaPrioridad.cpp.i
-
-.PHONY : ColaPrioridad.i
-
-# target to preprocess a source file
-ColaPrioridad.cpp.i:
-	$(MAKE) -f CMakeFiles/BDE.dir/build.make CMakeFiles/BDE.dir/ColaPrioridad.cpp.i
-.PHONY : ColaPrioridad.cpp.i
-
-ColaPrioridad.s: ColaPrioridad.cpp.s
-
-.PHONY : ColaPrioridad.s
-
-# target to generate assembly for a file
-ColaPrioridad.cpp.s:
-	$(MAKE) -f CMakeFiles/BDE.dir/build.make CMakeFiles/BDE.dir/ColaPrioridad.cpp.s
-.PHONY : ColaPrioridad.cpp.s
-
 DatosGrafo.o: DatosGrafo.cpp.o
 
 .PHONY : DatosGrafo.o
@@ -365,33 +338,6 @@ ElementalTierra.s: ElementalTierra.cpp.s
 ElementalTierra.cpp.s:
 	$(MAKE) -f CMakeFiles/BDE.dir/build.make CMakeFiles/BDE.dir/ElementalTierra.cpp.s
 .PHONY : ElementalTierra.cpp.s
-
-Etiqueta.o: Etiqueta.cpp.o
-
-.PHONY : Etiqueta.o
-
-# target to build an object file
-Etiqueta.cpp.o:
-	$(MAKE) -f CMakeFiles/BDE.dir/build.make CMakeFiles/BDE.dir/Etiqueta.cpp.o
-.PHONY : Etiqueta.cpp.o
-
-Etiqueta.i: Etiqueta.cpp.i
-
-.PHONY : Etiqueta.i
-
-# target to preprocess a source file
-Etiqueta.cpp.i:
-	$(MAKE) -f CMakeFiles/BDE.dir/build.make CMakeFiles/BDE.dir/Etiqueta.cpp.i
-.PHONY : Etiqueta.cpp.i
-
-Etiqueta.s: Etiqueta.cpp.s
-
-.PHONY : Etiqueta.s
-
-# target to generate assembly for a file
-Etiqueta.cpp.s:
-	$(MAKE) -f CMakeFiles/BDE.dir/build.make CMakeFiles/BDE.dir/Etiqueta.cpp.s
-.PHONY : Etiqueta.cpp.s
 
 Grafo.o: Grafo.cpp.o
 
@@ -609,33 +555,6 @@ NodoABB.cpp.s:
 	$(MAKE) -f CMakeFiles/BDE.dir/build.make CMakeFiles/BDE.dir/NodoABB.cpp.s
 .PHONY : NodoABB.cpp.s
 
-NodoColaPrioridad.o: NodoColaPrioridad.cpp.o
-
-.PHONY : NodoColaPrioridad.o
-
-# target to build an object file
-NodoColaPrioridad.cpp.o:
-	$(MAKE) -f CMakeFiles/BDE.dir/build.make CMakeFiles/BDE.dir/NodoColaPrioridad.cpp.o
-.PHONY : NodoColaPrioridad.cpp.o
-
-NodoColaPrioridad.i: NodoColaPrioridad.cpp.i
-
-.PHONY : NodoColaPrioridad.i
-
-# target to preprocess a source file
-NodoColaPrioridad.cpp.i:
-	$(MAKE) -f CMakeFiles/BDE.dir/build.make CMakeFiles/BDE.dir/NodoColaPrioridad.cpp.i
-.PHONY : NodoColaPrioridad.cpp.i
-
-NodoColaPrioridad.s: NodoColaPrioridad.cpp.s
-
-.PHONY : NodoColaPrioridad.s
-
-# target to generate assembly for a file
-NodoColaPrioridad.cpp.s:
-	$(MAKE) -f CMakeFiles/BDE.dir/build.make CMakeFiles/BDE.dir/NodoColaPrioridad.cpp.s
-.PHONY : NodoColaPrioridad.cpp.s
-
 Personaje.o: Personaje.cpp.o
 
 .PHONY : Personaje.o
@@ -762,9 +681,6 @@ help:
 	@echo "... Casillero.o"
 	@echo "... Casillero.i"
 	@echo "... Casillero.s"
-	@echo "... ColaPrioridad.o"
-	@echo "... ColaPrioridad.i"
-	@echo "... ColaPrioridad.s"
 	@echo "... DatosGrafo.o"
 	@echo "... DatosGrafo.i"
 	@echo "... DatosGrafo.s"
@@ -780,9 +696,6 @@ help:
 	@echo "... ElementalTierra.o"
 	@echo "... ElementalTierra.i"
 	@echo "... ElementalTierra.s"
-	@echo "... Etiqueta.o"
-	@echo "... Etiqueta.i"
-	@echo "... Etiqueta.s"
 	@echo "... Grafo.o"
 	@echo "... Grafo.i"
 	@echo "... Grafo.s"
@@ -807,9 +720,6 @@ help:
 	@echo "... NodoABB.o"
 	@echo "... NodoABB.i"
 	@echo "... NodoABB.s"
-	@echo "... NodoColaPrioridad.o"
-	@echo "... NodoColaPrioridad.i"
-	@echo "... NodoColaPrioridad.s"
 	@echo "... Personaje.o"
 	@echo "... Personaje.i"
 	@echo "... Personaje.s"

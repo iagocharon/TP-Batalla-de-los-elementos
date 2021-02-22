@@ -28,28 +28,33 @@ using namespace std;
 class Utiles{
 
 public:
-    // PRE:
-    // POS:
+    // PRE: -
+    // POS: Crea un *ABB, para luego devolverlo cargado con los personajes leidos del archivo correspondiente
     ABB* personajes();
 
-    // PRE: los valores recibidos son válidos
-    // POS: devuelve un Tipo personaje cargando lo recibido en sus atributos
+    // PRE: Los valores recibidos son válidos
+    // POS: Devuelve un Tipo personaje cargando lo recibido en sus atributos
     Tipo establecerTipo(string elemento, string nombre, int escudo, int vida);
 
-    // PRE: los valores recibidos son válidos
-    // POS: devuelve un Tipo personaje cargando lo recibido en sus atributos y lo no recibido de forma default
+    // PRE: Los valores recibidos son válidos
+    // POS: Devuelve un Tipo personaje cargando lo recibido en sus atributos y lo no recibido de forma default
     Tipo establecerTipo(string elemento, string nombre);
 
     // PRE: minimo < maximo
-    // POS: devuelve un numero aleatorio entre minimo y maximo
+    // POS: Devuelve un numero aleatorio entre minimo y maximo
     int randomizar(int minimo, int maximo);
 
+    // PRE: -
+    // POS: Limpia la pantalla
     void limpiarPantalla();
 
+    // PRE: -
+    // POS: Hace una pausa en la ejecución del programa
     void pausa();
 
+    // PRE: -
+    // POS: Muestra el texto recidido enmarcado
     void enmarcar(string texto);
-
 };
 
 

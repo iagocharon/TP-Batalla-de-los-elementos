@@ -44,7 +44,7 @@ void MenuInicio::mostrarNombres(ABB* personajes) {
 void MenuInicio::buscarPorNombre(ABB* personajes) {
 
     string nombre = ingresoNombre();
-    cout << personajes->cantidadPersonajes() << endl;
+    cout << personajes->cantidadElementos() << endl;
     if (personajes->buscar(nombre) != NULL) {
         personajes->buscar(nombre)->getDato()->mostrar();
     }
@@ -98,7 +98,7 @@ void MenuInicio::accionMenu(int& eleccion, Juego* juego) {
             buscarPorNombre(juego->getPersonajes());
             break;
         case MI_COMENZAR:
-            if(juego->getPersonajes()->cantidadPersonajes() < MI_PERSONAJES_MINIMOS){
+            if(juego->getPersonajes()->cantidadElementos() < MI_PERSONAJES_MINIMOS){
                 cout << "Se necesitan almenos 6 personajes para comenzar.\n" << endl;
                 eleccion = 0;
             }

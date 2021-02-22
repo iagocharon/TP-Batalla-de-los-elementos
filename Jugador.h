@@ -25,7 +25,7 @@ public:
 
     // PRE: Recibe un entero con valores entre 0 y 2, y un personaje cargado.
     // POS: Agrega al personaje al vector de personajes en la posicion indicada y aumenta la
-    //  cantidad de personajes.
+    //      cantidad de personajes.
     void setPersonaje(int posicion, Personaje* personaje);
 
     // PRE: -
@@ -38,7 +38,7 @@ public:
 
     // PRE: -
     // POS: Reduce mucho la vida de un personaje muerto y lo quita del tablero para que no interfiera
-    //  con el resto del juego.
+    //      con el resto del juego.
     void matarPersonajes();
 };
 

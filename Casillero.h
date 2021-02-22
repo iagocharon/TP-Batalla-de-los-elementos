@@ -17,19 +17,61 @@ private:
     int fila;
     int columna;
 public:
+
+    // PRE:
+    // POS:
     string getNombre();
+
+    // PRE:
+    // POS:
     int getCostoTierra();
+
+    // PRE:
+    // POS:
     int getCostoAire();
+
+    // PRE:
+    // POS:
     int getCostoAgua();
+
+    // PRE:
+    // POS:
     int getCostoFuego();
+
+    // PRE:
+    // POS:
     int getFila();
+
+    // PRE:
+    // POS:
     int getColumna();
+
+    // PRE:
+    // POS:
     void setNombre(string nombre);
+
+    // PRE:
+    // POS:
     void setCostoTierra(int costo);
+
+    // PRE:
+    // POS:
     void setCostoAire(int costo);
+
+    // PRE:
+    // POS:
     void setCostoAgua(int costo);
+
+    // PRE:
+    // POS:
     void setCostoFuego(int costo);
+
+    // PRE:
+    // POS:
     void setFila(int fila);
+
+    // PRE:
+    // POS:
     void setColumna(int columna);
     
 };

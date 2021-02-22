@@ -96,22 +96,9 @@ CMakeFiles/BDE.dir/Casillero.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BDE.dir/Casillero.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/Casillero.cpp" -o CMakeFiles/BDE.dir/Casillero.cpp.s
 
-CMakeFiles/BDE.dir/ColaPrioridad.cpp.o: CMakeFiles/BDE.dir/flags.make
-CMakeFiles/BDE.dir/ColaPrioridad.cpp.o: ../ColaPrioridad.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/BDE.dir/ColaPrioridad.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/ColaPrioridad.cpp.o -c "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/ColaPrioridad.cpp"
-
-CMakeFiles/BDE.dir/ColaPrioridad.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BDE.dir/ColaPrioridad.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/ColaPrioridad.cpp" > CMakeFiles/BDE.dir/ColaPrioridad.cpp.i
-
-CMakeFiles/BDE.dir/ColaPrioridad.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BDE.dir/ColaPrioridad.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/ColaPrioridad.cpp" -o CMakeFiles/BDE.dir/ColaPrioridad.cpp.s
-
 CMakeFiles/BDE.dir/DatosGrafo.cpp.o: CMakeFiles/BDE.dir/flags.make
 CMakeFiles/BDE.dir/DatosGrafo.cpp.o: ../DatosGrafo.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/BDE.dir/DatosGrafo.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/BDE.dir/DatosGrafo.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/DatosGrafo.cpp.o -c "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/DatosGrafo.cpp"
 
 CMakeFiles/BDE.dir/DatosGrafo.cpp.i: cmake_force
@@ -124,7 +111,7 @@ CMakeFiles/BDE.dir/DatosGrafo.cpp.s: cmake_force
 
 CMakeFiles/BDE.dir/ElementalAgua.cpp.o: CMakeFiles/BDE.dir/flags.make
 CMakeFiles/BDE.dir/ElementalAgua.cpp.o: ../ElementalAgua.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/BDE.dir/ElementalAgua.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/BDE.dir/ElementalAgua.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/ElementalAgua.cpp.o -c "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/ElementalAgua.cpp"
 
 CMakeFiles/BDE.dir/ElementalAgua.cpp.i: cmake_force
@@ -137,7 +124,7 @@ CMakeFiles/BDE.dir/ElementalAgua.cpp.s: cmake_force
 
 CMakeFiles/BDE.dir/ElementalAire.cpp.o: CMakeFiles/BDE.dir/flags.make
 CMakeFiles/BDE.dir/ElementalAire.cpp.o: ../ElementalAire.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/BDE.dir/ElementalAire.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/BDE.dir/ElementalAire.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/ElementalAire.cpp.o -c "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/ElementalAire.cpp"
 
 CMakeFiles/BDE.dir/ElementalAire.cpp.i: cmake_force
@@ -150,7 +137,7 @@ CMakeFiles/BDE.dir/ElementalAire.cpp.s: cmake_force
 
 CMakeFiles/BDE.dir/ElementalFuego.cpp.o: CMakeFiles/BDE.dir/flags.make
 CMakeFiles/BDE.dir/ElementalFuego.cpp.o: ../ElementalFuego.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/BDE.dir/ElementalFuego.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/BDE.dir/ElementalFuego.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/ElementalFuego.cpp.o -c "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/ElementalFuego.cpp"
 
 CMakeFiles/BDE.dir/ElementalFuego.cpp.i: cmake_force
@@ -163,7 +150,7 @@ CMakeFiles/BDE.dir/ElementalFuego.cpp.s: cmake_force
 
 CMakeFiles/BDE.dir/ElementalTierra.cpp.o: CMakeFiles/BDE.dir/flags.make
 CMakeFiles/BDE.dir/ElementalTierra.cpp.o: ../ElementalTierra.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/BDE.dir/ElementalTierra.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/BDE.dir/ElementalTierra.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/ElementalTierra.cpp.o -c "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/ElementalTierra.cpp"
 
 CMakeFiles/BDE.dir/ElementalTierra.cpp.i: cmake_force
@@ -174,22 +161,9 @@ CMakeFiles/BDE.dir/ElementalTierra.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BDE.dir/ElementalTierra.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/ElementalTierra.cpp" -o CMakeFiles/BDE.dir/ElementalTierra.cpp.s
 
-CMakeFiles/BDE.dir/Etiqueta.cpp.o: CMakeFiles/BDE.dir/flags.make
-CMakeFiles/BDE.dir/Etiqueta.cpp.o: ../Etiqueta.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/BDE.dir/Etiqueta.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/Etiqueta.cpp.o -c "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/Etiqueta.cpp"
-
-CMakeFiles/BDE.dir/Etiqueta.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BDE.dir/Etiqueta.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/Etiqueta.cpp" > CMakeFiles/BDE.dir/Etiqueta.cpp.i
-
-CMakeFiles/BDE.dir/Etiqueta.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BDE.dir/Etiqueta.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/Etiqueta.cpp" -o CMakeFiles/BDE.dir/Etiqueta.cpp.s
-
 CMakeFiles/BDE.dir/Grafo.cpp.o: CMakeFiles/BDE.dir/flags.make
 CMakeFiles/BDE.dir/Grafo.cpp.o: ../Grafo.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/BDE.dir/Grafo.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/BDE.dir/Grafo.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/Grafo.cpp.o -c "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/Grafo.cpp"
 
 CMakeFiles/BDE.dir/Grafo.cpp.i: cmake_force
@@ -202,7 +176,7 @@ CMakeFiles/BDE.dir/Grafo.cpp.s: cmake_force
 
 CMakeFiles/BDE.dir/Juego.cpp.o: CMakeFiles/BDE.dir/flags.make
 CMakeFiles/BDE.dir/Juego.cpp.o: ../Juego.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/BDE.dir/Juego.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/BDE.dir/Juego.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/Juego.cpp.o -c "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/Juego.cpp"
 
 CMakeFiles/BDE.dir/Juego.cpp.i: cmake_force
@@ -215,7 +189,7 @@ CMakeFiles/BDE.dir/Juego.cpp.s: cmake_force
 
 CMakeFiles/BDE.dir/Jugador.cpp.o: CMakeFiles/BDE.dir/flags.make
 CMakeFiles/BDE.dir/Jugador.cpp.o: ../Jugador.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/BDE.dir/Jugador.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/BDE.dir/Jugador.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/Jugador.cpp.o -c "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/Jugador.cpp"
 
 CMakeFiles/BDE.dir/Jugador.cpp.i: cmake_force
@@ -228,7 +202,7 @@ CMakeFiles/BDE.dir/Jugador.cpp.s: cmake_force
 
 CMakeFiles/BDE.dir/main.cpp.o: CMakeFiles/BDE.dir/flags.make
 CMakeFiles/BDE.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/BDE.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/BDE.dir/main.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/main.cpp.o -c "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/main.cpp"
 
 CMakeFiles/BDE.dir/main.cpp.i: cmake_force
@@ -241,7 +215,7 @@ CMakeFiles/BDE.dir/main.cpp.s: cmake_force
 
 CMakeFiles/BDE.dir/MenuInicio.cpp.o: CMakeFiles/BDE.dir/flags.make
 CMakeFiles/BDE.dir/MenuInicio.cpp.o: ../MenuInicio.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/BDE.dir/MenuInicio.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/BDE.dir/MenuInicio.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/MenuInicio.cpp.o -c "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/MenuInicio.cpp"
 
 CMakeFiles/BDE.dir/MenuInicio.cpp.i: cmake_force
@@ -254,7 +228,7 @@ CMakeFiles/BDE.dir/MenuInicio.cpp.s: cmake_force
 
 CMakeFiles/BDE.dir/MenuSeleccion.cpp.o: CMakeFiles/BDE.dir/flags.make
 CMakeFiles/BDE.dir/MenuSeleccion.cpp.o: ../MenuSeleccion.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/BDE.dir/MenuSeleccion.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/BDE.dir/MenuSeleccion.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/MenuSeleccion.cpp.o -c "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/MenuSeleccion.cpp"
 
 CMakeFiles/BDE.dir/MenuSeleccion.cpp.i: cmake_force
@@ -267,7 +241,7 @@ CMakeFiles/BDE.dir/MenuSeleccion.cpp.s: cmake_force
 
 CMakeFiles/BDE.dir/NodoABB.cpp.o: CMakeFiles/BDE.dir/flags.make
 CMakeFiles/BDE.dir/NodoABB.cpp.o: ../NodoABB.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/BDE.dir/NodoABB.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/BDE.dir/NodoABB.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/NodoABB.cpp.o -c "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/NodoABB.cpp"
 
 CMakeFiles/BDE.dir/NodoABB.cpp.i: cmake_force
@@ -278,22 +252,9 @@ CMakeFiles/BDE.dir/NodoABB.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BDE.dir/NodoABB.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/NodoABB.cpp" -o CMakeFiles/BDE.dir/NodoABB.cpp.s
 
-CMakeFiles/BDE.dir/NodoColaPrioridad.cpp.o: CMakeFiles/BDE.dir/flags.make
-CMakeFiles/BDE.dir/NodoColaPrioridad.cpp.o: ../NodoColaPrioridad.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/BDE.dir/NodoColaPrioridad.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/NodoColaPrioridad.cpp.o -c "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/NodoColaPrioridad.cpp"
-
-CMakeFiles/BDE.dir/NodoColaPrioridad.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BDE.dir/NodoColaPrioridad.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/NodoColaPrioridad.cpp" > CMakeFiles/BDE.dir/NodoColaPrioridad.cpp.i
-
-CMakeFiles/BDE.dir/NodoColaPrioridad.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BDE.dir/NodoColaPrioridad.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/NodoColaPrioridad.cpp" -o CMakeFiles/BDE.dir/NodoColaPrioridad.cpp.s
-
 CMakeFiles/BDE.dir/Personaje.cpp.o: CMakeFiles/BDE.dir/flags.make
 CMakeFiles/BDE.dir/Personaje.cpp.o: ../Personaje.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/BDE.dir/Personaje.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/BDE.dir/Personaje.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/Personaje.cpp.o -c "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/Personaje.cpp"
 
 CMakeFiles/BDE.dir/Personaje.cpp.i: cmake_force
@@ -306,7 +267,7 @@ CMakeFiles/BDE.dir/Personaje.cpp.s: cmake_force
 
 CMakeFiles/BDE.dir/Tablero.cpp.o: CMakeFiles/BDE.dir/flags.make
 CMakeFiles/BDE.dir/Tablero.cpp.o: ../Tablero.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/BDE.dir/Tablero.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/BDE.dir/Tablero.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/Tablero.cpp.o -c "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/Tablero.cpp"
 
 CMakeFiles/BDE.dir/Tablero.cpp.i: cmake_force
@@ -319,7 +280,7 @@ CMakeFiles/BDE.dir/Tablero.cpp.s: cmake_force
 
 CMakeFiles/BDE.dir/Utiles.cpp.o: CMakeFiles/BDE.dir/flags.make
 CMakeFiles/BDE.dir/Utiles.cpp.o: ../Utiles.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/BDE.dir/Utiles.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/BDE.dir/Utiles.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/Utiles.cpp.o -c "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/Utiles.cpp"
 
 CMakeFiles/BDE.dir/Utiles.cpp.i: cmake_force
@@ -332,7 +293,7 @@ CMakeFiles/BDE.dir/Utiles.cpp.s: cmake_force
 
 CMakeFiles/BDE.dir/MenuJuego.cpp.o: CMakeFiles/BDE.dir/flags.make
 CMakeFiles/BDE.dir/MenuJuego.cpp.o: ../MenuJuego.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/BDE.dir/MenuJuego.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/BDE.dir/MenuJuego.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/MenuJuego.cpp.o -c "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/MenuJuego.cpp"
 
 CMakeFiles/BDE.dir/MenuJuego.cpp.i: cmake_force
@@ -345,7 +306,7 @@ CMakeFiles/BDE.dir/MenuJuego.cpp.s: cmake_force
 
 CMakeFiles/BDE.dir/Jugar.cpp.o: CMakeFiles/BDE.dir/flags.make
 CMakeFiles/BDE.dir/Jugar.cpp.o: ../Jugar.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/BDE.dir/Jugar.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/BDE.dir/Jugar.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BDE.dir/Jugar.cpp.o -c "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/Jugar.cpp"
 
 CMakeFiles/BDE.dir/Jugar.cpp.i: cmake_force
@@ -361,13 +322,11 @@ BDE_OBJECTS = \
 "CMakeFiles/BDE.dir/ABB.cpp.o" \
 "CMakeFiles/BDE.dir/ArchivoPersonajes.cpp.o" \
 "CMakeFiles/BDE.dir/Casillero.cpp.o" \
-"CMakeFiles/BDE.dir/ColaPrioridad.cpp.o" \
 "CMakeFiles/BDE.dir/DatosGrafo.cpp.o" \
 "CMakeFiles/BDE.dir/ElementalAgua.cpp.o" \
 "CMakeFiles/BDE.dir/ElementalAire.cpp.o" \
 "CMakeFiles/BDE.dir/ElementalFuego.cpp.o" \
 "CMakeFiles/BDE.dir/ElementalTierra.cpp.o" \
-"CMakeFiles/BDE.dir/Etiqueta.cpp.o" \
 "CMakeFiles/BDE.dir/Grafo.cpp.o" \
 "CMakeFiles/BDE.dir/Juego.cpp.o" \
 "CMakeFiles/BDE.dir/Jugador.cpp.o" \
@@ -375,7 +334,6 @@ BDE_OBJECTS = \
 "CMakeFiles/BDE.dir/MenuInicio.cpp.o" \
 "CMakeFiles/BDE.dir/MenuSeleccion.cpp.o" \
 "CMakeFiles/BDE.dir/NodoABB.cpp.o" \
-"CMakeFiles/BDE.dir/NodoColaPrioridad.cpp.o" \
 "CMakeFiles/BDE.dir/Personaje.cpp.o" \
 "CMakeFiles/BDE.dir/Tablero.cpp.o" \
 "CMakeFiles/BDE.dir/Utiles.cpp.o" \
@@ -388,13 +346,11 @@ BDE_EXTERNAL_OBJECTS =
 BDE: CMakeFiles/BDE.dir/ABB.cpp.o
 BDE: CMakeFiles/BDE.dir/ArchivoPersonajes.cpp.o
 BDE: CMakeFiles/BDE.dir/Casillero.cpp.o
-BDE: CMakeFiles/BDE.dir/ColaPrioridad.cpp.o
 BDE: CMakeFiles/BDE.dir/DatosGrafo.cpp.o
 BDE: CMakeFiles/BDE.dir/ElementalAgua.cpp.o
 BDE: CMakeFiles/BDE.dir/ElementalAire.cpp.o
 BDE: CMakeFiles/BDE.dir/ElementalFuego.cpp.o
 BDE: CMakeFiles/BDE.dir/ElementalTierra.cpp.o
-BDE: CMakeFiles/BDE.dir/Etiqueta.cpp.o
 BDE: CMakeFiles/BDE.dir/Grafo.cpp.o
 BDE: CMakeFiles/BDE.dir/Juego.cpp.o
 BDE: CMakeFiles/BDE.dir/Jugador.cpp.o
@@ -402,7 +358,6 @@ BDE: CMakeFiles/BDE.dir/main.cpp.o
 BDE: CMakeFiles/BDE.dir/MenuInicio.cpp.o
 BDE: CMakeFiles/BDE.dir/MenuSeleccion.cpp.o
 BDE: CMakeFiles/BDE.dir/NodoABB.cpp.o
-BDE: CMakeFiles/BDE.dir/NodoColaPrioridad.cpp.o
 BDE: CMakeFiles/BDE.dir/Personaje.cpp.o
 BDE: CMakeFiles/BDE.dir/Tablero.cpp.o
 BDE: CMakeFiles/BDE.dir/Utiles.cpp.o
@@ -410,7 +365,7 @@ BDE: CMakeFiles/BDE.dir/MenuJuego.cpp.o
 BDE: CMakeFiles/BDE.dir/Jugar.cpp.o
 BDE: CMakeFiles/BDE.dir/build.make
 BDE: CMakeFiles/BDE.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_24) "Linking CXX executable BDE"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_21) "Linking CXX executable BDE"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/BDE.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

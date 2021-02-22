@@ -24,13 +24,35 @@ class Tablero {
 private:
     Casillero* tablero[MAX_FILAS][MAX_COLUMNAS];
 public:
+
+    // PRE:
+    // POS:
     Tablero();
+
+    // PRE:
+    // POS:
     void mostrarTablero(Juego* juego);
+
+    // PRE:
+    // POS:
     void cargarGrafo(Grafo* grafo);
+
 private:
+
+    // PRE:
+    // POS:
     void mostrarPersonajeJugador1(int columna, int fila, char elemento);
+
+    // PRE:
+    // POS:
     void mostrarPersonajeJugador2(int columna, int fila, char elemento);
+
+    // PRE:
+    // POS:
     char personajeJugado(int columna, int fila, Juego* juego, int& jugador);
+
+    // PRE:
+    // POS:
     char elementoPersonaje(Personaje* personaje);
 };
 
