@@ -10,6 +10,7 @@ void MenuJuego::mostrarMenu1() {
 }
 
 void MenuJuego::accionMenu1(int eleccion, Juego* juego, Personaje* personaje, Grafo* grafo){
+    Utiles utiles;
     switch (eleccion){
         case MJ_ALIMENTAR:
             personaje->alimentar();
@@ -17,6 +18,7 @@ void MenuJuego::accionMenu1(int eleccion, Juego* juego, Personaje* personaje, Gr
 
         case MJ_MOVER:
             juego->moverPersonaje(personaje, grafo);
+            utiles.pausa();
             break;
 
         case MJ_PASAR:

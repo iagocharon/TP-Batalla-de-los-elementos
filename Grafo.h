@@ -46,6 +46,7 @@ public:
     bool existeArista(Vertice* salida, Vertice* destino);
     bool todosVistos(bool visitados[]);
     int minimoNoVisitado(bool visitados[], int distancias[]);
+    void mostrarLista(list<Vertice*> lista);
     int caminoMinimo(Vertice* salida, Vertice* destino);
     
     ~Grafo();

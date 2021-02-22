@@ -157,15 +157,30 @@ int Grafo::minimoNoVisitado(bool visitados[], int distancias[]) {
     return posicionMinima;
 }
 
+void Grafo::mostrarLista(list<Vertice*> lista) {
+    while (!lista.empty()) {
+        Vertice* auxiliar = lista.front();
+        cout << "[" << auxiliar->getCasillero()->getFila() + 1 << "][" << auxiliar->getCasillero()->getColumna() + 1 << "]";
+        if (lista.size() > 1) {
+            cout << " -> ";
+        }
+        lista.pop_front();
+    }
+    cout << endl << endl;
+}
+
 int Grafo::caminoMinimo(Vertice* salida, Vertice* destino) {
     int distancias[this->tamanio];
     bool visitados[this->tamanio];
+    list<Vertice*> lista[this->tamanio];
     for (int i = 0; i < this->tamanio; i++) {
         distancias[i] = INFINITO;
         visitados[i] = false;
+        lista[i].push_back(salida);
     }
     
     Vertice* auxiliar = this->primero;
+    
     
     for (int i = 0; i < this->tamanio; i++) {
         if (!this->existeArista(salida, auxiliar)) {
@@ -173,6 +188,7 @@ int Grafo::caminoMinimo(Vertice* salida, Vertice* destino) {
         }
         else {
             distancias[i] = this->getDistancia(salida, auxiliar);
+            lista[i].push_back(auxiliar);
         }
         auxiliar = auxiliar->getSiguiente();
     }
@@ -190,9 +206,13 @@ int Grafo::caminoMinimo(Vertice* salida, Vertice* destino) {
         for (int i = 0; i < cantidadSucesores; i++) {
             if ((distancias[this->getNumeroVertice(sucesores[i])]) > (distancias[getNumeroVertice(auxiliar)] + this->getDistancia(auxiliar, sucesores[i]))) {
                 distancias[this->getNumeroVertice(sucesores[i])] = distancias[getNumeroVertice(auxiliar)] + this->getDistancia(auxiliar, sucesores[i]);
+                lista[this->getNumeroVertice(sucesores[i])].assign(lista[getNumeroVertice(auxiliar)].begin(), lista[getNumeroVertice(auxiliar)].end());
+                lista[this->getNumeroVertice(sucesores[i])].push_back(sucesores[i]);
             }
         }
+        
     }
+    this->mostrarLista(lista[this->getNumeroVertice(destino)]);
     return distancias[this->getNumeroVertice(destino)];
 }
 
