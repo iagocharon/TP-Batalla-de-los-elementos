@@ -16,7 +16,7 @@ void MenuJuego::accionMenu1(int eleccion, Juego* juego, Personaje* personaje, Gr
             break;
 
         case MJ_MOVER:
-            //juego->moverPersonaje(personaje, grafo);
+            juego->moverPersonaje(personaje, grafo);
             break;
 
         case MJ_PASAR:

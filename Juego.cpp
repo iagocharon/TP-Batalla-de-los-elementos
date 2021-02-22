@@ -110,8 +110,6 @@ void Juego::posicionarPersonajeJugador2(int personaje) {
     cambiarTurno();
 }
 
-/*
-
 void Juego::moverPersonaje(Personaje* personaje, Grafo* tablero){
     int x = 0;
     int y = 0;
@@ -157,7 +155,7 @@ void Juego::moverPersonaje(Personaje* personaje, Grafo* tablero){
         tablero->setCriterioBusqueda(4);
     }
     int energiaNecesaria = tablero->caminoMinimo(salida, destino);
-    if (energiaNecesaria >= personaje->getEnergia()) {
+    if (personaje->getEnergia() >= energiaNecesaria) {
     //Hay que restar la energia al personaje
         personaje->setFila(x);
         personaje->setColumna(y);
@@ -167,7 +165,6 @@ void Juego::moverPersonaje(Personaje* personaje, Grafo* tablero){
         cout << "No tiene energia necesaria." << endl;
     }
 }
-*/
 
 void Juego::seleccionJugador1() {
     string nombre;

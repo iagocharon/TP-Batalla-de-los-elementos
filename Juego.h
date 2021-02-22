@@ -5,7 +5,6 @@
 #include <vector>
 #include <cstdlib>
 #include <ctime>
-#include "ColaPrioridad.h"
 #include <fstream>
 #include <string>
 #include "Personaje.h"
@@ -104,7 +103,7 @@ public:
 
     // PRE:
     // POS:
-    // void moverPersonaje(Personaje* personaje, Grafo* tablero);
+    void moverPersonaje(Personaje* personaje, Grafo* tablero);
 
 private:
     
