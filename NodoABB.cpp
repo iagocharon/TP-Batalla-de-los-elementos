@@ -88,14 +88,14 @@ bool NodoABB::soloHijoIzquierdo() {
 bool NodoABB::esRaiz() {
     return padre == NULL;
 }
-bool NodoABB::esHijoIzquierdo(NodoABB* hijo){
+bool NodoABB::esHijoIzquierdo(NodoABB* hijo) {
 
     return (izquierda == hijo);
 }
 
 NodoABB::~NodoABB() {
 
-    if(esRaiz()||soloHijoIzquierdo()||soloHijoDerecho()){}
+    if(esRaiz()||soloHijoIzquierdo()||soloHijoDerecho()) {}
 
     else if(getPadre()->esHijoIzquierdo(this))
         getPadre()->setIzquierda(NULL);

@@ -5,7 +5,7 @@ using namespace std;
 
 int main() {
     srand(unsigned(time(NULL)));
-    auto* jugar = new Jugar();
+    Jugar* jugar = new Jugar();
 
     jugar->flujoDeJuego();
 

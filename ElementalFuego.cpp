@@ -1,10 +1,10 @@
 #include "ElementalFuego.h"
 
 ElementalFuego::ElementalFuego(string nombre, string elemento, int escudo, int vida)
- : Personaje(nombre, elemento, escudo, vida){}
+ : Personaje(nombre, elemento, escudo, vida) {}
 
 ElementalFuego::ElementalFuego(string nombre, string elemento, int escudo, int vida, int energia, int fila, int columna)
-: Personaje(nombre, elemento, escudo, vida, energia, fila, columna){}
+: Personaje(nombre, elemento, escudo, vida, energia, fila, columna) {}
 
 void ElementalFuego::alimentar() {
     cout << "Estas alimentando a " << this->nombre << " un elemental de fuego, que consume madera para recuperar " << AUMENTO_ENERGIA_FUEGO << " de energia" << endl;
@@ -60,12 +60,12 @@ void ElementalFuego::defender(Personaje* aliados[MAX_PERSONAJES]) {
     }
 }
 
-bool ElementalFuego::energiaNecesariaAtaque(){
+bool ElementalFuego::energiaNecesariaAtaque() {
 
     return this->energia >= ENERGIA_ATAQUE_FUEGO;
 }
 
-bool ElementalFuego::energiaNecesariaDefensa(){
+bool ElementalFuego::energiaNecesariaDefensa() {
 
     return this->energia >= ENERGIA_DEFENSA_FUEGO;
 }

@@ -1,10 +1,10 @@
 #include "ElementalAire.h"
 
 ElementalAire::ElementalAire(string nombre, string elemento, int escudo, int vida)
- : Personaje(nombre, elemento, escudo, vida){}
+ : Personaje(nombre, elemento, escudo, vida) {}
 
 ElementalAire::ElementalAire(string nombre, string elemento, int escudo, int vida, int energia, int fila, int columna)
- : Personaje(nombre, elemento, escudo, vida, energia, fila, columna){}
+ : Personaje(nombre, elemento, escudo, vida, energia, fila, columna) {}
 
 
 void ElementalAire::alimentar() {
@@ -62,12 +62,12 @@ void ElementalAire::defender(Personaje* aliados[MAX_PERSONAJES]) {
     }
 }
 
-bool ElementalAire::energiaNecesariaAtaque(){
+bool ElementalAire::energiaNecesariaAtaque() {
 
     return this->energia >= ENERGIA_ATAQUE_AIRE;
 }
 
-bool ElementalAire::energiaNecesariaDefensa(){
+bool ElementalAire::energiaNecesariaDefensa() {
 
     return this->energia >= ENERGIA_DEFENSA_AIRE;
 }

@@ -67,7 +67,7 @@ Vertice::Vertice(Casillero* casillero) {
     this->casillero = casillero;
 }
 
-Vertice* Vertice::getSiguiente(){
+Vertice* Vertice::getSiguiente() {
     return this->siguiente;
 }
 

@@ -5,6 +5,7 @@
 #include "Juego.h"
 #include "Personaje.h"
 #include "Tablero.h"
+#include "Utiles.h"
 
 #define MJ_ALIMENTAR 1
 #define MJ_MOVER 2
@@ -26,7 +27,7 @@ public:
 
     // PRE: Recibe un entero entre 1 y 4 inclusive, un juego cargado, y un personaje cargado.
     // POS: Llama a la función correspondiente según el entero recibido.
-    void accionMenu1(int eleccion, Juego* juego, Personaje* personaje, Grafo* grafo);
+    void accionMenu1(int eleccion, Juego* juego, Personaje* personaje, Grafo* grafo, Tablero* tablero);
 
     // PRE: -
     // POS: Muestra un menu de opciones por pantalla.
@@ -34,7 +35,7 @@ public:
 
     // PRE: Recibe un entero entre 1 y 4 inclusive, un juego cargado, y un personaje cargado.
     // POS: Llama a la función correspondiente según el entero recibido.
-    void accionMenu2(int eleccion, Juego* juego, Personaje* personaje, Grafo* grafo);
+    void accionMenu2(int eleccion, Juego* juego, Personaje* personaje, Grafo* grafo, Tablero* tablero);
 };
 
 

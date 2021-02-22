@@ -2,12 +2,12 @@
 
 
 ElementalTierra::ElementalTierra(string nombre, string elemento, int escudo, int vida)
- : Personaje(nombre, elemento, escudo, vida){
+ : Personaje(nombre, elemento, escudo, vida) {
    this->bonificacion = false;
  }
 
 ElementalTierra::ElementalTierra(string nombre, string elemento, int escudo, int vida, int energia, int fila, int columna)
- : Personaje(nombre, elemento, escudo, vida, energia, fila, columna){
+ : Personaje(nombre, elemento, escudo, vida, energia, fila, columna) {
    this->bonificacion = false;
  }
 
@@ -91,12 +91,12 @@ void ElementalTierra::defender(Personaje* aliados[MAX_PERSONAJES]) {
     }
 }
 
-bool ElementalTierra::energiaNecesariaAtaque(){
+bool ElementalTierra::energiaNecesariaAtaque() {
 
     return this->energia >= ENERGIA_ATAQUE_TIERRA;
 }
 
-bool ElementalTierra::energiaNecesariaDefensa(){
+bool ElementalTierra::energiaNecesariaDefensa() {
 
     return this->energia >= ENERGIA_DEFENSA_TIERRA;
 }

@@ -39,16 +39,17 @@ void Juego::randomizarTurno() {
 void Juego::cambiarTurno() {
     if (turno == 1) {
         turno = 2;
-    } else {
+    }
+    else {
         turno = 1;
     }
 }
 
-bool Juego::posicionValida(int fila, int columna){
+bool Juego::posicionValida(int fila, int columna) {
     if(fila < 1 || fila > 8 || columna < 1 || columna > 8)
         return false;
 
-    for(int i = 0; i < MAX_PERSONAJES; i++){
+    for(int i = 0; i < MAX_PERSONAJES; i++) {
         if((jugador1->getPersonajes()[i]->getFila() == fila-1 &&
            jugador1->getPersonajes()[i]->getColumna() == columna-1) ||
           (jugador2->getPersonajes()[i]->getFila() == fila-1 &&
@@ -110,7 +111,7 @@ void Juego::posicionarPersonajeJugador2(int personaje) {
     cambiarTurno();
 }
 
-void Juego::moverPersonaje(Personaje* personaje, Grafo* tablero){
+void Juego::moverPersonaje(Personaje* personaje, Grafo* tablero) {
     int x = 0;
     int y = 0;
     bool ingresoValido = false;
@@ -124,14 +125,14 @@ void Juego::moverPersonaje(Personaje* personaje, Grafo* tablero){
         x -= 1;
         y -= 1;
 
-        if(x >= MAX_TABLERO || x < 0 || y >= MAX_TABLERO || y < 0){
+        if(x >= MAX_TABLERO || x < 0 || y >= MAX_TABLERO || y < 0) {
             cout << "\nCoordenadas invalidas, vuelva a ingresarlas." << endl;
             continue;
         }
 
-        for(int i = 0; i < MAX_PERSONAJES; i++){
+        for(int i = 0; i < MAX_PERSONAJES; i++) {
             if((x == jugador1->getPersonajes()[i]->getFila() && y == jugador1->getPersonajes()[i]->getFila()) ||
-               (x == jugador2->getPersonajes()[i]->getFila() && y == jugador2->getPersonajes()[i]->getFila())){
+               (x == jugador2->getPersonajes()[i]->getFila() && y == jugador2->getPersonajes()[i]->getFila())) {
                 cout << "\nYa hay un personaje en esas coordenadas." << endl;
                 ingresoValido = false;
                 break;
@@ -214,15 +215,17 @@ void Juego::seleccionJugador2() {
 void Juego::seleccionPersonajes() {
     if (turno == JUGADOR1) {
         seleccionJugador1();
-    } else {
+    }
+    else {
         seleccionJugador2();
     }
 }
 
-void Juego::posicionPersonajes(int personaje){
-    if(turno == JUGADOR1){
+void Juego::posicionPersonajes(int personaje) {
+    if(turno == JUGADOR1) {
         posicionarPersonajeJugador1(personaje);
-    } else {
+    }
+    else {
         posicionarPersonajeJugador2(personaje);
     }
 }
@@ -261,20 +264,24 @@ int Juego::partidaCargar() {
         if (elemento == ELEMENTO_AIRE) {
             personaje = new ElementalAire(nombre, elemento, stoi(escudo), stoi(vida), stoi(energia), stoi(fila),
                                           stoi(columna));
-        } else if (elemento == ELEMENTO_AGUA) {
+        }
+        else if (elemento == ELEMENTO_AGUA) {
             personaje = new ElementalAgua(nombre, elemento, stoi(escudo), stoi(vida), stoi(energia), stoi(fila),
                                           stoi(columna));
-        } else if (elemento == ELEMENTO_TIERRA) {
+        }
+        else if (elemento == ELEMENTO_TIERRA) {
             personaje = new ElementalTierra(nombre, elemento, stoi(escudo), stoi(vida), stoi(energia), stoi(fila),
                                             stoi(columna));
-        } else {
+        }
+        else {
             personaje = new ElementalFuego(nombre, elemento, stoi(escudo), stoi(vida), stoi(energia), stoi(fila),
                                            stoi(columna));
         }
 
         if (i < MAX_PERSONAJES) {
             jugador1->setPersonaje(i, personaje);
-        } else {
+        }
+        else {
             jugador2->setPersonaje(i - MAX_PERSONAJES, personaje);
         }
     }

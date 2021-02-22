@@ -1,9 +1,13 @@
-//
-// Created by nicolas on 28/11/20.
-//
-
 #ifndef TP2_UTILES_H
 #define TP2_UTILES_H
+
+#ifdef _WIN32
+#define CLEAR "cls"
+#else
+#define CLEAR "clear"
+#endif
+
+
 #include "Personaje.h"
 #include "ElementalAgua.h"
 #include "ElementalTierra.h"
@@ -15,7 +19,9 @@
 #include "ABB.hpp"
 #include "ArchivoPersonajes.h"
 
+
 #define RUTA "personajes.csv"
+#define ANCHO_PANTALLA 54
 
 typedef Personaje* Tipo;
 
@@ -39,6 +45,12 @@ public:
     // PRE: minimo < maximo
     // POS: devuelve un numero aleatorio entre minimo y maximo
     int randomizar(int minimo, int maximo);
+    
+    void limpiarPantalla();
+    
+    void pausa();
+    
+    void enmarcar(string texto);
 };
 
 

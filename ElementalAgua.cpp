@@ -6,7 +6,7 @@ ElementalAgua::ElementalAgua(string nombre, string elemento, int escudo, int vid
 }
 
 ElementalAgua::ElementalAgua(string nombre, string elemento, int escudo, int vida, int energia, int fila, int columna)
- : Personaje(nombre, elemento, escudo, vida, energia, fila, columna){
+ : Personaje(nombre, elemento, escudo, vida, energia, fila, columna) {
     vecesAlimentado = 0;
 }
 
@@ -81,12 +81,12 @@ void ElementalAgua::defender(Personaje* aliados[MAX_PERSONAJES]) {
     }
 }
 
-bool ElementalAgua::energiaNecesariaAtaque(){
+bool ElementalAgua::energiaNecesariaAtaque() {
 
     return this->energia >= ENERGIA_ATAQUE_AGUA;
 }
 
-bool ElementalAgua::energiaNecesariaDefensa(){
+bool ElementalAgua::energiaNecesariaDefensa() {
 
     return this->energia >= ENERGIA_DEFENSA_AGUA;
 }

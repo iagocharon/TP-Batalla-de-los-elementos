@@ -37,7 +37,7 @@ void ArchivoPersonaje::cargarPersonajes(ABB* personajes) {
 
     if (this->aperturaValida()) {
 
-        Personaje* auxiliar;
+        Personaje* auxiliar = NULL;
 
         while(getline(archivo, elemento, ',')) {
 

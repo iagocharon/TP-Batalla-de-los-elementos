@@ -1,7 +1,3 @@
-//
-// Created by nicolas on 28/11/20.
-//
-
 #include "Utiles.h"
 
 ABB* Utiles::personajes() {
@@ -18,13 +14,13 @@ Tipo Utiles::establecerTipo(string elemento, string nombre, int escudo, int vida
 
     Tipo personaje;
 
-    if (elemento == "aire")
+    if (elemento == ELEMENTO_AIRE)
         personaje = new ElementalAire(nombre, elemento, escudo, vida);
 
-    else if (elemento == "fuego")
+    else if (elemento == ELEMENTO_FUEGO)
         personaje = new ElementalFuego(nombre, elemento, escudo, vida);
 
-    else if (elemento == "tierra")
+    else if (elemento == ELEMENTO_TIERRA)
         personaje = new ElementalTierra(nombre, elemento, escudo, vida);
 
     else
@@ -54,4 +50,31 @@ int Utiles::randomizar(int minimo, int maximo) {
     numero = rand() % rango + minimo;
 
     return numero;
+}
+
+void Utiles::limpiarPantalla() {
+    system(CLEAR);
+}
+
+void Utiles::pausa() {
+    cout << endl << endl << "<Enter>";
+    cin.get();
+    cin.get();
+}
+
+void Utiles::enmarcar(string texto) {
+    int margen;
+    int tamanio = int(texto.length());
+    margen = ((ANCHO_PANTALLA / 2) - (tamanio / 2));
+    for ( int i = 0; i < margen; i++) cout << " ";
+    cout << "┌";
+    for ( int i = 0; i < tamanio; i++) cout << "─";
+    cout << "┐" << endl;
+    for ( int i = 0; i < margen; i++) cout << " ";
+    cout << "│" << texto << "│" << endl;
+    for ( int i = 0; i < margen; i++) cout << " ";
+    cout << "└";
+    for ( int i = 0; i < tamanio; i++) cout << "─";
+    cout << "┘" << endl;
+
 }
