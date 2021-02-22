@@ -45,7 +45,12 @@ void MenuInicio::buscarPorNombre(ABB* personajes) {
 
     string nombre = ingresoNombre();
     cout << personajes->cantidadPersonajes() << endl;
-    personajes->buscar(nombre)->getDato()->mostrar();
+    if (personajes->buscar(nombre) != NULL) {
+        personajes->buscar(nombre)->getDato()->mostrar();
+    }
+    else {
+        cout << "No se encontro el personaje." << endl;
+    }
 }
 
 

@@ -55,7 +55,7 @@ void ABB::insertar(Personaje* dato, string clave) {
 }
 
 NodoABB* ABB::buscar(NodoABB* nodo, string clave) {
-    if (nodo == nullptr || nodo->getClave() == clave) {
+    if (nodo == NULL || nodo->getClave() == clave) {
         return nodo;
 
     } else if (clave > nodo->getClave()) {
