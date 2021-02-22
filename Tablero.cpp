@@ -47,12 +47,12 @@ void Tablero::mostrarTablero(Juego* juego){
 
     for (int i = 0; i < MAX_FILAS; i++) {
         for (int j = 0; j < MAX_COLUMNAS; j++) {
-            personaje = personajeJugado(j, i, juego, jugador);
+            personaje = personajeJugado(i, j, juego, jugador);
             if (jugador == JUGADOR1) {
-                this->mostrarPersonajeJugador1(j, i, personaje);
+                this->mostrarPersonajeJugador1(i, j, personaje);
             }
             else {
-                this->mostrarPersonajeJugador2(j, i, personaje);
+                this->mostrarPersonajeJugador2(i, j, personaje);
             }
         }
         cout << "\n";
@@ -80,20 +80,20 @@ void Tablero::mostrarPersonajeJugador1(int columna, int fila, char elemento){
     }
 }
 
-void Tablero::mostrarPersonajeJugador2(int columna, int fila, char elemento){
-    if (tablero[columna][fila]->getNombre() == "Montania") {
+void Tablero::mostrarPersonajeJugador2(int fila, int columna, char elemento){
+    if (tablero[fila][columna]->getNombre() == "Montania") {
         printf("\033[1;43;30m %c \033[0m", elemento);
     }
-    else if (tablero[columna][fila]->getNombre() == "Precipicio") {
+    else if (tablero[fila][columna]->getNombre() == "Precipicio") {
         printf("\033[1;100;30m %c \033[0m", elemento);
     }
-    else if (tablero[columna][fila]->getNombre() == "Lago") {
+    else if (tablero[fila][columna]->getNombre() == "Lago") {
         printf("\033[1;46;30m %c \033[0m", elemento);
     }
-    else if (tablero[columna][fila]->getNombre() == "Volcan") {
+    else if (tablero[fila][columna]->getNombre() == "Volcan") {
         printf("\033[1;41;30m %c \033[0m", elemento);
     }
-    else if (tablero[columna][fila]->getNombre() == "Camino") {
+    else if (tablero[fila][columna]->getNombre() == "Camino") {
         printf("\033[1;42;30m %c \033[0m", elemento);
     }
     else{
