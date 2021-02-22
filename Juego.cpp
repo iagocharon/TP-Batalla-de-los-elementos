@@ -117,9 +117,9 @@ void Juego::moverPersonaje(Personaje* personaje, Grafo* tablero){
 
     do{
         ingresoValido = true;
-        cout << "\nIngrese la coordenada x a la que moverse (1 - 8): ";
+        cout << "\nIngrese la fila a la cual mover el personaje (1 - 8): ";
         cin >> x;
-        cout << "\nIngrese la coordenada y a la que moverse (1 - 8): ";
+        cout << "\nIngrese la columna a la cual mover el personaje (1 - 8): ";
         cin >> y;
         x -= 1;
         y -= 1;

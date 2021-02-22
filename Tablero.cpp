@@ -59,7 +59,7 @@ void Tablero::mostrarTablero(Juego* juego){
     }
 }
 
-void Tablero::mostrarPersonajeJugador1(int columna, int fila, char elemento){
+void Tablero::mostrarPersonajeJugador1(int fila, int columna, char elemento){
     if (tablero[fila][columna]->getNombre() == "Montania") {
         printf("\033[1;43;97m %c \033[0m", elemento);
     }

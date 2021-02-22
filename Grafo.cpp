@@ -172,7 +172,7 @@ int Grafo::caminoMinimo(Vertice* salida, Vertice* destino) {
             distancias[i] = INFINITO;
         }
         else {
-            distancias[i] = this->getDistancia(salida, destino);
+            distancias[i] = this->getDistancia(salida, auxiliar);
         }
         auxiliar = auxiliar->getSiguiente();
     }
