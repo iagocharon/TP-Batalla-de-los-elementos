@@ -48,8 +48,10 @@ void Jugar::posicionarPersonajes(Juego *juego, Tablero *tablero) {
 
 Personaje *Jugar::determinarPersonaje(Juego *juego, int personaje) {
     if (juego->getTurno() == JUGADOR1) {
+        juego->cambiarTurno();
         return juego->getJugador1()->getPersonajes()[personaje];
     } else {
+        juego->cambiarTurno();
         return juego->getJugador2()->getPersonajes()[personaje];
     }
 }
@@ -101,24 +103,26 @@ void Jugar::jugar(Juego *juego, Tablero *tablero, Grafo* grafo) {
         if(finDelJuego(juego)){
             return;
         }
-        personaje = determinarPersonaje(juego, i);
-        if (personaje->getVida() <= VIDA_MUERTO) {
-            continue;
+        for (int j = 0; j < 2; j++) {
+            personaje = determinarPersonaje(juego, i);
+            if (personaje->getVida() <= VIDA_MUERTO) {
+                continue;
+            }
+            do {
+                primerMenuJuego(juego, tablero, personaje, grafo, eleccion);
+                if (juego->getSalir()) {
+                    juego->partidaGuardar();
+                    return;
+                }
+            } while (!eleccionValida(eleccion));
+            do {
+                segundoMenuJuego(juego, tablero, personaje, grafo, eleccion);
+                if (juego->getSalir()) {
+                    juego->partidaGuardar();
+                    return;
+                }
+            } while (!eleccionValida(eleccion));
         }
-        do {
-            primerMenuJuego(juego, tablero, personaje, grafo, eleccion);
-            if (juego->getSalir()) {
-                juego->partidaGuardar();
-                return;
-            }
-        } while (!eleccionValida(eleccion));
-        do {
-            segundoMenuJuego(juego, tablero, personaje, grafo, eleccion);
-            if (juego->getSalir()) {
-                juego->partidaGuardar();
-                return;
-            }
-        } while (!eleccionValida(eleccion));
     }
 }
 
