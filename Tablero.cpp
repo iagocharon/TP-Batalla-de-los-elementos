@@ -132,15 +132,15 @@ char Tablero::personajeJugado(int columna, int fila, Juego* juego, int& jugador)
 
 char Tablero::elementoPersonaje(Personaje* personaje){
     if(personaje->getElemento() == ELEMENTO_AIRE){
-        return 'A';
+        return INICIAL_AIRE;
     }
     else if(personaje->getElemento() == ELEMENTO_TIERRA){
-        return 'T';
+        return INICIAL_TIERRA;
     }
     else if(personaje->getElemento() == ELEMENTO_AGUA){
-        return 'W';
+        return INICIAL_AGUA;
     }
-    return 'F';
+    return INICIAL_FUEGO;
 }
 
 void Tablero::cargarGrafo(Grafo* grafo) {
