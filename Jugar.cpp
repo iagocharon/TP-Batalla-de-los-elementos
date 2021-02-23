@@ -171,9 +171,9 @@ void Jugar::flujoDeJuego(){
     Utiles utiles;
     int partida;
     ABB* arbolPersonajes = utiles.personajes();
-    auto* juego = new Juego(arbolPersonajes);
-    auto* tablero = new Tablero();
-    auto* grafo = new Grafo();
+    Juego* juego = new Juego(arbolPersonajes);
+    Tablero* tablero = new Tablero();
+    Grafo* grafo = new Grafo();
     tablero->cargarGrafo(grafo);
 
     inicio(juego);

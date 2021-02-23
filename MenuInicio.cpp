@@ -1,9 +1,6 @@
 #include "MenuInicio.h"
 #include <iostream>
 
-const int PRIMERA_OPCION = 1;
-const int ULTIMA_OPCION = 6;
-
 using namespace std;
 
 void MenuInicio::mostrarMenu() {
