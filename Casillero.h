@@ -18,60 +18,60 @@ private:
     int columna;
 public:
 
-    // PRE:
-    // POS:
+    // PRE: -
+    // POS: Devuelve el atrubuto nombre.
     string getNombre();
 
-    // PRE:
-    // POS:
+    // PRE: -
+    // POS: Devuelve el atrubuto costoTierra.
     int getCostoTierra();
 
-    // PRE:
-    // POS:
+    // PRE: -
+    // POS: Devuelve el atrubuto costoAire.
     int getCostoAire();
 
-    // PRE:
-    // POS:
+    // PRE: -
+    // POS: Devuelve el atrubuto costoAgua.
     int getCostoAgua();
 
-    // PRE:
-    // POS:
+    // PRE: -
+    // POS: Devuelve el atrubuto costoFuego.
     int getCostoFuego();
 
-    // PRE:
-    // POS:
+    // PRE: -
+    // POS: Devuelve el atrubuto fila.
     int getFila();
 
-    // PRE:
-    // POS:
+    // PRE: -
+    // POS: Devuelve el atrubuto columna.
     int getColumna();
 
-    // PRE:
-    // POS:
+    // PRE: Recibe un string con el nombre al cual cambiar
+    // POS: Cambia el atributo nombre por el que se le paso por parametro.
     void setNombre(string nombre);
 
-    // PRE:
-    // POS:
+    // PRE: Recibe un int con el costo al cual cambiar
+    // POS: Cambia el atributo costoTierra por el que se le paso por parametro.
     void setCostoTierra(int costo);
 
-    // PRE:
-    // POS:
+    // PRE: Recibe un int con el costo al cual cambiar
+    // POS: Cambia el atributo costoAire por el que se le paso por parametro.
     void setCostoAire(int costo);
 
-    // PRE:
-    // POS:
+    // PRE: Recibe un int con el costo al cual cambiar
+    // POS: Cambia el atributo costoAgua por el que se le paso por parametro.
     void setCostoAgua(int costo);
 
-    // PRE:
-    // POS:
+    // PRE: Recibe un int con el costo al cual cambiar
+    // POS: Cambia el atributo costoFuego por el que se le paso por parametro.
     void setCostoFuego(int costo);
 
-    // PRE:
-    // POS:
+    // PRE: Recibe un string con el nombre al cual cambiar
+    // POS: Cambia el atributo nombre por el que se le paso por parametro.
     void setFila(int fila);
 
-    // PRE:
-    // POS:
+    // PRE: Recibe un string con el nombre al cual cambiar
+    // POS: Cambia el atributo nombre por el que se le paso por parametro.
     void setColumna(int columna);
     
 };
