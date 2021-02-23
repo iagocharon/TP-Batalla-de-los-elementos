@@ -65,7 +65,6 @@ void Juego::posicionarPersonajeJugador1(int personaje) {
     Utiles utiles;
 
     do {
-        utiles.enmarcar("JUGADOR 1");
         cout << "Personaje " << this->jugador1->getPersonajes()[personaje]->getNombre()<< " (" << personaje + 1  << "/3):" << endl;
         cout << "Ingrese la fila del personaje(1-8): " << endl;
         cin >> fila;
@@ -93,7 +92,6 @@ void Juego::posicionarPersonajeJugador2(int personaje) {
     Utiles utiles;
 
     do {
-        utiles.enmarcar("JUGADOR 2");
         cout << "Personaje " << this->jugador2->getPersonajes()[personaje]->getNombre()<< " (" << personaje + 1  << "/3):" << endl;
         cout << "Ingrese la fila del personaje(1-8): " << endl;
         cin >> fila;
@@ -179,7 +177,6 @@ void Juego::seleccionJugador1() {
     Utiles utiles;
 
     do {
-        utiles.enmarcar("Jugador 1");
         cout << jugador1->getCantidadPersonajes() + 1 << "/" << MAX_PERSONAJES << endl;
         cout << "\nIngrese el nombre del personaje a seleccionar: ";
         cin >> nombre;
@@ -205,7 +202,6 @@ void Juego::seleccionJugador2() {
     Utiles utiles;
 
     do {
-        utiles.enmarcar("Jugador 2");
         cout << jugador2->getCantidadPersonajes() + 1 << "/" << MAX_PERSONAJES << endl;
         cout << "\nIngrese el nombre del personaje a seleccionar: ";
         cin >> nombre;

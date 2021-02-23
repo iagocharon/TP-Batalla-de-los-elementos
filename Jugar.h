@@ -5,6 +5,7 @@
 #include "MenuInicio.h"
 #include "MenuSeleccion.h"
 #include "MenuJuego.h"
+#include "MenuPartida.h"
 #include "Personaje.h"
 #include "Tablero.h"
 
@@ -24,6 +25,10 @@ private:
     // PRE: Recibe un puntero a juego cargado.
     // POS: Controla el flujo del primer menu para agregar o eliminar personajes.
     void inicio(Juego* juego);
+
+    // PRE: Recibe un puntero a juego cargado.
+    // POS: Controla el flujo del menu para cargar partida o iniciar una nueva.
+    int menuPartida(Juego* juego);
 
     // PRE: Recibe un puntero a un juego y un MenuSeleccion.
     // POS: Controla el flujo de seleccion de personajes para que cada jugador pueda

@@ -20,11 +20,32 @@ void Jugar::inicio(Juego *juego){
     }
 }
 
+int Jugar::menuPartida(Juego* juego){
+    MenuPartida menu;
+    int eleccion = 0;
+
+    do{
+        menu.mostrarMenu();
+        cout << "Ingrese su eleccion: ";
+        cin >> eleccion;
+        menu.accionMenu(eleccion, juego);
+    }while(eleccion < MP_CARGAR_PARTIDA || eleccion > MP_SALIR);
+    return eleccion;
+}
+
 void Jugar::seleccionarPersonajes(Juego *juego) {
     MenuSeleccion menu;
     int eleccion = 0;
+    Utiles utiles;
 
     for(int i = 0; i < MAX_PERSONAJES*2; i++){
+
+        if(juego->getTurno() == JUGADOR1){
+            utiles.enmarcar("JUGADOR 1");
+        }else{
+            utiles.enmarcar("JUGADOR 2");
+        }
+
         while (eleccion != MS_SELECCIONAR_PERSONAJE) {
             menu.mostrarMenu();
             cin >> eleccion;
@@ -38,8 +59,16 @@ void Jugar::seleccionarPersonajes(Juego *juego) {
 }
 
 void Jugar::posicionarPersonajes(Juego *juego, Tablero *tablero) {
+    Utiles utiles;
     for (int i = 0; i < MAX_PERSONAJES; i++){
         for(int j = 0; j < JUGADORES; j++){
+
+            if(juego->getTurno() == JUGADOR1){
+                utiles.enmarcar("JUGADOR 1");
+            }else{
+                utiles.enmarcar("JUGADOR 2");
+            }
+
             tablero->mostrarTablero(juego);
             juego->posicionPersonajes(i);
         }
@@ -121,6 +150,8 @@ void Jugar::jugar(Juego *juego, Tablero *tablero, Grafo* grafo) {
             }
         } while (!eleccionValida(eleccion));
     }
+    actualizarMuertes(juego);
+    juego->cambiarTurno();
 }
 
 bool Jugar::finDelJuego(Juego *juego) {
@@ -138,6 +169,7 @@ void Jugar::anunciarGanador(Juego* juego) {
 
 void Jugar::flujoDeJuego(){
     Utiles utiles;
+    int partida;
     ABB* arbolPersonajes = utiles.personajes();
     auto* juego = new Juego(arbolPersonajes);
     auto* tablero = new Tablero();
@@ -148,7 +180,15 @@ void Jugar::flujoDeJuego(){
 
     if(!juego->getSalir()){
         utiles.limpiarPantalla();
-        if(juego->partidaCargar() == PARTIDA_NO_ENCONTRADA){
+        partida = menuPartida(juego);
+        if(partida == MP_CARGAR_PARTIDA){
+            if(juego->partidaCargar() == PARTIDA_NO_ENCONTRADA){
+                seleccionarPersonajes(juego);
+                if(!juego->getSalir())
+                    posicionarPersonajes(juego, tablero);
+                juego->randomizarTurno();
+            }
+        }else if(partida == MP_BORRAR_Y_CONTINUAR){
             seleccionarPersonajes(juego);
             if(!juego->getSalir())
                 posicionarPersonajes(juego, tablero);
@@ -159,7 +199,6 @@ void Jugar::flujoDeJuego(){
             while(!finDelJuego(juego) && !juego->getSalir()){
                 anunciarTurnoJugador(juego);
                 jugar(juego, tablero, grafo);
-                juego->cambiarTurno();
             }
             if(finDelJuego(juego)){
                 tablero->mostrarTablero(juego);
