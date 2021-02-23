@@ -40,4 +40,4 @@ add_executable(BDE
         Tablero.cpp
         Tablero.h
         Utiles.cpp
-        Utiles.h MenuJuego.cpp MenuJuego.h Jugar.cpp Jugar.h)
+        Utiles.h MenuJuego.cpp MenuJuego.h Jugar.cpp Jugar.h MenuPartida.cpp MenuPartida.h)

@@ -181,16 +181,17 @@ void Juego::seleccionJugador1() {
         cout << "\nIngrese el nombre del personaje a seleccionar: ";
         cin >> nombre;
         cout << endl;
-        cout << "Ese personaje no existe." << endl;
-        cout << "Ingrese un personaje valido: ";
-        cin >> nombre;
-        cout << endl;
-        jugador1->setPersonaje(jugador1->getCantidadPersonajes(), personajes->buscar(nombre)->getDato());
-        eliminado = personajes->eliminar(nombre);
 
-        if (!eliminado) {
+        NodoABB* buscado = personajes->buscar(nombre);
+
+        if(buscado == NULL)
             cout << "Personaje inválido" << endl;
+
+        else {
+            jugador1->setPersonaje(jugador1->getCantidadPersonajes(), buscado->getDato());
+            eliminado = personajes->eliminar(nombre);
         }
+
     } while (!eliminado);
     cambiarTurno();
     utiles.limpiarPantalla();
@@ -206,12 +207,17 @@ void Juego::seleccionJugador2() {
         cout << "\nIngrese el nombre del personaje a seleccionar: ";
         cin >> nombre;
         cout << endl;
-        jugador2->setPersonaje(jugador2->getCantidadPersonajes(), personajes->buscar(nombre)->getDato());
-        eliminado = personajes->eliminar(nombre);
 
-        if (!eliminado) {
+        NodoABB* buscado = personajes->buscar(nombre);
+
+        if(buscado == NULL)
             cout << "Personaje inválido" << endl;
+
+        else {
+            jugador2->setPersonaje(jugador2->getCantidadPersonajes(), buscado->getDato());
+            eliminado = personajes->eliminar(nombre);
         }
+
     } while (!eliminado);
 
     cambiarTurno();
@@ -319,4 +325,6 @@ void Juego::borrarPartidaGuardada() {
     remove(PARTIDA);
 }
 
-
+bool Juego::personajesListos(){
+    return (jugador1->getCantidadPersonajes() == MAX_PERSONAJES && jugador2->getCantidadPersonajes() == MAX_PERSONAJES);
+}

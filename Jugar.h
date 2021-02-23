@@ -33,7 +33,7 @@ private:
     // PRE: Recibe un puntero a un juego y un MenuSeleccion.
     // POS: Controla el flujo de seleccion de personajes para que cada jugador pueda
     //      seleccionar 3 para poder empezar a jugar.
-    void seleccionarPersonajes(Juego* juego);
+    void menuPersonajes(Juego* juego);
 
     // PRE: Recibe un juego y un tablero completamente cargados.
     // POS: Llama a la funcion correspondiente para posicionar a los personajes de cada jugador y muestra el tablero.

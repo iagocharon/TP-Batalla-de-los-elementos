@@ -18,6 +18,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/Jugar.cpp" "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles/BDE.dir/Jugar.cpp.o"
   "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/MenuInicio.cpp" "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles/BDE.dir/MenuInicio.cpp.o"
   "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/MenuJuego.cpp" "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles/BDE.dir/MenuJuego.cpp.o"
+  "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/MenuPartida.cpp" "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles/BDE.dir/MenuPartida.cpp.o"
   "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/MenuSeleccion.cpp" "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles/BDE.dir/MenuSeleccion.cpp.o"
   "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/NodoABB.cpp" "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles/BDE.dir/NodoABB.cpp.o"
   "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/Personaje.cpp" "/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/cmake-build-debug/CMakeFiles/BDE.dir/Personaje.cpp.o"

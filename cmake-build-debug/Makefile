@@ -501,6 +501,33 @@ MenuJuego.cpp.s:
 	$(MAKE) -f CMakeFiles/BDE.dir/build.make CMakeFiles/BDE.dir/MenuJuego.cpp.s
 .PHONY : MenuJuego.cpp.s
 
+MenuPartida.o: MenuPartida.cpp.o
+
+.PHONY : MenuPartida.o
+
+# target to build an object file
+MenuPartida.cpp.o:
+	$(MAKE) -f CMakeFiles/BDE.dir/build.make CMakeFiles/BDE.dir/MenuPartida.cpp.o
+.PHONY : MenuPartida.cpp.o
+
+MenuPartida.i: MenuPartida.cpp.i
+
+.PHONY : MenuPartida.i
+
+# target to preprocess a source file
+MenuPartida.cpp.i:
+	$(MAKE) -f CMakeFiles/BDE.dir/build.make CMakeFiles/BDE.dir/MenuPartida.cpp.i
+.PHONY : MenuPartida.cpp.i
+
+MenuPartida.s: MenuPartida.cpp.s
+
+.PHONY : MenuPartida.s
+
+# target to generate assembly for a file
+MenuPartida.cpp.s:
+	$(MAKE) -f CMakeFiles/BDE.dir/build.make CMakeFiles/BDE.dir/MenuPartida.cpp.s
+.PHONY : MenuPartida.cpp.s
+
 MenuSeleccion.o: MenuSeleccion.cpp.o
 
 .PHONY : MenuSeleccion.o
@@ -714,6 +741,9 @@ help:
 	@echo "... MenuJuego.o"
 	@echo "... MenuJuego.i"
 	@echo "... MenuJuego.s"
+	@echo "... MenuPartida.o"
+	@echo "... MenuPartida.i"
+	@echo "... MenuPartida.s"
 	@echo "... MenuSeleccion.o"
 	@echo "... MenuSeleccion.i"
 	@echo "... MenuSeleccion.s"

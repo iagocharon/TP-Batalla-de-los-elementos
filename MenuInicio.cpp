@@ -96,7 +96,8 @@ void MenuInicio::accionMenu(int& eleccion, Juego* juego) {
             break;
         case MI_COMENZAR:
             if(juego->getPersonajes()->cantidadElementos() < MI_PERSONAJES_MINIMOS){
-                cout << "Se necesitan almenos 6 personajes para comenzar.\n" << endl;
+                cout << "Se necesitan al menos 6 personajes para comenzar. Faltan " <<MI_PERSONAJES_MINIMOS -
+                juego->getPersonajes()->cantidadElementos() << " para poder comenzar" << endl;
                 eleccion = 0;
             }
             break;

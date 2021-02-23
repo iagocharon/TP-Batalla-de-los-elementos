@@ -170,6 +170,12 @@
 		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/MenuJuego.h">
 			<Option target="BDE"/>
 		</Unit>
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/MenuPartida.cpp">
+			<Option target="BDE"/>
+		</Unit>
+		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/MenuPartida.h">
+			<Option target="BDE"/>
+		</Unit>
 		<Unit filename="/home/nicolas/Daniel/Algo 2/TP3/TP-Batalla-de-los-elementos/MenuSeleccion.cpp">
 			<Option target="BDE"/>
 		</Unit>

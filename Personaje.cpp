@@ -4,7 +4,7 @@ Personaje::Personaje(string nombre, string elemento, int escudo, int vida) {
     this->nombre = nombre;
     this->elemento = elemento;
     this->escudo = escudo;
-    this->vida = vida;
+    this->vida = float(vida);
     this->energia = rand() % TOPE_ENERGIA;
     this->fila = -1;
     this->columna = -1;
@@ -14,7 +14,7 @@ Personaje::Personaje(string nombre, string elemento, int escudo, int vida, int e
     this->nombre = nombre;
     this->elemento = elemento;
     this->escudo = escudo;
-    this->vida = vida;
+    this->vida = float(vida);
     this->energia = energia;
     this->fila = fila;
     this->columna = columna;

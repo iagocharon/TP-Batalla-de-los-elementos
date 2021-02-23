@@ -15,6 +15,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/BDE.dir/Jugar.cpp.o"
   "CMakeFiles/BDE.dir/MenuInicio.cpp.o"
   "CMakeFiles/BDE.dir/MenuJuego.cpp.o"
+  "CMakeFiles/BDE.dir/MenuPartida.cpp.o"
   "CMakeFiles/BDE.dir/MenuSeleccion.cpp.o"
   "CMakeFiles/BDE.dir/NodoABB.cpp.o"
   "CMakeFiles/BDE.dir/Personaje.cpp.o"

@@ -33,30 +33,32 @@ int Jugar::menuPartida(Juego* juego){
     return eleccion;
 }
 
-void Jugar::seleccionarPersonajes(Juego *juego) {
+void Jugar::menuPersonajes(Juego* juego) {
     MenuSeleccion menu;
     int eleccion = 0;
     Utiles utiles;
 
-    for(int i = 0; i < MAX_PERSONAJES*2; i++){
+    while (!juego->personajesListos()) {
 
-        if(juego->getTurno() == JUGADOR1){
+        if(juego->getTurno() == JUGADOR1)
             utiles.enmarcar("JUGADOR 1");
-        }else{
-            utiles.enmarcar("JUGADOR 2");
-        }
 
-        while (eleccion != MS_SELECCIONAR_PERSONAJE) {
-            menu.mostrarMenu();
-            cin >> eleccion;
-            menu.accionMenu(eleccion, juego);
-            if (juego->getSalir()) {
-                return;
-            }
+        else
+            utiles.enmarcar("JUGADOR 2");
+
+        menu.mostrarMenu();
+        cin >> eleccion;
+
+        menu.accionMenu(eleccion, juego);
+
+        menu.espaciado();
+
+        if (juego->getSalir()) {
+            return;
         }
-        eleccion = 0;
     }
 }
+
 
 void Jugar::posicionarPersonajes(Juego *juego, Tablero *tablero) {
     Utiles utiles;
@@ -183,13 +185,13 @@ void Jugar::flujoDeJuego(){
         partida = menuPartida(juego);
         if(partida == MP_CARGAR_PARTIDA){
             if(juego->partidaCargar() == PARTIDA_NO_ENCONTRADA){
-                seleccionarPersonajes(juego);
+                menuPersonajes(juego);
                 if(!juego->getSalir())
                     posicionarPersonajes(juego, tablero);
                 juego->randomizarTurno();
             }
         }else if(partida == MP_BORRAR_Y_CONTINUAR){
-            seleccionarPersonajes(juego);
+            menuPersonajes(juego);
             if(!juego->getSalir())
                 posicionarPersonajes(juego, tablero);
             juego->randomizarTurno();

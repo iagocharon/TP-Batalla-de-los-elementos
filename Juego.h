@@ -116,6 +116,10 @@ public:
     // POS: Elimina el archivo con los datos de la partida.
     void borrarPartidaGuardada();
 
+    // PRE : -
+    // POS : true si ambos jugadores tienen a sus tres personajes, false de otro modo
+    bool personajesListos();
+
 private:
 
     // PRE: Recibe dos enteros inicializados.

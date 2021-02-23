@@ -26,6 +26,10 @@ public:
     // POS: Llama a la función correspondiente según el entero recibido.
     void accionMenu(int eleccion, Juego* juego);
 
+    // PRE: -
+    // POS: Imprime por pantalla unos espacios en blanco para la prolijidad al momento de mostrar
+    void espaciado();
+
 private:
     // PRE: Recibe un arbol cargado con personajes.
     // POS: Muestra por pantalla las estadisticas de un personaje.
