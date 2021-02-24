@@ -62,6 +62,10 @@ private:
     // PRE: Recibe un personaje.
     // POS: Devuelve un char con la inicial del mismo.
     char elementoPersonaje(Personaje* personaje);
+
+    // PRE: -
+    // POS: Muestra a que hace referencia cada color del tablero.
+    void mostrarGlosario();
 };
 
 

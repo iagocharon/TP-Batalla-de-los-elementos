@@ -65,11 +65,12 @@ void Jugar::posicionarPersonajes(Juego *juego, Tablero *tablero) {
     for (int i = 0; i < MAX_PERSONAJES; i++){
         for(int j = 0; j < JUGADORES; j++){
 
-            if(juego->getTurno() == JUGADOR1){
+            if(juego->getTurno() == JUGADOR1)
                 utiles.enmarcar("JUGADOR 1");
-            }else{
+
+            else
                 utiles.enmarcar("JUGADOR 2");
-            }
+
 
             tablero->mostrarTablero(juego);
             juego->posicionPersonajes(i);

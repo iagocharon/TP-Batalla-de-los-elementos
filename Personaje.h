@@ -9,7 +9,7 @@
 #define MAX_PERSONAJES 3
 #define MAX_TABLERO 8
 #define ELEMENTO_TIERRA "tierra"
-#define ELEMENTO_AIRE "tire"
+#define ELEMENTO_AIRE "aire"
 #define ELEMENTO_AGUA "agua"
 #define ELEMENTO_FUEGO "fuego"
 

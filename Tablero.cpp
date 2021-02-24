@@ -45,6 +45,8 @@ void Tablero::mostrarTablero(Juego* juego){
     char personaje = ' ';
     int jugador = 0;
 
+    mostrarGlosario();
+
     //GRILLA COLUMNAS
     cout << "\t\t  ";
     for(int k = 0; k < MAX_COLUMNAS; k++){
@@ -165,4 +167,17 @@ void Tablero::cargarGrafo(Grafo* grafo) {
             }
         }
     }
+}
+
+
+void Tablero::mostrarGlosario(){
+
+    cout << "Glosario: " << endl;
+    cout << "\tMontaña:    \033[1;43;30m   \033[0m" << endl;
+    cout << "\tPrecipicio: \033[1;100;30m   \033[0m" << endl;
+    cout << "\tLago:       \033[1;46;30m   \033[0m" << endl;
+    cout << "\tVolcan:     \033[1;41;30m   \033[0m" << endl;
+    cout << "\tCamino:     \033[1;42;30m   \033[0m" << endl;
+    cout << "\tVacio:      \033[1;45;30m   \033[0m" << endl;
+    cout << "\n\n";
 }
