@@ -141,8 +141,18 @@ void Jugar::segundoMenuJuego(Juego* juego, Tablero* tablero, Personaje* personaj
     } while(!accionRealizada);
 }
 
+void Jugar::comprobarFuegoYAire(Juego* juego){
+    if(juego->getTurno() == JUGADOR1){
+        juego->getJugador1()->comprobarFuegoYAire();
+    }else{
+        juego->getJugador2()->comprobarFuegoYAire();
+    }
+}
+
 void Jugar::jugar(Juego *juego, Tablero *tablero, Grafo* grafo) {
     Personaje *personaje;
+
+    comprobarFuegoYAire(juego);
 
     for (int i = 0; i < MAX_PERSONAJES; i++) {
         actualizarMuertes(juego);
@@ -226,5 +236,6 @@ void Jugar::flujoDeJuego(){
 
     delete arbolPersonajes;
     delete tablero;
+    delete grafo;
     delete juego;
 }

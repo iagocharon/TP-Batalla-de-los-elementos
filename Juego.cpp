@@ -334,3 +334,12 @@ void Juego::borrarPartidaGuardada() {
 bool Juego::personajesListos(){
     return (jugador1->getCantidadPersonajes() == MAX_PERSONAJES && jugador2->getCantidadPersonajes() == MAX_PERSONAJES);
 }
+
+Juego::~Juego(){
+    for(int i = 0; i < MAX_PERSONAJES; i++){
+        delete jugador1->getPersonajes()[i];
+        delete jugador2->getPersonajes()[i];
+    }
+    delete jugador1;
+    delete jugador2;
+}
