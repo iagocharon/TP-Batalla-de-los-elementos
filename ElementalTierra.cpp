@@ -30,65 +30,57 @@ void ElementalTierra::alimentar() {
 
 void ElementalTierra::atacar(Personaje* enemigos[MAX_PERSONAJES]) {
     cout << "ATAQUE DE ELEMENTAL DE TIERRA" << endl;
-    if (energiaNecesariaAtaque()) {
-        for (int i = 0; i < MAX_PERSONAJES; i++) {
-            float danio;
-            if (abs(enemigos[i]->getFila() - this->fila) <= 2) {
-                if (abs(enemigos[i]->getColumna() - this->columna) <= 2) {
-                    danio = DANIO_TIERRA_BASE * 3;
-                }
-                else if (abs(enemigos[i]->getColumna() - this->columna) <= 4) {
-                    danio = DANIO_TIERRA_BASE * 2;
-                }
-                else {
-                    danio = DANIO_TIERRA_BASE;
-                }
+
+    for (int i = 0; i < MAX_PERSONAJES; i++) {
+        float danio;
+        if (abs(enemigos[i]->getFila() - this->fila) <= 2) {
+            if (abs(enemigos[i]->getColumna() - this->columna) <= 2) {
+                danio = DANIO_TIERRA_BASE * 3;
             }
-            else if (abs(enemigos[i]->getFila() - this->fila) <= 4) {
-                if (abs(enemigos[i]->getColumna() - this->columna) <= 4) {
-                    danio = DANIO_TIERRA_BASE * 2;
-                }
-                else {
-                    danio = DANIO_TIERRA_BASE;
-                }
+            else if (abs(enemigos[i]->getColumna() - this->columna) <= 4) {
+                danio = DANIO_TIERRA_BASE * 2;
             }
             else {
                 danio = DANIO_TIERRA_BASE;
             }
-            if (enemigos[i]->getEscudo() == 1) {
-                danio = danio * 0.9;
-            }
-            else if (enemigos[i]->getEscudo() == 2) {
-                danio = danio * 0.8;
-            }
-            else if (enemigos[i]->getEscudo() > 2) {
-                danio = danio * 0.2;
-            }
-            if(enemigos[i]->getElemento() == ELEMENTO_AGUA)
-                danio += MODIFICADOR_TIERRA_AGUA;
-
-            else if(enemigos[i]->getElemento() == ELEMENTO_AGUA)
-                danio = MODIFICADOR_TIERRA_AIRE;
-
-            enemigos[i]->setVida(enemigos[i]->getVida() - danio);
         }
-        this->energia -= ENERGIA_ATAQUE_TIERRA;
+        else if (abs(enemigos[i]->getFila() - this->fila) <= 4) {
+            if (abs(enemigos[i]->getColumna() - this->columna) <= 4) {
+                danio = DANIO_TIERRA_BASE * 2;
+            }
+            else {
+                danio = DANIO_TIERRA_BASE;
+            }
+        }
+        else {
+            danio = DANIO_TIERRA_BASE;
+        }
+        if (enemigos[i]->getEscudo() == 1) {
+            danio = danio * 0.9;
+        }
+        else if (enemigos[i]->getEscudo() == 2) {
+            danio = danio * 0.8;
+        }
+        else if (enemigos[i]->getEscudo() > 2) {
+            danio = danio * 0.2;
+        }
+        if(enemigos[i]->getElemento() == ELEMENTO_AGUA)
+            danio += MODIFICADOR_TIERRA_AGUA;
+
+        else if(enemigos[i]->getElemento() == ELEMENTO_AGUA)
+            danio = MODIFICADOR_TIERRA_AIRE;
+
+        enemigos[i]->setVida(enemigos[i]->getVida() - danio);
     }
-    else {
-        cout << "\tNo tiene energia suficiente para atacar." << endl;
-    }
+    this->energia -= ENERGIA_ATAQUE_TIERRA;
 }
 
 void ElementalTierra::defender(Personaje* aliados[MAX_PERSONAJES]) {
     cout << "DEFENSA DE ELEMENTAL DE TIERRA" << endl;
-    if (energiaNecesariaDefensa()) {
-        this->escudo =+ BONIFICACION_ESCUDO_TIERRA;
-        setBonificacion(true);
-        this->energia -= ENERGIA_DEFENSA_TIERRA;
-    }
-    else {
-        cout << "\tNo tiene energia suficiente para defender." << endl;
-    }
+
+    this->escudo =+ BONIFICACION_ESCUDO_TIERRA;
+    setBonificacion(true);
+    this->energia -= ENERGIA_DEFENSA_TIERRA;
 }
 
 bool ElementalTierra::energiaNecesariaAtaque(){
@@ -99,4 +91,18 @@ bool ElementalTierra::energiaNecesariaAtaque(){
 bool ElementalTierra::energiaNecesariaDefensa(){
 
     return this->energia >= ENERGIA_DEFENSA_TIERRA;
+}
+
+void ElementalTierra::caracteristicasPrimerMenu(){
+    cout << nombre << " es un elemental de tierra, cuando se alimenta regenera 8 de energía" << endl;
+    cout << "El costo de desplazarse dependerá del lugar" << endl;
+}
+
+
+void ElementalTierra::caracteristicasSegundoMenu(){
+
+    cout << nombre << " es un elemental de tierra, su ataque consume 6 de energía y dañará a todos los enemigos"
+                      " su daño cambia según la cercanía con el enemigo." << endl;
+    cout << "La defensa consiste en gastar 5 puntos de energía para obtener 2 puntos de escudo hasta luego de "
+            "ser atacado, lo que disminuirá el daño recidio a un 20%." << endl;
 }

@@ -25,16 +25,18 @@ public:
     void mostrarMenu1();
 
     // PRE: Recibe un entero entre 1 y 4 inclusive, un juego cargado, y un personaje cargado.
-    // POS: Llama a la función correspondiente según el entero recibido.
-    void accionMenu1(int eleccion, Juego* juego, Personaje* personaje, Grafo* grafo);
+    // POS: Llama a la función correspondiente según el entero recibido. Devuelve true si la acción pudo
+    //      ser realizada.
+    bool accionMenu1(int eleccion, Juego* juego, Personaje* personaje, Grafo* grafo);
 
     // PRE: -
     // POS: Muestra un menu de opciones por pantalla.
     void mostrarMenu2();
 
     // PRE: Recibe un entero entre 1 y 4 inclusive, un juego cargado, y un personaje cargado.
-    // POS: Llama a la función correspondiente según el entero recibido.
-    void accionMenu2(int eleccion, Juego* juego, Personaje* personaje, Grafo* grafo);
+    // POS: Llama a la función correspondiente según el entero recibido. Devuelve true si la acción pudo
+    //      ser realizada.
+    bool accionMenu2(int eleccion, Juego* juego, Personaje* personaje);
 };
 
 

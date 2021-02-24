@@ -79,13 +79,14 @@ public:
     // POS:
     void criterioDeBusqueda(Personaje* personaje, Grafo* tablero);
 
-    // PRE:
-    // POS:
-    void actualizarPosicion(Personaje* personaje, int energiaNecesaria, int fila, int columna);
+    // PRE: -
+    // POS: Actualiza la posición del personaje y devuelve true si la energía es suficiente,
+    //      false de otro modo
+    bool actualizarPosicion(Personaje* personaje, int energiaNecesaria, int fila, int columna);
 
-    // PRE:
-    // POS:
-    void moverPersonaje(Personaje* personaje, Grafo* tablero);
+    // PRE: -
+    // POS: true si se pudo mover el personaje, false de otro modo
+    bool moverPersonaje(Personaje* personaje, Grafo* tablero);
 
     // PRE: -
     // POS: Cambia el turno entre 1 y 2 aleatoriamente.

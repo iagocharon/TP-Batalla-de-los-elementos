@@ -128,24 +128,29 @@ void Juego::criterioDeBusqueda(Personaje* personaje, Grafo* tablero){
     }
 }
 
-void Juego::actualizarPosicion(Personaje* personaje, int energiaNecesaria, int fila, int columna){
+bool Juego::actualizarPosicion(Personaje* personaje, int energiaNecesaria, int fila, int columna){
+
+    bool energiaSuficiente = false;
+
     if (personaje->getEnergia() >= energiaNecesaria) {
         personaje->setFila(fila);
         personaje->setColumna(columna);
         personaje->setEnergia(personaje->getEnergia() - energiaNecesaria);
+        energiaSuficiente = true;
     }
     else {
-        cout << "No tiene energia necesaria." << endl;
+        cout << "No tiene la energia necesaria." << endl;
     }
+    return energiaSuficiente;
 }
 
 
-void Juego::moverPersonaje(Personaje* personaje, Grafo* tablero) {
+bool Juego::moverPersonaje(Personaje* personaje, Grafo* tablero) {
     int fila = 0;
     int columna = 0;
     Vertice* salida;
     Vertice* destino;
-    int energiaNecesaria = 0;
+    int energiaNecesaria;
     bool ingresoValido;
 
     do{
@@ -168,7 +173,8 @@ void Juego::moverPersonaje(Personaje* personaje, Grafo* tablero) {
     destino = tablero->getVertice(fila, columna);
     criterioDeBusqueda(personaje, tablero);
     energiaNecesaria = tablero->caminoMinimo(salida, destino);
-    actualizarPosicion(personaje, energiaNecesaria, fila, columna);
+    bool energiaSuficiente = actualizarPosicion(personaje, energiaNecesaria, fila, columna);
+    return energiaSuficiente;
 }
 
 void Juego::seleccionJugador1() {

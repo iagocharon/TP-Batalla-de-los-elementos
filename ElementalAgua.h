@@ -34,16 +34,14 @@ public:
     //      En caso de ser efectuada la alimentación aumenta en 1 las vecesAlimentado
     void alimentar();
 
-    // PRE: -
-    // POS: Realiza un ataque con las características del ataque agua si tiene energia suficiente,
-    //      sino notifica al ususario que no es posible efectuar el mismo
+    // PRE: Tiene energía suficiente.
+    // POS: Realiza un ataque con las características del ataque agua.
     void atacar(Personaje* enemigos[MAX_PERSONAJES]);
 
 
-    // PRE: -
+    // PRE: Tiene energía suficiente.
     // POS: Se cura a si mismo y a sus aliados por RECUPERACION_AGUA y RECUPERACION_ALIADOS_AGUA
-    //      respectivamente si tiene energia suficiente, de otro modo notifica al ususario que no
-    //      es posible realizar la acción
+    //      respectivamente.
     void defender(Personaje* aliados[MAX_PERSONAJES]);
 
     // PRE: -
@@ -53,6 +51,15 @@ public:
     // PRE: -
     // POS: devuelve true si la energia es suficiente para realizar su defensa
     bool energiaNecesariaDefensa();
+
+
+    // PRE: -
+    // POS: Muestra las características del elemental para las acciones del primer menú
+    void caracteristicasPrimerMenu();
+
+    // PRE: -
+    // POS: Muestra las características del elemental para las acciones del segundo menú
+    void caracteristicasSegundoMenu();
 };
 
 #endif //TP2_ELEMENTALAGUA_H

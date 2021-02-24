@@ -52,16 +52,16 @@ private:
 
     // PRE: Recibe un entero inicializado.
     // POS: Devuelve true si la eleccion es valida o false en caso contrario.
-    void primerMenuJuego(Juego* juego, Tablero* tablero, Personaje* personaje, Grafo* grafo, int& eleccion);
+    void primerMenuJuego(Juego* juego, Tablero* tablero, Personaje* personaje, Grafo* grafo);
 
     // PRE: Recibe un entero inicializado.
     // POS: Devuelve true si la eleccion es valida o false en caso contrario.
-    void segundoMenuJuego(Juego* juego, Tablero* tablero, Personaje* personaje, Grafo* grafo, int& eleccion);
+    void segundoMenuJuego(Juego* juego, Tablero* tablero, Personaje* personaje);
 
-    // PRE: Recibe un entero inicializado.
+    /*// PRE: Recibe un entero inicializado.
     // POS: Devuelve true si la eleccion es valida o false en caso contrario.
     bool eleccionValida(int eleccion);
-
+*/
     // PRE: Recibe un puntero a juego cargado.
     // POS: Llama a la función matar personajes para cada jugador.
     void actualizarMuertes(Juego* juego);

@@ -30,54 +30,46 @@ void ElementalAgua::alimentar() {
 
 void ElementalAgua::atacar(Personaje* enemigos[MAX_PERSONAJES]) {
     cout << "ATAQUE DE ELEMENTAL DE AGUA" << endl;
-    if (energiaNecesariaAtaque()) {
-        int filaObjetivo, columnaObjetivo;
-        cout << "\tIngrese las coordenadas del destino del ataque: " << endl;
-        cout << "\t\tFila: ";
-        cin >> filaObjetivo;
-        cout << "\t\tColumna: ";
-        cin >> columnaObjetivo;
 
-        for (int i = 0; i < MAX_PERSONAJES; i++) {
-            if ((enemigos[i]->getFila() == filaObjetivo) && (enemigos[i]->getColumna() == columnaObjetivo)) {
-                float danio = DANIO_AGUA;
-                if (enemigos[i]->getElemento() == ELEMENTO_FUEGO) {
-                    danio += MODIFICADOR_AGUA;
-                }
-                else if (enemigos[i]->getElemento() == ELEMENTO_TIERRA) {
-                    danio -= MODIFICADOR_AGUA;
-                }
-                if (enemigos[i]->getEscudo() == 1) {
-                    danio = danio * 0.9;
-                }
-                else if (enemigos[i]->getEscudo() == 2) {
-                    danio = danio * 0.8;
-                }
-                else if (enemigos[i]->getEscudo() > 2) {
-                    danio = danio * 0.2;
-                }
-                enemigos[i]->setVida(enemigos[i]->getVida() - danio);
+    int filaObjetivo, columnaObjetivo;
+    cout << "\tIngrese las coordenadas del destino del ataque: " << endl;
+    cout << "\t\tFila: ";
+    cin >> filaObjetivo;
+    cout << "\t\tColumna: ";
+    cin >> columnaObjetivo;
+
+    for (int i = 0; i < MAX_PERSONAJES; i++) {
+        if ((enemigos[i]->getFila() == filaObjetivo) && (enemigos[i]->getColumna() == columnaObjetivo)) {
+            float danio = DANIO_AGUA;
+            if (enemigos[i]->getElemento() == ELEMENTO_FUEGO) {
+                danio += MODIFICADOR_AGUA;
             }
+            else if (enemigos[i]->getElemento() == ELEMENTO_TIERRA) {
+                danio -= MODIFICADOR_AGUA;
+            }
+            if (enemigos[i]->getEscudo() == 1) {
+                danio = danio * 0.9;
+            }
+            else if (enemigos[i]->getEscudo() == 2) {
+                danio = danio * 0.8;
+            }
+            else if (enemigos[i]->getEscudo() > 2) {
+                danio = danio * 0.2;
+            }
+            enemigos[i]->setVida(enemigos[i]->getVida() - danio);
         }
-        this->energia -= ENERGIA_ATAQUE_AGUA;
     }
-    else {
-        cout << "\tNo tiene energia suficiente para atacar." << endl;
-    }
+    this->energia -= ENERGIA_ATAQUE_AGUA;
 }
 
 void ElementalAgua::defender(Personaje* aliados[MAX_PERSONAJES]) {
     cout << "DEFENSA DE ELEMENTAL DE AGUA" << endl;
-    if (energiaNecesariaDefensa()) {
-        this->vida += RECUPERACION_AGUA;
-        for (int i = 0; i < MAX_PERSONAJES; i++) {
-            if (aliados[i]->getNombre() != this->nombre) {
-                aliados[i]->setVida(aliados[i]->getVida() + RECUPERACION_ALIADOS_AGUA);
-            }
+
+    this->vida += RECUPERACION_AGUA;
+    for (int i = 0; i < MAX_PERSONAJES; i++) {
+        if (aliados[i]->getNombre() != this->nombre) {
+            aliados[i]->setVida(aliados[i]->getVida() + RECUPERACION_ALIADOS_AGUA);
         }
-    }
-    else {
-        cout << "\tNo tiene energia suficiente para defender." << endl;
     }
 }
 
@@ -89,4 +81,21 @@ bool ElementalAgua::energiaNecesariaAtaque(){
 bool ElementalAgua::energiaNecesariaDefensa(){
 
     return this->energia >= ENERGIA_DEFENSA_AGUA;
+}
+
+void ElementalAgua::caracteristicasPrimerMenu(){
+
+    cout << nombre << " es un elemental de agua, cuando se alimenta regenera 10 de energía" << endl;
+    cout << "El costo de desplazarse dependerá del lugar" << endl;
+}
+
+
+void ElementalAgua::caracteristicasSegundoMenu(){
+
+    cout << nombre << " es un elemental de agua, su ataque es dirigido a una posición específica e inflige "
+                      "30 de daño a los elementales de fuego, 10 a los de tierra y 20 a los de agua y aire."
+                      " Consume 5 puntos de energía." << endl;
+
+    cout << "La defensa consiste en gastar 12 puntos de energía para regenerarse 50 puntos de vida y "
+            "curar a todos los aliados aún vivos por 10 puntos de vitalidad." << endl;
 }

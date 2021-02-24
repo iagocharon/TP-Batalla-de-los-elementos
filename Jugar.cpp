@@ -105,28 +105,43 @@ void Jugar::actualizarMuertes(Juego* juego){
     juego->getJugador2()->matarPersonajes();
 }
 
-bool Jugar::eleccionValida(int eleccion){
+/*bool Jugar::eleccionValida(int eleccion){
     return (eleccion >= MINIMO && eleccion <= MAXIMO);
 }
-
-void Jugar::primerMenuJuego(Juego* juego, Tablero* tablero, Personaje* personaje, Grafo* grafo, int& eleccion){
+*/
+void Jugar::primerMenuJuego(Juego* juego, Tablero* tablero, Personaje* personaje, Grafo* grafo){
     MenuJuego menu;
+
     tableroYPersonaje(juego, tablero, personaje);
-    menu.mostrarMenu1();
-    cin >> eleccion;
-    menu.accionMenu1(eleccion, juego, personaje, grafo);
+
+    int eleccion = 0;
+    bool accionRealizada;
+
+    personaje -> caracteristicasPrimerMenu();
+    do {
+        menu.mostrarMenu1();
+        cin >> eleccion;
+        accionRealizada = menu.accionMenu1(eleccion, juego, personaje, grafo);
+    } while(!accionRealizada);
 }
 
-void Jugar::segundoMenuJuego(Juego* juego, Tablero* tablero, Personaje* personaje, Grafo* grafo, int& eleccion){
+void Jugar::segundoMenuJuego(Juego* juego, Tablero* tablero, Personaje* personaje){
+
     MenuJuego menu;
+
     tableroYPersonaje(juego, tablero, personaje);
-    menu.mostrarMenu2();
-    cin >> eleccion;
-    menu.accionMenu2(eleccion, juego, personaje, grafo);
+    bool accionRealizada;
+    int eleccion = 0;
+
+    do {
+        personaje -> caracteristicasSegundoMenu();
+        menu.mostrarMenu2();
+        cin >> eleccion;
+        accionRealizada = menu.accionMenu2(eleccion, juego, personaje);
+    } while(!accionRealizada);
 }
 
 void Jugar::jugar(Juego *juego, Tablero *tablero, Grafo* grafo) {
-    int eleccion = 0;
     Personaje *personaje;
 
     for (int i = 0; i < MAX_PERSONAJES; i++) {
@@ -138,20 +153,18 @@ void Jugar::jugar(Juego *juego, Tablero *tablero, Grafo* grafo) {
         if (personaje->getVida() <= VIDA_MUERTO) {
             continue;
         }
-        do {
-            primerMenuJuego(juego, tablero, personaje, grafo, eleccion);
-            if (juego->getSalir()) {
-                juego->partidaGuardar();
-                return;
-            }
-        } while (!eleccionValida(eleccion));
-        do {
-            segundoMenuJuego(juego, tablero, personaje, grafo, eleccion);
-            if (juego->getSalir()) {
-                juego->partidaGuardar();
-                return;
-            }
-        } while (!eleccionValida(eleccion));
+
+        primerMenuJuego(juego, tablero, personaje, grafo);
+        if (juego->getSalir()) {
+            juego->partidaGuardar();
+            return;
+        }
+
+        segundoMenuJuego(juego, tablero, personaje);
+        if (juego->getSalir()) {
+            juego->partidaGuardar();
+            return;
+        }
     }
     actualizarMuertes(juego);
     juego->cambiarTurno();

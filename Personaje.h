@@ -102,6 +102,8 @@ public:
     virtual void defender(Personaje* aliados[MAX_PERSONAJES]) = 0;
     virtual bool energiaNecesariaAtaque() = 0;
     virtual bool energiaNecesariaDefensa() = 0;
+    virtual void caracteristicasPrimerMenu() = 0;
+    virtual void caracteristicasSegundoMenu() = 0;
 };
 
 #endif //TP2_PERSONAJE_H
