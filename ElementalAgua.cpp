@@ -6,7 +6,7 @@ ElementalAgua::ElementalAgua(string nombre, string elemento, int escudo, int vid
 }
 
 ElementalAgua::ElementalAgua(string nombre, string elemento, int escudo, int vida, int energia, int fila, int columna)
- : Personaje(nombre, elemento, escudo, vida, energia, fila, columna){
+ : Personaje(nombre, elemento, escudo, vida, energia, fila, columna) {
     vecesAlimentado = 0;
 }
 
@@ -73,24 +73,24 @@ void ElementalAgua::defender(Personaje* aliados[MAX_PERSONAJES]) {
     }
 }
 
-bool ElementalAgua::energiaNecesariaAtaque(){
+bool ElementalAgua::energiaNecesariaAtaque() {
 
     return this->energia >= ENERGIA_ATAQUE_AGUA;
 }
 
-bool ElementalAgua::energiaNecesariaDefensa(){
+bool ElementalAgua::energiaNecesariaDefensa() {
 
     return this->energia >= ENERGIA_DEFENSA_AGUA;
 }
 
-void ElementalAgua::caracteristicasPrimerMenu(){
+void ElementalAgua::caracteristicasPrimerMenu() {
 
     cout << nombre << " es un elemental de agua, cuando se alimenta regenera 10 de energía" << endl;
     cout << "El costo de desplazarse dependerá del lugar" << endl;
 }
 
 
-void ElementalAgua::caracteristicasSegundoMenu(){
+void ElementalAgua::caracteristicasSegundoMenu() {
 
     cout << nombre << " es un elemental de agua, su ataque es dirigido a una posición específica e inflige "
                       "30 de daño a los elementales de fuego, 10 a los de tierra y 20 a los de agua y aire."
@@ -98,4 +98,8 @@ void ElementalAgua::caracteristicasSegundoMenu(){
 
     cout << "La defensa consiste en gastar 12 puntos de energía para regenerarse 50 puntos de vida y "
             "curar a todos los aliados aún vivos por 10 puntos de vitalidad." << endl;
+}
+
+ElementalAgua::~ElementalAgua() {
+    
 }

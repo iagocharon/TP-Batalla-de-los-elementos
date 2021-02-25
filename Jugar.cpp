@@ -1,6 +1,6 @@
 #include "Jugar.h"
 
-void Jugar::inicio(Juego *juego){
+void Jugar::inicio(Juego *juego) {
     MenuInicio menu;
     int eleccion = 0;
 
@@ -20,7 +20,7 @@ void Jugar::inicio(Juego *juego){
     }
 }
 
-int Jugar::menuPartida(Juego* juego){
+int Jugar::menuPartida(Juego* juego) {
     MenuPartida menu;
     int eleccion = 0;
 
@@ -62,8 +62,8 @@ void Jugar::menuPersonajes(Juego* juego) {
 
 void Jugar::posicionarPersonajes(Juego *juego, Tablero *tablero) {
     Utiles utiles;
-    for (int i = 0; i < MAX_PERSONAJES; i++){
-        for(int j = 0; j < JUGADORES; j++){
+    for (int i = 0; i < MAX_PERSONAJES; i++) {
+        for(int j = 0; j < JUGADORES; j++) {
 
             if(juego->getTurno() == JUGADOR1)
                 utiles.enmarcar("JUGADOR 1");
@@ -81,7 +81,8 @@ void Jugar::posicionarPersonajes(Juego *juego, Tablero *tablero) {
 Personaje *Jugar::determinarPersonaje(Juego *juego, int personaje) {
     if (juego->getTurno() == JUGADOR1) {
         return juego->getJugador1()->getPersonajes()[personaje];
-    } else {
+    }
+    else {
         return juego->getJugador2()->getPersonajes()[personaje];
     }
 }
@@ -91,25 +92,26 @@ void Jugar::tableroYPersonaje(Juego *juego, Tablero *tablero, Personaje *persona
     personaje->mostrar();
 }
 
-void Jugar::anunciarTurnoJugador(Juego* juego){
+void Jugar::anunciarTurnoJugador(Juego* juego) {
     Utiles utiles;
-    if(juego->getTurno() == JUGADOR1){
+    if(juego->getTurno() == JUGADOR1) {
         utiles.enmarcar("TURNO JUGADOR 1");
-    }else{
+    }
+    else{
         utiles.enmarcar("TURNO JUGADOR 2");
     }
 }
 
-void Jugar::actualizarMuertes(Juego* juego){
+void Jugar::actualizarMuertes(Juego* juego) {
     juego->getJugador1()->matarPersonajes();
     juego->getJugador2()->matarPersonajes();
 }
 
-/*bool Jugar::eleccionValida(int eleccion){
+/*bool Jugar::eleccionValida(int eleccion) {
     return (eleccion >= MINIMO && eleccion <= MAXIMO);
 }
 */
-void Jugar::primerMenuJuego(Juego* juego, Tablero* tablero, Personaje* personaje, Grafo* grafo){
+void Jugar::primerMenuJuego(Juego* juego, Tablero* tablero, Personaje* personaje, Grafo* grafo) {
     MenuJuego menu;
 
     tableroYPersonaje(juego, tablero, personaje);
@@ -125,7 +127,7 @@ void Jugar::primerMenuJuego(Juego* juego, Tablero* tablero, Personaje* personaje
     } while(!accionRealizada);
 }
 
-void Jugar::segundoMenuJuego(Juego* juego, Tablero* tablero, Personaje* personaje){
+void Jugar::segundoMenuJuego(Juego* juego, Tablero* tablero, Personaje* personaje) {
 
     MenuJuego menu;
 
@@ -141,10 +143,11 @@ void Jugar::segundoMenuJuego(Juego* juego, Tablero* tablero, Personaje* personaj
     } while(!accionRealizada);
 }
 
-void Jugar::comprobarFuegoYAire(Juego* juego){
-    if(juego->getTurno() == JUGADOR1){
+void Jugar::comprobarFuegoYAire(Juego* juego) {
+    if(juego->getTurno() == JUGADOR1) {
         juego->getJugador1()->comprobarFuegoYAire();
-    }else{
+    }
+    else{
         juego->getJugador2()->comprobarFuegoYAire();
     }
 }
@@ -156,7 +159,7 @@ void Jugar::jugar(Juego *juego, Tablero *tablero, Grafo* grafo) {
 
     for (int i = 0; i < MAX_PERSONAJES; i++) {
         actualizarMuertes(juego);
-        if(finDelJuego(juego)){
+        if(finDelJuego(juego)) {
             return;
         }
         personaje = determinarPersonaje(juego, i);
@@ -187,13 +190,14 @@ bool Jugar::finDelJuego(Juego *juego) {
 void Jugar::anunciarGanador(Juego* juego) {
     if (juego->getJugador1()->jugadorMuerto()) {
         cout << "\n\n\t\t¡GANA EL JUGADOR 2!\n\n" << endl;
-    }else{
+    }
+    else{
         cout << "\n\n\t\t¡GANA EL JUGADOR 1!\n\n" << endl;
     }
 }
 
 
-void Jugar::flujoDeJuego(){
+void Jugar::flujoDeJuego() {
     Utiles utiles;
     int partida;
     ABB* arbolPersonajes = utiles.personajes();
@@ -204,29 +208,30 @@ void Jugar::flujoDeJuego(){
 
     inicio(juego);
 
-    if(!juego->getSalir()){
+    if(!juego->getSalir()) {
         utiles.limpiarPantalla();
         partida = menuPartida(juego);
-        if(partida == MP_CARGAR_PARTIDA){
-            if(juego->partidaCargar() == PARTIDA_NO_ENCONTRADA){
+        if(partida == MP_CARGAR_PARTIDA) {
+            if(juego->partidaCargar() == PARTIDA_NO_ENCONTRADA) {
                 menuPersonajes(juego);
                 if(!juego->getSalir())
                     posicionarPersonajes(juego, tablero);
                 juego->randomizarTurno();
             }
-        }else if(partida == MP_BORRAR_Y_CONTINUAR){
+        }
+        else if(partida == MP_BORRAR_Y_CONTINUAR) {
             menuPersonajes(juego);
             if(!juego->getSalir())
                 posicionarPersonajes(juego, tablero);
             juego->randomizarTurno();
         }
 
-        if(!juego->getSalir()){
-            while(!finDelJuego(juego) && !juego->getSalir()){
+        if(!juego->getSalir()) {
+            while(!finDelJuego(juego) && !juego->getSalir()) {
                 anunciarTurnoJugador(juego);
                 jugar(juego, tablero, grafo);
             }
-            if(finDelJuego(juego)){
+            if(finDelJuego(juego)) {
                 tablero->mostrarTablero(juego);
                 anunciarGanador(juego);
                 juego->borrarPartidaGuardada();

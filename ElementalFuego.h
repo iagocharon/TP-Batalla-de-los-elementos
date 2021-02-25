@@ -51,6 +51,8 @@ public:
     // PRE: -
     // POS: Muestra las características del elemental para las acciones del segundo menú
     void caracteristicasSegundoMenu();
+    
+    ~ElementalFuego();
 };
 
 

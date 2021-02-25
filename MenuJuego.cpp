@@ -1,6 +1,6 @@
 #include "MenuJuego.h"
 
-MenuJuego::MenuJuego(){}
+MenuJuego::MenuJuego() {}
 
 void MenuJuego::mostrarMenu1() {
     cout << "\t1- Alimentar personaje." << endl;
@@ -9,10 +9,10 @@ void MenuJuego::mostrarMenu1() {
     cout << "\t4- Salir del juego." << endl;
 }
 
-bool MenuJuego::accionMenu1(int eleccion, Juego* juego, Personaje* personaje, Grafo* grafo){
+bool MenuJuego::accionMenu1(int eleccion, Juego* juego, Personaje* personaje, Grafo* grafo) {
     Utiles utiles;
     bool accionRealizada = false;
-    switch (eleccion){
+    switch (eleccion) {
         case MJ_ALIMENTAR:
             personaje->alimentar();
             accionRealizada = true;
@@ -45,10 +45,10 @@ void MenuJuego::mostrarMenu2() {
     cout << "\t4- Salir." << endl;
 }
 
-bool MenuJuego::accionMenu2(int eleccion, Juego* juego, Personaje* personaje){
+bool MenuJuego::accionMenu2(int eleccion, Juego* juego, Personaje* personaje) {
 
     bool accionRealizada = false;
-    switch (eleccion){
+    switch (eleccion) {
         case MJ_ATACAR:
             if(personaje ->energiaNecesariaAtaque()) {
 
@@ -59,7 +59,8 @@ bool MenuJuego::accionMenu2(int eleccion, Juego* juego, Personaje* personaje){
                     personaje->atacar(juego->getJugador1()->getPersonajes());
 
                 accionRealizada = true;
-            } else
+            }
+            else
                 cout << "El personaje no tiene la energía suficiente para atacar" << endl;
             break;
 
@@ -73,7 +74,8 @@ bool MenuJuego::accionMenu2(int eleccion, Juego* juego, Personaje* personaje){
                     personaje->defender(juego->getJugador2()->getPersonajes());
 
                 accionRealizada = true;
-            } else
+            }
+            else
                 cout << "El personaje no tiene la energía suficiente para defenderse" << endl;
             break;
 

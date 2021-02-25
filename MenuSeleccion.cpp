@@ -39,13 +39,14 @@ void MenuSeleccion::buscar(ABB *personajes) {
     cin >> nombre;
     if (personajes->buscar(nombre) != nullptr) {
         personajes->buscar(nombre)->getDato()->mostrar();
-    } else {
+    }
+    else {
         cout << "El personaje ingresado no es alguno de los posibles" << endl;
     }
 }
 
 
-void MenuSeleccion::espaciado(){
+void MenuSeleccion::espaciado() {
 
     cout << "\n\n\n";
 }

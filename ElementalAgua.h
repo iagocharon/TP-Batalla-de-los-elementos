@@ -60,6 +60,8 @@ public:
     // PRE: -
     // POS: Muestra las características del elemental para las acciones del segundo menú
     void caracteristicasSegundoMenu();
+    
+    ~ElementalAgua();
 };
 
 #endif //TP2_ELEMENTALAGUA_H

@@ -1,10 +1,10 @@
 #include "ElementalFuego.h"
 
 ElementalFuego::ElementalFuego(string nombre, string elemento, int escudo, int vida)
- : Personaje(nombre, elemento, escudo, vida){}
+ : Personaje(nombre, elemento, escudo, vida) {}
 
 ElementalFuego::ElementalFuego(string nombre, string elemento, int escudo, int vida, int energia, int fila, int columna)
-: Personaje(nombre, elemento, escudo, vida, energia, fila, columna){}
+: Personaje(nombre, elemento, escudo, vida, energia, fila, columna) {}
 
 void ElementalFuego::alimentar() {
     cout << "Estas alimentando a " << this->nombre << " un elemental de fuego, que consume madera para recuperar " << AUMENTO_ENERGIA_FUEGO << " de energia" << endl;
@@ -50,17 +50,17 @@ void ElementalFuego::defender(Personaje* aliados[MAX_PERSONAJES]) {
     this->energia -= ENERGIA_DEFENSA_FUEGO;
 }
 
-bool ElementalFuego::energiaNecesariaAtaque(){
+bool ElementalFuego::energiaNecesariaAtaque() {
 
     return this->energia >= ENERGIA_ATAQUE_FUEGO;
 }
 
-bool ElementalFuego::energiaNecesariaDefensa(){
+bool ElementalFuego::energiaNecesariaDefensa() {
 
     return this->energia >= ENERGIA_DEFENSA_FUEGO;
 }
 
-void ElementalFuego::caracteristicasPrimerMenu(){
+void ElementalFuego::caracteristicasPrimerMenu() {
 
     cout << nombre << " es un elemental de fuego, cuando se alimenta regenera 10 de energía y se cura "
                       "5 puntos de vida" << endl;
@@ -69,10 +69,14 @@ void ElementalFuego::caracteristicasPrimerMenu(){
 }
 
 
-void ElementalFuego::caracteristicasSegundoMenu(){
+void ElementalFuego::caracteristicasSegundoMenu() {
     cout << nombre << " es un elemental de fuego, su ataque consume 5 de energía y dañará a todos los enemigos "
                       "que se encuentren entre las filas " << fila - 1  << " y " << fila + 1 << " inclusive. "
                                                                                                 "Los enemigos tipo aire perderán 30 puntos de vida, los tipo agua 10, y los tipo tierra o fuego 20 puntos"<< endl;
 
     cout << "La defensa consiste en gastar 10 puntos de energía para regenerarse 10 puntos de vida. " << endl;
+}
+
+ElementalFuego::~ElementalFuego() {
+    
 }

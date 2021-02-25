@@ -84,3 +84,7 @@ void Personaje::mostrar() {
     cout << "VIDA: " << this->vida << endl;
     cout << "ENERGIA: " << this->energia << endl;
 }
+
+Personaje::~Personaje() {
+    
+}

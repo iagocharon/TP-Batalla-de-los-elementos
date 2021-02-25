@@ -2,12 +2,12 @@
 
 
 ElementalTierra::ElementalTierra(string nombre, string elemento, int escudo, int vida)
- : Personaje(nombre, elemento, escudo, vida){
+ : Personaje(nombre, elemento, escudo, vida) {
    this->bonificacion = false;
  }
 
 ElementalTierra::ElementalTierra(string nombre, string elemento, int escudo, int vida, int energia, int fila, int columna)
- : Personaje(nombre, elemento, escudo, vida, energia, fila, columna){
+ : Personaje(nombre, elemento, escudo, vida, energia, fila, columna) {
    this->bonificacion = false;
  }
 
@@ -83,26 +83,30 @@ void ElementalTierra::defender(Personaje* aliados[MAX_PERSONAJES]) {
     this->energia -= ENERGIA_DEFENSA_TIERRA;
 }
 
-bool ElementalTierra::energiaNecesariaAtaque(){
+bool ElementalTierra::energiaNecesariaAtaque() {
 
     return this->energia >= ENERGIA_ATAQUE_TIERRA;
 }
 
-bool ElementalTierra::energiaNecesariaDefensa(){
+bool ElementalTierra::energiaNecesariaDefensa() {
 
     return this->energia >= ENERGIA_DEFENSA_TIERRA;
 }
 
-void ElementalTierra::caracteristicasPrimerMenu(){
+void ElementalTierra::caracteristicasPrimerMenu() {
     cout << nombre << " es un elemental de tierra, cuando se alimenta regenera 8 de energía" << endl;
     cout << "El costo de desplazarse dependerá del lugar" << endl;
 }
 
 
-void ElementalTierra::caracteristicasSegundoMenu(){
+void ElementalTierra::caracteristicasSegundoMenu() {
 
     cout << nombre << " es un elemental de tierra, su ataque consume 6 de energía y dañará a todos los enemigos"
                       " su daño cambia según la cercanía con el enemigo." << endl;
     cout << "La defensa consiste en gastar 5 puntos de energía para obtener 2 puntos de escudo hasta luego de "
             "ser atacado, lo que disminuirá el daño recidio a un 20%." << endl;
+}
+
+ElementalTierra::~ElementalTierra() {
+    
 }
