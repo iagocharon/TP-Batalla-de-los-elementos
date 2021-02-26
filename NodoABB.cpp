@@ -95,11 +95,4 @@ bool NodoABB::esHijoIzquierdo(NodoABB* hijo) {
 
 NodoABB::~NodoABB() {
 
-    if(esRaiz()||soloHijoIzquierdo()||soloHijoDerecho()) {}
-
-    else if(getPadre()->esHijoIzquierdo(this))
-        getPadre()->setIzquierda(NULL);
-
-    else
-        getPadre()->setDerecha(NULL);
 }
