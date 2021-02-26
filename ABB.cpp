@@ -105,15 +105,15 @@ NodoABB* ABB::hallarMinimo(NodoABB* nodo) {
 }
 
 void ABB::eliminarNodo(NodoABB* nodo) {
-    delete nodo->getDato();
-
     if (nodo->esHoja()) {
+        delete nodo->getDato();
         delete nodo;
     }
 
     else if (nodo->soloHijoDerecho()) {
         if (nodo->esRaiz()) {
             setRaiz(nodo->getDerecha());
+            delete nodo->getDato();
             delete nodo;
         }
         else {
@@ -121,12 +121,14 @@ void ABB::eliminarNodo(NodoABB* nodo) {
             nodo->getPadre()->setDerecha(nodo->getDerecha());
             NodoABB *auxiliar = nodo;
             nodo = nodo->getDerecha();
+            delete auxiliar->getDato();
             delete auxiliar;
         }
     }
     else if (nodo->soloHijoIzquierdo()) {
         if(nodo->esRaiz()) {
             setRaiz(nodo->getIzquierda());
+            delete nodo->getDato();
             delete nodo;
         }
         else {
@@ -134,6 +136,7 @@ void ABB::eliminarNodo(NodoABB* nodo) {
             nodo->getPadre()->setIzquierda(nodo->getIzquierda());
             NodoABB *auxiliar = nodo;
             nodo = nodo->getIzquierda();
+            delete auxiliar->getDato();
             delete auxiliar;
         }
     }
