@@ -196,6 +196,7 @@ void Juego::seleccionJugador1() {
 
         else {
             jugador1->setPersonaje(jugador1->getCantidadPersonajes(), buscado->getDato());
+            buscado->setDato(NULL);
             eliminado = personajes->eliminar(nombre);
         }
 
@@ -222,6 +223,7 @@ void Juego::seleccionJugador2() {
 
         else {
             jugador2->setPersonaje(jugador2->getCantidadPersonajes(), buscado->getDato());
+            buscado->setDato(NULL);
             eliminado = personajes->eliminar(nombre);
         }
 

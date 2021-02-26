@@ -104,14 +104,21 @@ NodoABB* ABB::hallarMinimo(NodoABB* nodo) {
     }
 }
 
+//void ABB::reemplazarNodo(NodoABB *aReemplazar, NodoABB *reemplazante) {
+//    if (aReemplazar->getPadre() != NULL) {
+//        reemplazante->setPadre(aReemplazar->getPadre());
+//        if (aReemplazar->getPadre()->getDerecha() == aReemplazar) {
+//            aReemplazar->getPadre()->setDerecha(reemplazante);
+//        }
+//        else {
+//            aReemplazar->getPadre()->setIzquierda(reemplazante);
+//        }
+//    }
+//}
+
 void ABB::eliminarNodo(NodoABB* nodo) {
     if (nodo->esHoja()) {
-        if (nodo->getPadre()->getIzquierda() == nodo) {
-            nodo->getPadre()->setIzquierda(NULL);
-        }
-        else {
-            nodo->getPadre()->setDerecha(NULL);
-        }
+
         delete nodo;
     }
 
@@ -122,7 +129,12 @@ void ABB::eliminarNodo(NodoABB* nodo) {
         }
         else {
             nodo->getDerecha()->setPadre(nodo->getPadre());
-            nodo->getPadre()->setDerecha(nodo->getDerecha());
+            if (nodo->getPadre()->getDerecha() == nodo) {
+                nodo->getPadre()->setDerecha(nodo->getDerecha());
+            }
+            else {
+                nodo->getPadre()->setIzquierda(nodo->getDerecha());
+            }
             NodoABB *auxiliar = nodo;
             nodo = nodo->getDerecha();
             delete auxiliar;
@@ -135,7 +147,12 @@ void ABB::eliminarNodo(NodoABB* nodo) {
         }
         else {
             nodo->getIzquierda()->setPadre(nodo->getPadre());
-            nodo->getPadre()->setIzquierda(nodo->getIzquierda());
+            if (nodo->getPadre()->getDerecha() == nodo) {
+                nodo->getPadre()->setDerecha(nodo->getDerecha());
+            }
+            else {
+                nodo->getPadre()->setIzquierda(nodo->getDerecha());
+            }
             NodoABB *auxiliar = nodo;
             nodo = nodo->getIzquierda();
             delete auxiliar;
@@ -143,7 +160,9 @@ void ABB::eliminarNodo(NodoABB* nodo) {
     }
     else {
         NodoABB* minimo = this->hallarMinimo(nodo->getDerecha());
+        delete nodo->getDato();
         nodo->setDato(minimo->getDato());
+        minimo->setDato(NULL);
         nodo->setClave(minimo->getClave());
         this->eliminarNodo(minimo);
     }
