@@ -192,8 +192,7 @@ void ABB::eliminarTodo(NodoABB* nodo) {
     }
     this->eliminarTodo(nodo->getDerecha());
     this->eliminarTodo(nodo->getIzquierda());
-    delete nodo->getDato();
-    delete nodo;
+    eliminarNodo(nodo);
 }
 
 void ABB::eliminarTodo() {
