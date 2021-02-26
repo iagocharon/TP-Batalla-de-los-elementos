@@ -111,6 +111,9 @@ public:
     // PRE: Recibe dos vertices, uno de salida y uno de destino.
     // POS: Devuelve la distancia minima entre dos vertices y mustra el recorrido.
     int caminoMinimo(Vertice* salida, Vertice* destino);
+    
+    void eliminarAristas(Vertice* vertice);
+    void eliminarTodo();
 
     // DESTRUCTOR
     // PRE: -

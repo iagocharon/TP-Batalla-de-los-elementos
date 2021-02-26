@@ -216,6 +216,27 @@ int Grafo::caminoMinimo(Vertice* salida, Vertice* destino) {
     return distancias[this->getNumeroVertice(destino)];
 }
 
+void Grafo::eliminarAristas(Vertice *vertice) {
+    Arista* arista = vertice->getArista();
+    Arista* auxiliar;
+    while (arista != NULL) {
+        auxiliar = arista;
+        arista = arista->getSiguiente();
+        delete auxiliar;
+    }
+}
+
+void Grafo::eliminarTodo() {
+    Vertice* vertice = this->primero;
+    Vertice* auxiliar;
+    while (vertice != NULL) {
+        auxiliar = vertice;
+        vertice = vertice->getSiguiente();
+        this->eliminarAristas(auxiliar);
+        delete auxiliar;
+    }
+}
+
 Grafo::~Grafo() {
-    
+    this->eliminarTodo();
 }
