@@ -105,6 +105,7 @@ NodoABB* ABB::hallarMinimo(NodoABB* nodo) {
 }
 
 void ABB::eliminarNodo(NodoABB* nodo) {
+    delete nodo->getDato();
 
     if (nodo->esHoja()) {
         delete nodo;
