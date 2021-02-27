@@ -8,6 +8,8 @@ int main() {
     Jugar* jugar = new Jugar();
 
     jugar->flujoDeJuego();
+    
+    delete jugar;
 
     return 0;
 }

@@ -101,6 +101,8 @@ public:
     // PRE: -
     // POS: true si el árbol está vacío, false de otro modo
     bool vacio();
+    
+//    void reemplazarNodo(NodoABB* aReemplazar, NodoABB* reemplazante);
 
     // PRE: -
     // POS: Borra el árbol completo

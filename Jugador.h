@@ -37,6 +37,11 @@ public:
     bool jugadorMuerto();
 
     // PRE: -
+    // POS: Comprueba si hay elementales de aire o fuego en el equipo, y si los hay aumenta
+    //      la energía de los de aire y daña a los de fuego sin energía.
+    void comprobarFuegoYAire();
+
+    // PRE: -
     // POS: Reduce mucho la vida de un personaje muerto y lo quita del tablero para que no interfiera
     //      con el resto del juego.
     void matarPersonajes();

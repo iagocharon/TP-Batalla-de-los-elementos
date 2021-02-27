@@ -28,7 +28,7 @@ void ABB::setRaiz(NodoABB* raiz) {
     raiz->setPadre(NULL);
 }
 
-int ABB::cantidadElementos(){
+int ABB::cantidadElementos() {
 
     return cantidadCargados;
 }
@@ -38,11 +38,13 @@ NodoABB* ABB::insertar(NodoABB* nodo, Personaje* dato, string clave) {
         nodo = new NodoABB(clave, dato);
         setRaiz(nodo);
 
-    } else if (clave > nodo->getClave()) {
+    }
+    else if (clave > nodo->getClave()) {
         nodo->setDerecha(insertar(nodo->getDerecha(), dato, clave));
         nodo->getDerecha()->setPadre(nodo);
 
-    } else {
+    }
+    else {
         nodo->setIzquierda(insertar(nodo->getIzquierda(), dato, clave));
         nodo->getIzquierda()->setPadre(nodo);
     }
@@ -59,10 +61,12 @@ NodoABB* ABB::buscar(NodoABB* nodo, string clave) {
     if (nodo == NULL || nodo->getClave() == clave) {
         return nodo;
 
-    } else if (clave > nodo->getClave()) {
+    }
+    else if (clave > nodo->getClave()) {
         return buscar(nodo->getDerecha(), clave);
 
-    } else {
+    }
+    else {
         return buscar(nodo->getIzquierda(), clave);
     }
 }
@@ -94,14 +98,27 @@ NodoABB* ABB::hallarMinimo(NodoABB* nodo) {
     if (nodo->getIzquierda() != NULL) {
         return this->hallarMinimo(nodo->getIzquierda());
 
-    } else {
+    }
+    else {
         return nodo;
     }
 }
 
-void ABB::eliminarNodo(NodoABB* nodo) {
+//void ABB::reemplazarNodo(NodoABB *aReemplazar, NodoABB *reemplazante) {
+//    if (aReemplazar->getPadre() != NULL) {
+//        reemplazante->setPadre(aReemplazar->getPadre());
+//        if (aReemplazar->getPadre()->getDerecha() == aReemplazar) {
+//            aReemplazar->getPadre()->setDerecha(reemplazante);
+//        }
+//        else {
+//            aReemplazar->getPadre()->setIzquierda(reemplazante);
+//        }
+//    }
+//}
 
+void ABB::eliminarNodo(NodoABB* nodo) {
     if (nodo->esHoja()) {
+
         delete nodo;
     }
 
@@ -109,27 +126,43 @@ void ABB::eliminarNodo(NodoABB* nodo) {
         if (nodo->esRaiz()) {
             setRaiz(nodo->getDerecha());
             delete nodo;
-        } else {
+        }
+        else {
             nodo->getDerecha()->setPadre(nodo->getPadre());
-            nodo->getPadre()->setDerecha(nodo->getDerecha());
+            if (nodo->getPadre()->getDerecha() == nodo) {
+                nodo->getPadre()->setDerecha(nodo->getDerecha());
+            }
+            else {
+                nodo->getPadre()->setIzquierda(nodo->getDerecha());
+            }
             NodoABB *auxiliar = nodo;
             nodo = nodo->getDerecha();
             delete auxiliar;
         }
-    } else if (nodo->soloHijoIzquierdo()) {
-        if(nodo->esRaiz()){
+    }
+    else if (nodo->soloHijoIzquierdo()) {
+        if(nodo->esRaiz()) {
             setRaiz(nodo->getIzquierda());
             delete nodo;
-        } else {
+        }
+        else {
             nodo->getIzquierda()->setPadre(nodo->getPadre());
-            nodo->getPadre()->setIzquierda(nodo->getIzquierda());
+            if (nodo->getPadre()->getDerecha() == nodo) {
+                nodo->getPadre()->setDerecha(nodo->getDerecha());
+            }
+            else {
+                nodo->getPadre()->setIzquierda(nodo->getDerecha());
+            }
             NodoABB *auxiliar = nodo;
             nodo = nodo->getIzquierda();
             delete auxiliar;
         }
-    } else {
+    }
+    else {
         NodoABB* minimo = this->hallarMinimo(nodo->getDerecha());
+        delete nodo->getDato();
         nodo->setDato(minimo->getDato());
+        minimo->setDato(NULL);
         nodo->setClave(minimo->getClave());
         this->eliminarNodo(minimo);
     }
@@ -145,11 +178,13 @@ NodoABB* ABB::eliminar(NodoABB* nodo, string clave, bool* eliminado) {
         *eliminado = true;
         return nodo;
 
-    } else if (nodo->getClave() < clave) {
+    }
+    else if (nodo->getClave() < clave) {
         eliminar(nodo->getDerecha(), clave, eliminado);
         return nodo;
 
-    } else {
+    }
+    else {
         eliminar(nodo->getIzquierda(), clave, eliminado);
         return nodo;
     }
@@ -177,8 +212,7 @@ void ABB::eliminarTodo(NodoABB* nodo) {
     }
     this->eliminarTodo(nodo->getDerecha());
     this->eliminarTodo(nodo->getIzquierda());
-    //En caso de que haga falta, habria que agregar un delete para el personaje
-    delete nodo;
+    eliminarNodo(nodo);
 }
 
 void ABB::eliminarTodo() {

@@ -1,10 +1,10 @@
 #include "ElementalAire.h"
 
 ElementalAire::ElementalAire(string nombre, string elemento, int escudo, int vida)
- : Personaje(nombre, elemento, escudo, vida){}
+ : Personaje(nombre, elemento, escudo, vida) {}
 
 ElementalAire::ElementalAire(string nombre, string elemento, int escudo, int vida, int energia, int fila, int columna)
- : Personaje(nombre, elemento, escudo, vida, energia, fila, columna){}
+ : Personaje(nombre, elemento, escudo, vida, energia, fila, columna) {}
 
 
 void ElementalAire::alimentar() {
@@ -56,28 +56,32 @@ void ElementalAire::defender(Personaje* aliados[MAX_PERSONAJES]) {
 
 }
 
-bool ElementalAire::energiaNecesariaAtaque(){
+bool ElementalAire::energiaNecesariaAtaque() {
 
     return this->energia >= ENERGIA_ATAQUE_AIRE;
 }
 
-bool ElementalAire::energiaNecesariaDefensa(){
+bool ElementalAire::energiaNecesariaDefensa() {
 
     return this->energia >= ENERGIA_DEFENSA_AIRE;
 }
 
-void ElementalAire::caracteristicasPrimerMenu(){
+void ElementalAire::caracteristicasPrimerMenu() {
 
     cout << nombre << " es un elemental de aire, no se alimenta. Recuperará 5 puntos de energía al finalizar el turno." << endl;
     cout << "El costo de desplazarse dependerá del lugar." << endl;
 }
 
 
-void ElementalAire::caracteristicasSegundoMenu(){
+void ElementalAire::caracteristicasSegundoMenu() {
 
     cout << nombre << " es un elemental de aire, su ataque consume 8 de energía y dañará a todos los enemigos "
                       "tipo tierra por 20 puntos, 10 a los de fuego y 15 a los de aire o agua" << endl;
 
     cout << "La defensa consiste en gastar 15 puntos de energía para desplazarse a cualquier otro "
             "punto del tablero." << endl;
+}
+
+ElementalAire::~ElementalAire() {
+    
 }

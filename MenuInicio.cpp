@@ -13,7 +13,7 @@ void MenuInicio::mostrarMenu() {
     cout << "\t6) Salir" << endl;
 }
 
-void MenuInicio::agregarNuevo(ABB* personajes){
+void MenuInicio::agregarNuevo(ABB* personajes) {
 
     Utiles util;
     Tipo personaje;
@@ -95,7 +95,7 @@ void MenuInicio::accionMenu(int& eleccion, Juego* juego) {
             buscarPorNombre(juego->getPersonajes());
             break;
         case MI_COMENZAR:
-            if(juego->getPersonajes()->cantidadElementos() < MI_PERSONAJES_MINIMOS){
+            if(juego->getPersonajes()->cantidadElementos() < MI_PERSONAJES_MINIMOS) {
                 cout << "Se necesitan al menos 6 personajes para comenzar. Faltan " <<MI_PERSONAJES_MINIMOS -
                 juego->getPersonajes()->cantidadElementos() << " para poder comenzar" << endl;
                 eleccion = 0;

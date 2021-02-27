@@ -42,6 +42,7 @@ public:
     // POS: Carga la informacion al grafo.
     void cargarGrafo(Grafo* grafo);
 
+    ~Tablero();
 private:
 
     // PRE: Recibe las coordenadas de fila y columna, asi como el elemento del personaje.
@@ -66,6 +67,7 @@ private:
     // PRE: -
     // POS: Muestra a que hace referencia cada color del tablero.
     void mostrarGlosario();
+    
 };
 
 

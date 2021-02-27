@@ -39,16 +39,17 @@ void Juego::randomizarTurno() {
 void Juego::cambiarTurno() {
     if (turno == 1) {
         turno = 2;
-    } else {
+    }
+    else {
         turno = 1;
     }
 }
 
-bool Juego::posicionValida(int fila, int columna){
+bool Juego::posicionValida(int fila, int columna) {
     if(fila < MIN_FILA || fila > MAX_FILA || columna < MIN_COLUMNA || columna > MAX_COLUMNA)
         return false;
 
-    for(int i = 0; i < MAX_PERSONAJES; i++){
+    for(int i = 0; i < MAX_PERSONAJES; i++) {
         if((jugador1->getPersonajes()[i]->getFila() == fila-1 &&
            jugador1->getPersonajes()[i]->getColumna() == columna-1) ||
           (jugador2->getPersonajes()[i]->getFila() == fila-1 &&
@@ -113,7 +114,7 @@ void Juego::posicionarPersonajeJugador2(int personaje) {
     utiles.limpiarPantalla();
 }
 
-void Juego::criterioDeBusqueda(Personaje* personaje, Grafo* tablero){
+void Juego::criterioDeBusqueda(Personaje* personaje, Grafo* tablero) {
     if (personaje->getElemento() == ELEMENTO_AGUA) {
         tablero->setCriterioBusqueda(1);
     }
@@ -128,7 +129,7 @@ void Juego::criterioDeBusqueda(Personaje* personaje, Grafo* tablero){
     }
 }
 
-bool Juego::actualizarPosicion(Personaje* personaje, int energiaNecesaria, int fila, int columna){
+bool Juego::actualizarPosicion(Personaje* personaje, int energiaNecesaria, int fila, int columna) {
 
     bool energiaSuficiente = false;
 
@@ -160,7 +161,7 @@ bool Juego::moverPersonaje(Personaje* personaje, Grafo* tablero) {
         cout << "\nIngrese la columna a la cual mover el personaje (1 - 8): ";
         cin >> columna;
 
-        if(!posicionValida(fila, columna)){
+        if(!posicionValida(fila, columna)) {
             cout << "\nPosicion invalida, vuelva a ingresarla." << endl;
             ingresoValido = false;
         }
@@ -195,6 +196,7 @@ void Juego::seleccionJugador1() {
 
         else {
             jugador1->setPersonaje(jugador1->getCantidadPersonajes(), buscado->getDato());
+            buscado->setDato(NULL);
             eliminado = personajes->eliminar(nombre);
         }
 
@@ -221,6 +223,7 @@ void Juego::seleccionJugador2() {
 
         else {
             jugador2->setPersonaje(jugador2->getCantidadPersonajes(), buscado->getDato());
+            buscado->setDato(NULL);
             eliminado = personajes->eliminar(nombre);
         }
 
@@ -233,15 +236,17 @@ void Juego::seleccionJugador2() {
 void Juego::seleccionPersonajes() {
     if (turno == JUGADOR1) {
         seleccionJugador1();
-    } else {
+    }
+    else {
         seleccionJugador2();
     }
 }
 
-void Juego::posicionPersonajes(int personaje){
-    if(turno == JUGADOR1){
+void Juego::posicionPersonajes(int personaje) {
+    if(turno == JUGADOR1) {
         posicionarPersonajeJugador1(personaje);
-    } else {
+    }
+    else {
         posicionarPersonajeJugador2(personaje);
     }
 }
@@ -280,20 +285,24 @@ int Juego::partidaCargar() {
         if (elemento == ELEMENTO_AIRE) {
             personaje = new ElementalAire(nombre, elemento, stoi(escudo), stoi(vida), stoi(energia), stoi(fila),
                                           stoi(columna));
-        } else if (elemento == ELEMENTO_AGUA) {
+        }
+        else if (elemento == ELEMENTO_AGUA) {
             personaje = new ElementalAgua(nombre, elemento, stoi(escudo), stoi(vida), stoi(energia), stoi(fila),
                                           stoi(columna));
-        } else if (elemento == ELEMENTO_TIERRA) {
+        }
+        else if (elemento == ELEMENTO_TIERRA) {
             personaje = new ElementalTierra(nombre, elemento, stoi(escudo), stoi(vida), stoi(energia), stoi(fila),
                                             stoi(columna));
-        } else {
+        }
+        else {
             personaje = new ElementalFuego(nombre, elemento, stoi(escudo), stoi(vida), stoi(energia), stoi(fila),
                                            stoi(columna));
         }
 
         if (i < MAX_PERSONAJES) {
             jugador1->setPersonaje(i, personaje);
-        } else {
+        }
+        else {
             jugador2->setPersonaje(i - MAX_PERSONAJES, personaje);
         }
     }
@@ -331,6 +340,15 @@ void Juego::borrarPartidaGuardada() {
     remove(PARTIDA);
 }
 
-bool Juego::personajesListos(){
+bool Juego::personajesListos() {
     return (jugador1->getCantidadPersonajes() == MAX_PERSONAJES && jugador2->getCantidadPersonajes() == MAX_PERSONAJES);
+}
+
+Juego::~Juego() {
+    for(int i = 0; i < MAX_PERSONAJES; i++) {
+        delete jugador1->getPersonajes()[i];
+        delete jugador2->getPersonajes()[i];
+    }
+    delete jugador1;
+    delete jugador2;
 }

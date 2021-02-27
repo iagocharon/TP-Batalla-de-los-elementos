@@ -41,7 +41,7 @@ Tablero::Tablero() {
     archivo.close();
 }
 
-void Tablero::mostrarTablero(Juego* juego){
+void Tablero::mostrarTablero(Juego* juego) {
     char personaje = ' ';
     int jugador = 0;
 
@@ -49,7 +49,7 @@ void Tablero::mostrarTablero(Juego* juego){
 
     //GRILLA COLUMNAS
     cout << "\t\t  ";
-    for(int k = 0; k < MAX_COLUMNAS; k++){
+    for(int k = 0; k < MAX_COLUMNAS; k++) {
         cout << " " << k+1 << " ";
     }
 
@@ -72,7 +72,7 @@ void Tablero::mostrarTablero(Juego* juego){
     }
 }
 
-void Tablero::mostrarPersonajeJugador1(int columna, int fila, char elemento){
+void Tablero::mostrarPersonajeJugador1(int columna, int fila, char elemento) {
     if (tablero[fila][columna]->getNombre() == "Montania") {
         printf("\033[1;43;97m %c \033[0m", elemento);
     }
@@ -93,7 +93,7 @@ void Tablero::mostrarPersonajeJugador1(int columna, int fila, char elemento){
     }
 }
 
-void Tablero::mostrarPersonajeJugador2(int columna, int fila, char elemento){
+void Tablero::mostrarPersonajeJugador2(int columna, int fila, char elemento) {
     if (tablero[fila][columna]->getNombre() == "Montania") {
         printf("\033[1;43;30m %c \033[0m", elemento);
     }
@@ -115,15 +115,15 @@ void Tablero::mostrarPersonajeJugador2(int columna, int fila, char elemento){
 }
 
 
-char Tablero::personajeJugado(int columna, int fila, Juego* juego, int& jugador){
-    for(int i = 0; i < MAX_PERSONAJES; i++){
+char Tablero::personajeJugado(int columna, int fila, Juego* juego, int& jugador) {
+    for(int i = 0; i < MAX_PERSONAJES; i++) {
         if(juego->getJugador1()->getPersonajes()[i]->getColumna() == columna &&
         juego->getJugador1()->getPersonajes()[i]->getFila() == fila) {
             jugador = 1;
             return elementoPersonaje(juego->getJugador1()->getPersonajes()[i]);
         }
         if(juego->getJugador2()->getPersonajes()[i]->getColumna() == columna &&
-        juego->getJugador2()->getPersonajes()[i]->getFila() == fila){
+        juego->getJugador2()->getPersonajes()[i]->getFila() == fila) {
             jugador = 2;
             return elementoPersonaje(juego->getJugador2()->getPersonajes()[i]);
         }
@@ -132,14 +132,14 @@ char Tablero::personajeJugado(int columna, int fila, Juego* juego, int& jugador)
     return ' ';
 }
 
-char Tablero::elementoPersonaje(Personaje* personaje){
-    if(personaje->getElemento() == ELEMENTO_AIRE){
+char Tablero::elementoPersonaje(Personaje* personaje) {
+    if(personaje->getElemento() == ELEMENTO_AIRE) {
         return INICIAL_AIRE;
     }
-    else if(personaje->getElemento() == ELEMENTO_TIERRA){
+    else if(personaje->getElemento() == ELEMENTO_TIERRA) {
         return INICIAL_TIERRA;
     }
-    else if(personaje->getElemento() == ELEMENTO_AGUA){
+    else if(personaje->getElemento() == ELEMENTO_AGUA) {
         return INICIAL_AGUA;
     }
     return INICIAL_FUEGO;
@@ -170,7 +170,7 @@ void Tablero::cargarGrafo(Grafo* grafo) {
 }
 
 
-void Tablero::mostrarGlosario(){
+void Tablero::mostrarGlosario() {
 
     cout << "Glosario: " << endl;
     cout << "\tMontaña:    \033[1;43;30m   \033[0m" << endl;
@@ -180,4 +180,13 @@ void Tablero::mostrarGlosario(){
     cout << "\tCamino:     \033[1;42;30m   \033[0m" << endl;
     cout << "\tVacio:      \033[1;45;30m   \033[0m" << endl;
     cout << "\n\n";
+}
+
+Tablero::~Tablero() {
+    for (int i = 0; i < MAX_FILAS; i++) {
+        for (int j = 0; j < MAX_COLUMNAS; j++) {
+            delete this->tablero[i][j];
+        }
+    }
+
 }

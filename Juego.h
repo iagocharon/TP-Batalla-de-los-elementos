@@ -121,6 +121,9 @@ public:
     // POS : true si ambos jugadores tienen a sus tres personajes, false de otro modo
     bool personajesListos();
 
+    // Destructor.
+    ~Juego();
+
 private:
 
     // PRE: Recibe dos enteros inicializados.

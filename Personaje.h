@@ -102,6 +102,8 @@ public:
     virtual bool energiaNecesariaDefensa() = 0;
     virtual void caracteristicasPrimerMenu() = 0;
     virtual void caracteristicasSegundoMenu() = 0;
+    
+    virtual ~Personaje();
 };
 
 #endif //TP2_PERSONAJE_H

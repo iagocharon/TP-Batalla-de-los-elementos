@@ -68,6 +68,10 @@ private:
     // POS: Devuelve el personaje de la posicion que indique el entero del jugador que tenga el turno.
     Personaje* determinarPersonaje(Juego* juego, int personaje);
 
+    // PRE: Recibe un puntero a juego cargado.
+    // POS: Llama a la funcion comprobarFuegoYAires del jugador correspondiente.
+    void comprobarFuegoYAire(Juego* juego);
+
     //PRE: Recibe un juego y un personaje cargados.
     //POS: Muestra por pantalla el tablero y las estadisticas del personaje en juego.
     void tableroYPersonaje(Juego* juego, Tablero* tablero, Personaje* personaje);
