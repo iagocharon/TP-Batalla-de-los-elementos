@@ -9,11 +9,11 @@ using namespace std;
 class NodoABB {
 private:
     string clave;
-    Personaje* dato;
     NodoABB* derecha;
     NodoABB* izquierda;
     NodoABB* padre;
-    
+    Personaje* dato;
+
 public:
 
     // PRE: -

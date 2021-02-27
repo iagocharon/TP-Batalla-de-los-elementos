@@ -105,10 +105,6 @@ void Jugar::actualizarMuertes(Juego* juego){
     juego->getJugador2()->matarPersonajes();
 }
 
-/*bool Jugar::eleccionValida(int eleccion){
-    return (eleccion >= MINIMO && eleccion <= MAXIMO);
-}
-*/
 void Jugar::primerMenuJuego(Juego* juego, Tablero* tablero, Personaje* personaje, Grafo* grafo){
     MenuJuego menu;
 

@@ -37,18 +37,14 @@ public:
     Personaje(string nombre, string elemento, int escudo, int vida, int energia, int fila, int columna);
 
     // PRE: -
-    // POS: Alimenta al personaje, notifica al usuario
-    virtual void alimentar() = 0;
-
-    // PRE: -
     // POS: Devuelve el nombre del personaje
     string getNombre();
 
     string getElemento();
+
     // PRE: -
     // POS: Devuelve el escudo del personaje
     int getEscudo();
-
     // PRE: -
     // POS: Devuelve la vida del personaje
     int getVida();
@@ -97,7 +93,9 @@ public:
     // POS: Muestra por pantalla los atributos del personaje
     void mostrar();
 
+
     // Métodos virtuales implementados por los hijos (polimorfismo)
+    virtual void alimentar() = 0;
     virtual void atacar(Personaje* enemigos[MAX_PERSONAJES]) = 0;
     virtual void defender(Personaje* aliados[MAX_PERSONAJES]) = 0;
     virtual bool energiaNecesariaAtaque() = 0;

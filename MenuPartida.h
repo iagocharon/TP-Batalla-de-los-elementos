@@ -18,7 +18,7 @@ public:
 
     // PRE: Recibe un entero y un juego cargados.
     // POS: Llama a la función correspondiente según la eleccion realizada.
-    void accionMenu(int eleccion, Juego *juego);
+    void accionMenu(int eleccion, Juego* juego);
 };
 
 
